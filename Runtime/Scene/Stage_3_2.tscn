@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://dqf7dekvholxn"]
+[gd_scene load_steps=167 format=3 uid="uid://dqf7dekvholxn"]
 
 [ext_resource type="Texture2D" uid="uid://0yrpisinw2s1" path="res://Runtime/Resource/FrameAnimation/robot_standing/robot_standing_00.png" id="1_doviu"]
 [ext_resource type="Texture2D" uid="uid://db2wlnh87ljs7" path="res://Runtime/Resource/FrameAnimation/robot_standing/robot_standing_01.png" id="2_tjtex"]
@@ -62,7 +62,108 @@
 [ext_resource type="Texture2D" uid="uid://dhgimh1gm6cv5" path="res://Runtime/Resource/FrameAnimation/robot_standing/robot_standing_59.png" id="60_ainty"]
 [ext_resource type="Texture2D" uid="uid://cvedu5kujdqv2" path="res://Runtime/Resource/FrameAnimation/robot_standing/robot_standing_60.png" id="61_w2fk6"]
 [ext_resource type="Texture2D" uid="uid://dbsvjppft3b4u" path="res://Runtime/Resource/Background/stage3-2.png" id="62_mpk0e"]
-[ext_resource type="Script" path="res://Runtime/Script/robot.gd" id="63_gx5e5"]
+[ext_resource type="Texture2D" uid="uid://qhrco2uoh128" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_000.png" id="63_kiich"]
+[ext_resource type="Texture2D" uid="uid://4jy4284hjb2e" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_001.png" id="64_a88yy"]
+[ext_resource type="Script" path="res://Runtime/Script/UI/Label_FPS.gd" id="64_mjafk"]
+[ext_resource type="Texture2D" uid="uid://hlguft2k2hcd" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_002.png" id="65_7ijbp"]
+[ext_resource type="Texture2D" uid="uid://be6u6ev8ifi00" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_003.png" id="66_g3r7e"]
+[ext_resource type="Texture2D" uid="uid://bovoke0qlxhbl" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_004.png" id="67_sgv3y"]
+[ext_resource type="Texture2D" uid="uid://dotj14ndj7xa" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_005.png" id="68_escvl"]
+[ext_resource type="Texture2D" uid="uid://bvv5c3cv0gbet" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_006.png" id="69_6qpm3"]
+[ext_resource type="Texture2D" uid="uid://th2evgqdn6a" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_007.png" id="70_0r5dl"]
+[ext_resource type="Texture2D" uid="uid://dtwrv6b35khne" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_008.png" id="71_ygtm5"]
+[ext_resource type="Texture2D" uid="uid://d4g85drm1scne" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_009.png" id="72_ky2qi"]
+[ext_resource type="Texture2D" uid="uid://7hqcd3kfola0" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_010.png" id="73_dxah6"]
+[ext_resource type="Texture2D" uid="uid://bvwl1sv474sm" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_011.png" id="74_cr4hh"]
+[ext_resource type="Texture2D" uid="uid://wyjd0wrlakxx" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_012.png" id="75_7o4n2"]
+[ext_resource type="Texture2D" uid="uid://dfri7u0j0578v" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_013.png" id="76_siewh"]
+[ext_resource type="Texture2D" uid="uid://bjyrupegbq52t" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_014.png" id="77_cvm6k"]
+[ext_resource type="Texture2D" uid="uid://wqupo8m3eqf4" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_015.png" id="78_7y3t7"]
+[ext_resource type="Texture2D" uid="uid://hqfiacnndbge" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_016.png" id="79_iceaw"]
+[ext_resource type="Texture2D" uid="uid://cehwiwqas0ck5" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_017.png" id="80_jgjcy"]
+[ext_resource type="Texture2D" uid="uid://d1lln4wosqyse" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_018.png" id="81_qw2r7"]
+[ext_resource type="Texture2D" uid="uid://s8acyhio72ii" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_019.png" id="82_eq680"]
+[ext_resource type="Texture2D" uid="uid://u4s2orv68knn" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_020.png" id="83_qfrch"]
+[ext_resource type="Texture2D" uid="uid://bjvhpgwc0upg3" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_021.png" id="84_5hkeo"]
+[ext_resource type="Texture2D" uid="uid://b5m85t2hsf618" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_022.png" id="85_m0an3"]
+[ext_resource type="Texture2D" uid="uid://dgm4flhpmbsgy" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_023.png" id="86_lbkm1"]
+[ext_resource type="Texture2D" uid="uid://b61o8imxiuku2" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_024.png" id="87_ls4l7"]
+[ext_resource type="Texture2D" uid="uid://b0vrakd1wx0wt" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_025.png" id="88_6b1r4"]
+[ext_resource type="Texture2D" uid="uid://dvxwkib5cawfn" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_026.png" id="89_v2jjg"]
+[ext_resource type="Texture2D" uid="uid://8e5ybj682bem" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_027.png" id="90_q5wh3"]
+[ext_resource type="Texture2D" uid="uid://dphttk1lxdynk" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_028.png" id="91_agwug"]
+[ext_resource type="Texture2D" uid="uid://bjlkxwk1gdca2" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_029.png" id="92_bqjh6"]
+[ext_resource type="Texture2D" uid="uid://easu7vb76hp5" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_030.png" id="93_ejodh"]
+[ext_resource type="Texture2D" uid="uid://dgr07tbev5ofn" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_031.png" id="94_3vc2t"]
+[ext_resource type="Texture2D" uid="uid://b7ila7lreaa7l" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_032.png" id="95_3egfs"]
+[ext_resource type="Texture2D" uid="uid://cjvkui484t5hs" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_033.png" id="96_5x6tb"]
+[ext_resource type="Texture2D" uid="uid://dpm6anh1igehe" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_034.png" id="97_x2lma"]
+[ext_resource type="Texture2D" uid="uid://c34vxipdrj7dn" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_035.png" id="98_h6jvo"]
+[ext_resource type="Texture2D" uid="uid://b2pd63gakr8te" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_036.png" id="99_q7gpw"]
+[ext_resource type="Texture2D" uid="uid://b852wyc3urqi8" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_037.png" id="100_vffb0"]
+[ext_resource type="Texture2D" uid="uid://dpxaoepfjhqom" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_038.png" id="101_eq2wa"]
+[ext_resource type="Texture2D" uid="uid://csuj2ppdo8wtc" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_039.png" id="102_eqoq8"]
+[ext_resource type="Texture2D" uid="uid://crjdpp5iihdid" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_040.png" id="103_ca6en"]
+[ext_resource type="Texture2D" uid="uid://doatbwf3iq24" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_041.png" id="104_y600f"]
+[ext_resource type="Texture2D" uid="uid://b5x4carvd54nx" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_042.png" id="105_2yv83"]
+[ext_resource type="Texture2D" uid="uid://7obort2woixc" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_043.png" id="106_nwmi6"]
+[ext_resource type="Texture2D" uid="uid://by1pmfirjm7px" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_044.png" id="107_ul0kf"]
+[ext_resource type="Texture2D" uid="uid://cwmv247nmbmmj" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_045.png" id="108_u5uae"]
+[ext_resource type="Texture2D" uid="uid://dhocclu37gi5" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_046.png" id="109_y5i6r"]
+[ext_resource type="Texture2D" uid="uid://bwudyls41ncru" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_047.png" id="110_hannb"]
+[ext_resource type="Texture2D" uid="uid://dp07nvo7dnh0" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_048.png" id="111_1oovr"]
+[ext_resource type="Texture2D" uid="uid://bpxlu8llgob5f" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_049.png" id="112_dncxv"]
+[ext_resource type="Texture2D" uid="uid://71ylsmhg2dct" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_050.png" id="113_js5wb"]
+[ext_resource type="Texture2D" uid="uid://ciqgod44irkmw" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_051.png" id="114_nxf5n"]
+[ext_resource type="Texture2D" uid="uid://bwq58a13jtjo3" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_052.png" id="115_g5afx"]
+[ext_resource type="Texture2D" uid="uid://78b77f3jyyqq" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_053.png" id="116_ta25f"]
+[ext_resource type="Texture2D" uid="uid://c8ko7w2bcv3yj" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_054.png" id="117_yy4yb"]
+[ext_resource type="Texture2D" uid="uid://dejff87sptwo" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_055.png" id="118_0vvre"]
+[ext_resource type="Texture2D" uid="uid://bpsfnrg75svng" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_056.png" id="119_645vb"]
+[ext_resource type="Texture2D" uid="uid://dbfevkrwuuvun" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_057.png" id="120_ux10y"]
+[ext_resource type="Texture2D" uid="uid://quhsrqpn2xmm" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_058.png" id="121_hnyvt"]
+[ext_resource type="Texture2D" uid="uid://jk6nt11m16kx" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_059.png" id="122_6gtyl"]
+[ext_resource type="Texture2D" uid="uid://c2v5aaeviptgt" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_060.png" id="123_6j1e7"]
+[ext_resource type="Texture2D" uid="uid://donjryaw1f8t0" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_061.png" id="124_p0whb"]
+[ext_resource type="Texture2D" uid="uid://cf7jpx384q4ha" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_062.png" id="125_e4u2y"]
+[ext_resource type="Texture2D" uid="uid://clkwpivp8wv16" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_063.png" id="126_h8nr1"]
+[ext_resource type="Texture2D" uid="uid://bddgma6igswfh" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_064.png" id="127_4icuh"]
+[ext_resource type="Texture2D" uid="uid://dkw8ejr87fowk" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_065.png" id="128_s217r"]
+[ext_resource type="Texture2D" uid="uid://b0hrmmsvhb821" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_066.png" id="129_6h0cs"]
+[ext_resource type="Texture2D" uid="uid://c6dmy0g2ulgis" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_067.png" id="130_ycbbs"]
+[ext_resource type="Texture2D" uid="uid://ctfdgog6yxlxb" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_068.png" id="131_ggo7q"]
+[ext_resource type="Texture2D" uid="uid://dfj1ycjkqtia6" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_069.png" id="132_ec4yl"]
+[ext_resource type="Texture2D" uid="uid://bwvgoomguqsta" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_070.png" id="133_6kws7"]
+[ext_resource type="Texture2D" uid="uid://cjqt5yxjnewx4" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_071.png" id="134_vg3h0"]
+[ext_resource type="Texture2D" uid="uid://dm6ck1tr0ow8y" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_072.png" id="135_r4jp5"]
+[ext_resource type="Texture2D" uid="uid://dgsa0u414860a" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_073.png" id="136_tnvel"]
+[ext_resource type="Texture2D" uid="uid://dvtox07hguhga" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_074.png" id="137_2el7h"]
+[ext_resource type="Texture2D" uid="uid://d3rufhr6vba7k" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_075.png" id="138_ur2vs"]
+[ext_resource type="Texture2D" uid="uid://pbtjpcnylhj" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_076.png" id="139_guvib"]
+[ext_resource type="Texture2D" uid="uid://f42ipq8fyo6o" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_077.png" id="140_44mg0"]
+[ext_resource type="Texture2D" uid="uid://b6g1a8oh365yp" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_078.png" id="141_2x67j"]
+[ext_resource type="Texture2D" uid="uid://c4ydmfm7e1p0v" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_079.png" id="142_eugwg"]
+[ext_resource type="Texture2D" uid="uid://dag2oq0k2pot6" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_080.png" id="143_cb6x2"]
+[ext_resource type="Texture2D" uid="uid://cdis5ry4lvwsr" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_081.png" id="144_evd1g"]
+[ext_resource type="Texture2D" uid="uid://dy7cfefigrg4r" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_082.png" id="145_mycy4"]
+[ext_resource type="Texture2D" uid="uid://duq377r75yowa" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_083.png" id="146_w7dfa"]
+[ext_resource type="Texture2D" uid="uid://b0bavecqysu2l" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_084.png" id="147_bw483"]
+[ext_resource type="Texture2D" uid="uid://cxcv81skf8k11" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_085.png" id="148_si500"]
+[ext_resource type="Texture2D" uid="uid://dly4umtpymkys" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_086.png" id="149_jdxt0"]
+[ext_resource type="Texture2D" uid="uid://qjsxccspg5i4" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_087.png" id="150_m3t6l"]
+[ext_resource type="Texture2D" uid="uid://obb30tnebgjf" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_088.png" id="151_8ttc8"]
+[ext_resource type="Texture2D" uid="uid://bjoxs3644vig7" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_089.png" id="152_7vs06"]
+[ext_resource type="Texture2D" uid="uid://g4o1edik4c16" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_090.png" id="153_daj45"]
+[ext_resource type="Texture2D" uid="uid://d4ku31qfv6s40" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_091.png" id="154_o4yi4"]
+[ext_resource type="Texture2D" uid="uid://b585myeghyrg8" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_092.png" id="155_i3mhg"]
+[ext_resource type="Texture2D" uid="uid://bonk76su51xye" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_093.png" id="156_58wve"]
+[ext_resource type="Texture2D" uid="uid://bxy5ruhpawajl" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_094.png" id="157_dktdh"]
+[ext_resource type="Texture2D" uid="uid://btmvh3tu1kpo5" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_095.png" id="158_ad5gh"]
+[ext_resource type="Texture2D" uid="uid://b2y4m7tn5dqmh" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_096.png" id="159_mnkcs"]
+[ext_resource type="Texture2D" uid="uid://b1nrso2n2c81d" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_097.png" id="160_lb8qc"]
+[ext_resource type="Texture2D" uid="uid://dbf2r6p78e5bl" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_098.png" id="161_xtytj"]
+[ext_resource type="Texture2D" uid="uid://itb2rj7hyxku" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_099.png" id="162_dmlcj"]
+[ext_resource type="Texture2D" uid="uid://bwy6a1vupyhex" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_100.png" id="163_w21es"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8v8w1"]
 animations = [{
@@ -253,27 +354,354 @@ animations = [{
 "loop": true,
 "name": &"robot_standing",
 "speed": 60.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("63_kiich")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_a88yy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_7ijbp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_g3r7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_sgv3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_escvl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_6qpm3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_0r5dl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_ygtm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_ky2qi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_dxah6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_cr4hh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_7o4n2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_siewh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_cvm6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_7y3t7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_iceaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_jgjcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_qw2r7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_eq680")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_qfrch")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_5hkeo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_m0an3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_lbkm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_ls4l7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_6b1r4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_v2jjg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_q5wh3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_agwug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_bqjh6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_ejodh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_3vc2t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_3egfs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_5x6tb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_x2lma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_h6jvo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_q7gpw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_vffb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_eq2wa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_eqoq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_ca6en")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_y600f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_2yv83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_nwmi6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_ul0kf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_u5uae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_y5i6r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_hannb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_1oovr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_dncxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_js5wb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_nxf5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_g5afx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_ta25f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_yy4yb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_0vvre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_645vb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_ux10y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_hnyvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_6gtyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_6j1e7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_p0whb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_e4u2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_h8nr1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_4icuh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_s217r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_6h0cs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_ycbbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_ggo7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_ec4yl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_6kws7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_vg3h0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_r4jp5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_tnvel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_2el7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_ur2vs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_guvib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_44mg0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_2x67j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_eugwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_cb6x2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_evd1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_mycy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_w7dfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_bw483")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_si500")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_jdxt0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_m3t6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_8ttc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_7vs06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_daj45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_o4yi4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_i3mhg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_58wve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_dktdh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_ad5gh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_mnkcs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_lb8qc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_xtytj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_dmlcj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_w21es")
+}],
+"loop": true,
+"name": &"robot_walking",
+"speed": 60.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mslyk"]
+size = Vector2(83, 148)
 
 [node name="Root" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 2450.0
-offset_bottom = 2640.0
+offset_right = 1920.0
+offset_bottom = 2070.0
 texture = ExtResource("62_mpk0e")
 expand_mode = 1
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="TextureRect"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="robot" type="CharacterBody2D" parent="."]
+position = Vector2(1048, 578)
+safe_margin = 0.001
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="robot"]
 texture_filter = 6
-position = Vector2(1173, 736)
-scale = Vector2(0.214179, 0.214179)
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(0.164767, 0.164767)
 sprite_frames = SubResource("SpriteFrames_8v8w1")
 animation = &"robot_standing"
 autoplay = "robot_standing"
-frame = 39
-frame_progress = 0.864677
-script = ExtResource("63_gx5e5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="robot"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+shape = SubResource("RectangleShape2D_mslyk")
+disabled = true
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Label_FPS" type="Label" parent="HUD"]
+offset_right = 55.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.113725, 0.54902, 0.243137, 1)
+text = "FPS: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("64_mjafk")
