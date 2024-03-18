@@ -1,14 +1,24 @@
-[gd_scene load_steps=167 format=3 uid="uid://dqf7dekvholxn"]
+[gd_scene load_steps=196 format=3 uid="uid://dqf7dekvholxn"]
 
 [ext_resource type="Texture2D" uid="uid://0yrpisinw2s1" path="res://Runtime/Resource/FrameAnimation/robot_standing/robot_standing_00.png" id="1_doviu"]
+[ext_resource type="Script" path="res://Runtime/Script/Manager/PlayerManager.gd" id="2_2covn"]
+[ext_resource type="Texture2D" uid="uid://dmhngtjyqs42f" path="res://Runtime/Resource/FrameAnimation/swarm_walking/1.png" id="2_3vyyt"]
 [ext_resource type="Texture2D" uid="uid://db2wlnh87ljs7" path="res://Runtime/Resource/FrameAnimation/robot_standing/robot_standing_01.png" id="2_tjtex"]
 [ext_resource type="Texture2D" uid="uid://b5agadj7v73ff" path="res://Runtime/Resource/FrameAnimation/robot_standing/robot_standing_02.png" id="3_1oaiw"]
+[ext_resource type="Texture2D" uid="uid://fy5pxgtmyqih" path="res://Runtime/Resource/FrameAnimation/swarm_walking/2.png" id="3_e3p80"]
+[ext_resource type="Texture2D" uid="uid://d17aby680fjnr" path="res://Runtime/Resource/FrameAnimation/swarm_walking/3.png" id="4_5ngw7"]
 [ext_resource type="Texture2D" uid="uid://d2l5utjgjkkw0" path="res://Runtime/Resource/FrameAnimation/robot_standing/robot_standing_03.png" id="4_cfja5"]
+[ext_resource type="Texture2D" uid="uid://h1rkptnsv3pn" path="res://Runtime/Resource/FrameAnimation/swarm_walking/4.png" id="5_7k0ru"]
 [ext_resource type="Texture2D" uid="uid://uxckj4q35xtm" path="res://Runtime/Resource/FrameAnimation/robot_standing/robot_standing_04.png" id="5_e3jqy"]
 [ext_resource type="Texture2D" uid="uid://c0bht7lcky2ja" path="res://Runtime/Resource/FrameAnimation/robot_standing/robot_standing_05.png" id="6_qgddy"]
+[ext_resource type="Texture2D" uid="uid://d3xawxfkbiler" path="res://Runtime/Resource/FrameAnimation/swarm_walking/5.png" id="6_sab6o"]
 [ext_resource type="Texture2D" uid="uid://btkdtlcom8am8" path="res://Runtime/Resource/FrameAnimation/robot_standing/robot_standing_06.png" id="7_7beai"]
+[ext_resource type="Texture2D" uid="uid://dyeg7r472oso0" path="res://Runtime/Resource/FrameAnimation/swarm_walking/6.png" id="7_di3wq"]
 [ext_resource type="Texture2D" uid="uid://dr8xtixyy7vjm" path="res://Runtime/Resource/FrameAnimation/robot_standing/robot_standing_07.png" id="8_t83su"]
+[ext_resource type="Texture2D" uid="uid://brtswr28vhfi8" path="res://Runtime/Resource/FrameAnimation/swarm_walking/7.png" id="8_usgbk"]
 [ext_resource type="Texture2D" uid="uid://bqaqrh1ce42nd" path="res://Runtime/Resource/FrameAnimation/robot_standing/robot_standing_08.png" id="9_2yymw"]
+[ext_resource type="Texture2D" uid="uid://j2yaiowqdhnd" path="res://Runtime/Resource/FrameAnimation/swarm_walking/8.png" id="9_w7pph"]
+[ext_resource type="Texture2D" uid="uid://cvcq3biwj6w3n" path="res://Runtime/Resource/FrameAnimation/swarm_walking/9.png" id="10_n8x6a"]
 [ext_resource type="Texture2D" uid="uid://ce5jcilth551l" path="res://Runtime/Resource/FrameAnimation/robot_standing/robot_standing_09.png" id="10_wkjum"]
 [ext_resource type="Texture2D" uid="uid://cdprraw3kxltd" path="res://Runtime/Resource/FrameAnimation/robot_standing/robot_standing_10.png" id="11_wyj5v"]
 [ext_resource type="Texture2D" uid="uid://c7bvmiw7mwewx" path="res://Runtime/Resource/FrameAnimation/robot_standing/robot_standing_11.png" id="12_tp1sw"]
@@ -164,6 +174,59 @@
 [ext_resource type="Texture2D" uid="uid://dbf2r6p78e5bl" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_098.png" id="161_xtytj"]
 [ext_resource type="Texture2D" uid="uid://itb2rj7hyxku" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_099.png" id="162_dmlcj"]
 [ext_resource type="Texture2D" uid="uid://bwy6a1vupyhex" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_100.png" id="163_w21es"]
+[ext_resource type="Script" path="res://Runtime/Script/Manager/FatManager.gd" id="174_rqc2k"]
+[ext_resource type="Texture2D" uid="uid://bxhkqhmv20r82" path="res://Runtime/Resource/FrameAnimation/fat_fliping/1.png" id="174_sgvll"]
+[ext_resource type="Texture2D" uid="uid://cjvpl0j1krvx0" path="res://Runtime/Resource/FrameAnimation/fat_fliping/2.png" id="175_70uss"]
+[ext_resource type="Texture2D" uid="uid://c2h34lcp6ql46" path="res://Runtime/Resource/FrameAnimation/fat_fliping/3.png" id="176_nauda"]
+[ext_resource type="Texture2D" uid="uid://cqqpjc5i5nx1l" path="res://Runtime/Resource/FrameAnimation/fat_fliping/4.png" id="177_j3txa"]
+[ext_resource type="Texture2D" uid="uid://bu3gvicad6i3i" path="res://Runtime/Resource/FrameAnimation/fat_fliping/5.png" id="178_fpfgt"]
+[ext_resource type="Texture2D" uid="uid://b12t8kbmnia0m" path="res://Runtime/Resource/FrameAnimation/fat_fliping/6.png" id="179_dphlp"]
+[ext_resource type="Script" path="res://Runtime/Script/Manager/GlobalHUDManager.gd" id="180_6sgy0"]
+[ext_resource type="Texture2D" uid="uid://cd28qklrpi6yv" path="res://Runtime/Resource/FrameAnimation/fat_fliping/7.png" id="180_bxwhy"]
+[ext_resource type="Script" path="res://Runtime/Script/Manager/ScreenCameraManger.gd" id="184_d74i6"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3i4il"]
+normal = Vector2(0, 1)
+
+[sub_resource type="TileSet" id="TileSet_sjdhp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eu6gd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_n8x6a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3vyyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_e3p80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5ngw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7k0ru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sab6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_di3wq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_usgbk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_w7pph")
+}],
+"loop": true,
+"name": &"swarm_walking",
+"speed": 19.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgrl3"]
+size = Vector2(96, 93)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8v8w1"]
 animations = [{
@@ -667,6 +730,76 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mslyk"]
 size = Vector2(83, 148)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_q13pq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("174_sgvll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_70uss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_nauda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_j3txa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_fpfgt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_dphlp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_bxwhy")
+}],
+"loop": false,
+"name": &"fat_fliping",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2vg8a"]
+radius = 57.0
+
+[sub_resource type="Animation" id="Animation_cg16d"]
+resource_name = "fat_rotating_0"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 3.14159]
+}
+
+[sub_resource type="Animation" id="Animation_0kn2u"]
+resource_name = "fat_rotating_1"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [3.14159, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qiqvt"]
+_data = {
+"fat_rotating_0": SubResource("Animation_cg16d"),
+"fat_rotating_1": SubResource("Animation_0kn2u")
+}
+
 [node name="Root" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -677,8 +810,33 @@ expand_mode = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="TextureRect"]
 
+[node name="sky" type="CollisionShape2D" parent="TextureRect/StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_3i4il")
+
+[node name="TileMap" type="TileMap" parent="TextureRect/StaticBody2D"]
+tile_set = SubResource("TileSet_sjdhp")
+format = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TextureRect/StaticBody2D"]
+position = Vector2(-3, 1)
+build_mode = 1
+polygon = PackedVector2Array(1187, 0, 1188, 163, 1184, 175, 1168, 188, 1157, 191, 579, 191, 567, 197, 556, 207, 552, 215, 552, 624, 555, 634, 562, 644, 571, 651, 1433, 652, 1443, 656, 1450, 661, 1455, 669, 1458, 679, 1458, 742, 1455, 750, 1449, 758, 1439, 765, 873, 765, 854, 769, 842, 781, 840, 792, 840, 1128, 844, 1137, 851, 1145, 860, 1150, 1092, 1150, 1102, 1156, 1106, 1161, 1109, 1168, 1110, 1173, 1110, 1321, 1112, 1329, 1120, 1336, 1129, 1341, 1436, 1341, 1448, 1338, 1455, 1328, 1455, 1169, 1460, 1158, 1471, 1150, 1713, 1150, 1721, 1154, 1726, 1160, 1728, 1166, 1728, 1397, 1724, 1406, 1715, 1414, 1706, 1418, 1556, 1418, 1550, 1419, 1537, 1434, 1537, 1861, 1531, 1872, 1517, 1879, 1503, 1872, 1496, 1858, 1496, 1555, 1492, 1544, 1486, 1537, 1476, 1533, 781, 1533, 773, 1538, 766, 1546, 764, 1553, 764, 1865, 759, 1873, 752, 1877, 747, 1879, 547, 1880, 537, 1873, 531, 1863, 530, 1852, 531, 1474, 534, 1465, 542, 1459, 550, 1456, 663, 1456, 672, 1454, 681, 1445, 684, 1434, 684, 872, 680, 858, 670, 847, 659, 844, 511, 844, 499, 837, 491, 823, 492, 446, 484, 432, 470, 423, 173, 423, 156, 429, 147, 440, 145, 453, 145, 1863, 141, 1872, 130, 1879, 122, 1880, 41, 1880, 34, 1886, 29, 1892, 29, 2015, 31, 2022, 38, 2030, 49, 2033, 280, 2033, 289, 2029, 297, 2020, 298, 2011, 298, 596, 303, 587, 314, 579, 323, 580, 334, 590, 337, 600, 337, 974, 339, 984, 345, 991, 353, 995, 509, 995, 519, 1000, 525, 1007, 530, 1019, 530, 1290, 525, 1298, 519, 1303, 508, 1307, 394, 1307, 387, 1311, 380, 1318, 377, 1328, 376, 2015, 383, 2026, 393, 2032, 898, 2032, 909, 2028, 915, 2016, 916, 2005, 916, 1705, 921, 1696, 932, 1687, 1322, 1687, 1328, 1688, 1337, 1696, 1341, 1710, 1341, 2017, 1348, 2030, 1356, 2035, 1669, 2035, 1679, 2031, 1688, 2019, 1688, 1589, 1690, 1581, 1701, 1571, 1709, 1569, 1860, 1569, 1867, 1567, 1874, 1563, 1879, 1555, 1881, 1547, 1880, 1023, 1876, 1008, 1869, 1000, 1856, 997, 1331, 997, 1319, 1001, 1311, 1006, 1304, 1017, 1304, 1165, 1301, 1178, 1294, 1186, 1284, 1188, 1271, 1184, 1263, 1171, 1263, 1024, 1256, 1004, 1241, 996, 1009, 996, 1001, 989, 994, 977, 994, 937, 1001, 926, 1016, 917, 1592, 917, 1604, 912, 1611, 902, 1612, 893, 1612, 535, 1608, 520, 1599, 507, 1585, 499, 729, 499, 714, 491, 706, 477, 704, 455, 704, 373, 712, 359, 727, 348, 740, 343, 1307, 344, 1321, 342, 1332, 332, 1339, 319, 1340, 0)
+
+[node name="player" type="CharacterBody2D" parent="."]
+position = Vector2(1253, 93)
+script = ExtResource("2_2covn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player"]
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_eu6gd")
+animation = &"swarm_walking"
+frame = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+shape = SubResource("RectangleShape2D_wgrl3")
+
 [node name="robot" type="CharacterBody2D" parent="."]
-position = Vector2(1048, 578)
+position = Vector2(1430, 389)
 safe_margin = 0.001
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="robot"]
@@ -686,15 +844,35 @@ texture_filter = 6
 position = Vector2(2.08165e-12, 2.08165e-12)
 scale = Vector2(0.164767, 0.164767)
 sprite_frames = SubResource("SpriteFrames_8v8w1")
-animation = &"robot_standing"
+animation = &"robot_walking"
 autoplay = "robot_standing"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="robot"]
 position = Vector2(2.08165e-12, 2.08165e-12)
 shape = SubResource("RectangleShape2D_mslyk")
-disabled = true
+
+[node name="fat" type="CharacterBody2D" parent="."]
+position = Vector2(1546, 387)
+rotation = 3.14159
+script = ExtResource("174_rqc2k")
+
+[node name="flip_anim" type="AnimatedSprite2D" parent="fat"]
+position = Vector2(3.05176e-05, 0)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_q13pq")
+animation = &"fat_fliping"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fat"]
+position = Vector2(-4, 7)
+shape = SubResource("CircleShape2D_2vg8a")
+
+[node name="rotate_anim" type="AnimationPlayer" parent="fat"]
+libraries = {
+"": SubResource("AnimationLibrary_qiqvt")
+}
 
 [node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("180_6sgy0")
 
 [node name="Label_FPS" type="Label" parent="HUD"]
 offset_right = 55.0
@@ -705,3 +883,11 @@ text = "FPS: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("64_mjafk")
+
+[node name="ScreenCamera" type="Camera2D" parent="."]
+position = Vector2(957, 540)
+script = ExtResource("184_d74i6")
+target = NodePath("../player")
+
+[connection signal="animation_finished" from="fat/flip_anim" to="fat" method="_flip_anim_finish"]
+[connection signal="animation_finished" from="fat/rotate_anim" to="fat" method="_rotate_anim1_finish"]
