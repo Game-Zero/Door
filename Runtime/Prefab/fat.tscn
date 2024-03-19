@@ -1,0 +1,120 @@
+[gd_scene load_steps=19 format=3 uid="uid://omevqqnc5ybq"]
+
+[ext_resource type="Script" path="res://Runtime/Script/Manager/FatManager.gd" id="1_hvice"]
+[ext_resource type="Texture2D" uid="uid://b1n0lpkjset5c" path="res://Runtime/Resource/FrameAnimation/fat_being_eaten/1.png" id="2_c82e4"]
+[ext_resource type="Texture2D" uid="uid://bxhkqhmv20r82" path="res://Runtime/Resource/FrameAnimation/fat_fliping/1.png" id="2_ujfwx"]
+[ext_resource type="Texture2D" uid="uid://cjvpl0j1krvx0" path="res://Runtime/Resource/FrameAnimation/fat_fliping/2.png" id="3_4quli"]
+[ext_resource type="Texture2D" uid="uid://cni1inanq6qcf" path="res://Runtime/Resource/FrameAnimation/fat_being_eaten/2.png" id="3_hqjq3"]
+[ext_resource type="Texture2D" uid="uid://i7nahtryroaq" path="res://Runtime/Resource/FrameAnimation/fat_being_eaten/3.png" id="4_gsic5"]
+[ext_resource type="Texture2D" uid="uid://c2h34lcp6ql46" path="res://Runtime/Resource/FrameAnimation/fat_fliping/3.png" id="4_re3yy"]
+[ext_resource type="Texture2D" uid="uid://cqqpjc5i5nx1l" path="res://Runtime/Resource/FrameAnimation/fat_fliping/4.png" id="5_ddil5"]
+[ext_resource type="Texture2D" uid="uid://i8wi6ri4et8t" path="res://Runtime/Resource/FrameAnimation/fat_being_eaten/4.png" id="5_xcq87"]
+[ext_resource type="Texture2D" uid="uid://bu3gvicad6i3i" path="res://Runtime/Resource/FrameAnimation/fat_fliping/5.png" id="6_7vqci"]
+[ext_resource type="Texture2D" uid="uid://bjeiiwq7mqm8q" path="res://Runtime/Resource/FrameAnimation/fat_being_eaten/5.png" id="6_22o26"]
+[ext_resource type="Texture2D" uid="uid://b12t8kbmnia0m" path="res://Runtime/Resource/FrameAnimation/fat_fliping/6.png" id="7_4flri"]
+[ext_resource type="Texture2D" uid="uid://boe30bhmqdhrn" path="res://Runtime/Resource/FrameAnimation/fat_being_eaten/6.png" id="7_if7d1"]
+[ext_resource type="Texture2D" uid="uid://cd28qklrpi6yv" path="res://Runtime/Resource/FrameAnimation/fat_fliping/7.png" id="8_hdnrr"]
+[ext_resource type="Texture2D" uid="uid://wmm6ciavveyx" path="res://Runtime/Resource/FrameAnimation/fat_being_eaten/7.png" id="8_ikevo"]
+[ext_resource type="Texture2D" uid="uid://ctbx8wy1lijdo" path="res://Runtime/Resource/FrameAnimation/fat_being_eaten/8.png" id="9_4bl36"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q13pq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c82e4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hqjq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gsic5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xcq87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_22o26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_if7d1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ikevo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4bl36")
+}],
+"loop": false,
+"name": &"fat_being_eaten",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ujfwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4quli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_re3yy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ddil5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7vqci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4flri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hdnrr")
+}],
+"loop": false,
+"name": &"fat_fliping_0",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_hdnrr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4flri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7vqci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ddil5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_re3yy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4quli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ujfwx")
+}],
+"loop": false,
+"name": &"fat_fliping_1",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2vg8a"]
+radius = 57.0
+
+[node name="fat" type="CharacterBody2D"]
+script = ExtResource("1_hvice")
+
+[node name="anim" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3.99997, 0)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_q13pq")
+animation = &"fat_fliping_0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 7)
+shape = SubResource("CircleShape2D_2vg8a")
+
+[connection signal="animation_finished" from="anim" to="." method="_flip_anim_finish"]

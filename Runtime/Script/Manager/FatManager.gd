@@ -1,22 +1,56 @@
 extends CharacterBody2D
 
-@onready var flip_anim = $flip_anim
-@onready var rotate_anim = $rotate_anim
+@onready var anim = $anim
 
 var id = 0
+var bIsRotatePause = false
+var lastRotation = 1
+var palyerDirection
+var eatenCallback
 
 func _ready():
-	flip_anim.stop()
-	flip_anim.frame = 0
-	rotate_anim.play("fat_rotating_" + str(id))
+	anim.animation = "fat_fliping_0"
+	anim.frame = 0
 	pass
+
+func _physics_process(delta):
+	if !bIsRotatePause:
+		rotate(delta * 2 * PI / 360 * 72)
+	
+	var rotation = transform.get_rotation()
+	var flag = rotation / absf(rotation)
+	
+	if rotation * lastRotation < 0:
+		bIsRotatePause = true
+		anim.play("fat_fliping_" + str(id))
+		id ^= 1
+  
+	lastRotation = rotation
+	pass
+
+func remove_self():
+	if get_parent():
+		get_parent().remove_child(self)
+		
+func start_being_eaten(direction: int, callback):
+	bIsRotatePause = true
+	eatenCallback = callback
+	palyerDirection = direction
+	call_deferred("being_eaten")
+
+func being_eaten():
+	rotation = 0
+	if palyerDirection > 0:
+		anim.scale *= Vector2(-1, 1)
+	anim.play("fat_being_eaten")
+
 
 func _flip_anim_finish():
-	id ^= 1
-	rotate_anim.play("fat_rotating_" + str(id))
-	pass
+	if anim.animation.begins_with("fat_fliping"):	
+		bIsRotatePause = false
+	elif anim.animation == "fat_being_eaten":
+		eatenCallback.call()
+		remove_self()
 
-func _rotate_anim1_finish(anim_name: StringName):
-	print("_rotate_anim_finish: " + anim_name)
-	flip_anim.play("fat_fliping")
-	pass
+
+
