@@ -105,6 +105,8 @@ animations = [{
 radius = 57.0
 
 [node name="fat" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 7
 script = ExtResource("1_hvice")
 
 [node name="anim" type="AnimatedSprite2D" parent="."]

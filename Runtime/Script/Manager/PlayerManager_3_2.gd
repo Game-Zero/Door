@@ -6,36 +6,50 @@ const JUMP_VELOCITY = -400.0
 
 @onready var player = $"."
 @onready var animated_sprite_2d = $AnimatedSprite2D
-@onready var dialog = $AcceptDialog
+@onready var collision_shape = $CollisionShape2D
+@onready var rays = [$ray_left, $ray_mid, $ray_right]
 
 var bCanControl = true
+var bGravityEnable = true
 var bFatEatenAnimPlayFinished = false
 var bPlayerEatPlayFinished = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var gravity_direct = 1
+var direction = -1
+var dialog
+
+func _ready():
+	dialog = AcceptDialog.new()
+	add_child(dialog)
+	dialog.size.x = 300
+	dialog.dialog_text = "GameOver."
+	dialog.title = "提示"
+	dialog.get_ok_button().pressed.connect(func():get_tree().reload_current_scene())
 
 func _physics_process(delta):
 	if !bCanControl:
 		return
 	
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y += gravity * gravity_direct * delta
+	if bGravityEnable:
+		# Add the gravity.
+		if not is_on_floor():
+			velocity.y += gravity * gravity_direct * delta
 
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y += JUMP_VELOCITY * gravity_direct
-		gravity_direct *= -1
-		animated_sprite_2d.flip_v = !animated_sprite_2d.flip_v
-		set_up_direction(Vector2(0, gravity_direct * -1))
-
+		# Handle jump.
+		if Input.is_action_just_pressed("player_jump") and is_on_floor():
+			velocity.y += JUMP_VELOCITY * gravity_direct
+			gravity_direct *= -1
+			scale.y *= -1  
+			set_up_direction(Vector2(0, gravity_direct * -1))
+	else:
+		velocity.y = 0
 	#print("gravity: ", gravity, ", velocity.y: ", velocity.y, ", gravity_direct: ", gravity_direct)
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("ui_left", "ui_right")
+	direction = Input.get_axis("player_left", "player_right")
 	if direction:
 		velocity.x = direction * SPEED
 		if direction < 0:
@@ -46,6 +60,7 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	if velocity.x != 0:
+		animated_sprite_2d.speed_scale = abs(direction)
 		animated_sprite_2d.play("swarm_walking")
 	else:
 		animated_sprite_2d.pause()
@@ -57,11 +72,26 @@ func _physics_process(delta):
 		var body = collision.get_collider()
 		if body.name.begins_with("fat"):
 			bCanControl = false
+			if global_position.y != body.global_position.y:
+				var tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUINT)
+				var delta_y = 0
+				if gravity_direct < 0:
+					delta_y = 20
+				tween.tween_property(body, "global_position:y", global_position.y - delta_y, 1)
 			var callback = func():
 				bFatEatenAnimPlayFinished = true
 				try_resume_contrl()
 			body.start_being_eaten(direction, callback)
 			animated_sprite_2d.play("swarm_eating")
+		elif body.name.begins_with("robot"):
+			dead(body)
+
+func dead(robot):
+	bCanControl = false
+	if robot:
+		robot.set_physics_process(false)
+		robot.anim.play("robot_standing")
+	dialog.popup_centered()
 
 func try_resume_contrl():
 	if bFatEatenAnimPlayFinished and bPlayerEatPlayFinished:
@@ -75,3 +105,8 @@ func animation_finished():
 		animated_sprite_2d.animation = "swarm_walking"
 		try_resume_contrl()
 
+func get_ray_clliding_robot():
+	for ray in rays:
+		if ray.is_colliding():
+			return ray.get_collider()
+	return null

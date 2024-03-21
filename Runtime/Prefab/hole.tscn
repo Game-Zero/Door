@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://brg0ell7yg5nl"]
+
+[ext_resource type="Script" path="res://Runtime/Script/Manager/hole_3_2.gd" id="1_06vv3"]
+[ext_resource type="Texture2D" uid="uid://c7clkkxn054gp" path="res://Runtime/Resource/Background/hole_mask.png" id="1_idw81"]
+
+[node name="hole" type="Node2D"]
+script = ExtResource("1_06vv3")
+
+[node name="HoleMask" type="Sprite2D" parent="."]
+scale = Vector2(0.157, 0.157)
+texture = ExtResource("1_idw81")
+
+[node name="ray_left" type="RayCast2D" parent="."]
+position = Vector2(-76, 50)
+collision_mask = 2
+
+[node name="ray_mid" type="RayCast2D" parent="."]
+position = Vector2(0, 50)
+collision_mask = 2
+
+[node name="ray_right" type="RayCast2D" parent="."]
+position = Vector2(76, 50)
+collision_mask = 2

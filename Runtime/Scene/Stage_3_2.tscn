@@ -1,32 +1,80 @@
-[gd_scene load_steps=36 format=3 uid="uid://dqf7dekvholxn"]
+[gd_scene load_steps=84 format=3 uid="uid://dqf7dekvholxn"]
 
-[ext_resource type="Texture2D" uid="uid://dmhngtjyqs42f" path="res://Runtime/Resource/FrameAnimation/swarm_walking/1.png" id="2_3vyyt"]
+[ext_resource type="PackedScene" uid="uid://brg0ell7yg5nl" path="res://Runtime/Prefab/hole.tscn" id="2_53d5x"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/PlayerManager_3_2.gd" id="2_vn8ns"]
-[ext_resource type="Texture2D" uid="uid://fy5pxgtmyqih" path="res://Runtime/Resource/FrameAnimation/swarm_walking/2.png" id="3_e3p80"]
 [ext_resource type="Texture2D" uid="uid://bjpptjyll5rtq" path="res://Runtime/Resource/FrameAnimation/swarm_eating/1.png" id="3_tofwr"]
-[ext_resource type="Texture2D" uid="uid://d17aby680fjnr" path="res://Runtime/Resource/FrameAnimation/swarm_walking/3.png" id="4_5ngw7"]
 [ext_resource type="Texture2D" uid="uid://cobwx1iv46f5g" path="res://Runtime/Resource/FrameAnimation/swarm_eating/2.png" id="4_dfw1q"]
-[ext_resource type="Texture2D" uid="uid://h1rkptnsv3pn" path="res://Runtime/Resource/FrameAnimation/swarm_walking/4.png" id="5_7k0ru"]
 [ext_resource type="Texture2D" uid="uid://gddqlnepd36j" path="res://Runtime/Resource/FrameAnimation/swarm_eating/3.png" id="5_g4l3c"]
-[ext_resource type="Texture2D" uid="uid://d3xawxfkbiler" path="res://Runtime/Resource/FrameAnimation/swarm_walking/5.png" id="6_sab6o"]
 [ext_resource type="Texture2D" uid="uid://ch4k4bob6jyv6" path="res://Runtime/Resource/FrameAnimation/swarm_eating/4.png" id="6_t7lb2"]
-[ext_resource type="Texture2D" uid="uid://dyeg7r472oso0" path="res://Runtime/Resource/FrameAnimation/swarm_walking/6.png" id="7_di3wq"]
 [ext_resource type="Texture2D" uid="uid://o5r0mjyhtj88" path="res://Runtime/Resource/FrameAnimation/swarm_eating/5.png" id="7_ir7af"]
 [ext_resource type="Texture2D" uid="uid://bnbf4allk3lqp" path="res://Runtime/Resource/FrameAnimation/swarm_eating/6.png" id="8_tbdm4"]
-[ext_resource type="Texture2D" uid="uid://brtswr28vhfi8" path="res://Runtime/Resource/FrameAnimation/swarm_walking/7.png" id="8_usgbk"]
 [ext_resource type="Texture2D" uid="uid://do7syip50o5ba" path="res://Runtime/Resource/FrameAnimation/swarm_eating/7.png" id="9_l7dhm"]
-[ext_resource type="Texture2D" uid="uid://j2yaiowqdhnd" path="res://Runtime/Resource/FrameAnimation/swarm_walking/8.png" id="9_w7pph"]
 [ext_resource type="Texture2D" uid="uid://bonw22kbmls2u" path="res://Runtime/Resource/FrameAnimation/swarm_eating/8.png" id="10_7k2oc"]
-[ext_resource type="Texture2D" uid="uid://cvcq3biwj6w3n" path="res://Runtime/Resource/FrameAnimation/swarm_walking/9.png" id="10_n8x6a"]
 [ext_resource type="Texture2D" uid="uid://l1tnn13rnqdx" path="res://Runtime/Resource/FrameAnimation/swarm_eating/9.png" id="11_p2mge"]
 [ext_resource type="Texture2D" uid="uid://ci8mlqi1nq1sd" path="res://Runtime/Resource/FrameAnimation/swarm_eating/10.png" id="12_1oa61"]
 [ext_resource type="PackedScene" uid="uid://ugbp7lw4pwpc" path="res://Runtime/Prefab/robot.tscn" id="12_yw5qv"]
 [ext_resource type="Texture2D" uid="uid://tprhsos408n" path="res://Runtime/Resource/FrameAnimation/swarm_eating/11.png" id="13_1653n"]
 [ext_resource type="Texture2D" uid="uid://c65n55kecv8e2" path="res://Runtime/Resource/FrameAnimation/swarm_eating/12.png" id="14_iq1kh"]
 [ext_resource type="Texture2D" uid="uid://dsjdsq2x7s7yt" path="res://Runtime/Resource/FrameAnimation/swarm_eating/13.png" id="15_xdcvk"]
+[ext_resource type="Texture2D" uid="uid://bylesybfvu4fh" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_00.png" id="16_0e6a4"]
+[ext_resource type="Texture2D" uid="uid://tf5mm77rrdey" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_01.png" id="17_olafk"]
+[ext_resource type="Texture2D" uid="uid://c1g1vhpmhb4l7" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_02.png" id="18_t0ilm"]
+[ext_resource type="Texture2D" uid="uid://dycxbgaxcql3q" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_03.png" id="19_owh2c"]
+[ext_resource type="Texture2D" uid="uid://7jcujqaxlhfs" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_04.png" id="20_d3ioj"]
+[ext_resource type="Texture2D" uid="uid://djq4v1rqx26sr" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_05.png" id="21_58bcq"]
+[ext_resource type="Texture2D" uid="uid://ds5otltteyii4" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_06.png" id="22_c8ney"]
+[ext_resource type="Texture2D" uid="uid://ddkk3uthxcsey" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_07.png" id="23_1jr33"]
+[ext_resource type="Texture2D" uid="uid://bms4yp1ah4d2m" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_08.png" id="24_2xsa1"]
+[ext_resource type="Texture2D" uid="uid://d35t53mu1db3s" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_09.png" id="25_i4fnj"]
+[ext_resource type="Texture2D" uid="uid://bs2te6u020pe5" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_10.png" id="26_ke1dk"]
+[ext_resource type="Texture2D" uid="uid://cpe8auymvopag" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_11.png" id="27_qtm6e"]
+[ext_resource type="Texture2D" uid="uid://ccmm6r1caxwob" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_12.png" id="28_rn14c"]
+[ext_resource type="Texture2D" uid="uid://d2228fumadyjs" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_13.png" id="29_j0biu"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/Destination_3_2.gd" id="30_4lk77"]
+[ext_resource type="Texture2D" uid="uid://v3cdbitsiceg" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_14.png" id="30_jrsjm"]
+[ext_resource type="Texture2D" uid="uid://c0jr78g7ou0ph" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_15.png" id="31_7v6ed"]
+[ext_resource type="Texture2D" uid="uid://dcik7suacql2t" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_16.png" id="32_i2abu"]
+[ext_resource type="Texture2D" uid="uid://d0ug2kb5llg7" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_17.png" id="33_mtjpc"]
+[ext_resource type="Texture2D" uid="uid://un582sbtdf08" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_18.png" id="34_5d2lo"]
+[ext_resource type="Texture2D" uid="uid://cvokdgf738a0s" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_19.png" id="35_4h78s"]
+[ext_resource type="Texture2D" uid="uid://ba3ffcs0fwsrf" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_20.png" id="36_d7h0p"]
+[ext_resource type="Texture2D" uid="uid://cyi5sx2hsilgy" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_21.png" id="37_eanst"]
+[ext_resource type="Texture2D" uid="uid://b1ldxgpenocoh" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_22.png" id="38_6u34w"]
+[ext_resource type="Texture2D" uid="uid://dkkin7e8gmamb" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_23.png" id="39_ypsw6"]
+[ext_resource type="Texture2D" uid="uid://betkaq11270r0" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_24.png" id="40_jelfh"]
+[ext_resource type="Texture2D" uid="uid://cu72enj6a502" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_25.png" id="41_hfli3"]
+[ext_resource type="Texture2D" uid="uid://bfvnad6q0223r" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_26.png" id="42_w35tf"]
+[ext_resource type="Texture2D" uid="uid://dkjxkmoplbg4i" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_27.png" id="43_qap0l"]
+[ext_resource type="Texture2D" uid="uid://crfen3ounkma0" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_28.png" id="44_4o2d7"]
+[ext_resource type="Texture2D" uid="uid://h8rpfkufkf4i" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_29.png" id="45_43c8b"]
+[ext_resource type="Texture2D" uid="uid://bwjexn6fbvp05" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_30.png" id="46_34d66"]
+[ext_resource type="Texture2D" uid="uid://dr7aadskgjkjr" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_31.png" id="47_mkw5i"]
+[ext_resource type="Texture2D" uid="uid://bap6ic3iugh0d" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_32.png" id="48_evq68"]
+[ext_resource type="Texture2D" uid="uid://dqepu4ox6aoxe" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_33.png" id="49_37igg"]
+[ext_resource type="Texture2D" uid="uid://cwhu7euk0c45c" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_34.png" id="50_nplqe"]
+[ext_resource type="Texture2D" uid="uid://yk0wpinotsok" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_35.png" id="51_8ei2y"]
+[ext_resource type="Texture2D" uid="uid://mw006w71jcv8" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_36.png" id="52_rixiv"]
+[ext_resource type="Texture2D" uid="uid://c36mhgixkurhn" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_37.png" id="53_mluxc"]
+[ext_resource type="Texture2D" uid="uid://deec8523b43d0" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_38.png" id="54_nrdv1"]
+[ext_resource type="Texture2D" uid="uid://beumdbpr3lmw2" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_39.png" id="55_fyqyb"]
+[ext_resource type="Texture2D" uid="uid://bnq3othjaamm2" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_40.png" id="56_svxn4"]
+[ext_resource type="Texture2D" uid="uid://1tn6niwuu2hw" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_41.png" id="57_go5bh"]
+[ext_resource type="Texture2D" uid="uid://4hqvcfyuc6cr" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_42.png" id="58_2nkg7"]
+[ext_resource type="Texture2D" uid="uid://uvc8uothjru7" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_43.png" id="59_hlhv5"]
+[ext_resource type="Texture2D" uid="uid://b8odr2y1r4edk" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_44.png" id="60_6ywo0"]
+[ext_resource type="Texture2D" uid="uid://c8t4o5wrrgdna" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_45.png" id="61_xl116"]
+[ext_resource type="Texture2D" uid="uid://2bkxhscy003s" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_46.png" id="62_cj13n"]
 [ext_resource type="Texture2D" uid="uid://dbsvjppft3b4u" path="res://Runtime/Resource/Background/stage3-2.png" id="62_mpk0e"]
+[ext_resource type="Texture2D" uid="uid://vhiqrlb0rtev" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_47.png" id="63_yfb5p"]
+[ext_resource type="Texture2D" uid="uid://faffx8td82c6" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_48.png" id="64_2sjp4"]
 [ext_resource type="Script" path="res://Runtime/Script/UI/Label_FPS.gd" id="64_mjafk"]
+[ext_resource type="Texture2D" uid="uid://tgym7f3fd6ua" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_49.png" id="65_3k4lv"]
+[ext_resource type="Texture2D" uid="uid://cgj8uy82guacw" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_50.png" id="66_5sih6"]
+[ext_resource type="Texture2D" uid="uid://ch1vuwvf3kogx" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_51.png" id="67_hiut3"]
+[ext_resource type="Texture2D" uid="uid://bf7wficywg6i" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_52.png" id="68_1lm4d"]
+[ext_resource type="Texture2D" uid="uid://bj3cgcpf410uy" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_53.png" id="69_do1im"]
+[ext_resource type="Texture2D" uid="uid://dlog68ew1heh6" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_54.png" id="70_vu0ei"]
+[ext_resource type="Texture2D" uid="uid://8fw4h2sj8uhq" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_55.png" id="71_pinlh"]
 [ext_resource type="PackedScene" uid="uid://omevqqnc5ybq" path="res://Runtime/Prefab/fat.tscn" id="174_eeac7"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/GlobalHUDManager.gd" id="180_6sgy0"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/ScreenCameraManger.gd" id="184_d74i6"]
@@ -82,35 +130,176 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_n8x6a")
+"texture": ExtResource("16_0e6a4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_3vyyt")
+"texture": ExtResource("17_olafk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_e3p80")
+"texture": ExtResource("18_t0ilm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_5ngw7")
+"texture": ExtResource("19_owh2c")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_7k0ru")
+"texture": ExtResource("20_d3ioj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_sab6o")
+"texture": ExtResource("21_58bcq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_di3wq")
+"texture": ExtResource("22_c8ney")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_usgbk")
+"texture": ExtResource("23_1jr33")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_w7pph")
+"texture": ExtResource("24_2xsa1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_i4fnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ke1dk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_qtm6e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_rn14c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_j0biu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_jrsjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_7v6ed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_i2abu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_mtjpc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_5d2lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_4h78s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_d7h0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_eanst")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_6u34w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_ypsw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_jelfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_hfli3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_w35tf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_qap0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_4o2d7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_43c8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_34d66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_mkw5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_evq68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_37igg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_nplqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_8ei2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_rixiv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_mluxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_nrdv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_fyqyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_svxn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_go5bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_2nkg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_hlhv5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_6ywo0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_xl116")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_cj13n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_yfb5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_2sjp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_3k4lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_5sih6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_hiut3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_1lm4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_do1im")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_vu0ei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_pinlh")
 }],
-"loop": true,
+"loop": false,
 "name": &"swarm_walking",
-"speed": 19.0
+"speed": 60.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wgrl3"]
@@ -130,6 +319,7 @@ texture = ExtResource("62_mpk0e")
 expand_mode = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="TextureRect"]
+collision_mask = 4278190087
 
 [node name="sky" type="CollisionShape2D" parent="TextureRect/StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_3i4il")
@@ -140,13 +330,17 @@ build_mode = 1
 polygon = PackedVector2Array(1187, 0, 1188, 163, 1184, 175, 1168, 188, 1157, 191, 579, 191, 567, 197, 556, 207, 552, 215, 552, 624, 555, 634, 562, 644, 571, 651, 1433, 652, 1443, 656, 1450, 661, 1455, 669, 1458, 679, 1458, 742, 1455, 750, 1449, 758, 1439, 765, 873, 765, 854, 769, 842, 781, 840, 792, 840, 1128, 844, 1137, 851, 1145, 860, 1150, 1092, 1150, 1102, 1156, 1106, 1161, 1109, 1168, 1110, 1173, 1110, 1321, 1112, 1329, 1120, 1336, 1129, 1341, 1436, 1341, 1448, 1338, 1455, 1328, 1455, 1169, 1460, 1158, 1471, 1150, 1713, 1150, 1721, 1154, 1726, 1160, 1728, 1166, 1728, 1397, 1724, 1406, 1715, 1414, 1706, 1418, 1556, 1418, 1550, 1419, 1537, 1434, 1537, 1861, 1531, 1872, 1517, 1879, 1503, 1872, 1496, 1858, 1496, 1555, 1492, 1544, 1486, 1537, 1476, 1533, 781, 1533, 773, 1538, 766, 1546, 764, 1553, 764, 1865, 759, 1873, 752, 1877, 747, 1879, 547, 1880, 537, 1873, 531, 1863, 530, 1852, 531, 1474, 534, 1465, 542, 1459, 550, 1456, 663, 1456, 672, 1454, 681, 1445, 684, 1434, 684, 872, 680, 858, 670, 847, 659, 844, 511, 844, 499, 837, 491, 823, 492, 446, 484, 432, 470, 423, 173, 423, 156, 429, 147, 440, 145, 453, 145, 1863, 141, 1872, 130, 1879, 122, 1880, 41, 1880, 34, 1886, 29, 1892, 29, 2015, 31, 2022, 38, 2030, 49, 2033, 280, 2033, 289, 2029, 297, 2020, 298, 2011, 298, 596, 303, 587, 314, 579, 323, 580, 334, 590, 337, 600, 337, 974, 339, 984, 345, 991, 353, 995, 509, 995, 519, 1000, 525, 1007, 530, 1019, 530, 1290, 525, 1298, 519, 1303, 508, 1307, 394, 1307, 387, 1311, 380, 1318, 377, 1328, 376, 2015, 383, 2026, 393, 2032, 898, 2032, 909, 2028, 915, 2016, 916, 2005, 916, 1705, 921, 1696, 932, 1687, 1322, 1687, 1328, 1688, 1337, 1696, 1341, 1710, 1341, 2017, 1348, 2030, 1356, 2035, 1669, 2035, 1679, 2031, 1688, 2019, 1688, 1589, 1690, 1581, 1701, 1571, 1709, 1569, 1860, 1569, 1867, 1567, 1874, 1563, 1879, 1555, 1881, 1547, 1880, 1023, 1876, 1008, 1869, 1000, 1856, 997, 1331, 997, 1319, 1001, 1311, 1006, 1304, 1017, 1304, 1165, 1301, 1178, 1294, 1186, 1284, 1188, 1271, 1184, 1263, 1171, 1263, 1024, 1256, 1004, 1241, 996, 1009, 996, 1001, 989, 994, 977, 994, 937, 1001, 926, 1016, 917, 1592, 917, 1604, 912, 1611, 902, 1612, 893, 1612, 535, 1608, 520, 1599, 507, 1585, 499, 729, 499, 714, 491, 706, 477, 704, 455, 704, 373, 712, 359, 727, 348, 740, 343, 1307, 344, 1321, 342, 1332, 332, 1339, 319, 1340, 0)
 
 [node name="player" type="CharacterBody2D" parent="."]
-position = Vector2(1253, 93)
+position = Vector2(1261, 62)
+collision_layer = 2
+collision_mask = 7
 script = ExtResource("2_vn8ns")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player"]
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_eu6gd")
 animation = &"swarm_walking"
+frame = 55
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 shape = SubResource("RectangleShape2D_wgrl3")
@@ -189,21 +383,68 @@ position = Vector2(29, -46)
 rotation = -1.5708
 shape = SubResource("SeparationRayShape2D_lcfr4")
 
-[node name="robot" parent="." instance=ExtResource("12_yw5qv")]
-position = Vector2(1540, 336)
+[node name="ray_left" type="RayCast2D" parent="player"]
+position = Vector2(-48, -46)
+scale = Vector2(-1, -1)
+collision_mask = 4
 
-[node name="HUD" type="CanvasLayer" parent="."]
-script = ExtResource("180_6sgy0")
+[node name="ray_mid" type="RayCast2D" parent="player"]
+position = Vector2(-1, -46)
+scale = Vector2(-1, -1)
+collision_mask = 4
 
-[node name="Label_FPS" type="Label" parent="HUD"]
-offset_right = 55.0
-offset_bottom = 23.0
-theme_override_colors/font_color = Color(0, 1, 0, 1)
-theme_override_colors/font_shadow_color = Color(0.113725, 0.54902, 0.243137, 1)
-text = "FPS: 0"
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("64_mjafk")
+[node name="ray_right" type="RayCast2D" parent="player"]
+position = Vector2(47, -46)
+scale = Vector2(-1, -1)
+collision_mask = 4
+
+[node name="holes" type="Node2D" parent="."]
+
+[node name="hole_0" parent="holes" instance=ExtResource("2_53d5x")]
+position = Vector2(886, 138)
+
+[node name="hole_1" parent="holes" instance=ExtResource("2_53d5x")]
+position = Vector2(1201, 446)
+
+[node name="hole_2" parent="holes" instance=ExtResource("2_53d5x")]
+position = Vector2(695, 705)
+scale = Vector2(1, -1)
+
+[node name="hole_3" parent="holes" instance=ExtResource("2_53d5x")]
+position = Vector2(313, 371)
+
+[node name="hole_4" parent="holes" instance=ExtResource("2_53d5x")]
+position = Vector2(666, 1826)
+
+[node name="hole_5" parent="holes" instance=ExtResource("2_53d5x")]
+position = Vector2(978, 1204)
+scale = Vector2(1, -1)
+
+[node name="hole_6" parent="holes" instance=ExtResource("2_53d5x")]
+position = Vector2(1188, 1740)
+scale = Vector2(1, -1)
+
+[node name="hole_7" parent="holes" instance=ExtResource("2_53d5x")]
+position = Vector2(1593, 1202)
+scale = Vector2(1, -1)
+
+[node name="robots" type="Node2D" parent="."]
+position = Vector2(1286, 62)
+
+[node name="robot_0" parent="robots" instance=ExtResource("12_yw5qv")]
+position = Vector2(-201, 206)
+
+[node name="robot_1" parent="robots" instance=ExtResource("12_yw5qv")]
+position = Vector2(-533, 514)
+
+[node name="robot_2" parent="robots" instance=ExtResource("12_yw5qv")]
+position = Vector2(235, 1014)
+
+[node name="robot_3" parent="robots" instance=ExtResource("12_yw5qv")]
+position = Vector2(-446, 1894)
+
+[node name="robot_4" parent="robots" instance=ExtResource("12_yw5qv")]
+position = Vector2(-256, 1548)
 
 [node name="ScreenCamera" type="Camera2D" parent="."]
 position = Vector2(957, 540)
@@ -213,7 +454,7 @@ target = NodePath("../player")
 [node name="fats" type="Node2D" parent="."]
 
 [node name="fat_0" parent="fats" instance=ExtResource("174_eeac7")]
-position = Vector2(645, 267)
+position = Vector2(621, 249)
 
 [node name="fat_1" parent="fats" instance=ExtResource("174_eeac7")]
 position = Vector2(1520, 566)
@@ -241,6 +482,19 @@ script = ExtResource("30_4lk77")
 
 [node name="destination" type="CollisionShape2D" parent="destination/destination"]
 shape = SubResource("RectangleShape2D_o0f2e")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("180_6sgy0")
+
+[node name="Label_FPS" type="Label" parent="HUD"]
+offset_right = 55.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.113725, 0.54902, 0.243137, 1)
+text = "FPS: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("64_mjafk")
 
 [connection signal="animation_finished" from="player/AnimatedSprite2D" to="player" method="animation_finished"]
 [connection signal="body_entered" from="destination/destination" to="destination" method="body_entered"]

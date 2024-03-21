@@ -44,7 +44,6 @@ func being_eaten():
 		anim.scale *= Vector2(-1, 1)
 	anim.play("fat_being_eaten")
 
-
 func _flip_anim_finish():
 	if anim.animation.begins_with("fat_fliping"):	
 		bIsRotatePause = false

@@ -1,6 +1,7 @@
-[gd_scene load_steps=165 format=3 uid="uid://ugbp7lw4pwpc"]
+[gd_scene load_steps=166 format=3 uid="uid://ugbp7lw4pwpc"]
 
 [ext_resource type="Texture2D" uid="uid://0yrpisinw2s1" path="res://Runtime/Resource/FrameAnimation/robot_standing/robot_standing_00.png" id="1_sq55p"]
+[ext_resource type="Script" path="res://Runtime/Script/Manager/robot_3_2.gd" id="1_xidbv"]
 [ext_resource type="Texture2D" uid="uid://db2wlnh87ljs7" path="res://Runtime/Resource/FrameAnimation/robot_standing/robot_standing_01.png" id="2_ig2yy"]
 [ext_resource type="Texture2D" uid="uid://b5agadj7v73ff" path="res://Runtime/Resource/FrameAnimation/robot_standing/robot_standing_02.png" id="3_y4iqy"]
 [ext_resource type="Texture2D" uid="uid://d2l5utjgjkkw0" path="res://Runtime/Resource/FrameAnimation/robot_standing/robot_standing_03.png" id="4_dk54r"]
@@ -662,20 +663,76 @@ animations = [{
 "speed": 60.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mslyk"]
-size = Vector2(83, 148)
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_kc5dt"]
 
 [node name="robot" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 5
 safe_margin = 0.001
+script = ExtResource("1_xidbv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 1)
+polygon = PackedVector2Array(-42, -74, 42, -74, 42, 74, -42, 74)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 6
 position = Vector2(2.08165e-12, 2.08165e-12)
 scale = Vector2(0.164767, 0.164767)
 sprite_frames = SubResource("SpriteFrames_8v8w1")
-animation = &"robot_walking"
+animation = &"robot_standing"
 autoplay = "robot_standing"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.08165e-12, 2.08165e-12)
-shape = SubResource("RectangleShape2D_mslyk")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-41, 55)
+shape = SubResource("SeparationRayShape2D_kc5dt")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(41, 55)
+shape = SubResource("SeparationRayShape2D_kc5dt")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(-22, 74)
+rotation = 1.5708
+shape = SubResource("SeparationRayShape2D_kc5dt")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(22, 74)
+rotation = -1.5708
+shape = SubResource("SeparationRayShape2D_kc5dt")
+
+[node name="ray_not_to_wall" type="RayCast2D" parent="."]
+position = Vector2(-41, 74)
+rotation = -3.14159
+scale = Vector2(-1, -1)
+target_position = Vector2(0, 20)
+
+[node name="ray_to_wall" type="RayCast2D" parent="."]
+position = Vector2(-41, 74)
+rotation = 1.5708
+target_position = Vector2(0, 100)
+collision_mask = 5
+
+[node name="ray_eye_0" type="RayCast2D" parent="."]
+position = Vector2(-41, -64)
+rotation = 1.5708
+target_position = Vector2(0, 20000)
+collision_mask = 3
+
+[node name="ray_eye_1" type="RayCast2D" parent="."]
+position = Vector2(-41, -17)
+rotation = 1.5708
+target_position = Vector2(0, 20000)
+collision_mask = 3
+
+[node name="ray_eye_2" type="RayCast2D" parent="."]
+position = Vector2(-41, 29)
+rotation = 1.5708
+target_position = Vector2(0, 20000)
+collision_mask = 3
+
+[node name="ray_eye_3" type="RayCast2D" parent="."]
+position = Vector2(-41, 68)
+rotation = 1.5708
+target_position = Vector2(0, 20000)
+collision_mask = 3
