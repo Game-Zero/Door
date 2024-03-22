@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 100 * 20
+@export var SPEED = 100 * 20
 const STANDIG_TIME = 3
 
 @onready var anim = $AnimatedSprite2D
