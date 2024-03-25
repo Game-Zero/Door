@@ -1,8 +1,10 @@
 extends CharacterBody2D
 
-
 @export var SPEED = 100 * 20
-const STANDIG_TIME = 3
+@export var STANDIG_TIME = 3
+@export var WALL_DISTANCE = 100
+@export var GROUND_DISTANCE = 20
+@export var GROUND_POSITION = 0
 
 @onready var anim = $AnimatedSprite2D
 @onready var ray_to_wall = $ray_to_wall
@@ -19,6 +21,12 @@ var state = 0
 
 var standing_tot_time = 0
 var ray_not_to_wall_tot_time = 0
+
+func _ready():
+	ray_to_wall.target_position.y = WALL_DISTANCE
+	ray_not_to_wall.target_position.y = GROUND_DISTANCE
+	ray_not_to_wall.position.x += GROUND_POSITION 
+	pass
 
 func _check_eyes_see_player():
 	for ray_eye in ray_eyes:

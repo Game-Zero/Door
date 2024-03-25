@@ -6,12 +6,14 @@ extends Node2D
 
 @onready var rays = [ray_left, ray_mid, ray_right]
 
+var delta_y = -95
+
 var player_in_hole = null
-var player_origin_global_pos = Vector2(INF, INF)
 var bPlayDead = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	delta_y *= scale.y
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -26,9 +28,10 @@ func _physics_process(delta):
 				bPlayDead = true
 				player_in_hole.dead(robot)
 			else:
-				player_in_hole.global_position = player_origin_global_pos
+				player_in_hole.global_position.y += delta_y
+				delta_y *= -1
 				player_in_hole.bGravityEnable = true
-				player_in_hole.bCanControl = true
+				player_in_hole.bCanRevertGravity = true
 				player_in_hole = null
 
 		return
@@ -39,12 +42,12 @@ func _physics_process(delta):
 			var r = ray_right.global_position.x
 			var player = ray.get_collider()
 			var player_half_size = player.collision_shape.shape.get_rect().size.x / 2
-			if l <= player.global_position.x - player_half_size && player.global_position.x + player_half_size <= r:
+			if l < player.global_position.x - player_half_size && player.global_position.x + player_half_size < r:
 				if Input.is_action_just_pressed("player_fire"):
 					player_in_hole = player
-					player_origin_global_pos = player.global_position
-					player.global_position = global_position
+					player.global_position.y += delta_y
+					delta_y *= -1
 					player.bGravityEnable = false
-					player_in_hole.bCanControl = false
+					player_in_hole.bCanRevertGravity = false
 					break
 	pass

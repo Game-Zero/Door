@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=3 uid="uid://dqf7dekvholxn"]
+[gd_scene load_steps=102 format=3 uid="uid://dqf7dekvholxn"]
 
 [ext_resource type="PackedScene" uid="uid://brg0ell7yg5nl" path="res://Runtime/Prefab/hole.tscn" id="2_53d5x"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/PlayerManager_3_2.gd" id="2_vn8ns"]
@@ -17,22 +17,39 @@
 [ext_resource type="Texture2D" uid="uid://c65n55kecv8e2" path="res://Runtime/Resource/FrameAnimation/swarm_eating/12.png" id="14_iq1kh"]
 [ext_resource type="Texture2D" uid="uid://dsjdsq2x7s7yt" path="res://Runtime/Resource/FrameAnimation/swarm_eating/13.png" id="15_xdcvk"]
 [ext_resource type="Texture2D" uid="uid://bylesybfvu4fh" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_00.png" id="16_0e6a4"]
+[ext_resource type="Texture2D" uid="uid://d0ok7fno70tfu" path="res://Runtime/Resource/FrameAnimation/swarm_eating_big_fat/1.png" id="16_6le66"]
 [ext_resource type="Texture2D" uid="uid://tf5mm77rrdey" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_01.png" id="17_olafk"]
+[ext_resource type="Texture2D" uid="uid://bgbbvlt6rxns5" path="res://Runtime/Resource/FrameAnimation/swarm_eating_big_fat/2.png" id="17_sf1iv"]
+[ext_resource type="Texture2D" uid="uid://bjq8sv1p3fdxh" path="res://Runtime/Resource/FrameAnimation/swarm_eating_big_fat/3.png" id="18_apt7e"]
 [ext_resource type="Texture2D" uid="uid://c1g1vhpmhb4l7" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_02.png" id="18_t0ilm"]
+[ext_resource type="Texture2D" uid="uid://cdyt7udxm6qc6" path="res://Runtime/Resource/FrameAnimation/swarm_eating_big_fat/4.png" id="19_7aeox"]
 [ext_resource type="Texture2D" uid="uid://dycxbgaxcql3q" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_03.png" id="19_owh2c"]
 [ext_resource type="Texture2D" uid="uid://7jcujqaxlhfs" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_04.png" id="20_d3ioj"]
+[ext_resource type="Texture2D" uid="uid://cavootmhh3mks" path="res://Runtime/Resource/FrameAnimation/swarm_eating_big_fat/5.png" id="20_fm7l6"]
 [ext_resource type="Texture2D" uid="uid://djq4v1rqx26sr" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_05.png" id="21_58bcq"]
+[ext_resource type="Texture2D" uid="uid://cn4rpc8asl5v3" path="res://Runtime/Resource/FrameAnimation/swarm_eating_big_fat/6.png" id="21_847xr"]
 [ext_resource type="Texture2D" uid="uid://ds5otltteyii4" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_06.png" id="22_c8ney"]
+[ext_resource type="Texture2D" uid="uid://eynn8rdr2pus" path="res://Runtime/Resource/FrameAnimation/swarm_eating_big_fat/7.png" id="22_mh6i1"]
 [ext_resource type="Texture2D" uid="uid://ddkk3uthxcsey" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_07.png" id="23_1jr33"]
+[ext_resource type="Texture2D" uid="uid://bs4e6wmmtefj1" path="res://Runtime/Resource/FrameAnimation/swarm_eating_big_fat/8.png" id="23_k0ucj"]
 [ext_resource type="Texture2D" uid="uid://bms4yp1ah4d2m" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_08.png" id="24_2xsa1"]
+[ext_resource type="Texture2D" uid="uid://c6668nhpxakbd" path="res://Runtime/Resource/FrameAnimation/swarm_eating_big_fat/9.png" id="24_yxjtj"]
 [ext_resource type="Texture2D" uid="uid://d35t53mu1db3s" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_09.png" id="25_i4fnj"]
+[ext_resource type="Texture2D" uid="uid://c01ly4qmwrmrk" path="res://Runtime/Resource/FrameAnimation/swarm_eating_big_fat/10.png" id="25_mtgs0"]
+[ext_resource type="Texture2D" uid="uid://djdyyijhb7uky" path="res://Runtime/Resource/FrameAnimation/swarm_eating_big_fat/11.png" id="26_ayec8"]
 [ext_resource type="Texture2D" uid="uid://bs2te6u020pe5" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_10.png" id="26_ke1dk"]
+[ext_resource type="Texture2D" uid="uid://fedf4lkl2mcv" path="res://Runtime/Resource/FrameAnimation/swarm_eating_big_fat/12.png" id="27_ghal4"]
 [ext_resource type="Texture2D" uid="uid://cpe8auymvopag" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_11.png" id="27_qtm6e"]
+[ext_resource type="Texture2D" uid="uid://bdrfcxjtq7uir" path="res://Runtime/Resource/FrameAnimation/swarm_eating_big_fat/13.png" id="28_q4eo8"]
 [ext_resource type="Texture2D" uid="uid://ccmm6r1caxwob" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_12.png" id="28_rn14c"]
 [ext_resource type="Texture2D" uid="uid://d2228fumadyjs" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_13.png" id="29_j0biu"]
+[ext_resource type="Texture2D" uid="uid://gukfftatqth5" path="res://Runtime/Resource/FrameAnimation/swarm_eating_big_fat/14.png" id="29_ublux"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/Destination_3_2.gd" id="30_4lk77"]
 [ext_resource type="Texture2D" uid="uid://v3cdbitsiceg" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_14.png" id="30_jrsjm"]
+[ext_resource type="Texture2D" uid="uid://dfkl0ul53tjuw" path="res://Runtime/Resource/FrameAnimation/swarm_eating_big_fat/15.png" id="30_vpnj4"]
 [ext_resource type="Texture2D" uid="uid://c0jr78g7ou0ph" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_15.png" id="31_7v6ed"]
+[ext_resource type="Texture2D" uid="uid://uq55jem3rtlb" path="res://Runtime/Resource/FrameAnimation/swarm_eating_big_fat/16.png" id="31_unk4b"]
+[ext_resource type="Texture2D" uid="uid://bcagfbr2mn2ub" path="res://Runtime/Resource/FrameAnimation/swarm_eating_big_fat/17.png" id="32_4o4tk"]
 [ext_resource type="Texture2D" uid="uid://dcik7suacql2t" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_16.png" id="32_i2abu"]
 [ext_resource type="Texture2D" uid="uid://d0ug2kb5llg7" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_17.png" id="33_mtjpc"]
 [ext_resource type="Texture2D" uid="uid://un582sbtdf08" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_18.png" id="34_5d2lo"]
@@ -75,6 +92,7 @@
 [ext_resource type="Texture2D" uid="uid://bj3cgcpf410uy" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_53.png" id="69_do1im"]
 [ext_resource type="Texture2D" uid="uid://dlog68ew1heh6" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_54.png" id="70_vu0ei"]
 [ext_resource type="Texture2D" uid="uid://8fw4h2sj8uhq" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_55.png" id="71_pinlh"]
+[ext_resource type="PackedScene" uid="uid://de8so0lu14br5" path="res://Runtime/Prefab/big_fat.tscn" id="76_qivtl"]
 [ext_resource type="PackedScene" uid="uid://omevqqnc5ybq" path="res://Runtime/Prefab/fat.tscn" id="174_eeac7"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/GlobalHUDManager.gd" id="180_6sgy0"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/ScreenCameraManger.gd" id="184_d74i6"]
@@ -126,6 +144,62 @@ animations = [{
 }],
 "loop": false,
 "name": &"swarm_eating",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_6le66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_sf1iv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_apt7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7aeox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_fm7l6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_847xr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_mh6i1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_k0ucj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_yxjtj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_mtgs0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ayec8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ghal4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_q4eo8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ublux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_vpnj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_unk4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_4o4tk")
+}],
+"loop": false,
+"name": &"swarm_eating_big",
 "speed": 12.0
 }, {
 "frames": [{
@@ -473,6 +547,11 @@ position = Vector2(605, 1363)
 
 [node name="fat_6" parent="fats" instance=ExtResource("174_eeac7")]
 position = Vector2(1279, 1603)
+
+[node name="big_fats" type="Node2D" parent="."]
+
+[node name="big_fat_0" parent="big_fats" instance=ExtResource("76_qivtl")]
+position = Vector2(193, 121)
 
 [node name="destination" type="Node2D" parent="."]
 position = Vector2(101, 1957)

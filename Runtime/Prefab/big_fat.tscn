@@ -1,0 +1,75 @@
+[gd_scene load_steps=15 format=3 uid="uid://de8so0lu14br5"]
+
+[ext_resource type="Script" path="res://Runtime/Script/Manager/BigFatManager.gd" id="1_r02fy"]
+[ext_resource type="Texture2D" uid="uid://c84vtxwbh8q4h" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/1.png" id="2_pv4pv"]
+[ext_resource type="Texture2D" uid="uid://by1t6decmxtfu" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/2.png" id="3_412gx"]
+[ext_resource type="Texture2D" uid="uid://dgh3xs1lbdioo" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/3.png" id="4_8ste8"]
+[ext_resource type="Texture2D" uid="uid://hgte27cbuy38" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/4.png" id="5_8jx8l"]
+[ext_resource type="Texture2D" uid="uid://djrt7g2gnww0n" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/5.png" id="6_x6kxo"]
+[ext_resource type="Texture2D" uid="uid://ckry8mcyd7s0f" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/6.png" id="7_crmgj"]
+[ext_resource type="Texture2D" uid="uid://dhql8fqcvu7cy" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/7.png" id="8_c7hwf"]
+[ext_resource type="Texture2D" uid="uid://byb5ywc7mbdf1" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/8.png" id="9_ljyfd"]
+[ext_resource type="Texture2D" uid="uid://d0vvccw3qoem4" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/9.png" id="10_7rd22"]
+[ext_resource type="Texture2D" uid="uid://tmhuoj3js0ak" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/10.png" id="11_b4hbo"]
+[ext_resource type="Texture2D" uid="uid://ca770a4evjoa1" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/11.png" id="12_wowar"]
+[ext_resource type="Texture2D" uid="uid://bg47ry5jhb4yr" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/12.png" id="13_ls5pg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gveja"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pv4pv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_412gx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8ste8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8jx8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_x6kxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_crmgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_c7hwf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ljyfd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7rd22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_b4hbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wowar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ls5pg")
+}],
+"loop": false,
+"name": &"big_fat_being_eaten",
+"speed": 12.0
+}]
+
+[node name="big_fat" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 7
+script = ExtResource("1_r02fy")
+
+[node name="anim" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.18, 0.18)
+sprite_frames = SubResource("SpriteFrames_gveja")
+animation = &"big_fat_being_eaten"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.9, 0.9)
+polygon = PackedVector2Array(-59, -48, -47, -62, -40, -65, -38, -69, -32, -70, -27, -72, -24, -70, -13, -70, -5, -82, -2, -88, 3, -87, 14, -82, 8, -65, 21, -54, 23, -39, 31, -35, 35, -44, 48, -44, 49, -40, 48, -25, 57, -15, 58, 4, 53, 13, 54, 18, 52, 21, 58, 24, 64, 34, 66, 45, 65, 54, 63, 62, 56, 73, 50, 78, 41, 80, 25, 82, -9, 72, -15, 75, -33, 74, -32, 86, -50, 88, -51, 73, -54, 76, -63, 75, -69, 70, -78, 71, -85, 64, -88, 56, -97, 47, -97, 31, -93, 23, -95, 20, -90, 16, -91, 2, -87, -8, -81, -16, -89, -32, -76, -41, -72, -37, -66, -24, -61, -36)
+
+[connection signal="animation_finished" from="anim" to="." method="_anim_finish"]

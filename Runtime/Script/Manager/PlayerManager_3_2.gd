@@ -10,6 +10,7 @@ const JUMP_VELOCITY = -400.0
 @onready var rays = [$ray_left, $ray_mid, $ray_right]
 
 var bCanControl = true
+var bCanRevertGravity = true
 var bGravityEnable = true
 var bFatEatenAnimPlayFinished = false
 var bPlayerEatPlayFinished = false
@@ -38,7 +39,7 @@ func _physics_process(delta):
 			velocity.y += gravity * gravity_direct * delta
 
 		# Handle jump.
-		if Input.is_action_just_pressed("player_jump") and is_on_floor():
+		if Input.is_action_just_pressed("player_jump") and is_on_floor() and bCanRevertGravity:
 			velocity.y += JUMP_VELOCITY * gravity_direct
 			gravity_direct *= -1
 			scale.y *= -1  
@@ -70,7 +71,7 @@ func _physics_process(delta):
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		var body = collision.get_collider()
-		if body.name.begins_with("fat"):
+		if body.name.begins_with("fat") || body.name.begins_with("big_fat"):
 			bCanControl = false
 			if global_position.y != body.global_position.y:
 				var tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUINT)
@@ -81,8 +82,8 @@ func _physics_process(delta):
 			var callback = func():
 				bFatEatenAnimPlayFinished = true
 				try_resume_contrl()
-			body.start_being_eaten(direction, callback)
-			animated_sprite_2d.play("swarm_eating")
+			body.start_being_eaten(direction, callback)	
+			animated_sprite_2d.play("swarm_eating" if body.name.begins_with("fat") else "swarm_eating_big")
 		elif body.name.begins_with("robot"):
 			dead(body)
 
@@ -100,7 +101,7 @@ func try_resume_contrl():
 		bPlayerEatPlayFinished = false
 
 func animation_finished():
-	if animated_sprite_2d.animation == "swarm_eating":
+	if animated_sprite_2d.animation == "swarm_eating" || animated_sprite_2d.animation == "swarm_eating_big":
 		bPlayerEatPlayFinished = true
 		animated_sprite_2d.animation = "swarm_walking"
 		try_resume_contrl()
