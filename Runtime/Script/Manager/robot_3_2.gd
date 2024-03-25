@@ -1,10 +1,22 @@
+@tool
 extends CharacterBody2D
 
+@export_category("机器人属性设置")
+
+## 机器人移动速度
 @export var SPEED = 100 * 20
+
+## 机器人走到地面边缘或产生碰撞后站立时间, 单位: 秒
 @export var STANDIG_TIME = 3
+
+## 机器人面前碰撞检测长度
 @export var WALL_DISTANCE = 100
+
+## 机器人走到地面边缘检测长度
 @export var GROUND_DISTANCE = 20
-@export var GROUND_POSITION = 0
+
+## 机器人走到地面边缘检测位置
+@export_range(-1, 1, 1.0/42) var GROUND_POSITION = -1.0
 
 @onready var anim = $AnimatedSprite2D
 @onready var ray_to_wall = $ray_to_wall
@@ -25,7 +37,16 @@ var ray_not_to_wall_tot_time = 0
 func _ready():
 	ray_to_wall.target_position.y = WALL_DISTANCE
 	ray_not_to_wall.target_position.y = GROUND_DISTANCE
-	ray_not_to_wall.position.x += GROUND_POSITION 
+	ray_not_to_wall.position.x = 42 * GROUND_POSITION
+	direction = -1
+	state = 0
+	pass
+
+func _process(delta):
+	if Engine.is_editor_hint():
+		ray_to_wall.target_position.y = WALL_DISTANCE
+		ray_not_to_wall.target_position.y = GROUND_DISTANCE
+		ray_not_to_wall.position.x = 42 * GROUND_POSITION
 	pass
 
 func _check_eyes_see_player():
@@ -38,6 +59,9 @@ func _check_eyes_see_player():
 
 func _physics_process(delta):
 	# Add the gravity.
+
+	if Engine.is_editor_hint():
+		return
 
 	if not is_on_floor():
 		velocity.y += gravity * delta
