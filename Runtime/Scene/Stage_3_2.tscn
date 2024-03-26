@@ -506,19 +506,32 @@ scale = Vector2(1, -1)
 position = Vector2(1286, 62)
 
 [node name="robot_0" parent="robots" instance=ExtResource("12_yw5qv")]
-position = Vector2(-201, 206)
+position = Vector2(92, 514)
+SPEED = 3000
+STANDIG_TIME = 2
 
 [node name="robot_1" parent="robots" instance=ExtResource("12_yw5qv")]
-position = Vector2(-533, 514)
+position = Vector2(-158, 206)
+SPEED = 3500
+STANDIG_TIME = 2
 
 [node name="robot_2" parent="robots" instance=ExtResource("12_yw5qv")]
-position = Vector2(235, 1014)
+position = Vector2(232, 1014)
+SPEED = 3000
+STANDIG_TIME = 4
+WALL_DISTANCE = 10
+GROUND_DISTANCE = 50
 
 [node name="robot_3" parent="robots" instance=ExtResource("12_yw5qv")]
-position = Vector2(-446, 1894)
+position = Vector2(-570, 1893)
+SPEED = 3500
 
 [node name="robot_4" parent="robots" instance=ExtResource("12_yw5qv")]
-position = Vector2(-256, 1548)
+position = Vector2(-337, 1548)
+SPEED = 3500
+STANDIG_TIME = 4
+WALL_DISTANCE = 10
+GROUND_DISTANCE = 50
 
 [node name="ScreenCamera" type="Camera2D" parent="."]
 position = Vector2(957, 540)
@@ -528,30 +541,42 @@ target = NodePath("../player")
 [node name="fats" type="Node2D" parent="."]
 
 [node name="fat_0" parent="fats" instance=ExtResource("174_eeac7")]
-position = Vector2(621, 249)
+position = Vector2(631, 262)
+scale = Vector2(0.8, 0.8)
 
 [node name="fat_1" parent="fats" instance=ExtResource("174_eeac7")]
-position = Vector2(1520, 566)
+position = Vector2(1521, 574)
+scale = Vector2(0.8, 0.8)
 
 [node name="fat_2" parent="fats" instance=ExtResource("174_eeac7")]
-position = Vector2(1248, 830)
+position = Vector2(1248, 834)
+scale = Vector2(0.8, 0.8)
 
 [node name="fat_3" parent="fats" instance=ExtResource("174_eeac7")]
-position = Vector2(1370, 1251)
+position = Vector2(1372, 1262)
+scale = Vector2(0.8, 0.8)
 
 [node name="fat_4" parent="fats" instance=ExtResource("174_eeac7")]
 position = Vector2(232, 500)
+scale = Vector2(0.8, 0.8)
 
 [node name="fat_5" parent="fats" instance=ExtResource("174_eeac7")]
 position = Vector2(605, 1363)
-
-[node name="fat_6" parent="fats" instance=ExtResource("174_eeac7")]
-position = Vector2(1279, 1603)
+scale = Vector2(0.8, 0.8)
 
 [node name="big_fats" type="Node2D" parent="."]
 
 [node name="big_fat_0" parent="big_fats" instance=ExtResource("76_qivtl")]
-position = Vector2(193, 121)
+position = Vector2(923, 577)
+scale = Vector2(0.75, 0.75)
+
+[node name="big_fat_1" parent="big_fats" instance=ExtResource("76_qivtl")]
+position = Vector2(1806, 1091)
+scale = Vector2(0.75, 0.75)
+
+[node name="big_fat_2" parent="big_fats" instance=ExtResource("76_qivtl")]
+position = Vector2(1298, 1611)
+scale = Vector2(0.75, 0.75)
 
 [node name="destination" type="Node2D" parent="."]
 position = Vector2(101, 1957)
