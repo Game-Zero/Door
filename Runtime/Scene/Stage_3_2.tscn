@@ -541,7 +541,7 @@ target = NodePath("../player")
 [node name="fats" type="Node2D" parent="."]
 
 [node name="fat_0" parent="fats" instance=ExtResource("174_eeac7")]
-position = Vector2(631, 262)
+position = Vector2(630, 262)
 scale = Vector2(0.8, 0.8)
 
 [node name="fat_1" parent="fats" instance=ExtResource("174_eeac7")]

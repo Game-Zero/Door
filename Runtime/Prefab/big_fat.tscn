@@ -1,18 +1,18 @@
 [gd_scene load_steps=15 format=3 uid="uid://de8so0lu14br5"]
 
 [ext_resource type="Script" path="res://Runtime/Script/Manager/BigFatManager.gd" id="1_r02fy"]
-[ext_resource type="Texture2D" uid="uid://c84vtxwbh8q4h" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/1.png" id="2_pv4pv"]
-[ext_resource type="Texture2D" uid="uid://by1t6decmxtfu" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/2.png" id="3_412gx"]
-[ext_resource type="Texture2D" uid="uid://dgh3xs1lbdioo" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/3.png" id="4_8ste8"]
-[ext_resource type="Texture2D" uid="uid://hgte27cbuy38" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/4.png" id="5_8jx8l"]
-[ext_resource type="Texture2D" uid="uid://djrt7g2gnww0n" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/5.png" id="6_x6kxo"]
-[ext_resource type="Texture2D" uid="uid://ckry8mcyd7s0f" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/6.png" id="7_crmgj"]
-[ext_resource type="Texture2D" uid="uid://dhql8fqcvu7cy" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/7.png" id="8_c7hwf"]
-[ext_resource type="Texture2D" uid="uid://byb5ywc7mbdf1" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/8.png" id="9_ljyfd"]
-[ext_resource type="Texture2D" uid="uid://d0vvccw3qoem4" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/9.png" id="10_7rd22"]
-[ext_resource type="Texture2D" uid="uid://tmhuoj3js0ak" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/10.png" id="11_b4hbo"]
-[ext_resource type="Texture2D" uid="uid://ca770a4evjoa1" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/11.png" id="12_wowar"]
-[ext_resource type="Texture2D" uid="uid://bg47ry5jhb4yr" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/12.png" id="13_ls5pg"]
+[ext_resource type="Texture2D" uid="uid://dkugg060vg0hv" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/1.png" id="2_pv4pv"]
+[ext_resource type="Texture2D" uid="uid://bdg56i77wrdkq" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/2.png" id="3_412gx"]
+[ext_resource type="Texture2D" uid="uid://dji85q3ndydk5" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/3.png" id="4_8ste8"]
+[ext_resource type="Texture2D" uid="uid://cphgs217bv5t1" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/4.png" id="5_8jx8l"]
+[ext_resource type="Texture2D" uid="uid://blag3ujsokqfv" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/5.png" id="6_x6kxo"]
+[ext_resource type="Texture2D" uid="uid://dlpyqa1nb5ncp" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/6.png" id="7_crmgj"]
+[ext_resource type="Texture2D" uid="uid://3j3md7tfnkkb" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/7.png" id="8_c7hwf"]
+[ext_resource type="Texture2D" uid="uid://7a083mr71r2k" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/8.png" id="9_ljyfd"]
+[ext_resource type="Texture2D" uid="uid://bphjr5xssj1ce" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/9.png" id="10_7rd22"]
+[ext_resource type="Texture2D" uid="uid://cc7jg7k0mylr0" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/10.png" id="11_b4hbo"]
+[ext_resource type="Texture2D" uid="uid://dliy44qc1ufq0" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/11.png" id="12_wowar"]
+[ext_resource type="Texture2D" uid="uid://cc8rtciaevrpq" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/12.png" id="13_ls5pg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gveja"]
 animations = [{
@@ -55,7 +55,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"big_fat_being_eaten",
-"speed": 12.0
+"speed": 16.0
 }]
 
 [node name="big_fat" type="CharacterBody2D"]
