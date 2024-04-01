@@ -529,7 +529,6 @@ SPEED = 3500
 [node name="robot_4" parent="robots" instance=ExtResource("12_yw5qv")]
 position = Vector2(-337, 1548)
 SPEED = 3500
-STANDIG_TIME = 4
 WALL_DISTANCE = 10
 GROUND_DISTANCE = 50
 
