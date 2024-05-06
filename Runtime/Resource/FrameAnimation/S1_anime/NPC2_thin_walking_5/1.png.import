@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7clkkxn054gp"
-path="res://.godot/imported/hole_mask.png-66e6864564c24e3e0f27eb1c7adc905d.ctex"
+uid="uid://di4cseu4ovsfg"
+path="res://.godot/imported/1.png-dfe13c59bb2e572174122279c8446d6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Runtime/Resource/Background/hole_mask.png"
-dest_files=["res://.godot/imported/hole_mask.png-66e6864564c24e3e0f27eb1c7adc905d.ctex"]
+source_file="res://Runtime/Resource/FrameAnimation/S1_anime/NPC2_thin_walking_5/1.png"
+dest_files=["res://.godot/imported/1.png-dfe13c59bb2e572174122279c8446d6d.ctex"]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

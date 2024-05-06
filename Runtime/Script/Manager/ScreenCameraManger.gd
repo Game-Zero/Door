@@ -11,7 +11,7 @@ extends Camera2D
 
 func _physics_process(_delta: float) -> void:
 	if not is_instance_valid(Target):
-		var targets: Array = get_tree().get_nodes_in_group("Player")
+		var targets: Array = get_tree().get_nodes_in_group("player")
 		if targets: Target = targets[0]
 	if not is_instance_valid(Target):
 		return

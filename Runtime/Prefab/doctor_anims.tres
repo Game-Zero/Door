@@ -1,0 +1,95 @@
+[gd_resource type="SpriteFrames" load_steps=21 format=3 uid="uid://dbhhh44ctampb"]
+
+[ext_resource type="Texture2D" uid="uid://c2han243br435" path="res://Runtime/Resource/FrameAnimation/S1_anime/doctor_arm_moving_10/1.png" id="1_8n0d1"]
+[ext_resource type="Texture2D" uid="uid://dmwr5bje873le" path="res://Runtime/Resource/FrameAnimation/S1_anime/doctor_arm_moving_10/2.png" id="2_dtkw2"]
+[ext_resource type="Texture2D" uid="uid://m4sr1baj762i" path="res://Runtime/Resource/FrameAnimation/S1_anime/doctor_arm_moving_10/3.png" id="3_fxvxf"]
+[ext_resource type="Texture2D" uid="uid://bfb2avcurl7d7" path="res://Runtime/Resource/FrameAnimation/S1_anime/doctor_arm_moving_10/4.png" id="4_ty7jw"]
+[ext_resource type="Texture2D" uid="uid://b85ydxs8xbbsr" path="res://Runtime/Resource/FrameAnimation/S1_anime/doctor_arm_moving_10/5.png" id="5_4scoc"]
+[ext_resource type="Texture2D" uid="uid://b5w56lfl8xc8q" path="res://Runtime/Resource/FrameAnimation/S1_anime/doctor_arm_moving_10/6.png" id="6_u7uf2"]
+[ext_resource type="Texture2D" uid="uid://u52fmq7m5dee" path="res://Runtime/Resource/FrameAnimation/S1_anime/doctor_arm_moving_10/7.png" id="7_pc5u8"]
+[ext_resource type="Texture2D" uid="uid://b4myx466mnjo" path="res://Runtime/Resource/FrameAnimation/S1_anime/doctor_arm_moving_10/8.png" id="8_lxpqi"]
+[ext_resource type="Texture2D" uid="uid://bm87guhuohwxt" path="res://Runtime/Resource/FrameAnimation/S1_anime/doctor_arm_moving_10/9.png" id="9_kww1e"]
+[ext_resource type="Texture2D" uid="uid://buhkpy0xkji1x" path="res://Runtime/Resource/FrameAnimation/S1_anime/doctor_arm_moving_10/10.png" id="10_h1lw3"]
+[ext_resource type="Texture2D" uid="uid://btj1d7og3lhor" path="res://Runtime/Resource/FrameAnimation/S1_anime/doctor_moving_10/1.png" id="11_wcnl7"]
+[ext_resource type="Texture2D" uid="uid://d2eeortjuy8hx" path="res://Runtime/Resource/FrameAnimation/S1_anime/doctor_moving_10/2.png" id="12_ha22c"]
+[ext_resource type="Texture2D" uid="uid://cicai7h1jaw5a" path="res://Runtime/Resource/FrameAnimation/S1_anime/doctor_moving_10/3.png" id="13_qdbns"]
+[ext_resource type="Texture2D" uid="uid://d2uiv111oaunj" path="res://Runtime/Resource/FrameAnimation/S1_anime/doctor_moving_10/4.png" id="14_el3qj"]
+[ext_resource type="Texture2D" uid="uid://buqn14twqfll5" path="res://Runtime/Resource/FrameAnimation/S1_anime/doctor_moving_10/5.png" id="15_rghpy"]
+[ext_resource type="Texture2D" uid="uid://c665qfnfvofxf" path="res://Runtime/Resource/FrameAnimation/S1_anime/doctor_moving_10/6.png" id="16_jsi6j"]
+[ext_resource type="Texture2D" uid="uid://c4bb5f5p56gem" path="res://Runtime/Resource/FrameAnimation/S1_anime/doctor_moving_10/7.png" id="17_l7mmr"]
+[ext_resource type="Texture2D" uid="uid://c4j0op3vypwmr" path="res://Runtime/Resource/FrameAnimation/S1_anime/doctor_moving_10/8.png" id="18_g6tc6"]
+[ext_resource type="Texture2D" uid="uid://dr8h66pkwc3lp" path="res://Runtime/Resource/FrameAnimation/S1_anime/doctor_moving_10/9.png" id="19_1854w"]
+[ext_resource type="Texture2D" uid="uid://c4phwhc30e1kj" path="res://Runtime/Resource/FrameAnimation/S1_anime/doctor_moving_10/10.png" id="20_o2f14"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8n0d1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dtkw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fxvxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ty7jw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4scoc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_u7uf2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pc5u8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lxpqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kww1e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_h1lw3")
+}],
+"loop": false,
+"name": &"doctor_arm_moving",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_wcnl7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ha22c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qdbns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_el3qj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_rghpy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_jsi6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_l7mmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_g6tc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_1854w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_o2f14")
+}],
+"loop": false,
+"name": &"doctor_moving",
+"speed": 5.0
+}]

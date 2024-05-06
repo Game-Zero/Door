@@ -1,4 +1,4 @@
-[gd_scene load_steps=102 format=3 uid="uid://dqf7dekvholxn"]
+[gd_scene load_steps=101 format=3 uid="uid://dqf7dekvholxn"]
 
 [ext_resource type="PackedScene" uid="uid://brg0ell7yg5nl" path="res://Runtime/Prefab/hole.tscn" id="2_53d5x"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/PlayerManager_3_2.gd" id="2_vn8ns"]
@@ -84,7 +84,6 @@
 [ext_resource type="Texture2D" uid="uid://dbsvjppft3b4u" path="res://Runtime/Resource/Background/stage3-2.png" id="62_mpk0e"]
 [ext_resource type="Texture2D" uid="uid://vhiqrlb0rtev" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_47.png" id="63_yfb5p"]
 [ext_resource type="Texture2D" uid="uid://faffx8td82c6" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_48.png" id="64_2sjp4"]
-[ext_resource type="Script" path="res://Runtime/Script/UI/Label_FPS.gd" id="64_mjafk"]
 [ext_resource type="Texture2D" uid="uid://tgym7f3fd6ua" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_49.png" id="65_3k4lv"]
 [ext_resource type="Texture2D" uid="uid://cgj8uy82guacw" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_50.png" id="66_5sih6"]
 [ext_resource type="Texture2D" uid="uid://ch1vuwvf3kogx" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_51.png" id="67_hiut3"]
@@ -93,8 +92,8 @@
 [ext_resource type="Texture2D" uid="uid://dlog68ew1heh6" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_54.png" id="70_vu0ei"]
 [ext_resource type="Texture2D" uid="uid://8fw4h2sj8uhq" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_55.png" id="71_pinlh"]
 [ext_resource type="PackedScene" uid="uid://de8so0lu14br5" path="res://Runtime/Prefab/big_fat.tscn" id="76_qivtl"]
+[ext_resource type="PackedScene" uid="uid://bofbb0bvx1ysw" path="res://Runtime/Prefab/hud.tscn" id="95_14h4s"]
 [ext_resource type="PackedScene" uid="uid://omevqqnc5ybq" path="res://Runtime/Prefab/fat.tscn" id="174_eeac7"]
-[ext_resource type="Script" path="res://Runtime/Script/Manager/GlobalHUDManager.gd" id="180_6sgy0"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/ScreenCameraManger.gd" id="184_d74i6"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3i4il"]
@@ -586,18 +585,7 @@ script = ExtResource("30_4lk77")
 [node name="destination" type="CollisionShape2D" parent="destination/destination"]
 shape = SubResource("RectangleShape2D_o0f2e")
 
-[node name="HUD" type="CanvasLayer" parent="."]
-script = ExtResource("180_6sgy0")
-
-[node name="Label_FPS" type="Label" parent="HUD"]
-offset_right = 55.0
-offset_bottom = 23.0
-theme_override_colors/font_color = Color(0, 1, 0, 1)
-theme_override_colors/font_shadow_color = Color(0.113725, 0.54902, 0.243137, 1)
-text = "FPS: 0"
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("64_mjafk")
+[node name="HUD" parent="." instance=ExtResource("95_14h4s")]
 
 [connection signal="animation_finished" from="player/AnimatedSprite2D" to="player" method="animation_finished"]
 [connection signal="body_entered" from="destination/destination" to="destination" method="body_entered"]
