@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqmfac3g0j0na"
-path="res://.godot/imported/protagonist_thin_standing.png-47bc6c62021618aecb48b1341ed7cb15.ctex"
+uid="uid://ucs66dcwe507"
+path="res://.godot/imported/nurses_move_bottom.png-29d48c92d7536d86fac2af2de27ece23.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Runtime/Resource/FrameAnimation/S1_anime/S1_character_standing/protagonist_thin_standing.png"
-dest_files=["res://.godot/imported/protagonist_thin_standing.png-47bc6c62021618aecb48b1341ed7cb15.ctex"]
+source_file="res://Runtime/Resource/Sprite/S1_character_standing/nurses_move_bottom.png"
+dest_files=["res://.godot/imported/nurses_move_bottom.png-29d48c92d7536d86fac2af2de27ece23.ctex"]
 
 [params]
 

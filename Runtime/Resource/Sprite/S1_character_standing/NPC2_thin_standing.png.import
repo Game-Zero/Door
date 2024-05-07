@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjki0i2e7ivn3"
-path="res://.godot/imported/NPC3_thin_standing.png-ec524ece38eba8efe5dfae19d01f6e5b.ctex"
+uid="uid://vlqbkpd7b5bg"
+path="res://.godot/imported/NPC2_thin_standing.png-674a2d869f6284794e35d352ef8aaab5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Runtime/Resource/FrameAnimation/S1_anime/S1_character_standing/NPC3_thin_standing.png"
-dest_files=["res://.godot/imported/NPC3_thin_standing.png-ec524ece38eba8efe5dfae19d01f6e5b.ctex"]
+source_file="res://Runtime/Resource/Sprite/S1_character_standing/NPC2_thin_standing.png"
+dest_files=["res://.godot/imported/NPC2_thin_standing.png-674a2d869f6284794e35d352ef8aaab5.ctex"]
 
 [params]
 

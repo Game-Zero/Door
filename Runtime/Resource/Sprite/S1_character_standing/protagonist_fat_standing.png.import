@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gon5i3f8rf1d"
-path="res://.godot/imported/NPC1_fat_standing.png-8f83c933e5f64fa038ab1c89be15d15d.ctex"
+uid="uid://cv7l5lfx7l3cs"
+path="res://.godot/imported/protagonist_fat_standing.png-6852ec7a74db109263b0a236de0e810a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Runtime/Resource/FrameAnimation/S1_anime/S1_character_standing/NPC1_fat_standing.png"
-dest_files=["res://.godot/imported/NPC1_fat_standing.png-8f83c933e5f64fa038ab1c89be15d15d.ctex"]
+source_file="res://Runtime/Resource/Sprite/S1_character_standing/protagonist_fat_standing.png"
+dest_files=["res://.godot/imported/protagonist_fat_standing.png-6852ec7a74db109263b0a236de0e810a.ctex"]
 
 [params]
 

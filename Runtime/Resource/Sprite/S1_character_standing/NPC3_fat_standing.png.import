@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://57inuxllw0mp"
-path="res://.godot/imported/nurses2_move_bottom.png-1a8db81e332a722a0ebb3adc76c88571.ctex"
+uid="uid://b44mu7fw2hlw8"
+path="res://.godot/imported/NPC3_fat_standing.png-692beff445ee398db94c527bd796f6ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Runtime/Resource/FrameAnimation/S1_anime/S1_character_standing/nurses2_move_bottom.png"
-dest_files=["res://.godot/imported/nurses2_move_bottom.png-1a8db81e332a722a0ebb3adc76c88571.ctex"]
+source_file="res://Runtime/Resource/Sprite/S1_character_standing/NPC3_fat_standing.png"
+dest_files=["res://.godot/imported/NPC3_fat_standing.png-692beff445ee398db94c527bd796f6ee.ctex"]
 
 [params]
 
