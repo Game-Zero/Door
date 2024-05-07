@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b0fmpdl8gr1da"]
+[gd_scene load_steps=5 format=3 uid="uid://b0fmpdl8gr1da"]
 
 [ext_resource type="Texture2D" uid="uid://ca7mpah0s762r" path="res://Runtime/Resource/Background/stage1-1.png" id="1_x035b"]
 [ext_resource type="PackedScene" uid="uid://vn4a1rgtwlwx" path="res://Runtime/Prefab/doctor.tscn" id="2_l10wh"]
 [ext_resource type="PackedScene" uid="uid://bofbb0bvx1ysw" path="res://Runtime/Prefab/hud.tscn" id="2_vcqr2"]
+[ext_resource type="PackedScene" uid="uid://i3hvoqto4ryi" path="res://Runtime/Prefab/nurses.tscn" id="4_vsn48"]
 
 [node name="Root" type="Node2D"]
 
@@ -20,3 +21,5 @@ position = Vector2(957, 540)
 [node name="camera" type="Camera2D" parent="player"]
 
 [node name="HUD" parent="." instance=ExtResource("2_vcqr2")]
+
+[node name="nurses" parent="." instance=ExtResource("4_vsn48")]

@@ -1,0 +1,87 @@
+[gd_resource type="SpriteFrames" load_steps=19 format=3 uid="uid://bweo5jhy1mfth"]
+
+[ext_resource type="Texture2D" uid="uid://boklk3wxefv5s" path="res://Runtime/Resource/FrameAnimation/S1_anime/nurses1_arm_moving_10/1.png" id="1_x7oe5"]
+[ext_resource type="Texture2D" uid="uid://rmyt87dtw27" path="res://Runtime/Resource/FrameAnimation/S1_anime/nurses1_arm_moving_10/2.png" id="2_ssvem"]
+[ext_resource type="Texture2D" uid="uid://ctpi57kpjidge" path="res://Runtime/Resource/FrameAnimation/S1_anime/nurses1_arm_moving_10/3.png" id="3_88iho"]
+[ext_resource type="Texture2D" uid="uid://b1jvte6ikxd6c" path="res://Runtime/Resource/FrameAnimation/S1_anime/nurses1_arm_moving_10/4.png" id="4_l08x5"]
+[ext_resource type="Texture2D" uid="uid://c1im3q7nw7squ" path="res://Runtime/Resource/FrameAnimation/S1_anime/nurses1_arm_moving_10/5.png" id="5_5xjqt"]
+[ext_resource type="Texture2D" uid="uid://2vu77vbg5raa" path="res://Runtime/Resource/FrameAnimation/S1_anime/nurses1_arm_moving_10/6.png" id="6_c4a7n"]
+[ext_resource type="Texture2D" uid="uid://bvl4fwxxiy5i0" path="res://Runtime/Resource/FrameAnimation/S1_anime/nurses1_arm_moving_10/7.png" id="7_cg7wl"]
+[ext_resource type="Texture2D" uid="uid://rsfwvmgg7uq0" path="res://Runtime/Resource/FrameAnimation/S1_anime/nurses1_arm_moving_10/8.png" id="8_px8d7"]
+[ext_resource type="Texture2D" uid="uid://unwfhfyte7vn" path="res://Runtime/Resource/FrameAnimation/S1_anime/nurses1_arm_moving_10/9.png" id="9_m5hp0"]
+[ext_resource type="Texture2D" uid="uid://y46mlu1cbus3" path="res://Runtime/Resource/FrameAnimation/S1_anime/nurses1_arm_moving_10/10.png" id="10_y2kpp"]
+[ext_resource type="Texture2D" uid="uid://b67erqxtyr4hu" path="res://Runtime/Resource/FrameAnimation/S1_anime/nurses1_arm_moving_10/11.png" id="11_20km0"]
+[ext_resource type="Texture2D" uid="uid://ctfbmckw8ebu7" path="res://Runtime/Resource/FrameAnimation/S1_anime/nurses1_arm_moving_10/12.png" id="12_x6ftn"]
+[ext_resource type="Texture2D" uid="uid://dh2nsrb4xjkal" path="res://Runtime/Resource/FrameAnimation/S1_anime/nurses2_arm_moving_10/1.png" id="13_u5rgc"]
+[ext_resource type="Texture2D" uid="uid://ckrf633rm36jo" path="res://Runtime/Resource/FrameAnimation/S1_anime/nurses2_arm_moving_10/2.png" id="14_ps0j5"]
+[ext_resource type="Texture2D" uid="uid://dbatq5otkixi1" path="res://Runtime/Resource/FrameAnimation/S1_anime/nurses2_arm_moving_10/3.png" id="15_gpykn"]
+[ext_resource type="Texture2D" uid="uid://bxrroeh8ugf46" path="res://Runtime/Resource/FrameAnimation/S1_anime/nurses2_arm_moving_10/4.png" id="16_ll3me"]
+[ext_resource type="Texture2D" uid="uid://s517atf8k8uv" path="res://Runtime/Resource/FrameAnimation/S1_anime/nurses2_arm_moving_10/5.png" id="17_q2t8u"]
+[ext_resource type="Texture2D" uid="uid://bbovsdjqhn31n" path="res://Runtime/Resource/FrameAnimation/S1_anime/nurses2_arm_moving_10/6.png" id="18_jr05r"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_x7oe5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ssvem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_88iho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_l08x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5xjqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_c4a7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cg7wl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_px8d7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_m5hp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_y2kpp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_20km0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_x6ftn")
+}],
+"loop": false,
+"name": &"nurse1_arm_anime",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_u5rgc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ps0j5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_gpykn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ll3me")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_q2t8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_jr05r")
+}],
+"loop": true,
+"name": &"nurse2_animation",
+"speed": 5.0
+}]
