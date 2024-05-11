@@ -82,6 +82,6 @@ animations = [{
 "texture": ExtResource("18_jr05r")
 }],
 "loop": false,
-"name": &"nurse2_animation",
+"name": &"nurse2_arm_anime",
 "speed": 5.0
 }]

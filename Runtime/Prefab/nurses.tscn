@@ -57,7 +57,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_ns4vr"]
-resource_name = "nurse2_animation"
+resource_name = "nurse2_arm_anime"
 length = 0.6
 tracks/0/type = "bezier"
 tracks/0/imported = false
@@ -80,14 +80,14 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"nurse2_animation"]
+"values": [&"nurse2_arm_anime"]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ywtcc"]
 _data = {
 "RESET": SubResource("Animation_1scpp"),
 "nurse1_animation": SubResource("Animation_8m5sv"),
-"nurse2_animation": SubResource("Animation_ns4vr")
+"nurse2_arm_anime": SubResource("Animation_ns4vr")
 }
 
 [node name="nurses" type="Node2D"]
