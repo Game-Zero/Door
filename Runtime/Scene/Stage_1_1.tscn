@@ -16,10 +16,8 @@ scale = Vector2(0.250694, 0.250694)
 texture = ExtResource("1_x035b")
 
 [node name="doctor" parent="." instance=ExtResource("2_l10wh")]
-visible = false
 
 [node name="player" type="CharacterBody2D" parent="."]
-visible = false
 position = Vector2(957, 540)
 
 [node name="camera" type="Camera2D" parent="player"]
