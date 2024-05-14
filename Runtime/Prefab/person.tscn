@@ -802,7 +802,7 @@ _data = {
 [node name="person" type="Node2D"]
 
 [node name="state" type="AnimatedSprite2D" parent="."]
-sprite_frames = ExtResource("1_jwxto")
+sprite_frames = ExtResource("1_sdtbp")
 animation = &"protagonist_fat_stading"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
