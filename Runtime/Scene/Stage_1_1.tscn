@@ -16,6 +16,8 @@ scale = Vector2(0.250694, 0.250694)
 texture = ExtResource("1_x035b")
 
 [node name="doctor" parent="." instance=ExtResource("2_l10wh")]
+position = Vector2(2990, 536)
+scale = Vector2(0.251, 0.251)
 
 [node name="player" type="CharacterBody2D" parent="."]
 position = Vector2(957, 540)
@@ -26,10 +28,67 @@ visible = false
 [node name="HUD" parent="." instance=ExtResource("2_vcqr2")]
 
 [node name="nurses" parent="." instance=ExtResource("4_vsn48")]
+position = Vector2(678, 516)
+scale = Vector2(0.251, 0.251)
+
+[node name="nurses1" parent="." instance=ExtResource("4_vsn48")]
+position = Vector2(1865, 758)
+scale = Vector2(0.251, 0.251)
 
 [node name="person" parent="." instance=ExtResource("5_gak2m")]
+position = Vector2(-210, 570)
+scale = Vector2(0.251, 0.251)
+
+[node name="person1" parent="." instance=ExtResource("5_gak2m")]
+position = Vector2(164, 570)
+scale = Vector2(0.251, 0.251)
+
+[node name="person2" parent="." instance=ExtResource("5_gak2m")]
+position = Vector2(538, 570)
+scale = Vector2(0.251, 0.251)
+
+[node name="person3" parent="." instance=ExtResource("5_gak2m")]
+position = Vector2(912, 570)
+scale = Vector2(0.251, 0.251)
+
+[node name="person4" parent="." instance=ExtResource("5_gak2m")]
+position = Vector2(1137, 690)
+scale = Vector2(0.251, 0.251)
+
+[node name="person5" parent="." instance=ExtResource("5_gak2m")]
+position = Vector2(1502, 690)
+scale = Vector2(0.251, 0.251)
+
+[node name="person6" parent="." instance=ExtResource("5_gak2m")]
+position = Vector2(1727, 810)
+scale = Vector2(0.251, 0.251)
+
+[node name="person7" parent="." instance=ExtResource("5_gak2m")]
+position = Vector2(2101, 810)
+scale = Vector2(0.251, 0.251)
+
+[node name="person8" parent="." instance=ExtResource("5_gak2m")]
+position = Vector2(2475, 810)
+scale = Vector2(0.251, 0.251)
+
+[node name="person9" parent="." instance=ExtResource("5_gak2m")]
+position = Vector2(2700, 690)
+scale = Vector2(0.251, 0.251)
+
+[node name="person10" parent="." instance=ExtResource("5_gak2m")]
+position = Vector2(3074, 690)
+scale = Vector2(0.251, 0.251)
+
+[node name="person11" parent="." instance=ExtResource("5_gak2m")]
+position = Vector2(3448, 690)
+scale = Vector2(0.251, 0.251)
+
+[node name="person12" parent="." instance=ExtResource("5_gak2m")]
+position = Vector2(3673, 570)
+scale = Vector2(0.251, 0.251)
 
 [node name="person_staand_sample" type="TextureRect" parent="."]
+visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.251, 0.251)
