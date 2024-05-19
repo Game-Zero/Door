@@ -1,13 +1,26 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0fmpdl8gr1da"]
+[gd_scene load_steps=13 format=3 uid="uid://b0fmpdl8gr1da"]
 
 [ext_resource type="Texture2D" uid="uid://ca7mpah0s762r" path="res://Runtime/Resource/Background/stage1-1.png" id="1_x035b"]
 [ext_resource type="Texture2D" uid="uid://bfpeddby78ypy" path="res://Runtime/Resource/Background/person_stand_sample_with_line.png" id="2_42k81"]
+[ext_resource type="Shader" path="res://Runtime/Shader/electrocardiogram.gdshader" id="2_ics1n"]
 [ext_resource type="PackedScene" uid="uid://vn4a1rgtwlwx" path="res://Runtime/Prefab/doctor.tscn" id="2_l10wh"]
 [ext_resource type="PackedScene" uid="uid://bofbb0bvx1ysw" path="res://Runtime/Prefab/hud.tscn" id="2_vcqr2"]
+[ext_resource type="Texture2D" uid="uid://bme2g6tns1qh7" path="res://Runtime/Resource/Sprite/wave.png" id="3_hpy4d"]
+[ext_resource type="Texture2D" uid="uid://bdsbcq14u4841" path="res://Runtime/Resource/Sprite/wave_mask.png" id="3_lkgex"]
 [ext_resource type="PackedScene" uid="uid://i3hvoqto4ryi" path="res://Runtime/Prefab/nurses.tscn" id="4_vsn48"]
 [ext_resource type="PackedScene" uid="uid://cjircuvt6il8c" path="res://Runtime/Prefab/person.tscn" id="5_gak2m"]
+[ext_resource type="Script" path="res://Runtime/Script/Manager/Destination_1_1.gd" id="7_5sfds"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0pj63"]
+shader = ExtResource("2_ics1n")
+shader_parameter/speed = 0.2
+shader_parameter/texture_mask = ExtResource("3_lkgex")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u6q8p"]
+size = Vector2(144, 576)
 
 [node name="Root" type="Node2D"]
+position = Vector2(1, 0)
 
 [node name="background" type="TextureRect" parent="."]
 offset_right = 40.0
@@ -15,7 +28,18 @@ offset_bottom = 40.0
 scale = Vector2(0.250694, 0.250694)
 texture = ExtResource("1_x035b")
 
-[node name="person_staand_sample" type="TextureRect" parent="."]
+[node name="electrocardiogram" type="TextureRect" parent="background"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_0pj63")
+layout_mode = 0
+offset_left = 9569.43
+offset_top = 1308.37
+offset_right = 10546.4
+offset_bottom = 1582.37
+texture = ExtResource("3_hpy4d")
+
+[node name="person_stand_sample" type="TextureRect" parent="."]
+visible = false
 offset_right = 16835.0
 offset_bottom = 4320.0
 scale = Vector2(0.251, 0.251)
@@ -80,19 +104,16 @@ person_type = 3
 position = Vector2(2101, 810)
 scale = Vector2(0.251, 0.251)
 person_type = 1
-bHasMark = true
 
 [node name="person8" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(2475, 810)
 scale = Vector2(0.251, 0.251)
 person_type = 2
-bHasMark = true
 
 [node name="person9" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(2700, 690)
 scale = Vector2(0.251, 0.251)
 person_type = 3
-bHasMark = true
 
 [node name="person10" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(3074, 690)
@@ -111,3 +132,12 @@ position = Vector2(3673, 570)
 scale = Vector2(0.251, 0.251)
 person_type = 3
 person_state = 1
+
+[node name="Destination" type="Area2D" parent="."]
+position = Vector2(3887, 488)
+script = ExtResource("7_5sfds")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Destination"]
+shape = SubResource("RectangleShape2D_u6q8p")
+
+[connection signal="body_entered" from="Destination" to="Destination" method="body_entered"]

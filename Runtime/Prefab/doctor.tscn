@@ -75,9 +75,12 @@ tracks/3/path = NodePath(".")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(1.4),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.4, 1.4),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
+"args": [],
+"method": &"_on_body_becoming_thin"
+}, {
 "args": [],
 "method": &"_on_liquid_up"
 }]
@@ -100,6 +103,7 @@ sprite_frames = ExtResource("1_aa3qt")
 animation = &"doctor_moving"
 
 [node name="arms" type="AnimatedSprite2D" parent="."]
+z_index = 9
 sprite_frames = ExtResource("1_aa3qt")
 animation = &"doctor_arm_moving"
 
@@ -118,3 +122,7 @@ texture = ExtResource("3_g7o4l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_p2wl0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

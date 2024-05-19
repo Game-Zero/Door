@@ -3,6 +3,9 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 
+static var npc_can_move = true
+static var player_can_move = true
+
 enum PersonType {
 	Player = 0,
 	NPC1 = 1,
@@ -26,7 +29,8 @@ enum PersonAnimationState {
 @export var person_type: PersonType
 @export var person_animation_state: PersonAnimationState
 @export var person_state: PersonState
-@export var bHasMark = false
+@export var b_has_mark = false
+@export var b_has_diagnosed = false
 
 var last_played_animation = ""
 
@@ -50,11 +54,11 @@ func play_animation():
 	
 	match (person_animation_state):
 		PersonAnimationState.Standing:
-			if (bHasMark):
+			if (b_has_mark && person_state == PersonState.Fat):
 				animation_name += "mark_"
 			animation_name += "standing"
 		PersonAnimationState.Walking:
-			if (bHasMark):
+			if (b_has_mark && person_state == PersonState.Fat):
 				animation_name += "mark_"
 			animation_name += "walking"
 		PersonAnimationState.LiftingUpCloth:
@@ -81,12 +85,12 @@ func check_can_move_y():
 
 	return 0
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	play_animation()
 	if Engine.is_editor_hint():
 		return
 
-	if person_type == PersonType.Player:
+	if person_type == PersonType.Player && player_can_move:
 		var direction = Input.get_axis("ui_left", "ui_right")
 		var can_move_y = check_can_move_y()
 		if direction:
@@ -97,10 +101,37 @@ func _physics_process(delta):
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.y = move_toward(velocity.y, 0, SPEED)
 			person_animation_state = PersonAnimationState.Standing
-		
-		move_and_slide()
-		
 
-func animation_finished(anim_name):
-	print("[Person(%s)][animation_finished]: anim_name == %s" % name % anim_name)
-	return
+		move_and_slide()
+
+func do_lifting_cloth():
+	person_animation_state = PersonAnimationState.LiftingUpCloth	
+
+func do_mark():
+	b_has_mark = true
+	person_animation_state = PersonAnimationState.Standing
+
+func do_diagnose():
+	b_has_diagnosed = true
+	person_animation_state = PersonAnimationState.Standing
+
+func do_becoming_thin():
+	person_animation_state = PersonAnimationState.BecomingThin
+
+func do_change_move_state(b_can_move):
+	if not b_can_move:
+		person_animation_state = PersonAnimationState.Standing
+		
+	npc_can_move = b_can_move
+	if (person_type == PersonType.Player):
+		player_can_move = b_can_move
+
+func _on_animation_player_animation_finished(anim_name):
+	print("[Person(%s)][animation_finished]: anim_name == " % name, anim_name)
+	if person_animation_state == PersonAnimationState.LiftingUpCloth:
+		person_animation_state = PersonAnimationState.Standing
+		
+	if person_animation_state == PersonAnimationState.BecomingThin:
+		person_animation_state = PersonAnimationState.Standing
+		person_state = PersonState.Medium
+

@@ -1,4 +1,4 @@
-@tool
+#@tool
 extends Node2D
 
 @onready var liquid = $liquid
@@ -19,7 +19,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	match(doctor_state):
 		DoctorState.Standing:
 			animation_player.play("doctor_lipo")
@@ -31,3 +31,25 @@ func _process(delta):
 func _on_liquid_up():
 	liquid.scale += Vector2(0, delta_h / h)
 	liquid.position -= Vector2(0, delta_h / 2)
+
+
+var cached_body
+func _on_body_entered(_body):
+	print("[%s][_on_body_entered] body.name == " % name, _body.name)
+	if _body.person_state == _body.PersonState.Medium:
+		return
+
+	cached_body = _body
+	_body.do_change_move_state(false)
+	doctor_state = DoctorState.Acting
+
+func _on_body_exited(_body):
+	print("[%s][_on_body_exited] body.name == " % name, _body.name)
+
+func _on_body_becoming_thin():
+	cached_body.do_becoming_thin()
+
+func _on_animation_player_animation_finished(_anim_name):
+	print("[%s][_on_animation_player_animation_finished] _anim_name == " % name, _anim_name)
+	doctor_state = DoctorState.Standing
+	cached_body.do_change_move_state(true)
