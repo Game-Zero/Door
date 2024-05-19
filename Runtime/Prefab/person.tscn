@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://cjircuvt6il8c"]
+[gd_scene load_steps=37 format=3 uid="uid://cjircuvt6il8c"]
 
 [ext_resource type="SpriteFrames" uid="uid://shtrwigvxjkw" path="res://Runtime/Prefab/person_fat_anime.tres" id="1_sdtbp"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/PersonManager.gd" id="1_ty8q4"]
@@ -15,6 +15,18 @@ tracks/0/keys = {
 "handle_modes": PackedInt32Array(0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("state:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"npc1_fat_mark_standing"]
 }
 
 [sub_resource type="Animation" id="Animation_db7l8"]
@@ -768,11 +780,120 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0)
 }
 
+[sub_resource type="Animation" id="Animation_kv42l"]
+resource_name = "npc1_fat_mark_standing"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("state:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"npc1_fat_mark_standing"]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("state:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_y05d4"]
+resource_name = "npc2_fat_mark_standing"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("state:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"npc2_fat_mark_standing"]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("state:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_k1wns"]
+resource_name = "npc3_fat_mark_standing"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("state:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"npc3_fat_mark_standing"]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("state:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_padeu"]
+resource_name = "protagonist_fat_mark_standing"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("state:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"protagonist_fat_mark_standing"]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("state:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_slju2"]
 _data = {
 "RESET": SubResource("Animation_s5hbl"),
 "npc1_fat_becom_thin": SubResource("Animation_db7l8"),
 "npc1_fat_cloth": SubResource("Animation_4lafl"),
+"npc1_fat_mark_standing": SubResource("Animation_kv42l"),
 "npc1_fat_mark_walking": SubResource("Animation_gtg0j"),
 "npc1_fat_standing": SubResource("Animation_4ev77"),
 "npc1_fat_walking": SubResource("Animation_v7tjn"),
@@ -780,6 +901,7 @@ _data = {
 "npc1_medium_walking": SubResource("Animation_oumww"),
 "npc2_fat_becom_thin": SubResource("Animation_icysg"),
 "npc2_fat_cloth": SubResource("Animation_h8mob"),
+"npc2_fat_mark_standing": SubResource("Animation_y05d4"),
 "npc2_fat_mark_walking": SubResource("Animation_yb2gf"),
 "npc2_fat_standing": SubResource("Animation_lt685"),
 "npc2_fat_walking": SubResource("Animation_lyebt"),
@@ -787,6 +909,7 @@ _data = {
 "npc2_medium_walking": SubResource("Animation_l2mqd"),
 "npc3_fat_becom_thin": SubResource("Animation_wbg1s"),
 "npc3_fat_cloth": SubResource("Animation_rske2"),
+"npc3_fat_mark_standing": SubResource("Animation_k1wns"),
 "npc3_fat_mark_walking": SubResource("Animation_yeem0"),
 "npc3_fat_standing": SubResource("Animation_2r0f0"),
 "npc3_fat_walking": SubResource("Animation_jqm7g"),
@@ -794,6 +917,7 @@ _data = {
 "npc3_medium_walking": SubResource("Animation_04ycs"),
 "protagonist_fat_becom_thin": SubResource("Animation_uy62o"),
 "protagonist_fat_cloth": SubResource("Animation_icpf4"),
+"protagonist_fat_mark_standing": SubResource("Animation_padeu"),
 "protagonist_fat_mark_walking": SubResource("Animation_mxyth"),
 "protagonist_fat_standing": SubResource("Animation_ho7uj"),
 "protagonist_fat_walking": SubResource("Animation_a1wp2"),
@@ -809,7 +933,7 @@ script = ExtResource("1_ty8q4")
 
 [node name="state" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_sdtbp")
-animation = &"protagonist_fat_stading"
+animation = &"npc1_fat_mark_standing"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

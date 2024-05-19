@@ -141,6 +141,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("1_s05of")
+}],
+"loop": true,
+"name": &"npc1_fat_mark_standing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("11_uetdo")
 }, {
 "duration": 1.0,
@@ -244,6 +252,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"npc2_fat_cloth",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_vvtcq")
+}],
+"loop": true,
+"name": &"npc2_fat_mark_standing",
 "speed": 5.0
 }, {
 "frames": [{
@@ -355,6 +371,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("49_b8gi3")
+}],
+"loop": true,
+"name": &"npc3_fat_mark_standing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("59_cpfds")
 }, {
 "duration": 1.0,
@@ -458,6 +482,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"protagonist_fat_cloth",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ud3y5")
+}],
+"loop": true,
+"name": &"protagonist_fat_mark_standing",
 "speed": 5.0
 }, {
 "frames": [{
