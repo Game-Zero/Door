@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://i3hvoqto4ryi"]
+[gd_scene load_steps=8 format=3 uid="uid://i3hvoqto4ryi"]
 
+[ext_resource type="Script" path="res://Runtime/Script/Manager/NurseManager.gd" id="1_4ml8e"]
 [ext_resource type="Texture2D" uid="uid://ucs66dcwe507" path="res://Runtime/Resource/Sprite/S1_character_standing/nurses_move_bottom.png" id="1_xl785"]
 [ext_resource type="SpriteFrames" uid="uid://bweo5jhy1mfth" path="res://Runtime/Prefab/nurses_anime.tres" id="2_wbasg"]
 
@@ -91,6 +92,7 @@ _data = {
 }
 
 [node name="nurses" type="Node2D"]
+script = ExtResource("1_4ml8e")
 
 [node name="NursesMoveBottom" type="Sprite2D" parent="."]
 texture = ExtResource("1_xl785")

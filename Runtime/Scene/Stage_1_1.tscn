@@ -26,14 +26,6 @@ texture = ExtResource("2_42k81")
 position = Vector2(2990, 536)
 scale = Vector2(0.251, 0.251)
 
-[node name="player" parent="." instance=ExtResource("5_gak2m")]
-position = Vector2(538, 570)
-scale = Vector2(0.251, 0.251)
-
-[node name="camera" type="Camera2D" parent="player"]
-position = Vector2(1669.32, -119.522)
-scale = Vector2(3.98406, 3.98406)
-
 [node name="HUD" parent="." instance=ExtResource("2_vcqr2")]
 
 [node name="nurses" parent="." instance=ExtResource("4_vsn48")]
@@ -43,6 +35,7 @@ scale = Vector2(0.251, 0.251)
 [node name="nurses1" parent="." instance=ExtResource("4_vsn48")]
 position = Vector2(1865, 758)
 scale = Vector2(0.251, 0.251)
+nurse_type = 2
 
 [node name="person" parent="." instance=ExtResource("5_gak2m")]
 position = Vector2(-210, 570)
@@ -109,3 +102,11 @@ position = Vector2(3673, 570)
 scale = Vector2(0.251, 0.251)
 person_type = 3
 person_state = 1
+
+[node name="player" parent="." instance=ExtResource("5_gak2m")]
+position = Vector2(538, 570)
+scale = Vector2(0.251, 0.251)
+
+[node name="camera" type="Camera2D" parent="player"]
+position = Vector2(1669.32, -119.522)
+scale = Vector2(3.98406, 3.98406)
