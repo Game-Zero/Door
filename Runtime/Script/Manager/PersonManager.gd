@@ -26,6 +26,7 @@ enum PersonAnimationState {
 @export var person_type: PersonType
 @export var person_animation_state: PersonAnimationState
 @export var person_state: PersonState
+@export var bHasMark = false
 
 var last_played_animation = ""
 
@@ -49,8 +50,12 @@ func play_animation():
 	
 	match (person_animation_state):
 		PersonAnimationState.Standing:
+			if (bHasMark):
+				animation_name += "mark_"
 			animation_name += "standing"
 		PersonAnimationState.Walking:
+			if (bHasMark):
+				animation_name += "mark_"
 			animation_name += "walking"
 		PersonAnimationState.LiftingUpCloth:
 			animation_name += "cloth"
@@ -62,16 +67,22 @@ func play_animation():
 		print("[Person(%s)][play_animation] animation_name: " % name + animation_name)
 		last_played_animation = animation_name
 	return animation_name
-	
+
 func _physics_process(delta):
+	play_animation()
 	if Engine.is_editor_hint():
-		play_animation()
 		return
-		
+
 	if person_type == PersonType.Player:
 		var direction = Input.get_axis("ui_left", "ui_right")
 		if direction:
 			velocity.x = direction * SPEED
+			person_animation_state = PersonAnimationState.Walking
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
+			person_animation_state = PersonAnimationState.Standing
 		move_and_slide()
+
+func animation_finished(anim_name):
+	print("[Person(%s)][animation_finished]: anim_name == %s" % name % anim_name)
+	return

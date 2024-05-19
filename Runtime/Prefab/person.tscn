@@ -818,3 +818,5 @@ libraries = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_wu7og")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="animation_finished" binds= ["anim_name"]]
