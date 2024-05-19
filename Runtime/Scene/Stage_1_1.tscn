@@ -42,8 +42,16 @@ position = Vector2(-210, 570)
 scale = Vector2(0.251, 0.251)
 person_type = 1
 
-[node name="person1" parent="." instance=ExtResource("5_gak2m")]
+[node name="player" parent="." instance=ExtResource("5_gak2m")]
 position = Vector2(164, 570)
+scale = Vector2(0.251, 0.251)
+
+[node name="camera" type="Camera2D" parent="player"]
+position = Vector2(3047.81, -119.522)
+scale = Vector2(3.98406, 3.98406)
+
+[node name="person1" parent="." instance=ExtResource("5_gak2m")]
+position = Vector2(510, 570)
 scale = Vector2(0.251, 0.251)
 person_type = 2
 
@@ -102,11 +110,3 @@ position = Vector2(3673, 570)
 scale = Vector2(0.251, 0.251)
 person_type = 3
 person_state = 1
-
-[node name="player" parent="." instance=ExtResource("5_gak2m")]
-position = Vector2(538, 570)
-scale = Vector2(0.251, 0.251)
-
-[node name="camera" type="Camera2D" parent="player"]
-position = Vector2(1669.32, -119.522)
-scale = Vector2(3.98406, 3.98406)

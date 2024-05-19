@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://i3hvoqto4ryi"]
+[gd_scene load_steps=9 format=3 uid="uid://i3hvoqto4ryi"]
 
 [ext_resource type="Script" path="res://Runtime/Script/Manager/NurseManager.gd" id="1_4ml8e"]
 [ext_resource type="Texture2D" uid="uid://ucs66dcwe507" path="res://Runtime/Resource/Sprite/S1_character_standing/nurses_move_bottom.png" id="1_xl785"]
@@ -91,7 +91,11 @@ _data = {
 "nurse2_arm_anime": SubResource("Animation_ns4vr")
 }
 
-[node name="nurses" type="Node2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lihe1"]
+radius = 194.21
+height = 2100.0
+
+[node name="nurses" type="CharacterBody2D"]
 script = ExtResource("1_4ml8e")
 
 [node name="NursesMoveBottom" type="Sprite2D" parent="."]
@@ -105,3 +109,7 @@ animation = &"nurse1_arm_anime"
 libraries = {
 "": SubResource("AnimationLibrary_ywtcc")
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-117, 0)
+shape = SubResource("CapsuleShape2D_lihe1")
