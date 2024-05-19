@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://vn4a1rgtwlwx"]
+[gd_scene load_steps=9 format=3 uid="uid://vn4a1rgtwlwx"]
 
 [ext_resource type="SpriteFrames" uid="uid://dbhhh44ctampb" path="res://Runtime/Prefab/doctor_anims.tres" id="1_aa3qt"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/DoctorManager.gd" id="1_gaxn1"]
@@ -71,6 +71,17 @@ tracks/2/keys = {
 "method": &"on_liquid_up"
 }]
 }
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("arms:z_index")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 10, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 1.8)
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u64ve"]
 _data = {
@@ -78,7 +89,10 @@ _data = {
 "doctor_lipo": SubResource("Animation_emkr3")
 }
 
-[node name="doctor" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p2wl0"]
+size = Vector2(1716, 2684)
+
+[node name="doctor" type="Area2D"]
 script = ExtResource("1_gaxn1")
 
 [node name="body" type="AnimatedSprite2D" parent="."]
@@ -101,3 +115,6 @@ texture = ExtResource("2_uyk88")
 [node name="bottle" type="Sprite2D" parent="."]
 position = Vector2(529, 1033)
 texture = ExtResource("3_g7o4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_p2wl0")

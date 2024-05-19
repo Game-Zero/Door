@@ -56,6 +56,17 @@ tracks/1/keys = {
 "update": 1,
 "values": [&"nurse1_arm_anime"]
 }
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("hand:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 10, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.1, 1.1)
+}
 
 [sub_resource type="Animation" id="Animation_ns4vr"]
 resource_name = "nurse2_arm_anime"
@@ -83,6 +94,17 @@ tracks/1/keys = {
 "update": 1,
 "values": [&"nurse2_arm_anime"]
 }
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("hand:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 10, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.1, 0.5)
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ywtcc"]
 _data = {
@@ -95,8 +117,9 @@ _data = {
 radius = 194.21
 height = 2100.0
 
-[node name="nurses" type="CharacterBody2D"]
+[node name="nurses" type="Area2D"]
 script = ExtResource("1_4ml8e")
+nurse_type = 2
 
 [node name="NursesMoveBottom" type="Sprite2D" parent="."]
 texture = ExtResource("1_xl785")

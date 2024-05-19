@@ -1,3 +1,4 @@
+@tool
 extends Label
 
 var deltaTime = 0.0

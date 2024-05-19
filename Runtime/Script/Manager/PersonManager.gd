@@ -68,6 +68,19 @@ func play_animation():
 		last_played_animation = animation_name
 	return animation_name
 
+func check_can_move_y():
+	var x = global_position.x
+	if (1024 <= x && x <= 1152):
+		return 1
+	elif (1616 <= x && x <= 1760):
+		return 1
+	elif (2480 <= x && x <= 2608):
+		return -1
+	elif (3456 <= x && x <= 3568):
+		return -1
+
+	return 0
+
 func _physics_process(delta):
 	play_animation()
 	if Engine.is_editor_hint():
@@ -75,13 +88,18 @@ func _physics_process(delta):
 
 	if person_type == PersonType.Player:
 		var direction = Input.get_axis("ui_left", "ui_right")
+		var can_move_y = check_can_move_y()
 		if direction:
 			velocity.x = direction * SPEED
+			velocity.y = direction * can_move_y * SPEED
 			person_animation_state = PersonAnimationState.Walking
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
+			velocity.y = move_toward(velocity.y, 0, SPEED)
 			person_animation_state = PersonAnimationState.Standing
+		
 		move_and_slide()
+		
 
 func animation_finished(anim_name):
 	print("[Person(%s)][animation_finished]: anim_name == %s" % name % anim_name)

@@ -16,14 +16,13 @@ scale = Vector2(0.250694, 0.250694)
 texture = ExtResource("1_x035b")
 
 [node name="person_staand_sample" type="TextureRect" parent="."]
-visible = false
 offset_right = 16835.0
 offset_bottom = 4320.0
 scale = Vector2(0.251, 0.251)
 texture = ExtResource("2_42k81")
 
 [node name="doctor" parent="." instance=ExtResource("2_l10wh")]
-position = Vector2(2990, 536)
+position = Vector2(3004, 536)
 scale = Vector2(0.251, 0.251)
 
 [node name="HUD" parent="." instance=ExtResource("2_vcqr2")]
@@ -33,79 +32,81 @@ position = Vector2(678, 516)
 scale = Vector2(0.251, 0.251)
 
 [node name="nurses1" parent="." instance=ExtResource("4_vsn48")]
-position = Vector2(1865, 758)
+position = Vector2(1885, 758)
 scale = Vector2(0.251, 0.251)
 nurse_type = 2
-
-[node name="person" parent="." instance=ExtResource("5_gak2m")]
-position = Vector2(-210, 570)
-scale = Vector2(0.251, 0.251)
-person_type = 1
 
 [node name="player" parent="." instance=ExtResource("5_gak2m")]
 position = Vector2(164, 570)
 scale = Vector2(0.251, 0.251)
 
 [node name="camera" type="Camera2D" parent="player"]
-position = Vector2(3047.81, -119.522)
+position = Vector2(0, -119)
 scale = Vector2(3.98406, 3.98406)
 
-[node name="person1" parent="." instance=ExtResource("5_gak2m")]
+[node name="PersonNPCS" type="Node2D" parent="."]
+
+[node name="person" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
+position = Vector2(-210, 570)
+scale = Vector2(0.251, 0.251)
+person_type = 1
+
+[node name="person1" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(510, 570)
 scale = Vector2(0.251, 0.251)
 person_type = 2
 
-[node name="person3" parent="." instance=ExtResource("5_gak2m")]
+[node name="person3" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(912, 570)
 scale = Vector2(0.251, 0.251)
 person_type = 3
 
-[node name="person4" parent="." instance=ExtResource("5_gak2m")]
+[node name="person4" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(1137, 690)
 scale = Vector2(0.251, 0.251)
 person_type = 1
 
-[node name="person5" parent="." instance=ExtResource("5_gak2m")]
+[node name="person5" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(1502, 690)
 scale = Vector2(0.251, 0.251)
 person_type = 2
 
-[node name="person6" parent="." instance=ExtResource("5_gak2m")]
+[node name="person6" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(1727, 810)
 scale = Vector2(0.251, 0.251)
 person_type = 3
 
-[node name="person7" parent="." instance=ExtResource("5_gak2m")]
+[node name="person7" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(2101, 810)
 scale = Vector2(0.251, 0.251)
 person_type = 1
 bHasMark = true
 
-[node name="person8" parent="." instance=ExtResource("5_gak2m")]
+[node name="person8" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(2475, 810)
 scale = Vector2(0.251, 0.251)
 person_type = 2
 bHasMark = true
 
-[node name="person9" parent="." instance=ExtResource("5_gak2m")]
+[node name="person9" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(2700, 690)
 scale = Vector2(0.251, 0.251)
 person_type = 3
 bHasMark = true
 
-[node name="person10" parent="." instance=ExtResource("5_gak2m")]
+[node name="person10" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(3074, 690)
 scale = Vector2(0.251, 0.251)
 person_type = 1
 person_state = 1
 
-[node name="person11" parent="." instance=ExtResource("5_gak2m")]
+[node name="person11" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(3448, 690)
 scale = Vector2(0.251, 0.251)
 person_type = 2
 person_state = 1
 
-[node name="person12" parent="." instance=ExtResource("5_gak2m")]
+[node name="person12" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(3673, 570)
 scale = Vector2(0.251, 0.251)
 person_type = 3
