@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=93 format=3 uid="uid://shtrwigvxjkw"]
+[gd_resource type="SpriteFrames" load_steps=97 format=3 uid="uid://shtrwigvxjkw"]
 
 [ext_resource type="Texture2D" uid="uid://cydpvgm2pxamv" path="res://Runtime/Resource/FrameAnimation/S1_anime/NPC1_become_thin_10/1.png" id="1_s05of"]
 [ext_resource type="Texture2D" uid="uid://cyyt16wtecnst" path="res://Runtime/Resource/FrameAnimation/S1_anime/protagonist_become_thin_10/1.png" id="1_ud3y5"]
@@ -92,6 +92,10 @@
 [ext_resource type="Texture2D" uid="uid://cd1h2spj0b4m5" path="res://Runtime/Resource/FrameAnimation/S1_anime/NPC3_thin_walking_5/3.png" id="71_frr0m"]
 [ext_resource type="Texture2D" uid="uid://5lpac1puc6bs" path="res://Runtime/Resource/FrameAnimation/S1_anime/NPC3_thin_walking_5/4.png" id="72_xwyll"]
 [ext_resource type="Texture2D" uid="uid://bqmfac3g0j0na" path="res://Runtime/Resource/Sprite/S1_character_standing/protagonist_thin_standing.png" id="92_poqml"]
+[ext_resource type="Texture2D" uid="uid://c5o03we6mdi7b" path="res://Runtime/Resource/FrameAnimation/S1_anime/thin_protagonist_walking_5/1.png" id="93_b42u7"]
+[ext_resource type="Texture2D" uid="uid://duvi0spbb8nr5" path="res://Runtime/Resource/FrameAnimation/S1_anime/thin_protagonist_walking_5/2.png" id="94_nauxw"]
+[ext_resource type="Texture2D" uid="uid://de8ug3sbclq6v" path="res://Runtime/Resource/FrameAnimation/S1_anime/thin_protagonist_walking_5/3.png" id="95_wn4bo"]
+[ext_resource type="Texture2D" uid="uid://6pbyf8125nnx" path="res://Runtime/Resource/FrameAnimation/S1_anime/thin_protagonist_walking_5/4.png" id="96_4unrm"]
 
 [resource]
 animations = [{
@@ -504,5 +508,22 @@ animations = [{
 }],
 "loop": true,
 "name": &"protagonist_medium_stading",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("93_b42u7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_nauxw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_wn4bo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_4unrm")
+}],
+"loop": true,
+"name": &"protagonist_medium_walking",
 "speed": 5.0
 }]
