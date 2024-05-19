@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://b0fmpdl8gr1da"]
 
 [ext_resource type="Texture2D" uid="uid://ca7mpah0s762r" path="res://Runtime/Resource/Background/stage1-1.png" id="1_x035b"]
+[ext_resource type="Texture2D" uid="uid://bfpeddby78ypy" path="res://Runtime/Resource/Background/person_stand_sample_with_line.png" id="2_42k81"]
 [ext_resource type="PackedScene" uid="uid://vn4a1rgtwlwx" path="res://Runtime/Prefab/doctor.tscn" id="2_l10wh"]
 [ext_resource type="PackedScene" uid="uid://bofbb0bvx1ysw" path="res://Runtime/Prefab/hud.tscn" id="2_vcqr2"]
 [ext_resource type="PackedScene" uid="uid://i3hvoqto4ryi" path="res://Runtime/Prefab/nurses.tscn" id="4_vsn48"]
 [ext_resource type="PackedScene" uid="uid://cjircuvt6il8c" path="res://Runtime/Prefab/person.tscn" id="5_gak2m"]
-[ext_resource type="Texture2D" uid="uid://bykaiwtcpcfyf" path="res://Runtime/Resource/Background/person_stand_sample.png" id="6_ogy56"]
 
 [node name="Root" type="Node2D"]
 
@@ -15,15 +15,23 @@ offset_bottom = 40.0
 scale = Vector2(0.250694, 0.250694)
 texture = ExtResource("1_x035b")
 
+[node name="person_staand_sample" type="TextureRect" parent="."]
+offset_right = 16835.0
+offset_bottom = 4320.0
+scale = Vector2(0.251, 0.251)
+texture = ExtResource("2_42k81")
+
 [node name="doctor" parent="." instance=ExtResource("2_l10wh")]
 position = Vector2(2990, 536)
 scale = Vector2(0.251, 0.251)
 
-[node name="player" type="CharacterBody2D" parent="."]
-position = Vector2(957, 540)
+[node name="player" parent="." instance=ExtResource("5_gak2m")]
+position = Vector2(538, 570)
+scale = Vector2(0.251, 0.251)
 
 [node name="camera" type="Camera2D" parent="player"]
-visible = false
+position = Vector2(1669.32, -119.522)
+scale = Vector2(3.98406, 3.98406)
 
 [node name="HUD" parent="." instance=ExtResource("2_vcqr2")]
 
@@ -41,10 +49,6 @@ scale = Vector2(0.251, 0.251)
 
 [node name="person1" parent="." instance=ExtResource("5_gak2m")]
 position = Vector2(164, 570)
-scale = Vector2(0.251, 0.251)
-
-[node name="person2" parent="." instance=ExtResource("5_gak2m")]
-position = Vector2(538, 570)
 scale = Vector2(0.251, 0.251)
 
 [node name="person3" parent="." instance=ExtResource("5_gak2m")]
@@ -86,10 +90,3 @@ scale = Vector2(0.251, 0.251)
 [node name="person12" parent="." instance=ExtResource("5_gak2m")]
 position = Vector2(3673, 570)
 scale = Vector2(0.251, 0.251)
-
-[node name="person_staand_sample" type="TextureRect" parent="."]
-visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(0.251, 0.251)
-texture = ExtResource("6_ogy56")

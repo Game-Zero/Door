@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://vn4a1rgtwlwx"]
+[gd_scene load_steps=8 format=3 uid="uid://vn4a1rgtwlwx"]
 
 [ext_resource type="SpriteFrames" uid="uid://dbhhh44ctampb" path="res://Runtime/Prefab/doctor_anims.tres" id="1_aa3qt"]
+[ext_resource type="Script" path="res://Runtime/Script/Manager/DoctorManager.gd" id="1_gaxn1"]
 [ext_resource type="Texture2D" uid="uid://dpewlkcxjpwq0" path="res://Runtime/Resource/Sprite/fat_liquid.png" id="2_uyk88"]
 [ext_resource type="Texture2D" uid="uid://0dltxdm8mm6r" path="res://Runtime/Resource/Sprite/bottle.png" id="3_g7o4l"]
 
@@ -29,18 +30,6 @@ tracks/1/keys = {
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("liquid_up:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
 
 [sub_resource type="Animation" id="Animation_emkr3"]
 resource_name = "doctor_lipo"
@@ -68,17 +57,19 @@ tracks/1/keys = {
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0, 3, -0.25, 0, 0.25, 0, 4, -0.25, 0, 0.25, 0, 5, -0.25, 0, 0.25, 0, 6, -0.25, 0, 0.25, 0, 7, -0.25, 0, 0.25, 0, 8, -0.25, 0, 0.25, 0, 9, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8)
 }
-tracks/2/type = "value"
+tracks/2/type = "method"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("liquid_up:visible")
+tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
+"times": PackedFloat32Array(1.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"on_liquid_up"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u64ve"]
@@ -88,6 +79,7 @@ _data = {
 }
 
 [node name="doctor" type="Node2D"]
+script = ExtResource("1_gaxn1")
 
 [node name="body" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_aa3qt")
@@ -101,11 +93,6 @@ animation = &"doctor_arm_moving"
 libraries = {
 "": SubResource("AnimationLibrary_u64ve")
 }
-
-[node name="liquid_up" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(528, 1227)
-texture = ExtResource("2_uyk88")
 
 [node name="liquid" type="Sprite2D" parent="."]
 position = Vector2(528, 1352)
