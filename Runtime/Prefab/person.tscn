@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://cjircuvt6il8c"]
+[gd_scene load_steps=38 format=3 uid="uid://cjircuvt6il8c"]
 
 [ext_resource type="SpriteFrames" uid="uid://shtrwigvxjkw" path="res://Runtime/Prefab/person_fat_anime.tres" id="1_sdtbp"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/PersonManager.gd" id="1_ty8q4"]
@@ -888,6 +888,35 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0)
 }
 
+[sub_resource type="Animation" id="Animation_3to17"]
+resource_name = "protagonist_medium_walking"
+length = 0.8
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("state:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"protagonist_medium_walking"]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("state:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0, 3, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6)
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_slju2"]
 _data = {
 "RESET": SubResource("Animation_s5hbl"),
@@ -921,7 +950,8 @@ _data = {
 "protagonist_fat_mark_walking": SubResource("Animation_mxyth"),
 "protagonist_fat_standing": SubResource("Animation_ho7uj"),
 "protagonist_fat_walking": SubResource("Animation_a1wp2"),
-"protagonist_medium_standing": SubResource("Animation_d7ikt")
+"protagonist_medium_standing": SubResource("Animation_d7ikt"),
+"protagonist_medium_walking": SubResource("Animation_3to17")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wu7og"]
