@@ -60,13 +60,13 @@ position = Vector2(1885, 758)
 scale = Vector2(0.251, 0.251)
 nurse_type = 2
 
+[node name="camera" type="Camera2D" parent="."]
+position = Vector2(960, 540.131)
+scale = Vector2(0.999999, 0.999999)
+
 [node name="player" parent="." instance=ExtResource("5_gak2m")]
 position = Vector2(164, 570)
 scale = Vector2(0.251, 0.251)
-
-[node name="camera" type="Camera2D" parent="player"]
-position = Vector2(0, -119)
-scale = Vector2(3.98406, 3.98406)
 
 [node name="PersonNPCS" type="Node2D" parent="."]
 
@@ -84,54 +84,70 @@ person_type = 2
 position = Vector2(912, 570)
 scale = Vector2(0.251, 0.251)
 person_type = 3
+b_has_diagnosed = true
 
 [node name="person4" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(1137, 690)
 scale = Vector2(0.251, 0.251)
 person_type = 1
+b_has_diagnosed = true
 
 [node name="person5" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(1502, 690)
 scale = Vector2(0.251, 0.251)
 person_type = 2
+b_has_diagnosed = true
 
 [node name="person6" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(1727, 810)
 scale = Vector2(0.251, 0.251)
 person_type = 3
+b_has_diagnosed = true
 
 [node name="person7" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(2101, 810)
 scale = Vector2(0.251, 0.251)
 person_type = 1
+b_has_mark = true
+b_has_diagnosed = true
 
 [node name="person8" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(2475, 810)
 scale = Vector2(0.251, 0.251)
 person_type = 2
+b_has_mark = true
+b_has_diagnosed = true
 
 [node name="person9" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(2700, 690)
 scale = Vector2(0.251, 0.251)
 person_type = 3
+b_has_mark = true
+b_has_diagnosed = true
 
 [node name="person10" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(3074, 690)
 scale = Vector2(0.251, 0.251)
 person_type = 1
 person_state = 1
+b_has_mark = true
+b_has_diagnosed = true
 
 [node name="person11" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(3448, 690)
 scale = Vector2(0.251, 0.251)
 person_type = 2
 person_state = 1
+b_has_mark = true
+b_has_diagnosed = true
 
 [node name="person12" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(3673, 570)
 scale = Vector2(0.251, 0.251)
 person_type = 3
 person_state = 1
+b_has_mark = true
+b_has_diagnosed = true
 
 [node name="Destination" type="Area2D" parent="."]
 position = Vector2(3887, 488)

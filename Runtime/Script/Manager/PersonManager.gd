@@ -2,9 +2,12 @@
 extends CharacterBody2D
 
 const SPEED = 300.0
+const NPC_SPEED = 200.0
 
 static var npc_can_move = true
 static var player_can_move = true
+
+var camera
 
 enum PersonType {
 	Player = 0,
@@ -33,6 +36,7 @@ enum PersonAnimationState {
 @export var b_has_diagnosed = false
 
 var last_played_animation = ""
+var dialog
 
 func play_animation():
 	var animation_name = ""
@@ -85,24 +89,54 @@ func check_can_move_y():
 
 	return 0
 
+func _ready():
+	if Engine.is_editor_hint():
+		return
+
+	camera = get_node_or_null("../camera")
+	dialog = AcceptDialog.new()
+	add_child(dialog)
+	dialog.size.x = 300
+	dialog.dialog_text = "GameOver."
+	dialog.title = "提示"
+	dialog.get_ok_button().pressed.connect(func():get_tree().reload_current_scene())
+
+
 func _physics_process(_delta):
 	play_animation()
 	if Engine.is_editor_hint():
 		return
-
-	if person_type == PersonType.Player && player_can_move:
+	
+	if person_type == PersonType.Player:
 		var direction = Input.get_axis("ui_left", "ui_right")
 		var can_move_y = check_can_move_y()
-		if direction:
+		if direction and player_can_move:
 			velocity.x = direction * SPEED
 			velocity.y = direction * can_move_y * SPEED
 			person_animation_state = PersonAnimationState.Walking
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.y = move_toward(velocity.y, 0, SPEED)
-			person_animation_state = PersonAnimationState.Standing
+			if person_animation_state == PersonAnimationState.Walking:
+				person_animation_state = PersonAnimationState.Standing
+	
+	if person_type != PersonType.Player:
+		if npc_can_move:
+			var can_move_y = check_can_move_y()
+			velocity.x = NPC_SPEED
+			velocity.y = can_move_y * NPC_SPEED
+			person_animation_state = PersonAnimationState.Walking
+		else:
+			velocity.x = move_toward(velocity.x, 0, NPC_SPEED)
+			velocity.y =  move_toward(velocity.y, 0, NPC_SPEED)
+			if person_animation_state == PersonAnimationState.Walking:
+				person_animation_state = PersonAnimationState.Standing
 
-		move_and_slide()
+	move_and_slide()
+	
+	var x = global_position.x
+	if camera and 960 <= x and x <= 3256:
+		camera.global_position.x = x
 
 func do_lifting_cloth():
 	person_animation_state = PersonAnimationState.LiftingUpCloth	
@@ -119,12 +153,15 @@ func do_becoming_thin():
 	person_animation_state = PersonAnimationState.BecomingThin
 
 func do_change_move_state(b_can_move):
-	if not b_can_move:
+	if not b_can_move and person_animation_state == PersonAnimationState.Walking:
 		person_animation_state = PersonAnimationState.Standing
-		
+
 	npc_can_move = b_can_move
 	if (person_type == PersonType.Player):
 		player_can_move = b_can_move
+
+func destroy():
+	queue_free()
 
 func _on_animation_player_animation_finished(anim_name):
 	print("[Person(%s)][animation_finished]: anim_name == " % name, anim_name)

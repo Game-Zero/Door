@@ -103,7 +103,6 @@ sprite_frames = ExtResource("1_aa3qt")
 animation = &"doctor_moving"
 
 [node name="arms" type="AnimatedSprite2D" parent="."]
-z_index = 9
 sprite_frames = ExtResource("1_aa3qt")
 animation = &"doctor_arm_moving"
 

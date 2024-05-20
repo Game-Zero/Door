@@ -37,6 +37,7 @@ var cached_body
 func _on_body_entered(_body):
 	print("[%s][_on_body_entered] body.name == " % name, _body.name)
 	if _body.person_state == _body.PersonState.Medium:
+		_body.z_index = 20
 		return
 
 	cached_body = _body
@@ -45,9 +46,11 @@ func _on_body_entered(_body):
 
 func _on_body_exited(_body):
 	print("[%s][_on_body_exited] body.name == " % name, _body.name)
+	_body.z_index = 0
 
 func _on_body_becoming_thin():
 	cached_body.do_becoming_thin()
+	cached_body.z_index = 20
 
 func _on_animation_player_animation_finished(_anim_name):
 	print("[%s][_on_animation_player_animation_finished] _anim_name == " % name, _anim_name)

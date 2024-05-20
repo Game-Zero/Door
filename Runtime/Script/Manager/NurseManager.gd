@@ -53,8 +53,12 @@ func _on_body_entered(_body):
 		_body.do_lifting_cloth()
 		nurse_state = NurseState.Acting
 
+	if _body.b_has_diagnosed or _body.b_has_mark:
+		_body.z_index = 20
+
 func _on_body_exited(_body):
 	print("[%s][_on_body_exited] body.name == " % name, _body.name)
+	_body.z_index = 0
 
 func _on_animation_player_animation_finished(_anim_name):
 	print("[%s][_on_animation_player_animation_finished] _anim_name == " % name, _anim_name)
@@ -62,5 +66,6 @@ func _on_animation_player_animation_finished(_anim_name):
 
 	if nurse_type == NurseType.Type2:
 		body_cache.do_mark()
+		body_cache.z_index = 20
 
 	body_cache.do_change_move_state(true)

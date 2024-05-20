@@ -11,10 +11,16 @@ func _ready():
 	dialog.title = "提示"
 	dialog.get_ok_button().pressed.connect(self._button_pressed)
 
+var cached_body
 func body_entered(_body):
-	_body.do_change_move_state(false)
-	dialog.popup_centered()
-	#get_tree().reload_current_scene()
+	cached_body = _body
+	if _body.person_type == _body.PersonType.Player:
+		_body.do_change_move_state(false)
+		dialog.popup_centered()
+	else:
+		_body.destroy()
 
 func _button_pressed():
 	get_tree().reload_current_scene()
+	if cached_body != null:
+		cached_body.do_change_move_state(true)
