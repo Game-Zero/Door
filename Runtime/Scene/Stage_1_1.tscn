@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b0fmpdl8gr1da"]
+[gd_scene load_steps=16 format=3 uid="uid://b0fmpdl8gr1da"]
 
 [ext_resource type="Texture2D" uid="uid://ca7mpah0s762r" path="res://Runtime/Resource/Background/stage1-1.png" id="1_x035b"]
 [ext_resource type="Texture2D" uid="uid://bfpeddby78ypy" path="res://Runtime/Resource/Background/person_stand_sample_with_line.png" id="2_42k81"]
@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://i3hvoqto4ryi" path="res://Runtime/Prefab/nurses.tscn" id="4_vsn48"]
 [ext_resource type="PackedScene" uid="uid://cjircuvt6il8c" path="res://Runtime/Prefab/person.tscn" id="5_gak2m"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/Destination_1_1.gd" id="7_5sfds"]
+[ext_resource type="Texture2D" uid="uid://44hs1ycbx5gl" path="res://Runtime/Resource/Sprite/light_base.png" id="11_jqium"]
+[ext_resource type="Script" path="res://Runtime/Script/Manager/LightManager.gd" id="12_ejfi4"]
+[ext_resource type="Texture2D" uid="uid://bjb3st1dksev2" path="res://Runtime/Resource/Sprite/light.png" id="12_ub2c1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0pj63"]
 shader = ExtResource("2_ics1n")
@@ -155,5 +158,29 @@ script = ExtResource("7_5sfds")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Destination"]
 shape = SubResource("RectangleShape2D_u6q8p")
+
+[node name="light_base" type="TextureRect" parent="." node_paths=PackedStringArray("player")]
+offset_left = 823.0
+offset_right = 10559.0
+offset_bottom = 339.0
+scale = Vector2(0.251, 0.251)
+texture = ExtResource("11_jqium")
+script = ExtResource("12_ejfi4")
+player = NodePath("../player")
+
+[node name="light1" type="Sprite2D" parent="light_base"]
+position = Vector2(70.9936, 274.647)
+texture = ExtResource("12_ub2c1")
+offset = Vector2(22.1362, 171.381)
+
+[node name="light2" type="Sprite2D" parent="light_base"]
+position = Vector2(5143.43, 274.9)
+texture = ExtResource("12_ub2c1")
+offset = Vector2(19.9199, 171.315)
+
+[node name="light3" type="Sprite2D" parent="light_base"]
+position = Vector2(9669.32, 278.884)
+texture = ExtResource("12_ub2c1")
+offset = Vector2(19.9209, 167.331)
 
 [connection signal="body_entered" from="Destination" to="Destination" method="body_entered"]
