@@ -954,9 +954,8 @@ _data = {
 "protagonist_medium_walking": SubResource("Animation_3to17")
 }
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wu7og"]
-radius = 266.91
-height = 1800.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3qvl"]
+size = Vector2(600, 1800)
 
 [node name="person" type="CharacterBody2D"]
 script = ExtResource("1_ty8q4")
@@ -971,6 +970,6 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_wu7og")
+shape = SubResource("RectangleShape2D_r3qvl")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

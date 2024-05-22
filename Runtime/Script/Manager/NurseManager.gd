@@ -43,18 +43,20 @@ var body_cache
 func _on_body_entered(_body):
 	print("[%s][_on_body_entered] body.name == " % name, _body.name)
 	body_cache = _body
-	if nurse_type == NurseType.Type1 and not _body.b_has_diagnosed:
-		_body.do_change_move_state(false)
-		_body.do_diagnose()
-		nurse_state = NurseState.Acting
+	if nurse_type == NurseType.Type1:
+		if not _body.b_has_diagnosed:
+			_body.do_change_move_state(false)
+			nurse_state = NurseState.Acting
+		else:
+			_body.z_index = 20
 	
-	if nurse_type == NurseType.Type2 and not _body.b_has_mark:
-		_body.do_change_move_state(false)
-		_body.do_lifting_cloth()
-		nurse_state = NurseState.Acting
-
-	if _body.b_has_diagnosed or _body.b_has_mark:
-		_body.z_index = 20
+	if nurse_type == NurseType.Type2:
+		if not _body.b_has_mark:
+			_body.do_change_move_state(false)
+			_body.do_lifting_cloth()
+			nurse_state = NurseState.Acting
+		else:
+			_body.z_index = 20
 
 func _on_body_exited(_body):
 	print("[%s][_on_body_exited] body.name == " % name, _body.name)
@@ -66,6 +68,9 @@ func _on_animation_player_animation_finished(_anim_name):
 
 	if nurse_type == NurseType.Type2:
 		body_cache.do_mark()
-		body_cache.z_index = 20
 
+	if nurse_type == NurseType.Type1:
+		body_cache.do_diagnose()
+
+	body_cache.z_index = 20
 	body_cache.do_change_move_state(true)

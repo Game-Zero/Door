@@ -101,7 +101,7 @@ func _ready():
 	dialog.title = "提示"
 	dialog.get_ok_button().pressed.connect(func():get_tree().reload_current_scene())
 
-
+var last_scale_x = 0
 func _physics_process(_delta):
 	play_animation()
 	if Engine.is_editor_hint():
@@ -114,7 +114,16 @@ func _physics_process(_delta):
 			velocity.x = direction * SPEED
 			velocity.y = direction * can_move_y * SPEED
 			person_animation_state = PersonAnimationState.Walking
+			
+			if velocity.x * transform.x.x < 0:
+				transform.x.x *= -1
+
+			if last_scale_x != scale.x:
+				print("[ZeroTest]", "[scale]", last_scale_x, " != ", scale.x)
+				last_scale_x = scale.x
 		else:
+			if transform.x.x < 0:
+				transform.x.x *= -1
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.y = move_toward(velocity.y, 0, SPEED)
 			if person_animation_state == PersonAnimationState.Walking:
@@ -133,7 +142,7 @@ func _physics_process(_delta):
 				person_animation_state = PersonAnimationState.Standing
 
 	move_and_slide()
-	
+
 	var x = global_position.x
 	if camera and 960 <= x and x <= 3256:
 		camera.global_position.x = x
