@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxk3xgdl1betd"]
+
+[ext_resource type="Texture2D" uid="uid://dheq1whowkd2p" path="res://Runtime/Resource/Background/stage3-1.png" id="1_sx32c"]
+
+[node name="Root" type="Node2D"]
+
+[node name="background" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.250136, 0.250136)
+texture = ExtResource("1_sx32c")
