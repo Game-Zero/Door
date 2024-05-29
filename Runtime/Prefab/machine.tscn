@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://k7cs5dfyvr8"]
+[gd_scene load_steps=9 format=3 uid="uid://k7cs5dfyvr8"]
 
 [ext_resource type="SpriteFrames" uid="uid://bffx87q6w2o0j" path="res://Runtime/Prefab/machine_anime.tres" id="1_yk5er"]
 
@@ -136,7 +136,10 @@ _data = {
 "machine_without_noun_still": SubResource("Animation_ir4jc")
 }
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1r5n0"]
+size = Vector2(1000, 1000)
+
+[node name="Node2D" type="Area2D"]
 
 [node name="state" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_yk5er")
@@ -146,3 +149,7 @@ animation = &"machine_noun_still"
 libraries = {
 "": SubResource("AnimationLibrary_13ey8")
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(495, 496)
+shape = SubResource("RectangleShape2D_1r5n0")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bxk3xgdl1betd"]
+[gd_scene load_steps=9 format=3 uid="uid://bxk3xgdl1betd"]
 
 [ext_resource type="Texture2D" uid="uid://dheq1whowkd2p" path="res://Runtime/Resource/Background/stage3-1.png" id="1_sx32c"]
 [ext_resource type="Texture2D" uid="uid://bmwosss3yp47m" path="res://Runtime/Resource/Background/machine_sample.png" id="2_50bbd"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://k7cs5dfyvr8" path="res://Runtime/Prefab/machine.tscn" id="4_f5c0m"]
 [ext_resource type="PackedScene" uid="uid://c353rtq7kkrvj" path="res://Runtime/Prefab/s3_button.tscn" id="5_nyooi"]
 [ext_resource type="PackedScene" uid="uid://qb4305drrrbj" path="res://Runtime/Prefab/s3_1-2_bridge_anime.tscn" id="6_15bsl"]
+[ext_resource type="PackedScene" uid="uid://bofbb0bvx1ysw" path="res://Runtime/Prefab/hud.tscn" id="7_lidkm"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uwx2r"]
 
 [node name="Root" type="Node2D"]
 
@@ -15,16 +18,18 @@ offset_bottom = 40.0
 scale = Vector2(0.250136, 0.250136)
 texture = ExtResource("1_sx32c")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="background"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="background/StaticBody2D"]
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_uwx2r")
+
 [node name="machine sample" type="TextureRect" parent="."]
 visible = false
 offset_right = 11500.0
 offset_bottom = 4320.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_50bbd")
-
-[node name="person" parent="." instance=ExtResource("3_06vkj")]
-position = Vector2(109, 573)
-scale = Vector2(0.25, 0.25)
 
 [node name="machine" parent="." instance=ExtResource("4_f5c0m")]
 position = Vector2(1254, 400)
@@ -34,6 +39,16 @@ scale = Vector2(0.25, 0.25)
 position = Vector2(834, 680)
 scale = Vector2(0.25, 0.25)
 
+[node name="person" parent="." instance=ExtResource("3_06vkj")]
+position = Vector2(109, 573)
+scale = Vector2(0.25, 0.25)
+
 [node name="s3_1-2_bridge anime" parent="." instance=ExtResource("6_15bsl")]
 visible = false
+position = Vector2(960, 540)
 scale = Vector2(0.25, 0.25)
+
+[node name="camera" type="Camera2D" parent="."]
+position = Vector2(960, 540)
+
+[node name="HUD" parent="." instance=ExtResource("7_lidkm")]

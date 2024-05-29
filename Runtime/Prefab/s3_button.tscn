@@ -1,6 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c353rtq7kkrvj"]
+[gd_scene load_steps=7 format=3 uid="uid://c353rtq7kkrvj"]
 
 [ext_resource type="SpriteFrames" uid="uid://dpfkuldxj3pc0" path="res://Runtime/Prefab/s3_button_anime.tres" id="1_ty8am"]
+
+[sub_resource type="Animation" id="Animation_6vdaa"]
+length = 0.001
 
 [sub_resource type="Animation" id="Animation_fuvxy"]
 resource_name = "button_pressed"
@@ -29,9 +32,6 @@ tracks/1/keys = {
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0, 3, -0.25, 0, 0.25, 0, 4, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5)
 }
-
-[sub_resource type="Animation" id="Animation_6vdaa"]
-length = 0.001
 
 [sub_resource type="Animation" id="Animation_uxkao"]
 resource_name = "button_still"
@@ -67,7 +67,10 @@ _data = {
 "button_still": SubResource("Animation_uxkao")
 }
 
-[node name="button" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rt3s3"]
+size = Vector2(600, 850)
+
+[node name="button" type="Area2D"]
 
 [node name="state" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_ty8am")
@@ -77,3 +80,6 @@ animation = &"button_pressed"
 libraries = {
 "": SubResource("AnimationLibrary_533th")
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rt3s3")
