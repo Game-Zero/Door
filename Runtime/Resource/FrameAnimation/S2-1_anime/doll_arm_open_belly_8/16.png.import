@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfpeddby78ypy"
-path="res://.godot/imported/person_stand_sample_with_line.png-9f6738891c5c4b850283d3d496f84197.ctex"
+uid="uid://cxmmbbxosa3ga"
+path="res://.godot/imported/16.png-1191792b2b936ea00f7450c9c904f3bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Runtime/Resource/Background/person_stand_sample_with_line.png"
-dest_files=["res://.godot/imported/person_stand_sample_with_line.png-9f6738891c5c4b850283d3d496f84197.ctex"]
+source_file="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_arm_open_belly_8/16.png"
+dest_files=["res://.godot/imported/16.png-1191792b2b936ea00f7450c9c904f3bf.ctex"]
 
 [params]
 

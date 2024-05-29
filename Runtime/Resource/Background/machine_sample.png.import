@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfpeddby78ypy"
-path="res://.godot/imported/person_stand_sample_with_line.png-9f6738891c5c4b850283d3d496f84197.ctex"
+uid="uid://bmwosss3yp47m"
+path="res://.godot/imported/machine_sample.png-f935cf38f5a5ef5f3639283ed1699f66.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Runtime/Resource/Background/person_stand_sample_with_line.png"
-dest_files=["res://.godot/imported/person_stand_sample_with_line.png-9f6738891c5c4b850283d3d496f84197.ctex"]
+source_file="res://Runtime/Resource/Background/machine_sample.png"
+dest_files=["res://.godot/imported/machine_sample.png-f935cf38f5a5ef5f3639283ed1699f66.ctex"]
 
 [params]
 

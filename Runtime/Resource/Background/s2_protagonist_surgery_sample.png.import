@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfpeddby78ypy"
-path="res://.godot/imported/person_stand_sample_with_line.png-9f6738891c5c4b850283d3d496f84197.ctex"
+uid="uid://d0e4nyy8bdere"
+path="res://.godot/imported/s2_protagonist_surgery_sample.png-a3bfc55a709d997ab966eef1a2789142.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Runtime/Resource/Background/person_stand_sample_with_line.png"
-dest_files=["res://.godot/imported/person_stand_sample_with_line.png-9f6738891c5c4b850283d3d496f84197.ctex"]
+source_file="res://Runtime/Resource/Background/s2_protagonist_surgery_sample.png"
+dest_files=["res://.godot/imported/s2_protagonist_surgery_sample.png-a3bfc55a709d997ab966eef1a2789142.ctex"]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

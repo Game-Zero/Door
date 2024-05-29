@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfpeddby78ypy"
-path="res://.godot/imported/person_stand_sample_with_line.png-9f6738891c5c4b850283d3d496f84197.ctex"
+uid="uid://cfpsryh21bduc"
+path="res://.godot/imported/4.png-926b4913c2b394bc5eb4820ff2804f48.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Runtime/Resource/Background/person_stand_sample_with_line.png"
-dest_files=["res://.godot/imported/person_stand_sample_with_line.png-9f6738891c5c4b850283d3d496f84197.ctex"]
+source_file="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgery_end_8/4.png"
+dest_files=["res://.godot/imported/4.png-926b4913c2b394bc5eb4820ff2804f48.ctex"]
 
 [params]
 
