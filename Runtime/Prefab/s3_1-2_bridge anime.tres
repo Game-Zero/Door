@@ -1,0 +1,190 @@
+[gd_resource type="SpriteFrames" load_steps=46 format=3 uid="uid://bc3s266icoytc"]
+
+[ext_resource type="Texture2D" uid="uid://27cuaw8vrqdg" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/1.png" id="1_whc8c"]
+[ext_resource type="Texture2D" uid="uid://cspu3g33rtsbx" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/2.png" id="2_omdh4"]
+[ext_resource type="Texture2D" uid="uid://bj774y830j8c6" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/3.png" id="3_cove2"]
+[ext_resource type="Texture2D" uid="uid://dd3ffb0hiil8b" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/4.png" id="4_jub61"]
+[ext_resource type="Texture2D" uid="uid://bq6b8q2o7pd1y" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/5.png" id="5_ir1e1"]
+[ext_resource type="Texture2D" uid="uid://co5qy040yafp7" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/6.png" id="6_upqkr"]
+[ext_resource type="Texture2D" uid="uid://cc5vjwcp5t7p3" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/7.png" id="7_wc41q"]
+[ext_resource type="Texture2D" uid="uid://dkmgfgg5xyo7m" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/8.png" id="8_cnhj8"]
+[ext_resource type="Texture2D" uid="uid://dn6fw8dxju6af" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/9.png" id="9_vxg5j"]
+[ext_resource type="Texture2D" uid="uid://dfg3ffh4glj67" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/10.png" id="10_3yte6"]
+[ext_resource type="Texture2D" uid="uid://b838dogpruao4" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/11.png" id="11_lwolv"]
+[ext_resource type="Texture2D" uid="uid://ds32nsnm6oeh4" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/12.png" id="12_n61wm"]
+[ext_resource type="Texture2D" uid="uid://cg6jhtldwr2ue" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/13.png" id="13_6yceu"]
+[ext_resource type="Texture2D" uid="uid://r025mdk6bebo" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/14.png" id="14_0g70i"]
+[ext_resource type="Texture2D" uid="uid://b5ao2pijtrm4h" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/15.png" id="15_k11k5"]
+[ext_resource type="Texture2D" uid="uid://0hpupqoracua" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/16.png" id="16_h63yb"]
+[ext_resource type="Texture2D" uid="uid://cxxjx78c4lcdr" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/17.png" id="17_mwqv6"]
+[ext_resource type="Texture2D" uid="uid://dm3r6b3sc3nvi" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/18.png" id="18_5oq3a"]
+[ext_resource type="Texture2D" uid="uid://vuv4nffkbnjm" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/19.png" id="19_8buvj"]
+[ext_resource type="Texture2D" uid="uid://c31fnyyxdtmsf" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/20.png" id="20_n1wmr"]
+[ext_resource type="Texture2D" uid="uid://cx4b4b2ukr8ey" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/21.png" id="21_qobi5"]
+[ext_resource type="Texture2D" uid="uid://cgagw28q5jd1f" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/22.png" id="22_dsycu"]
+[ext_resource type="Texture2D" uid="uid://dqua7ksrecdih" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/23.png" id="23_7b4ng"]
+[ext_resource type="Texture2D" uid="uid://cn7jhl2lviwc7" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/24.png" id="24_0sbl6"]
+[ext_resource type="Texture2D" uid="uid://cdexee5ke7erd" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/25.png" id="25_mokiu"]
+[ext_resource type="Texture2D" uid="uid://cy2liybokhjmk" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/26.png" id="26_6ve12"]
+[ext_resource type="Texture2D" uid="uid://c11agcmn2ahjt" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/27.png" id="27_viqhr"]
+[ext_resource type="Texture2D" uid="uid://cudxqt7wv6qv8" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/28.png" id="28_spijo"]
+[ext_resource type="Texture2D" uid="uid://c3a34hdkb6oos" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/29.png" id="29_wpei5"]
+[ext_resource type="Texture2D" uid="uid://bwu67t7k73fg8" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/30.png" id="30_2o4aq"]
+[ext_resource type="Texture2D" uid="uid://c5f8hleuuoemm" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/31.png" id="31_5v4ne"]
+[ext_resource type="Texture2D" uid="uid://c10x44358ruav" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/32.png" id="32_yge83"]
+[ext_resource type="Texture2D" uid="uid://q1gisp3f8exk" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/33.png" id="33_mli8y"]
+[ext_resource type="Texture2D" uid="uid://c56k7k8rfnrh6" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/34.png" id="34_t87on"]
+[ext_resource type="Texture2D" uid="uid://bjlfs3d3amgtn" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/35.png" id="35_ehv27"]
+[ext_resource type="Texture2D" uid="uid://cdeqbjt4p6ur3" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/36.png" id="36_addix"]
+[ext_resource type="Texture2D" uid="uid://b4dtiehai8gq2" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/37.png" id="37_dfmdf"]
+[ext_resource type="Texture2D" uid="uid://637mxg8ajknk" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/38.png" id="38_7s1wf"]
+[ext_resource type="Texture2D" uid="uid://dtd8jlxb8uoi6" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/39.png" id="39_5f5ts"]
+[ext_resource type="Texture2D" uid="uid://d270dhd7ryreu" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/40.png" id="40_224xn"]
+[ext_resource type="Texture2D" uid="uid://dr842413lv0r2" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/41.png" id="41_fhua2"]
+[ext_resource type="Texture2D" uid="uid://dkic7joiis2yl" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/42.png" id="42_wcooq"]
+[ext_resource type="Texture2D" uid="uid://1dsiha770003" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/43.png" id="43_7cr8c"]
+[ext_resource type="Texture2D" uid="uid://h1n8l8a661gb" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/44.png" id="44_ojwb0"]
+[ext_resource type="Texture2D" uid="uid://bfnbr7m3n4up7" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/S3_1-2_bridging anime_8/45.png" id="45_51es1"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_whc8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_omdh4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cove2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jub61")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ir1e1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_upqkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wc41q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cnhj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vxg5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3yte6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_lwolv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_n61wm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_6yceu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0g70i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_k11k5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_h63yb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_mwqv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_5oq3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_8buvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_n1wmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_qobi5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_dsycu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_7b4ng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_0sbl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_mokiu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_6ve12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_viqhr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_spijo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_wpei5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_2o4aq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_5v4ne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_yge83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_mli8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_t87on")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ehv27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_addix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_dfmdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_7s1wf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_5f5ts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_224xn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_fhua2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_wcooq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_7cr8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_ojwb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_51es1")
+}],
+"loop": true,
+"name": &"s3_1-2_bridge anime",
+"speed": 5.0
+}]
