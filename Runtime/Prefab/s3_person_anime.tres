@@ -1,0 +1,118 @@
+[gd_resource type="SpriteFrames" load_steps=21 format=3 uid="uid://b3bdxw7ekix2l"]
+
+[ext_resource type="Texture2D" uid="uid://ifotlxlwwtc1" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/protagonist_thin_button_to press_8/1.png" id="1_wsbwd"]
+[ext_resource type="Texture2D" uid="uid://b6v2etma73x5r" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/protagonist_thin_button_to press_8/2.png" id="2_bs3pg"]
+[ext_resource type="Texture2D" uid="uid://kei4meoet2rq" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/protagonist_thin_button_to press_8/3.png" id="3_jntrl"]
+[ext_resource type="Texture2D" uid="uid://bk27n0d54y0q6" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/protagonist_thin_button_to press_8/4.png" id="4_goyol"]
+[ext_resource type="Texture2D" uid="uid://dw4o5nk0r87j" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/protagonist_thin_button_to press_8/5.png" id="5_n6otf"]
+[ext_resource type="Texture2D" uid="uid://b2e8gnfmnks5v" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/protagonist_thin_medicine_to get_8/1.png" id="6_5rwf7"]
+[ext_resource type="Texture2D" uid="uid://cahq7vkpi5exw" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/protagonist_thin_medicine_to get_8/2.png" id="7_xj1t1"]
+[ext_resource type="Texture2D" uid="uid://cajlwr8ng2g6d" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/protagonist_thin_medicine_to get_8/3.png" id="8_axtk5"]
+[ext_resource type="Texture2D" uid="uid://dypc3k2g57pol" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/protagonist_thin_medicine_to get_8/4.png" id="9_m5jkq"]
+[ext_resource type="Texture2D" uid="uid://kjjy14n0qocf" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/protagonist_thin_medicine_to get_8/5.png" id="10_oa06l"]
+[ext_resource type="Texture2D" uid="uid://dkv3ihaie6jcx" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/protagonist_thin_medicine_to get_8/6.png" id="11_qo2ux"]
+[ext_resource type="Texture2D" uid="uid://37duu7n2fbyc" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/protagonist_thin_walking_5/1.png" id="12_bh01t"]
+[ext_resource type="Texture2D" uid="uid://kr3vyuo1slhu" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/protagonist_thin_walking_5/2.png" id="13_egluq"]
+[ext_resource type="Texture2D" uid="uid://cxk2cad5exs0c" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/protagonist_thin_walking_5/3.png" id="14_pvefg"]
+[ext_resource type="Texture2D" uid="uid://b0q6sac35p10j" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/protagonist_thin_walking_5/4.png" id="15_2iudh"]
+[ext_resource type="Texture2D" uid="uid://b8pv4ygbxocll" path="res://Runtime/Resource/Sprite/S3-1_character_standing/protagonist_thinner_standing.png" id="16_50iyq"]
+[ext_resource type="Texture2D" uid="uid://cosxfj7iigbq6" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/protagonist_thinner_walking_5/1.png" id="17_656j6"]
+[ext_resource type="Texture2D" uid="uid://t8wr6q43uf14" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/protagonist_thinner_walking_5/2.png" id="18_ydif7"]
+[ext_resource type="Texture2D" uid="uid://k4g2gvbql0c8" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/protagonist_thinner_walking_5/3.png" id="19_8vx74"]
+[ext_resource type="Texture2D" uid="uid://f6edf5ujirda" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/protagonist_thinner_walking_5/4.png" id="20_561yb"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wsbwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_bs3pg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jntrl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_goyol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_n6otf")
+}],
+"loop": true,
+"name": &"protagonist_thin_button_to press",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_5rwf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xj1t1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_axtk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_m5jkq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_oa06l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qo2ux")
+}],
+"loop": true,
+"name": &"protagonist_thin_medicine_to get",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wsbwd")
+}],
+"loop": true,
+"name": &"protagonist_thin_standing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_bh01t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_egluq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_pvefg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_2iudh")
+}],
+"loop": true,
+"name": &"protagonist_thin_walking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_50iyq")
+}],
+"loop": true,
+"name": &"protagonist_thinner_standing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_656j6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ydif7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_8vx74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_561yb")
+}],
+"loop": true,
+"name": &"protagonist_thinner_walking",
+"speed": 5.0
+}]

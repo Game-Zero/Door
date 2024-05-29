@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxk3xgdl1betd"]
+[gd_scene load_steps=6 format=3 uid="uid://bxk3xgdl1betd"]
 
 [ext_resource type="Texture2D" uid="uid://dheq1whowkd2p" path="res://Runtime/Resource/Background/stage3-1.png" id="1_sx32c"]
+[ext_resource type="Texture2D" uid="uid://bmwosss3yp47m" path="res://Runtime/Resource/Background/machine_sample.png" id="2_50bbd"]
+[ext_resource type="PackedScene" uid="uid://bsjgl82qq7apy" path="res://Runtime/Prefab/s3_person.tscn" id="3_06vkj"]
+[ext_resource type="PackedScene" uid="uid://k7cs5dfyvr8" path="res://Runtime/Prefab/machine.tscn" id="4_f5c0m"]
+[ext_resource type="PackedScene" uid="uid://c353rtq7kkrvj" path="res://Runtime/Prefab/s3_button.tscn" id="5_nyooi"]
 
 [node name="Root" type="Node2D"]
 
@@ -9,3 +13,22 @@ offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.250136, 0.250136)
 texture = ExtResource("1_sx32c")
+
+[node name="machine sample" type="TextureRect" parent="."]
+visible = false
+offset_right = 11500.0
+offset_bottom = 4320.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_50bbd")
+
+[node name="person" parent="." instance=ExtResource("3_06vkj")]
+position = Vector2(109, 573)
+scale = Vector2(0.25, 0.25)
+
+[node name="machine" parent="." instance=ExtResource("4_f5c0m")]
+position = Vector2(1254, 400)
+scale = Vector2(0.25, 0.25)
+
+[node name="button" parent="." instance=ExtResource("5_nyooi")]
+position = Vector2(834, 680)
+scale = Vector2(0.25, 0.25)

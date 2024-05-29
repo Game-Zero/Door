@@ -1,0 +1,143 @@
+[gd_resource type="SpriteFrames" load_steps=29 format=3 uid="uid://bffx87q6w2o0j"]
+
+[ext_resource type="Texture2D" uid="uid://u0kbjw0bvsku" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/machine_made medicine_8/1.png" id="1_re3jj"]
+[ext_resource type="Texture2D" uid="uid://deqj587md2nc4" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/machine_made medicine_8/2.png" id="2_k8jjf"]
+[ext_resource type="Texture2D" uid="uid://bfb5hf11omesi" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/machine_made medicine_8/3.png" id="3_42nnm"]
+[ext_resource type="Texture2D" uid="uid://brj28k0i6p33q" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/machine_made medicine_8/4.png" id="4_0hu1n"]
+[ext_resource type="Texture2D" uid="uid://cac5kvww4hntp" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/machine_made medicine_8/5.png" id="5_ops3c"]
+[ext_resource type="Texture2D" uid="uid://c7n5utsu0ieb4" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/machine_made medicine_8/6.png" id="6_em7xx"]
+[ext_resource type="Texture2D" uid="uid://dgw23x45tdicn" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/machine_made medicine_8/7.png" id="7_0ij1n"]
+[ext_resource type="Texture2D" uid="uid://bcntpiucd0mlc" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/machine_made medicine_8/8.png" id="8_xjydf"]
+[ext_resource type="Texture2D" uid="uid://b7ontw5csymj1" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/machine_made medicine_8/9.png" id="9_cfunm"]
+[ext_resource type="Texture2D" uid="uid://be1qjdatygr1a" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/machine_made medicine_8/10.png" id="10_3crud"]
+[ext_resource type="Texture2D" uid="uid://b7vn61t57y2ls" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/machine_made medicine_8/11.png" id="11_dpj4t"]
+[ext_resource type="Texture2D" uid="uid://wnbs5w3te5t5" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/machine_made medicine_8/12.png" id="12_owwl4"]
+[ext_resource type="Texture2D" uid="uid://bes1n8tkddn4j" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/machine_made medicine_8/13.png" id="13_aq7yx"]
+[ext_resource type="Texture2D" uid="uid://cec050xle7q8k" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/machine_made medicine_8/14.png" id="14_m8bk8"]
+[ext_resource type="Texture2D" uid="uid://11uc4qhnk88o" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/machine_made medicine_8/15.png" id="15_v4u7m"]
+[ext_resource type="Texture2D" uid="uid://cbyvgb6i31u82" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/machine_made medicine_8/16.png" id="16_xdj4f"]
+[ext_resource type="Texture2D" uid="uid://dseg8i11a4dfp" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/machine_made medicine_8/17.png" id="17_afg1o"]
+[ext_resource type="Texture2D" uid="uid://bbpubj2fauull" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/machine_made medicine_8/18.png" id="18_rdjq3"]
+[ext_resource type="Texture2D" uid="uid://bjr7rankukl0i" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/machine_made medicine_8/19.png" id="19_fqnoj"]
+[ext_resource type="Texture2D" uid="uid://btuvfco1mu07h" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/machine_made medicine_8/20.png" id="20_v25c3"]
+[ext_resource type="Texture2D" uid="uid://3xxg67rhra2w" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/machine_made medicine_8/21.png" id="21_0utnx"]
+[ext_resource type="Texture2D" uid="uid://cx454oc2iw36p" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/machine_made medicine_8/22.png" id="22_efgv4"]
+[ext_resource type="Texture2D" uid="uid://cbfybm617ntlp" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/medicine_taken_8/1.png" id="23_ltvk6"]
+[ext_resource type="Texture2D" uid="uid://dk12hd0b7hqbw" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/medicine_taken_8/2.png" id="24_pla5g"]
+[ext_resource type="Texture2D" uid="uid://dcr4xnsew4b28" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/medicine_taken_8/3.png" id="25_d7xvs"]
+[ext_resource type="Texture2D" uid="uid://kvi52bstprsx" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/medicine_taken_8/4.png" id="26_rjyg4"]
+[ext_resource type="Texture2D" uid="uid://dryw1cttxaqs7" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/medicine_taken_8/5.png" id="27_80tje"]
+[ext_resource type="Texture2D" uid="uid://bons433qq1cnp" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/medicine_taken_8/6.png" id="28_q1tgr"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_re3jj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_k8jjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_42nnm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0hu1n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ops3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_em7xx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0ij1n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xjydf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cfunm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3crud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dpj4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_owwl4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_aq7yx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_m8bk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_v4u7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_xdj4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_afg1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_rdjq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_fqnoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_v25c3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_0utnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_efgv4")
+}],
+"loop": true,
+"name": &"machine_made medicine ",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_ltvk6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_pla5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_d7xvs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_rjyg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_80tje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_q1tgr")
+}],
+"loop": true,
+"name": &"machine_medicine_taken",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_re3jj")
+}],
+"loop": true,
+"name": &"machine_noun_still",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_q1tgr")
+}],
+"loop": true,
+"name": &"machine_without_noun_still",
+"speed": 5.0
+}]
