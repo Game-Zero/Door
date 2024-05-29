@@ -19,7 +19,10 @@ func _physics_process(_delta: float) -> void:
 	var half_screen_height = screen_size.y / 2
 
 	if half_screen_height <= Target.global_position.y and Target.global_position.y <= half_screen_height * 3:
-		global_position.y = Target.global_position.y	
+		var tween: Tween = get_tree().create_tween()
+		tween.set_trans(Tween.TRANS_QUAD) # warning-ignore:return_value_discarded
+		tween.tween_property(self, "global_position:y", Target.global_position.y, 0.1)
+		global_position.y = Target.global_position.y
 	
 	# Actual movement
 	#var tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUINT)

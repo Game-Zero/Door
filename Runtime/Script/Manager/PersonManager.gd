@@ -108,7 +108,7 @@ func _physics_process(_delta):
 		return
 	
 	if person_type == PersonType.Player:
-		var direction = Input.get_axis("ui_left", "ui_right")
+		var direction = Input.get_axis("player_left", "player_right")
 		var can_move_y = check_can_move_y()
 		if direction and player_can_move:
 			velocity.x = direction * SPEED

@@ -17,7 +17,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("player_fire"):
 		var callback = func():
 			pass
-		player.do_move_to(722, callback)
+		player.do_move_to(1320, callback)
 
 
 func _on_body_entered(player):

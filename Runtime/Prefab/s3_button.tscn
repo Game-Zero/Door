@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://c353rtq7kkrvj"]
+[gd_scene load_steps=8 format=3 uid="uid://c353rtq7kkrvj"]
 
+[ext_resource type="Script" path="res://Runtime/Script/Manager/s3_button.gd" id="1_r8lm6"]
 [ext_resource type="SpriteFrames" uid="uid://dpfkuldxj3pc0" path="res://Runtime/Prefab/s3_button_anime.tres" id="1_ty8am"]
 
 [sub_resource type="Animation" id="Animation_6vdaa"]
@@ -71,6 +72,7 @@ _data = {
 size = Vector2(600, 850)
 
 [node name="button" type="Area2D"]
+script = ExtResource("1_r8lm6")
 
 [node name="state" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_ty8am")
@@ -83,3 +85,6 @@ libraries = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_rt3s3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

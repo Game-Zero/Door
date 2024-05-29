@@ -2,7 +2,7 @@
 extends CharacterBody2D
 
 const SPEED = 300.0
-const EPS = 1e-5
+const EPS = 6
 
 static var player_can_move = true
 
@@ -78,8 +78,7 @@ func _ready():
 	dialog.dialog_text = "GameOver."
 	dialog.title = "提示"
 	dialog.get_ok_button().pressed.connect(func():get_tree().reload_current_scene())
-	
-	self.do_move_to(100)
+
 
 func _physics_process(_delta):
 	play_animation()
@@ -90,7 +89,11 @@ func _physics_process(_delta):
 		var dx = self.force_move_to_x - global_position.x
 		#print("self.force_move_to_x == ", self.force_move_to_x, ", global_position.x == ", global_position.x, ", dx == ", dx)
 		if abs(dx) <= EPS:
-			b_force_move = false
+			var tween: Tween = get_tree().create_tween()
+			tween.set_trans(Tween.TRANS_QUAD) # warning-ignore:return_value_discarded
+			tween.tween_property(self, "global_position:x", self.force_move_to_x, 0.1)
+			#global_position.x = self.force_move_to_x
+			self.b_force_move = false
 			self.do_change_move_state(true)
 			self.person_animation_state = PersonAnimationState.Standing
 			if transform.x.x < 0:
@@ -99,11 +102,12 @@ func _physics_process(_delta):
 			if self.force_move_finish_callback:
 				force_move_finish_callback.call()
 		else:
+			self.person_animation_state = PersonAnimationState.Walking
 			velocity.x = dx / abs(dx) * SPEED
 			if velocity.x * transform.x.x < 0:
 				transform.x.x *= -1
 	else:
-		var direction = Input.get_axis("ui_left", "ui_right")
+		var direction = Input.get_axis("player_left", "player_right")
 		if direction and player_can_move:
 			velocity.x = direction * SPEED
 			person_animation_state = PersonAnimationState.Walking
@@ -121,20 +125,28 @@ func _physics_process(_delta):
 
 	var x = global_position.x
 	if camera and 960 <= x and x <= 1910:
+		#var tween: Tween = get_tree().create_tween()
+		#tween.set_trans(Tween.TRANS_QUAD) # warning-ignore:return_value_discarded
+		#tween.tween_property(camera, "global_position:x", x, 0.1)
 		camera.global_position.x = x
 
 func do_move_to(to_x, callback = null):
-	self.do_change_move_state(false)
 	self.force_move_to_x = to_x
 	if abs(to_x - global_position.x) <= EPS:
+		#global_position.x = to_x
+		var tween: Tween = get_tree().create_tween()
+		tween.set_trans(Tween.TRANS_QUAD) # warning-ignore:return_value_discarded
+		tween.tween_property(self, "global_position:x", to_x, 0.1)
 		self.person_animation_state = PersonAnimationState.Standing
 		self.b_force_move = false
+		self.do_change_move_state(true)
 		if callback:
 			callback.call()
 	else:
 		self.force_move_finish_callback = callback
 		self.force_move_to_x = to_x
 		self.person_animation_state = PersonAnimationState.Walking
+		self.do_change_move_state(false)
 		self.b_force_move = true	
 
 
