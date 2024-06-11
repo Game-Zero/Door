@@ -73,6 +73,12 @@ scale = Vector2(0.251, 0.251)
 
 [node name="PersonNPCS" type="Node2D" parent="."]
 
+[node name="person13" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
+position = Vector2(-556, 570)
+scale = Vector2(0.251, 0.251)
+person_type = 3
+b_has_diagnosed = true
+
 [node name="person" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(-210, 570)
 scale = Vector2(0.251, 0.251)
