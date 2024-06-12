@@ -77,6 +77,7 @@ script = ExtResource("1_r8lm6")
 [node name="state" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_ty8am")
 animation = &"button_pressed"
+frame = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -88,3 +89,4 @@ shape = SubResource("RectangleShape2D_rt3s3")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

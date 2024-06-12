@@ -194,7 +194,7 @@ script = ExtResource("1_dl0of")
 
 [node name="state" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_8pbws")
-animation = &"protagonist_thin_standing"
+animation = &"protagonist_thin_medicine_to get"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

@@ -1,4 +1,3 @@
-@tool
 extends CharacterBody2D
 
 const SPEED = 300.0
@@ -29,6 +28,8 @@ enum PersonAnimationState {
 var b_force_move = false
 var force_move_to_x = 0
 var force_move_finish_callback
+var press_button_finish_callabck
+var get_medicine_finish_callback
 
 var last_played_animation = ""
 var dialog
@@ -149,6 +150,15 @@ func do_move_to(to_x, callback = null):
 		self.do_change_move_state(false)
 		self.b_force_move = true	
 
+func do_press_button(callback = null):
+	press_button_finish_callabck = callback
+	self.do_change_move_state(false)
+	self.person_animation_state = PersonAnimationState.ButtonPressing
+	
+func do_get_medicine(callback = null):
+	get_medicine_finish_callback = callback
+	self.do_change_move_state(false)
+	self.person_animation_state = PersonAnimationState.MedicineGetting
 
 func do_change_move_state(b_can_move):
 	if not b_can_move and person_animation_state == PersonAnimationState.Walking:
@@ -163,8 +173,13 @@ func _on_animation_player_animation_finished(anim_name):
 	print("[Person(%s)][animation_finished]: anim_name == " % name, anim_name)
 	if person_animation_state == PersonAnimationState.ButtonPressing:
 		person_animation_state = PersonAnimationState.Standing
-		
+		self.do_change_move_state(true)
+		if (press_button_finish_callabck != null):
+			press_button_finish_callabck.call()
+
 	if person_animation_state == PersonAnimationState.MedicineGetting:
 		person_animation_state = PersonAnimationState.Standing
-
+		self.do_change_move_state(true)
+		if (get_medicine_finish_callback != null):
+			get_medicine_finish_callback.call()
 

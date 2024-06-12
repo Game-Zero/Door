@@ -1,6 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://qb4305drrrbj"]
+[gd_scene load_steps=6 format=3 uid="uid://qb4305drrrbj"]
 
+[ext_resource type="Script" path="res://Runtime/Script/Manager/s3_1-2_bridge_anime.gd" id="1_e703t"]
 [ext_resource type="SpriteFrames" uid="uid://bc3s266icoytc" path="res://Runtime/Prefab/s3_1-2_bridge anime.tres" id="1_r7ef5"]
+
+[sub_resource type="Animation" id="Animation_cyjix"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"s3_1-2_bridge anime"]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
 
 [sub_resource type="Animation" id="Animation_ctn3y"]
 resource_name = "s3_1-2_bridge anime"
@@ -30,32 +57,6 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1, 1.125, 1.25, 1.375, 1.5, 1.625, 1.75, 1.875, 2, 2.125, 2.25, 2.375, 2.5, 2.625, 2.75, 2.875, 3, 3.125, 3.25, 3.375, 3.5, 3.625, 3.75, 3.875, 4, 4.125, 4.25, 4.375, 4.5, 4.625, 4.75, 4.875, 5, 5.125, 5.25, 5.375, 5.5)
 }
 
-[sub_resource type="Animation" id="Animation_cyjix"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"s3_1-2_bridge anime"]
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hty1j"]
 _data = {
 "RESET": SubResource("Animation_cyjix"),
@@ -63,6 +64,7 @@ _data = {
 }
 
 [node name="s3_1-2_bridge anime" type="Node2D"]
+script = ExtResource("1_e703t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_r7ef5")
@@ -72,3 +74,5 @@ animation = &"s3_1-2_bridge anime"
 libraries = {
 "": SubResource("AnimationLibrary_hty1j")
 }
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

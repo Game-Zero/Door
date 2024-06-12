@@ -1,10 +1,10 @@
 [gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://dpfkuldxj3pc0"]
 
-[ext_resource type="Texture2D" uid="uid://eyfajxknxtyp" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/button_pressed_8/1.png" id="1_jcr35"]
-[ext_resource type="Texture2D" uid="uid://bv4d3gdm0ibvk" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/button_pressed_8/2.png" id="2_e61qx"]
-[ext_resource type="Texture2D" uid="uid://4xbw78ogwif5" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/button_pressed_8/3.png" id="3_yd0n3"]
-[ext_resource type="Texture2D" uid="uid://c4dmg2hy383nh" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/button_pressed_8/4.png" id="4_1guqn"]
-[ext_resource type="Texture2D" uid="uid://5tqr8anoj3sv" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/button_pressed_8/5.png" id="5_dbnwu"]
+[ext_resource type="Texture2D" uid="uid://eyfajxknxtyp" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/Button_pressed_8/1.png" id="1_jcr35"]
+[ext_resource type="Texture2D" uid="uid://bv4d3gdm0ibvk" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/Button_pressed_8/2.png" id="2_e61qx"]
+[ext_resource type="Texture2D" uid="uid://4xbw78ogwif5" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/Button_pressed_8/3.png" id="3_yd0n3"]
+[ext_resource type="Texture2D" uid="uid://c4dmg2hy383nh" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/Button_pressed_8/4.png" id="4_1guqn"]
+[ext_resource type="Texture2D" uid="uid://5tqr8anoj3sv" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/Button_pressed_8/5.png" id="5_dbnwu"]
 
 [resource]
 animations = [{
@@ -24,7 +24,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_dbnwu")
 }],
-"loop": true,
+"loop": false,
 "name": &"button_pressed",
 "speed": 5.0
 }, {

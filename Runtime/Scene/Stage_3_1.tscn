@@ -31,24 +31,25 @@ offset_bottom = 4320.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_50bbd")
 
-[node name="machine" parent="." instance=ExtResource("4_f5c0m")]
+[node name="machine" parent="." node_paths=PackedStringArray("bridge_anime") instance=ExtResource("4_f5c0m")]
 position = Vector2(1254, 400)
 scale = Vector2(0.25, 0.25)
+bridge_anime = NodePath("../camera/s3_1-2_bridge anime")
 
-[node name="button" parent="." instance=ExtResource("5_nyooi")]
+[node name="button" parent="." node_paths=PackedStringArray("machine") instance=ExtResource("5_nyooi")]
 position = Vector2(834, 680)
 scale = Vector2(0.25, 0.25)
+machine = NodePath("../machine")
 
 [node name="person" parent="." instance=ExtResource("3_06vkj")]
 position = Vector2(109, 573)
 scale = Vector2(0.25, 0.25)
 
-[node name="s3_1-2_bridge anime" parent="." instance=ExtResource("6_15bsl")]
-visible = false
-position = Vector2(960, 540)
-scale = Vector2(0.25, 0.25)
-
 [node name="camera" type="Camera2D" parent="."]
 position = Vector2(960, 540)
+
+[node name="s3_1-2_bridge anime" parent="camera" instance=ExtResource("6_15bsl")]
+visible = false
+scale = Vector2(0.25, 0.25)
 
 [node name="HUD" parent="." instance=ExtResource("7_lidkm")]
