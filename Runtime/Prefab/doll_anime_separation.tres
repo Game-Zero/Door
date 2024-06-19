@@ -1,0 +1,192 @@
+[gd_resource type="SpriteFrames" load_steps=42 format=3 uid="uid://bsq6obk7ckv48"]
+
+[ext_resource type="Texture2D" uid="uid://c5312xrr1g8vm" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_arm_open_belly_8/1.png" id="1_cvdbr"]
+[ext_resource type="Texture2D" uid="uid://eoakrjdsfwtg" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_arm_open_belly_8/2.png" id="2_jakj4"]
+[ext_resource type="Texture2D" uid="uid://dajox3tw8dq88" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_arm_open_belly_8/3.png" id="3_m0n47"]
+[ext_resource type="Texture2D" uid="uid://bc0b42j4iyvdj" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_arm_open_belly_8/4.png" id="4_fvtpb"]
+[ext_resource type="Texture2D" uid="uid://bvg1u2n5ljdid" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_arm_open_belly_8/5.png" id="5_ys0d7"]
+[ext_resource type="Texture2D" uid="uid://boxxqdyfiaafx" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_arm_open_belly_8/6.png" id="6_u1cm6"]
+[ext_resource type="Texture2D" uid="uid://um0icy2psnm5" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_arm_open_belly_8/7.png" id="7_fv7dg"]
+[ext_resource type="Texture2D" uid="uid://2eb4e3ywxyag" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_arm_open_belly_8/8.png" id="8_kcbcv"]
+[ext_resource type="Texture2D" uid="uid://deugsksly47yq" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_arm_open_belly_8/9.png" id="9_6xroj"]
+[ext_resource type="Texture2D" uid="uid://b6dok2mah2dww" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_arm_open_belly_8/10.png" id="10_h7wuu"]
+[ext_resource type="Texture2D" uid="uid://cwll0o0fpxqad" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_arm_open_belly_8/11.png" id="11_8xt8s"]
+[ext_resource type="Texture2D" uid="uid://cq0uotfb7elyk" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_arm_open_belly_8/12.png" id="12_ioj25"]
+[ext_resource type="Texture2D" uid="uid://dt7j7ji10utkp" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_arm_open_belly_8/13.png" id="13_u24t8"]
+[ext_resource type="Texture2D" uid="uid://crmtkfurbw47j" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_arm_open_belly_8/14.png" id="14_u6j6f"]
+[ext_resource type="Texture2D" uid="uid://fvnc5bubbjw8" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_arm_open_belly_8/15.png" id="15_rxhux"]
+[ext_resource type="Texture2D" uid="uid://cxmmbbxosa3ga" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_arm_open_belly_8/16.png" id="16_ei7fi"]
+[ext_resource type="Texture2D" uid="uid://eukffn36424a" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgical_cycle_8/1.png" id="17_oe15q"]
+[ext_resource type="Texture2D" uid="uid://kwtmb452iygr" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgical_cycle_8/2.png" id="18_kurt6"]
+[ext_resource type="Texture2D" uid="uid://iorxpfyrbolf" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgical_cycle_8/3.png" id="19_wu751"]
+[ext_resource type="Texture2D" uid="uid://lg6bkbnsm8kb" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgical_cycle_8/4.png" id="20_pp8ii"]
+[ext_resource type="Texture2D" uid="uid://d01j5n5k20hiq" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgical_cycle_8/5.png" id="21_sc5x2"]
+[ext_resource type="Texture2D" uid="uid://c0rslafjpgqd8" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgical_cycle_8/6.png" id="22_clyhs"]
+[ext_resource type="Texture2D" uid="uid://r081bp84d7mr" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgical_cycle_8/7.png" id="23_erelu"]
+[ext_resource type="Texture2D" uid="uid://bkjm68wbhb1mp" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgical_cycle_8/8.png" id="24_7656v"]
+[ext_resource type="Texture2D" uid="uid://ir8ohr2pjqd" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgical_cycle_8/9.png" id="25_xjn7s"]
+[ext_resource type="Texture2D" uid="uid://bmeeq0g4dd8bw" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgical_cycle_8/10.png" id="26_ej07q"]
+[ext_resource type="Texture2D" uid="uid://cujcuokfrwqe2" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgical_cycle_8/11.png" id="27_sq8rg"]
+[ext_resource type="Texture2D" uid="uid://bg278hr7o02p3" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgical_cycle_8/12.png" id="28_54q77"]
+[ext_resource type="Texture2D" uid="uid://8qcfyp5b81c7" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgical_cycle_8/13.png" id="29_pblq0"]
+[ext_resource type="Texture2D" uid="uid://cv6hgmtkgwsby" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgical_cycle_8/14.png" id="30_lsdr3"]
+[ext_resource type="Texture2D" uid="uid://w1u4jfg8p43r" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgery_end_8/1.png" id="31_mq824"]
+[ext_resource type="Texture2D" uid="uid://c120x8ov3p64j" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgery_end_8/2.png" id="32_kdbjs"]
+[ext_resource type="Texture2D" uid="uid://0pv3akj71djj" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgery_end_8/3.png" id="33_3soth"]
+[ext_resource type="Texture2D" uid="uid://cfpsryh21bduc" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgery_end_8/4.png" id="34_u2gy7"]
+[ext_resource type="Texture2D" uid="uid://bgsbc75uyrew0" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgery_end_8/5.png" id="35_e5df1"]
+[ext_resource type="Texture2D" uid="uid://cx1ro1nq433bs" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgery_end_8/6.png" id="36_vgxvj"]
+[ext_resource type="Texture2D" uid="uid://b7arxub8h3i8f" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgery_end_8/7.png" id="37_4vtna"]
+[ext_resource type="Texture2D" uid="uid://bc2dgp82i0034" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgery_end_8/8.png" id="38_ur468"]
+[ext_resource type="Texture2D" uid="uid://dw0s26mdffeia" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgery_end_8/9.png" id="39_ib647"]
+[ext_resource type="Texture2D" uid="uid://0a551p68mulg" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgery_end_8/10.png" id="40_air5a"]
+[ext_resource type="Texture2D" uid="uid://cneah8g2o40kr" path="res://Runtime/Resource/FrameAnimation/S2-1_anime/doll_surgery_end_8/11.png" id="41_ijrt2"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_cvdbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jakj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_m0n47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fvtpb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ys0d7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_u1cm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fv7dg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_kcbcv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6xroj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_h7wuu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8xt8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ioj25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_u24t8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_u6j6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_rxhux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ei7fi")
+}],
+"loop": true,
+"name": &"doll_arm_open_belly",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_lsdr3")
+}],
+"loop": true,
+"name": &"doll_arm_still",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_oe15q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_kurt6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_wu751")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_pp8ii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_sc5x2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_clyhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_erelu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_7656v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_xjn7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ej07q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_sq8rg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_54q77")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_pblq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_lsdr3")
+}],
+"loop": true,
+"name": &"doll_arm_suegery_cycle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_mq824")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_kdbjs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_3soth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_u2gy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_e5df1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_vgxvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_4vtna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_ur468")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_ib647")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_air5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_ijrt2")
+}],
+"loop": true,
+"name": &"doll_arm_suegery_end",
+"speed": 5.0
+}]

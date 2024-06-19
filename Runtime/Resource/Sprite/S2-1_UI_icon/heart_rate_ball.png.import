@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bolg2c5p3exqj"
-path="res://.godot/imported/doll_suegery_buttom.png-e62e02b4bb5d6a31f95f1265fa509d9b.ctex"
+uid="uid://du1u4s3edt830"
+path="res://.godot/imported/heart_rate_ball.png-aba18e77299faf345d7cfee1044caece.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Runtime/Resource/Sprite/S2-1_charater_standing/doll_suegery_buttom.png"
-dest_files=["res://.godot/imported/doll_suegery_buttom.png-e62e02b4bb5d6a31f95f1265fa509d9b.ctex"]
+source_file="res://Runtime/Resource/Sprite/S2-1_UI_icon/heart_rate_ball.png"
+dest_files=["res://.godot/imported/heart_rate_ball.png-aba18e77299faf345d7cfee1044caece.ctex"]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

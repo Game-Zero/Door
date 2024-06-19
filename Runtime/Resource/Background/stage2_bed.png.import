@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bolg2c5p3exqj"
-path="res://.godot/imported/doll_suegery_buttom.png-e62e02b4bb5d6a31f95f1265fa509d9b.ctex"
+uid="uid://dv2x103qv0iis"
+path="res://.godot/imported/stage2_bed.png-f6b419f779b40702acd51bb4fd9b4788.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Runtime/Resource/Sprite/S2-1_charater_standing/doll_suegery_buttom.png"
-dest_files=["res://.godot/imported/doll_suegery_buttom.png-e62e02b4bb5d6a31f95f1265fa509d9b.ctex"]
+source_file="res://Runtime/Resource/Background/stage2_bed.png"
+dest_files=["res://.godot/imported/stage2_bed.png-f6b419f779b40702acd51bb4fd9b4788.ctex"]
 
 [params]
 
