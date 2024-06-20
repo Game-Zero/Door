@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hoc4ogt2w0wp"
-path="res://.godot/imported/white_circle.png-be11f3a1ee3538e8c841f1f464b7668a.ctex"
+uid="uid://e4igikkposly"
+path="res://.godot/imported/12.png-a3f1a2c5a619b8517aa4543362a12dc9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Runtime/Resource/Sprite/S2-1_UI_icon/white_circle.png"
-dest_files=["res://.godot/imported/white_circle.png-be11f3a1ee3538e8c841f1f464b7668a.ctex"]
+source_file="res://Runtime/Resource/FrameAnimation/S4_anime/end3/12.png"
+dest_files=["res://.godot/imported/12.png-a3f1a2c5a619b8517aa4543362a12dc9.ctex"]
 
 [params]
 
