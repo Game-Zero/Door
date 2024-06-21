@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://247thrl7sreg"]
+[gd_scene load_steps=12 format=3 uid="uid://247thrl7sreg"]
 
 [ext_resource type="SpriteFrames" uid="uid://c6w4we1exvsgx" path="res://Runtime/Prefab/s2_person_anime.tres" id="1_8uy5x"]
 
@@ -223,10 +223,38 @@ tracks/1/keys = {
 "values": [&"protagonist_thin_walking"]
 }
 
+[sub_resource type="Animation" id="Animation_oj4gw"]
+resource_name = "protagonist_medium_lie_cycle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"protagonist_medium_lie_cycle"]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7ceew"]
 _data = {
 "RESET": SubResource("Animation_wqruc"),
 "protagonist_medium_lie": SubResource("Animation_p31q0"),
+"protagonist_medium_lie_cycle": SubResource("Animation_oj4gw"),
 "protagonist_medium_lie_open_belly": SubResource("Animation_8v1xa"),
 "protagonist_medium_lie_suegery_end": SubResource("Animation_youq6"),
 "protagonist_medium_standing": SubResource("Animation_gm4h6"),

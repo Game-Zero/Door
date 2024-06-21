@@ -51,6 +51,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("17_qs1ie")
+}],
+"loop": true,
+"name": &"protagonist_medium_lie_cycle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("2_b3dij")
 }, {
 "duration": 1.0,

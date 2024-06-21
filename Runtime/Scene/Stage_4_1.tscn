@@ -1,15 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4yhlgy47d7k2"]
+[gd_scene load_steps=3 format=3 uid="uid://b4yhlgy47d7k2"]
 
 [ext_resource type="Texture2D" uid="uid://cyqsb3o5h1x08" path="res://Runtime/Resource/Background/stage4.png" id="1_2jawe"]
+[ext_resource type="PackedScene" uid="uid://cdof8hcbk5qgg" path="res://Runtime/Prefab/end_part_2.tscn" id="2_2qc13"]
 
 [node name="Root" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_top = -4.0
 offset_right = 12300.0
-offset_bottom = 4316.0
-scale = Vector2(0.251, 0.251)
+offset_bottom = 4320.0
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_2jawe")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(961, 539)
+
+[node name="end_part_2" parent="." instance=ExtResource("2_2qc13")]
+position = Vector2(961, 539)
+scale = Vector2(0.25, 0.25)
