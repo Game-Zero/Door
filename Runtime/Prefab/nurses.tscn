@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://i3hvoqto4ryi"]
+[gd_scene load_steps=10 format=3 uid="uid://i3hvoqto4ryi"]
 
 [ext_resource type="Script" path="res://Runtime/Script/Manager/NurseManager.gd" id="1_4ml8e"]
 [ext_resource type="Texture2D" uid="uid://ucs66dcwe507" path="res://Runtime/Resource/Sprite/S1_character_standing/nurses_move_bottom.png" id="1_xl785"]
 [ext_resource type="SpriteFrames" uid="uid://bweo5jhy1mfth" path="res://Runtime/Prefab/nurses_anime.tres" id="2_wbasg"]
+[ext_resource type="AudioStream" uid="uid://bthota53cgmyo" path="res://Runtime/Resource/Audio/s1/heart_voice.MP3" id="4_0hjc4"]
 
 [sub_resource type="Animation" id="Animation_1scpp"]
 length = 0.001
@@ -67,6 +68,21 @@ tracks/2/keys = {
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 10, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.1, 1.1)
 }
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer2D")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_0hjc4")
+}],
+"times": PackedFloat32Array(0.1)
+}
+tracks/3/use_blend = true
 
 [sub_resource type="Animation" id="Animation_ns4vr"]
 resource_name = "nurse2_arm_anime"
@@ -135,6 +151,8 @@ libraries = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-117, 0)
 shape = SubResource("CapsuleShape2D_lihe1")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
