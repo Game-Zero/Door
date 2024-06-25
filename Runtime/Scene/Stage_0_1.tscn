@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bueufkljryjug"]
+
+[ext_resource type="Texture2D" uid="uid://cfl5vd288pito" path="res://Runtime/Resource/Background/stage0-1.png" id="1_tbd8e"]
+[ext_resource type="PackedScene" uid="uid://bx7do7py8jbba" path="res://Runtime/Prefab/s0_person.tscn" id="2_lc70h"]
+
+[node name="Root" type="Node2D"]
+
+[node name="background" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_tbd8e")
+
+[node name="person" parent="." instance=ExtResource("2_lc70h")]
+position = Vector2(237, 551)
+scale = Vector2(0.25, 0.25)
