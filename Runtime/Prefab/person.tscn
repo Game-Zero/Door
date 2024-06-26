@@ -1,11 +1,10 @@
-[gd_scene load_steps=42 format=3 uid="uid://cjircuvt6il8c"]
+[gd_scene load_steps=41 format=3 uid="uid://cjircuvt6il8c"]
 
 [ext_resource type="SpriteFrames" uid="uid://shtrwigvxjkw" path="res://Runtime/Prefab/person_fat_anime.tres" id="1_sdtbp"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/PersonManager.gd" id="1_ty8q4"]
 [ext_resource type="AudioStream" uid="uid://c35j4dk0vnr8p" path="res://Runtime/Resource/Audio/s1/cloth.MP3" id="4_2g67b"]
 [ext_resource type="AudioStream" uid="uid://drbeeb0r2tfs0" path="res://Runtime/Resource/Audio/s1/mark.MP3" id="5_irs2f"]
-[ext_resource type="AudioStream" uid="uid://c1kauh173ofta" path="res://Runtime/Resource/Audio/s1/medium_walkng.MP3" id="6_obxp3"]
-[ext_resource type="AudioStream" uid="uid://bys85yufuhfdy" path="res://Runtime/Resource/Audio/s1/fat_walking.MP3" id="7_lugi1"]
+[ext_resource type="AudioStream" uid="uid://blpemkg3mw58w" path="res://Runtime/Resource/Audio/s1/walking2.MP3" id="7_0tdg2"]
 
 [sub_resource type="Animation" id="Animation_s5hbl"]
 length = 0.001
@@ -182,7 +181,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("6_obxp3")
+"stream": ExtResource("7_0tdg2")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -253,7 +252,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("6_obxp3")
+"stream": ExtResource("7_0tdg2")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -324,7 +323,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("7_lugi1")
+"stream": ExtResource("7_0tdg2")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -468,7 +467,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("6_obxp3")
+"stream": ExtResource("7_0tdg2")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -539,7 +538,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("6_obxp3")
+"stream": ExtResource("7_0tdg2")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -610,7 +609,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("7_lugi1")
+"stream": ExtResource("7_0tdg2")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -754,7 +753,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("6_obxp3")
+"stream": ExtResource("7_0tdg2")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -825,7 +824,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("6_obxp3")
+"stream": ExtResource("7_0tdg2")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -896,7 +895,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("7_lugi1")
+"stream": ExtResource("7_0tdg2")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -1040,7 +1039,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("6_obxp3")
+"stream": ExtResource("7_0tdg2")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -1111,7 +1110,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("6_obxp3")
+"stream": ExtResource("7_0tdg2")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -1182,7 +1181,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("7_lugi1")
+"stream": ExtResource("7_0tdg2")
 }],
 "times": PackedFloat32Array(0)
 }
