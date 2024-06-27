@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://qb4305drrrbj"]
+[gd_scene load_steps=7 format=3 uid="uid://qb4305drrrbj"]
 
 [ext_resource type="Script" path="res://Runtime/Script/Manager/s3_1-2_bridge_anime.gd" id="1_e703t"]
 [ext_resource type="SpriteFrames" uid="uid://bc3s266icoytc" path="res://Runtime/Prefab/s3_1-2_bridge anime.tres" id="1_r7ef5"]
+[ext_resource type="AudioStream" uid="uid://cntl4abtgals4" path="res://Runtime/Resource/Audio/s3/3_1_2_bridge.MP3" id="3_wnkvu"]
 
 [sub_resource type="Animation" id="Animation_cyjix"]
 length = 0.001
@@ -56,6 +57,21 @@ tracks/1/keys = {
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0, 3, -0.25, 0, 0.25, 0, 4, -0.25, 0, 0.25, 0, 5, -0.25, 0, 0.25, 0, 6, -0.25, 0, 0.25, 0, 7, -0.25, 0, 0.25, 0, 8, -0.25, 0, 0.25, 0, 9, -0.25, 0, 0.25, 0, 10, -0.25, 0, 0.25, 0, 11, -0.25, 0, 0.25, 0, 12, -0.25, 0, 0.25, 0, 13, -0.25, 0, 0.25, 0, 14, -0.25, 0, 0.25, 0, 15, -0.25, 0, 0.25, 0, 16, -0.25, 0, 0.25, 0, 17, -0.25, 0, 0.25, 0, 18, -0.25, 0, 0.25, 0, 19, -0.25, 0, 0.25, 0, 20, -0.25, 0, 0.25, 0, 21, -0.25, 0, 0.25, 0, 22, -0.25, 0, 0.25, 0, 23, -0.25, 0, 0.25, 0, 24, -0.25, 0, 0.25, 0, 25, -0.25, 0, 0.25, 0, 26, -0.25, 0, 0.25, 0, 27, -0.25, 0, 0.25, 0, 28, -0.25, 0, 0.25, 0, 29, -0.25, 0, 0.25, 0, 30, -0.25, 0, 0.25, 0, 31, -0.25, 0, 0.25, 0, 32, -0.25, 0, 0.25, 0, 33, -0.25, 0, 0.25, 0, 34, -0.25, 0, 0.25, 0, 35, -0.25, 0, 0.25, 0, 36, -0.25, 0, 0.25, 0, 37, -0.25, 0, 0.25, 0, 38, -0.25, 0, 0.25, 0, 39, -0.25, 0, 0.25, 0, 40, -0.25, 0, 0.25, 0, 41, -0.25, 0, 0.25, 0, 42, -0.25, 0, 0.25, 0, 43, -0.25, 0, 0.25, 0, 44, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1, 1.125, 1.25, 1.375, 1.5, 1.625, 1.75, 1.875, 2, 2.125, 2.25, 2.375, 2.5, 2.625, 2.75, 2.875, 3, 3.125, 3.25, 3.375, 3.5, 3.625, 3.75, 3.875, 4, 4.125, 4.25, 4.375, 4.5, 4.625, 4.75, 4.875, 5, 5.125, 5.25, 5.375, 5.5)
 }
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer2D")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_wnkvu")
+}],
+"times": PackedFloat32Array(0.125)
+}
+tracks/2/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hty1j"]
 _data = {
@@ -74,5 +90,8 @@ animation = &"s3_1-2_bridge anime"
 libraries = {
 "": SubResource("AnimationLibrary_hty1j")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+volume_db = 10.0
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
