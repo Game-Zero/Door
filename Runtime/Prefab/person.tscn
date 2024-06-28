@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Runtime/Script/Manager/PersonManager.gd" id="1_ty8q4"]
 [ext_resource type="AudioStream" uid="uid://c35j4dk0vnr8p" path="res://Runtime/Resource/Audio/s1/cloth.MP3" id="4_2g67b"]
 [ext_resource type="AudioStream" uid="uid://drbeeb0r2tfs0" path="res://Runtime/Resource/Audio/s1/mark.MP3" id="5_irs2f"]
-[ext_resource type="AudioStream" uid="uid://blpemkg3mw58w" path="res://Runtime/Resource/Audio/s1/walking2.MP3" id="7_0tdg2"]
+[ext_resource type="AudioStream" uid="uid://b2l5ij7tjrs04" path="res://Runtime/Resource/Audio/s1/walking.MP3" id="5_rqf7l"]
 
 [sub_resource type="Animation" id="Animation_s5hbl"]
 length = 0.001
@@ -181,7 +181,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("7_0tdg2")
+"stream": ExtResource("5_rqf7l")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -252,7 +252,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("7_0tdg2")
+"stream": ExtResource("5_rqf7l")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -323,7 +323,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("7_0tdg2")
+"stream": ExtResource("5_rqf7l")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -467,7 +467,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("7_0tdg2")
+"stream": ExtResource("5_rqf7l")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -538,7 +538,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("7_0tdg2")
+"stream": ExtResource("5_rqf7l")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -609,7 +609,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("7_0tdg2")
+"stream": ExtResource("5_rqf7l")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -753,7 +753,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("7_0tdg2")
+"stream": ExtResource("5_rqf7l")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -824,7 +824,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("7_0tdg2")
+"stream": ExtResource("5_rqf7l")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -895,7 +895,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("7_0tdg2")
+"stream": ExtResource("5_rqf7l")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -1039,7 +1039,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("7_0tdg2")
+"stream": ExtResource("5_rqf7l")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -1110,7 +1110,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("7_0tdg2")
+"stream": ExtResource("5_rqf7l")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -1181,7 +1181,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("7_0tdg2")
+"stream": ExtResource("5_rqf7l")
 }],
 "times": PackedFloat32Array(0)
 }
