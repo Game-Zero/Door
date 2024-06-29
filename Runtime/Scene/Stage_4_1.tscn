@@ -16,7 +16,6 @@ texture = ExtResource("1_2jawe")
 position = Vector2(961, 539)
 
 [node name="end_part_2" parent="." instance=ExtResource("2_2qc13")]
-visible = false
 position = Vector2(961, 539)
 scale = Vector2(0.25, 0.25)
 
