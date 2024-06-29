@@ -1,0 +1,35 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://bltiiaorvel8t"]
+
+[ext_resource type="Texture2D" uid="uid://cosxfj7iigbq6" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/protagonist_thinner_walking_5/1.png" id="1_eqj6m"]
+[ext_resource type="Texture2D" uid="uid://b8pv4ygbxocll" path="res://Runtime/Resource/Sprite/S3-1_character_standing/protagonist_thinner_standing.png" id="1_rom5x"]
+[ext_resource type="Texture2D" uid="uid://t8wr6q43uf14" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/protagonist_thinner_walking_5/2.png" id="2_7d1bl"]
+[ext_resource type="Texture2D" uid="uid://k4g2gvbql0c8" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/protagonist_thinner_walking_5/3.png" id="3_th3vi"]
+[ext_resource type="Texture2D" uid="uid://f6edf5ujirda" path="res://Runtime/Resource/FrameAnimation/S3-1_anime/protagonist_thinner_walking_5/4.png" id="4_y88ad"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rom5x")
+}],
+"loop": true,
+"name": &"protagonist_thinner_standing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_eqj6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7d1bl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_th3vi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_y88ad")
+}],
+"loop": true,
+"name": &"protagonist_thinner_walking",
+"speed": 5.0
+}]
