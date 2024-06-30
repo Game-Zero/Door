@@ -42,7 +42,7 @@ scale = Vector2(0.25, 0.25)
 machine = NodePath("../machine")
 
 [node name="person" parent="." instance=ExtResource("3_06vkj")]
-position = Vector2(109, 573)
+position = Vector2(109, 570)
 scale = Vector2(0.25, 0.25)
 
 [node name="camera" type="Camera2D" parent="."]
@@ -50,6 +50,5 @@ position = Vector2(960, 540)
 
 [node name="s3_1-2_bridge anime" parent="camera" instance=ExtResource("6_15bsl")]
 visible = false
-scale = Vector2(0.25, 0.25)
 
 [node name="HUD" parent="." instance=ExtResource("7_lidkm")]
