@@ -1,27 +1,57 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4yhlgy47d7k2"]
+[gd_scene load_steps=8 format=3 uid="uid://b4yhlgy47d7k2"]
 
 [ext_resource type="Texture2D" uid="uid://cyqsb3o5h1x08" path="res://Runtime/Resource/Background/stage4.png" id="1_2jawe"]
 [ext_resource type="PackedScene" uid="uid://cdof8hcbk5qgg" path="res://Runtime/Prefab/end_part_2.tscn" id="2_2qc13"]
 [ext_resource type="PackedScene" uid="uid://2lt8ey4aknoy" path="res://Runtime/Prefab/end.tscn" id="2_ubst6"]
 [ext_resource type="PackedScene" uid="uid://ctrl7btmmpqnl" path="res://Runtime/Prefab/s4_person.tscn" id="3_ywbdv"]
+[ext_resource type="PackedScene" uid="uid://bofbb0bvx1ysw" path="res://Runtime/Prefab/hud.tscn" id="5_8eu86"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vw622"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ehwn2"]
+normal = Vector2(-1, 0)
 
 [node name="Root" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="end2" type="Node2D" parent="."]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="end2"]
 offset_right = 12300.0
 offset_bottom = 4320.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_2jawe")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(961, 539)
+[node name="StaticBody2D" type="StaticBody2D" parent="end2/TextureRect"]
 
-[node name="end" parent="." instance=ExtResource("2_ubst6")]
-position = Vector2(960, 540)
+[node name="L" type="CollisionShape2D" parent="end2/TextureRect/StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_vw622")
 
-[node name="end_part_2" parent="." instance=ExtResource("2_2qc13")]
-position = Vector2(960, 540)
+[node name="R" type="CollisionShape2D" parent="end2/TextureRect/StaticBody2D"]
+position = Vector2(12300, 0)
+shape = SubResource("WorldBoundaryShape2D_ehwn2")
 
-[node name="person" parent="." instance=ExtResource("3_ywbdv")]
+[node name="End2Base" parent="end2" instance=ExtResource("2_ubst6")]
+position = Vector2(1535, 541)
+end_animation_state = 2
+
+[node name="person" parent="end2" node_paths=PackedStringArray("camera") instance=ExtResource("3_ywbdv")]
 position = Vector2(149, 570)
 scale = Vector2(0.25, 0.25)
+camera = NodePath("../../Camera2D")
+
+[node name="End2Top" parent="end2" instance=ExtResource("2_ubst6")]
+position = Vector2(1533, 537)
+end_animation_state = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(960, 540)
+
+[node name="end" parent="Camera2D" instance=ExtResource("2_ubst6")]
+visible = false
+
+[node name="end_part_2" parent="Camera2D" instance=ExtResource("2_2qc13")]
+visible = false
+
+[node name="HUD" parent="." instance=ExtResource("5_8eu86")]
