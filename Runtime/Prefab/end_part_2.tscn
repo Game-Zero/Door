@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cdof8hcbk5qgg"]
+[gd_scene load_steps=8 format=3 uid="uid://cdof8hcbk5qgg"]
 
 [ext_resource type="SpriteFrames" uid="uid://bau2p0ysdqmcg" path="res://Runtime/Prefab/end_part_2_anime.tres" id="1_5sa86"]
+[ext_resource type="Script" path="res://Runtime/Script/Manager/end_part_2.gd" id="1_tq0b2"]
 [ext_resource type="AudioStream" uid="uid://cpl2rc85a7sgf" path="res://Runtime/Resource/Audio/s4/protagonist_neck_break.MP3" id="2_53r24"]
 
 [sub_resource type="Animation" id="Animation_twgbf"]
@@ -71,6 +72,18 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0.17)
 }
 tracks/2/use_blend = true
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer:current_animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3.74),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"end4"]
+}
 
 [sub_resource type="Animation" id="Animation_t06a3"]
 resource_name = "end4"
@@ -109,6 +122,7 @@ _data = {
 }
 
 [node name="end_part_2" type="Node2D"]
+script = ExtResource("1_tq0b2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_5sa86")

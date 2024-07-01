@@ -29,7 +29,7 @@ func play_animation():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	play_animation()
-	if Engine.is_editor_hint():
+	if Engine.is_editor_hint() or !get_parent().visible:
 		return
 
 	var direction = Input.get_axis("player_left", "player_right")

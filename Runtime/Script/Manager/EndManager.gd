@@ -11,6 +11,7 @@ enum EndAnimationState {
 
 @export var end_animation_state: EndAnimationState
 var last_played_animation = ""
+var callback
 @onready var animation_player = $AnimationPlayer
 
 func play_animation():
@@ -35,13 +36,40 @@ func play_animation():
 		last_played_animation = animation_name
 	return animation_name
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
+func play(animation_state: EndAnimationState, callback = null):
+	self.end_animation_state = animation_state
+	self.callback = callback
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	play_animation()
+	if (get_parent() is SubViewport):
+		return
 
+	if get_parent().visible and self.visible:
+		play_animation()
+	else:
+		animation_player.stop()
+
+
+func _on_animation_player_animation_finished(anim_name):
+	if self.callback:
+		var state
+		match (anim_name):
+			"end1":
+				state = EndAnimationState.End1
+			"end2_top":
+				state = EndAnimationState.End2Top
+			"end2_base":
+				state = EndAnimationState.End2Base
+			"end3_1":
+				state = EndAnimationState.End31
+			"end3_2":
+				state = EndAnimationState.End32
+		self.callback.call(state )
 
