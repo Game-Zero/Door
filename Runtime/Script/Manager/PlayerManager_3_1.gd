@@ -46,19 +46,12 @@ func play_animation():
 	match (person_animation_state):
 		PersonAnimationState.Standing:
 			animation_name += "standing"
-			pass
-			
 		PersonAnimationState.Walking:
 			animation_name += "walking"
-			pass
-			
 		PersonAnimationState.ButtonPressing:
 			animation_name += "button_to press"
-			pass
-			
 		PersonAnimationState.MedicineGetting:
 			animation_name += "medicine_to get"
-			pass
 
 	if animation_player != null and animation_player.has_animation(animation_name):
 		animation_player.play(animation_name)

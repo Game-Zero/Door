@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://2lt8ey4aknoy"]
+[gd_scene load_steps=10 format=3 uid="uid://2lt8ey4aknoy"]
 
+[ext_resource type="Script" path="res://Runtime/Script/Manager/EndManager.gd" id="1_jastq"]
 [ext_resource type="SpriteFrames" uid="uid://dqi4ebwehu6me" path="res://Runtime/Prefab/end_anime.tres" id="1_r6or5"]
 
 [sub_resource type="Animation" id="Animation_r1s5s"]
@@ -182,6 +183,7 @@ _data = {
 }
 
 [node name="end" type="Node2D"]
+script = ExtResource("1_jastq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_r6or5")

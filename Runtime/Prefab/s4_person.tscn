@@ -1,51 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://ctrl7btmmpqnl"]
+[gd_scene load_steps=9 format=3 uid="uid://ctrl7btmmpqnl"]
 
+[ext_resource type="Script" path="res://Runtime/Script/Manager/PlayerManager_4_1.gd" id="1_aatmq"]
 [ext_resource type="SpriteFrames" uid="uid://bltiiaorvel8t" path="res://Runtime/Prefab/s4_person_anime.tres" id="1_qrbkp"]
 [ext_resource type="AudioStream" uid="uid://b2l5ij7tjrs04" path="res://Runtime/Resource/Audio/s1/walking.MP3" id="2_vgjxv"]
-
-[sub_resource type="Animation" id="Animation_et5xd"]
-resource_name = "protagonist_thinner_walking"
-length = 0.8
-loop_mode = 1
-step = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("state:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"protagonist_thinner_walking"]
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("state:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0, 3, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6)
-}
-tracks/2/type = "audio"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AudioStreamPlayer2D")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("2_vgjxv")
-}],
-"times": PackedFloat32Array(0)
-}
-tracks/2/use_blend = true
 
 [sub_resource type="Animation" id="Animation_uw04c"]
 length = 0.001
@@ -100,6 +57,50 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0)
 }
 
+[sub_resource type="Animation" id="Animation_et5xd"]
+resource_name = "protagonist_thinner_walking"
+length = 0.8
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("state:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"protagonist_thinner_walking"]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("state:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0, 3, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6)
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer2D")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("2_vgjxv")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/2/use_blend = true
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vsrin"]
 _data = {
 "RESET": SubResource("Animation_uw04c"),
@@ -107,7 +108,12 @@ _data = {
 "protagonist_thinner_walking": SubResource("Animation_et5xd")
 }
 
-[node name="person" type="Node2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_42hyw"]
+radius = 207.0
+height = 1824.0
+
+[node name="person" type="CharacterBody2D"]
+script = ExtResource("1_aatmq")
 
 [node name="state" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_qrbkp")
@@ -120,3 +126,6 @@ libraries = {
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 volume_db = 10.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_42hyw")
