@@ -6,6 +6,8 @@ const NPC_SPEED = 200.0
 
 static var npc_can_move = true
 static var player_can_move = true
+static var player
+static var npcs = []
 
 var camera
 
@@ -100,6 +102,12 @@ func _ready():
 	dialog.dialog_text = "GameOver."
 	dialog.title = "提示"
 	dialog.get_ok_button().pressed.connect(func():get_tree().reload_current_scene())
+	player_can_move = true
+	npc_can_move = true
+	if (person_type == PersonType.Player):
+		player = self
+	else:
+		npcs.append(self)
 
 var last_scale_x = 0
 func _physics_process(_delta):
@@ -108,6 +116,15 @@ func _physics_process(_delta):
 		return
 	
 	if person_type == PersonType.Player:
+		if get_slide_collision_count() > 0:
+			if self.person_type == self.PersonType.Player:
+				for npc in npcs:
+					if npc != null:
+						npc.do_change_move_state(false)
+				player.do_change_move_state(false)
+				npcs = []
+				dialog.popup_centered()
+
 		var direction = Input.get_axis("player_left", "player_right")
 		var can_move_y = check_can_move_y()
 		if direction and player_can_move:
