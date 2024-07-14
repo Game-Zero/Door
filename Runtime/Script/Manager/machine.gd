@@ -32,8 +32,11 @@ func _process(delta):
 			var finish_callabck = func():
 				count = count + 1
 				if (count >= 2):
+					player.player_can_move = false
 					bridge_anime.visible = true
 					bridge_anime.play()
+			player.player_can_move = false
+			player.b_has_eaten_medication = true
 			player.do_get_medicine(finish_callabck)
 			self.do_take_medicine(finish_callabck)
 		player.do_move_to(1320, callback)

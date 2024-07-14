@@ -65,6 +65,7 @@ func _ready():
 	if Engine.is_editor_hint():
 		return
 
+	self.load_state()
 	camera = get_node_or_null("../camera")
 	dialog = AcceptDialog.new()
 	add_child(dialog)
@@ -151,8 +152,31 @@ func do_press_button(callback = null):
 func do_get_medicine(callback = null):
 	get_medicine_finish_callback = callback
 	self.do_change_move_state(false)
+	self.save_state()
 	self.person_animation_state = PersonAnimationState.MedicineGetting
 
+func save_state():
+	var share_instance = get_node("/root/SharedInstance")
+	share_instance.shared_data_map["s3_1"] = {
+		"player_can_move": true,
+		"person_state": self.person_state,
+		"person_animation_state": self.person_animation_state,
+		"b_has_pressed_button": self.b_has_pressed_button,
+		"b_has_eaten_medication": self.b_has_eaten_medication,
+		"player_global_position": self.global_position
+	}
+
+func load_state():
+	var share_instance = get_node("/root/SharedInstance")
+	if share_instance != null and share_instance.shared_data_map.has("s3_1"):
+		var data_map = share_instance.shared_data_map["s3_1"]
+		player_can_move = data_map["player_can_move"]
+		person_state = data_map["person_state"]
+		person_animation_state = data_map["person_animation_state"]
+		b_has_pressed_button = data_map["b_has_pressed_button"]
+		b_has_eaten_medication = data_map["b_has_eaten_medication"]
+		global_position = data_map["player_global_position"]
+		
 func do_change_move_state(b_can_move):
 	if not b_can_move and person_animation_state == PersonAnimationState.Walking:
 		person_animation_state = PersonAnimationState.Standing
@@ -176,3 +200,6 @@ func _on_animation_player_animation_finished(anim_name):
 		if (get_medicine_finish_callback != null):
 			get_medicine_finish_callback.call()
 
+
+func _on_destination_body_entered(body):
+	get_tree().change_scene_to_file("res://Runtime/Scene/Stage_4_1.tscn")

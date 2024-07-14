@@ -5,6 +5,7 @@ extends Node2D
 @onready var ray_right = $ray_right
 
 @onready var rays = [ray_left, ray_mid, ray_right]
+@onready var audio_player = $AudioStreamPlayer
 
 var delta_y = -95
 
@@ -13,8 +14,8 @@ var bPlayDead = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	audio_player.stream = load("res://Runtime/Resource/Audio/s3/s3_2/worm_flip_and_hide.MP3")
 	delta_y *= scale.y
-	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -22,7 +23,8 @@ func _physics_process(delta):
 		return
 
 	if player_in_hole != null:
-		if Input.is_action_just_pressed("player_fire"):
+		if Input.is_action_just_pressed("player_fire") and player_in_hole.bCanControl:
+			audio_player.play()
 			var robot = player_in_hole.get_ray_clliding_robot()
 			if robot:
 				bPlayDead = true
@@ -43,11 +45,12 @@ func _physics_process(delta):
 			var player = ray.get_collider()
 			var player_half_size = player.collision_shape.shape.get_rect().size.x / 2
 			if l < player.global_position.x - player_half_size && player.global_position.x + player_half_size < r:
-				if Input.is_action_just_pressed("player_fire"):
+				if Input.is_action_just_pressed("player_fire") and player.bCanControl:
+					audio_player.play()
 					player_in_hole = player
 					player.global_position.y += delta_y
 					delta_y *= -1
 					player.bGravityEnable = false
 					player_in_hole.bCanRevertGravity = false
 					break
-	pass
+

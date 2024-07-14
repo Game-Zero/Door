@@ -119,4 +119,6 @@ animation = &"fat_being_eaten"
 position = Vector2(-4, 7)
 shape = SubResource("CircleShape2D_2vg8a")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="animation_finished" from="anim" to="." method="_anim_finish"]

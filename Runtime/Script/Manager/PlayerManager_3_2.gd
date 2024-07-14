@@ -8,6 +8,7 @@ const JUMP_VELOCITY = -400.0
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var collision_shape = $CollisionShape2D
 @onready var rays = [$ray_left, $ray_mid, $ray_right]
+@onready var audio_player = $AudioStreamPlayer
 
 var bCanControl = true
 var bCanRevertGravity = true
@@ -22,6 +23,7 @@ var direction = -1
 var dialog
 
 func _ready():
+	audio_player.stream = load("res://Runtime/Resource/Audio/s3/s3_2/worm_flip_and_hide.MP3")
 	dialog = AcceptDialog.new()
 	add_child(dialog)
 	dialog.size.x = 300
@@ -40,6 +42,7 @@ func _physics_process(delta):
 
 		# Handle jump.
 		if Input.is_action_just_pressed("player_jump") and is_on_floor() and bCanRevertGravity:
+			audio_player.play()
 			velocity.y += JUMP_VELOCITY * gravity_direct
 			gravity_direct *= -1
 			scale.y *= -1  

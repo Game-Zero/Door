@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 @onready var anim = $anim
+@onready var audio_player = $AudioStreamPlayer
+
 var bIsRotatePause = false
 var playerDirection
 var eatenCallback
@@ -26,6 +28,8 @@ func start_being_eaten(direction: int, callback):
 
 func being_eaten():
 	rotation = 0
+	audio_player.stream = load("res://Runtime/Resource/Audio/s3/s3_2/fat_big_eaten.MP3")
+	audio_player.play()
 	if playerDirection > 0:
 		anim.scale *= Vector2(-1, 1)
 	anim.play("big_fat_being_eaten")

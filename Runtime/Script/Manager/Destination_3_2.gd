@@ -14,7 +14,8 @@ func _ready():
 func body_entered(body):
 	body.bCanControl = false
 	body.animated_sprite_2d.stop()
-	dialog.popup_centered()
+	get_tree().change_scene_to_file("res://Runtime/Scene/Stage_3_1.tscn")
+	#dialog.popup_centered()
 	#get_tree().reload_current_scene()
 
 func _button_pressed():
