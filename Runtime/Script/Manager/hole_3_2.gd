@@ -7,7 +7,7 @@ extends Node2D
 @onready var rays = [ray_left, ray_mid, ray_right]
 @onready var audio_player = $AudioStreamPlayer
 
-var delta_y = -95
+var delta_y = -105
 
 var player_in_hole = null
 var bPlayDead = false

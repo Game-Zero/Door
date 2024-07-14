@@ -376,7 +376,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wgrl3"]
-size = Vector2(96, 93)
+size = Vector2(86, 93)
 
 [sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_lcfr4"]
 
@@ -416,48 +416,49 @@ frame = 55
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_wgrl3")
 
 [node name="SeparationRayShape1" type="CollisionShape2D" parent="player"]
-position = Vector2(-48, 27)
+position = Vector2(-42, 26)
 shape = SubResource("SeparationRayShape2D_lcfr4")
 
 [node name="SeparationRayShape2" type="CollisionShape2D" parent="player"]
-position = Vector2(48, 27)
+position = Vector2(44, 27)
 shape = SubResource("SeparationRayShape2D_lcfr4")
 
 [node name="SeparationRayShape3" type="CollisionShape2D" parent="player"]
-position = Vector2(-48, -27)
+position = Vector2(-42, -27)
 scale = Vector2(1, -1)
 shape = SubResource("SeparationRayShape2D_lcfr4")
 
 [node name="SeparationRayShape4" type="CollisionShape2D" parent="player"]
-position = Vector2(48, -27)
+position = Vector2(44, -27)
 scale = Vector2(1, -1)
 shape = SubResource("SeparationRayShape2D_lcfr4")
 
 [node name="SeparationRayShape5" type="CollisionShape2D" parent="player"]
-position = Vector2(-29, 46)
+position = Vector2(-22, 46)
 rotation = 1.5708
 shape = SubResource("SeparationRayShape2D_lcfr4")
 
 [node name="SeparationRayShape6" type="CollisionShape2D" parent="player"]
-position = Vector2(-29, -46)
+position = Vector2(-22, -46)
 rotation = 1.5708
 shape = SubResource("SeparationRayShape2D_lcfr4")
 
 [node name="SeparationRayShape7" type="CollisionShape2D" parent="player"]
-position = Vector2(29, 46)
+position = Vector2(24, 46)
 rotation = -1.5708
 shape = SubResource("SeparationRayShape2D_lcfr4")
 
 [node name="SeparationRayShape8" type="CollisionShape2D" parent="player"]
-position = Vector2(29, -46)
+position = Vector2(24, -46)
 rotation = -1.5708
 shape = SubResource("SeparationRayShape2D_lcfr4")
 
 [node name="ray_left" type="RayCast2D" parent="player"]
-position = Vector2(-48, -46)
+position = Vector2(-42, -46)
 scale = Vector2(-1, -1)
 collision_mask = 4
 
@@ -467,7 +468,7 @@ scale = Vector2(-1, -1)
 collision_mask = 4
 
 [node name="ray_right" type="RayCast2D" parent="player"]
-position = Vector2(47, -46)
+position = Vector2(44, -46)
 scale = Vector2(-1, -1)
 collision_mask = 4
 

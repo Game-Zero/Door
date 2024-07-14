@@ -22,6 +22,7 @@ extends CharacterBody2D
 @onready var ray_to_wall = $ray_to_wall
 @onready var ray_not_to_wall = $ray_not_to_wall
 @onready var ray_eyes = [$ray_eye_0, $ray_eye_1, $ray_eye_2, $ray_eye_3, $ray_eye_3]
+@onready var audio_player = $AudioStreamPlayer
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -33,6 +34,7 @@ var state = 0
 
 var standing_tot_time = 0
 var ray_not_to_wall_tot_time = 0
+var player
 
 func _ready():
 	ray_to_wall.target_position.y = WALL_DISTANCE
@@ -40,14 +42,14 @@ func _ready():
 	ray_not_to_wall.position.x = 42 * GROUND_POSITION
 	direction = -1
 	state = 0
-	pass
+	player = get_node_or_null("/root/Root/player")
+	audio_player.stream = load("res://Runtime/Resource/Audio/s3/s3_2/robot_walking.MP3")
 
 func _process(delta):
 	if Engine.is_editor_hint():
 		ray_to_wall.target_position.y = WALL_DISTANCE
 		ray_not_to_wall.target_position.y = GROUND_DISTANCE
 		ray_not_to_wall.position.x = 42 * GROUND_POSITION
-	pass
 
 func _check_eyes_see_player():
 	for ray_eye in ray_eyes:
@@ -62,6 +64,20 @@ func _physics_process(delta):
 
 	if Engine.is_editor_hint():
 		return
+
+	if audio_player.playing and player != null:
+		var distance = abs(player.global_position.distance_to(global_position))
+		
+		# 如果距离小于 10，则将音量设置为最大值
+		if distance < 10: 
+			distance = 0
+		
+		# 设置音量
+		audio_player.volume_db = -60.0 / 1000 * distance # 根据距离设置音量
+
+		
+			
+
 
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -82,6 +98,8 @@ func _physics_process(delta):
 		if ray_to_wall.is_colliding() or is_on_wall() or ray_not_to_wall_tot_time > 0.2:
 			state = 1
 		else:
+			if not audio_player.playing:
+				audio_player.play(0)
 			anim.play("robot_walking")
 			#print(anim.frame)
 			#if 25 <= anim.frame and anim.frame <= 47:
@@ -89,6 +107,7 @@ func _physics_process(delta):
 			#else:
 				#velocity.x = move_toward(velocity.x, 0, SPEED)
 	elif state == 1:
+		audio_player.stop()
 		anim.play("robot_standing")
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		standing_tot_time += delta

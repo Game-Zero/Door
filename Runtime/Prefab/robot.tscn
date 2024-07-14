@@ -702,7 +702,7 @@ rotation = -1.5708
 shape = SubResource("SeparationRayShape2D_kc5dt")
 
 [node name="ray_not_to_wall" type="RayCast2D" parent="."]
-position = Vector2(-41, 74)
+position = Vector2(-42, 74)
 rotation = -3.14159
 scale = Vector2(-1, -1)
 target_position = Vector2(0, 20)
@@ -736,3 +736,5 @@ position = Vector2(-41, 68)
 rotation = 1.5708
 target_position = Vector2(0, 20000)
 collision_mask = 3
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
