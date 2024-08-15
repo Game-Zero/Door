@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dcj23pu0k32jg"]
+[gd_scene load_steps=8 format=3 uid="uid://dcj23pu0k32jg"]
 
 [ext_resource type="Texture2D" uid="uid://8b3tljigsmuk" path="res://Runtime/Resource/Background/stage2-1.png" id="1_umuh0"]
 [ext_resource type="PackedScene" uid="uid://247thrl7sreg" path="res://Runtime/Prefab/s2_person.tscn" id="2_blu0p"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dtta75oplr5x3" path="res://Runtime/Prefab/doll_anime.tscn" id="4_cx74w"]
 [ext_resource type="Texture2D" uid="uid://dv2x103qv0iis" path="res://Runtime/Resource/Background/stage2_bed.png" id="5_ph1ej"]
 [ext_resource type="Texture2D" uid="uid://qjepgekb1ew3" path="res://Runtime/Resource/Background/stage2_person_sample.png" id="6_ekbdv"]
+[ext_resource type="PackedScene" uid="uid://dbtoksrbrxqyx" path="res://Runtime/Prefab/s2_3_cross_door.tscn" id="7_h87v7"]
 
 [node name="Root" type="Node2D"]
 
@@ -39,3 +40,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.251, 0.251)
 texture = ExtResource("6_ekbdv")
+
+[node name="s2_3_cross_door" parent="." instance=ExtResource("7_h87v7")]
+position = Vector2(960, 540)
