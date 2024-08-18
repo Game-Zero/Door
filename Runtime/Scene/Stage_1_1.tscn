@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b0fmpdl8gr1da"]
+[gd_scene load_steps=17 format=3 uid="uid://b0fmpdl8gr1da"]
 
 [ext_resource type="Texture2D" uid="uid://ca7mpah0s762r" path="res://Runtime/Resource/Background/stage1-1.png" id="1_x035b"]
 [ext_resource type="Texture2D" uid="uid://bfpeddby78ypy" path="res://Runtime/Resource/Background/person_stand_sample_with_line.png" id="2_42k81"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://44hs1ycbx5gl" path="res://Runtime/Resource/Sprite/light_base.png" id="11_jqium"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/LightManager.gd" id="12_ejfi4"]
 [ext_resource type="Texture2D" uid="uid://bjb3st1dksev2" path="res://Runtime/Resource/Sprite/light.png" id="12_ub2c1"]
+[ext_resource type="PackedScene" uid="uid://dvqavnf8m6dgn" path="res://Runtime/Prefab/s1_2_cross_door.tscn" id="14_wnwul"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0pj63"]
 shader = ExtResource("2_ics1n")
@@ -188,5 +189,8 @@ offset = Vector2(19.9199, 171.315)
 position = Vector2(9669.32, 278.884)
 texture = ExtResource("12_ub2c1")
 offset = Vector2(19.9209, 167.331)
+
+[node name="s1_2_cross_door" parent="." instance=ExtResource("14_wnwul")]
+position = Vector2(961, 543)
 
 [connection signal="body_entered" from="Destination" to="Destination" method="body_entered"]
