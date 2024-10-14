@@ -54,6 +54,3 @@ func _anim_finish():
 	elif anim.animation == "fat_being_eaten":
 		eatenCallback.call()
 		remove_self()
-
-
-

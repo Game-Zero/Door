@@ -8,7 +8,7 @@ static var npc_can_move = true
 static var player_can_move = true
 static var player
 static var npcs = []
-static var b_Is_game_over = false
+static var b_is_game_over = false
 
 var camera
 
@@ -105,7 +105,7 @@ func _ready():
 	dialog.get_ok_button().pressed.connect(func():get_tree().reload_current_scene())
 	player_can_move = true
 	npc_can_move = true
-	b_Is_game_over = false
+	b_is_game_over = false
 	if (person_type == PersonType.Player):
 		player = self
 	else:
@@ -125,7 +125,9 @@ func _physics_process(_delta):
 						npc.do_change_move_state(false)
 				player.do_change_move_state(false)
 				npcs = []
-				b_Is_game_over = true
+				b_is_game_over = true
+				npc_can_move = false
+				player_can_move = false
 				dialog.popup_centered()
 
 		var direction = Input.get_axis("player_left", "player_right")

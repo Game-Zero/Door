@@ -14,5 +14,3 @@ func _process(delta):
 	if (deltaTime > 0.1):
 		self.text = " FPS: " + str(Performance.get_monitor(Performance.TIME_FPS))
 	deltaTime += delta
-
-

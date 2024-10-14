@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://tc4t3r0kxkk3"]
+[gd_scene load_steps=3 format=3 uid="uid://tc4t3r0kxkk3"]
 
 [ext_resource type="Texture2D" uid="uid://bjb3st1dksev2" path="res://Runtime/Resource/Sprite/light.png" id="1_e2hxx"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/s_1_1_light.gd" id="2_xxpii"]
-
-[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_sifml"]
-length = 8192.0
 
 [node name="light" type="Sprite2D"]
 position = Vector2(70.9936, 274.647)
@@ -12,14 +9,15 @@ texture = ExtResource("1_e2hxx")
 offset = Vector2(22.1362, 171.381)
 script = ExtResource("2_xxpii")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0, 1, 0, 0.313726)
+polygon = PackedVector2Array(-341.994, 311.353, -4027.99, 20284.4, 3996.01, 20295.4, 359.006, 308.353)
 
-[node name="Left" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-297.994, 313.353)
-rotation = 0.114089
-shape = SubResource("SeparationRayShape2D_sifml")
+[node name="Area2D" type="Area2D" parent="Polygon2D"]
+z_index = 512
 
-[node name="Right" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(333.006, 303.353)
-rotation = -0.112039
-shape = SubResource("SeparationRayShape2D_sifml")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Polygon2D/Area2D"]
+polygon = PackedVector2Array(-341.994, 311.353, -4027.99, 20284.4, 3996.01, 20295.4, 359.006, 308.353)
+
+[connection signal="body_entered" from="Polygon2D/Area2D" to="." method="_on_body_entered"]
+[connection signal="body_exited" from="Polygon2D/Area2D" to="." method="_on_body_exited"]

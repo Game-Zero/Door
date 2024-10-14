@@ -53,4 +53,3 @@ func _physics_process(delta):
 					player.bGravityEnable = false
 					player_in_hole.bCanRevertGravity = false
 					break
-

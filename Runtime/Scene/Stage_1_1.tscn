@@ -166,7 +166,12 @@ script = ExtResource("7_5sfds")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Destination"]
 shape = SubResource("RectangleShape2D_u6q8p")
 
+[node name="s1_2_cross_door" parent="." instance=ExtResource("14_wnwul")]
+visible = false
+position = Vector2(961, 543)
+
 [node name="light_base" type="TextureRect" parent="." node_paths=PackedStringArray("player")]
+z_index = 1024
 offset_left = 823.0
 offset_right = 10559.0
 offset_bottom = 339.0
@@ -182,9 +187,5 @@ position = Vector2(5143.43, 274.9)
 
 [node name="light3" parent="light_base" instance=ExtResource("13_r5j2e")]
 position = Vector2(9669.32, 278.884)
-
-[node name="s1_2_cross_door" parent="." instance=ExtResource("14_wnwul")]
-visible = false
-position = Vector2(961, 543)
 
 [connection signal="body_entered" from="Destination" to="Destination" method="body_entered"]
