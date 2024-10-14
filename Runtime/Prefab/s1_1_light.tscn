@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://tc4t3r0kxkk3"]
+
+[ext_resource type="Texture2D" uid="uid://bjb3st1dksev2" path="res://Runtime/Resource/Sprite/light.png" id="1_e2hxx"]
+[ext_resource type="Script" path="res://Runtime/Script/Manager/s_1_1_light.gd" id="2_xxpii"]
+
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_sifml"]
+length = 8192.0
+
+[node name="light" type="Sprite2D"]
+position = Vector2(70.9936, 274.647)
+texture = ExtResource("1_e2hxx")
+offset = Vector2(22.1362, 171.381)
+script = ExtResource("2_xxpii")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Left" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-297.994, 313.353)
+rotation = 0.114089
+shape = SubResource("SeparationRayShape2D_sifml")
+
+[node name="Right" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(333.006, 303.353)
+rotation = -0.112039
+shape = SubResource("SeparationRayShape2D_sifml")
