@@ -181,6 +181,7 @@ script = ExtResource("12_ejfi4")
 player = NodePath("../player")
 
 [node name="light1" parent="light_base" instance=ExtResource("13_r5j2e")]
+position = Vector2(74.9775, 274.647)
 
 [node name="light2" parent="light_base" instance=ExtResource("13_r5j2e")]
 position = Vector2(5143.43, 274.9)
