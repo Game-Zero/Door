@@ -106,7 +106,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("17_qs1ie")
 }],
-"loop": true,
+"loop": false,
 "name": &"protagonist_medium_lie_open_belly",
 "speed": 5.0
 }, {
@@ -144,7 +144,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("28_684q0")
 }],
-"loop": true,
+"loop": false,
 "name": &"protagonist_medium_lie_suegery_end",
 "speed": 5.0
 }, {

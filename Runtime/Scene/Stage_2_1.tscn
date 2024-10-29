@@ -1,10 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://dcj23pu0k32jg"]
+[gd_scene load_steps=12 format=3 uid="uid://dcj23pu0k32jg"]
 
 [ext_resource type="Script" path="res://Runtime/Script/Manager/Stage_2_1.gd" id="1_fy5sg"]
 [ext_resource type="Texture2D" uid="uid://8b3tljigsmuk" path="res://Runtime/Resource/Background/stage2-1.png" id="1_umuh0"]
 [ext_resource type="PackedScene" uid="uid://247thrl7sreg" path="res://Runtime/Prefab/s2_person.tscn" id="2_blu0p"]
 [ext_resource type="PackedScene" uid="uid://dg3my4p57h5kh" path="res://Runtime/Prefab/doll_anime_complete.tscn" id="3_ge5ri"]
-[ext_resource type="Script" path="res://Runtime/Script/Manager/PlayerManager_2_1.gd" id="3_hq6st"]
 [ext_resource type="PackedScene" uid="uid://dtta75oplr5x3" path="res://Runtime/Prefab/doll_anime.tscn" id="4_cx74w"]
 [ext_resource type="Texture2D" uid="uid://dv2x103qv0iis" path="res://Runtime/Resource/Background/stage2_bed.png" id="5_ph1ej"]
 [ext_resource type="Texture2D" uid="uid://qjepgekb1ew3" path="res://Runtime/Resource/Background/stage2_person_sample.png" id="6_ekbdv"]
@@ -61,8 +60,8 @@ texture = ExtResource("5_ph1ej")
 [node name="s2_person" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("2_blu0p")]
 position = Vector2(149, 567)
 scale = Vector2(0.251, 0.251)
-script = ExtResource("3_hq6st")
 camera = NodePath("../camera")
+b_can_move = false
 
 [node name="person_sample" type="TextureRect" parent="."]
 visible = false
@@ -76,3 +75,6 @@ visible = false
 position = Vector2(960, 540)
 
 [node name="HUD" parent="." instance=ExtResource("8_05owv")]
+
+[connection signal="body_entered" from="doll_anime/Area2D" to="." method="on_doll_body_entered"]
+[connection signal="body_entered" from="Door/Area2D" to="." method="on_door_body_entered"]
