@@ -171,7 +171,7 @@ visible = false
 position = Vector2(961, 543)
 
 [node name="light_base" type="TextureRect" parent="." node_paths=PackedStringArray("player")]
-z_index = 1024
+z_index = 200
 offset_left = 823.0
 offset_right = 10559.0
 offset_bottom = 339.0
@@ -181,12 +181,18 @@ script = ExtResource("12_ejfi4")
 player = NodePath("../player")
 
 [node name="light1" parent="light_base" instance=ExtResource("13_r5j2e")]
-position = Vector2(74.9775, 274.647)
+z_index = 100
+z_as_relative = false
+position = Vector2(65.0271, 277.711)
 
 [node name="light2" parent="light_base" instance=ExtResource("13_r5j2e")]
-position = Vector2(5143.43, 274.9)
+z_index = 100
+z_as_relative = false
+position = Vector2(5133.48, 277.964)
 
 [node name="light3" parent="light_base" instance=ExtResource("13_r5j2e")]
-position = Vector2(9669.32, 278.884)
+z_index = 100
+z_as_relative = false
+position = Vector2(9659.37, 281.948)
 
 [connection signal="body_entered" from="Destination" to="Destination" method="body_entered"]
