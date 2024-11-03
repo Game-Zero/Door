@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh8frt03hpxs0"]
+
+[ext_resource type="PackedScene" uid="uid://vguvqexn7pw4" path="res://Runtime/Prefab/note.tscn" id="1_ckp7n"]
+[ext_resource type="Texture2D" uid="uid://cmbbs1ma7qrb0" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/gray_base_map.png" id="2_cr8ci"]
+
+[node name="tables" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 7680.0
+offset_bottom = 4320.0
+scale = Vector2(0.251, 0.251)
+texture = ExtResource("2_cr8ci")
+
+[node name="electrocardiogram" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="notes" type="Node2D" parent="."]
+
+[node name="note" parent="notes" instance=ExtResource("1_ckp7n")]
+position = Vector2(119, 663)
+
+[node name="note2" parent="notes" instance=ExtResource("1_ckp7n")]
+position = Vector2(219, 749)
+value = 1
+
+[node name="note3" parent="notes" instance=ExtResource("1_ckp7n")]
+position = Vector2(315, 866)
+value = 2
+
+[node name="note4" parent="notes" instance=ExtResource("1_ckp7n")]
+position = Vector2(468, 681)
+value = 3
+
+[node name="note5" parent="notes" instance=ExtResource("1_ckp7n")]
+position = Vector2(614, 799)
+value = 3
+
+[node name="note6" parent="notes" instance=ExtResource("1_ckp7n")]
+position = Vector2(778, 663)
+value = 2
+
+[node name="note7" parent="notes" instance=ExtResource("1_ckp7n")]
+position = Vector2(946, 813)
+value = 1
+
+[node name="note8" parent="notes" instance=ExtResource("1_ckp7n")]
+position = Vector2(1103, 895)
+
+[node name="note9" parent="notes" instance=ExtResource("1_ckp7n")]
+position = Vector2(1338, 763)
+value = 3

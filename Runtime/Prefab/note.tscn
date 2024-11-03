@@ -1,0 +1,75 @@
+[gd_scene load_steps=10 format=3 uid="uid://vguvqexn7pw4"]
+
+[ext_resource type="Script" path="res://Runtime/Script/Manager/note.gd" id="1_48s0n"]
+[ext_resource type="Texture2D" uid="uid://dkubgdv7bj8wo" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/W_button.png" id="1_eucpf"]
+[ext_resource type="Texture2D" uid="uid://1wwctbam72m7" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/D_button.png" id="2_o8u0o"]
+[ext_resource type="Texture2D" uid="uid://doetomk0v6j6o" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/green_circle.png" id="3_8j3c0"]
+[ext_resource type="Texture2D" uid="uid://bv3ff8bardroy" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/A_button.png" id="3_o11d0"]
+[ext_resource type="Texture2D" uid="uid://2yvuclpy2uns" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/red_circle.png" id="4_1rjxd"]
+[ext_resource type="Texture2D" uid="uid://b2nqsxobvtdee" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/S_button.png" id="4_htpnw"]
+[ext_resource type="Texture2D" uid="uid://hoc4ogt2w0wp" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/white_circle.png" id="8_fsvg6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jaxau"]
+radius = 156.895
+
+[node name="note" type="Area2D"]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_48s0n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jaxau")
+
+[node name="TextureRectD" type="TextureRect" parent="."]
+visible = false
+offset_left = -173.0
+offset_top = -176.0
+offset_right = 175.0
+offset_bottom = 176.0
+texture = ExtResource("2_o8u0o")
+
+[node name="TextureRectA" type="TextureRect" parent="."]
+visible = false
+offset_left = -173.0
+offset_top = -176.0
+offset_right = 175.0
+offset_bottom = 176.0
+texture = ExtResource("3_o11d0")
+
+[node name="TextureRectS" type="TextureRect" parent="."]
+visible = false
+offset_left = -173.0
+offset_top = -176.0
+offset_right = 175.0
+offset_bottom = 176.0
+texture = ExtResource("4_htpnw")
+
+[node name="TextureRectW" type="TextureRect" parent="."]
+offset_left = -173.0
+offset_top = -176.0
+offset_right = 175.0
+offset_bottom = 176.0
+texture = ExtResource("1_eucpf")
+
+[node name="MaskAccepted" type="TextureRect" parent="."]
+visible = false
+offset_left = -173.0
+offset_top = -176.0
+offset_right = 175.0
+offset_bottom = 176.0
+texture = ExtResource("8_fsvg6")
+
+[node name="MaskMissed" type="TextureRect" parent="."]
+visible = false
+offset_left = -173.0
+offset_top = -176.0
+offset_right = 175.0
+offset_bottom = 176.0
+texture = ExtResource("4_1rjxd")
+
+[node name="MaskPerfect" type="TextureRect" parent="."]
+visible = false
+offset_left = -175.0
+offset_top = -175.0
+offset_right = 173.0
+offset_bottom = 177.0
+texture = ExtResource("3_8j3c0")
