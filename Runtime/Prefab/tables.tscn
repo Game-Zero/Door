@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://dh8frt03hpxs0"]
+[gd_scene load_steps=14 format=3 uid="uid://dh8frt03hpxs0"]
 
+[ext_resource type="Script" path="res://Runtime/Script/Manager/s2_1_tables.gd" id="1_ax147"]
 [ext_resource type="PackedScene" uid="uid://vguvqexn7pw4" path="res://Runtime/Prefab/note.tscn" id="1_ckp7n"]
 [ext_resource type="Texture2D" uid="uid://cmbbs1ma7qrb0" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/gray_base_map.png" id="2_cr8ci"]
 [ext_resource type="Texture2D" uid="uid://c3rairg3tfwqr" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/musical_score_sample.png" id="2_ykw15"]
@@ -20,7 +21,11 @@ shader_parameter/outline_max_alpha = 0.3
 shader_parameter/modulate_color = Color(1, 0.807843, 0.396078, 1)
 shader_parameter/outline_color = Color(1, 1, 1, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6rrv4"]
+size = Vector2(400, 398)
+
 [node name="tables" type="Node2D"]
+script = ExtResource("1_ax147")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 7680.0
@@ -38,6 +43,7 @@ scale = Vector2(0.446749, 0.742071)
 texture = ExtResource("2_ykw15")
 
 [node name="electrocardiogram" type="Node2D" parent="."]
+position = Vector2(2872, 0)
 
 [node name="electrocardiogram1" type="TextureRect" parent="electrocardiogram"]
 offset_left = -2877.0
@@ -88,6 +94,7 @@ scale = Vector2(0.603245, 0.994488)
 texture = ExtResource("8_d76dc")
 
 [node name="notes" type="Node2D" parent="."]
+position = Vector2(2872, 0)
 
 [node name="note1" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
@@ -607,3 +614,15 @@ value = 1
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(31172, 734)
 value = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(960, 800)
+collision_layer = 16
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_6rrv4")
+
+[connection signal="area_entered" from="Area2D" to="." method="on_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="on_area_exited"]
