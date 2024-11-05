@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dou1qlcqi0hqf"
-path="res://.godot/imported/electrocardiogram_3.png-549cd922b6cefe0406c8cd284ebfae4c.ctex"
+uid="uid://dvuww6rv8eyjl"
+path="res://.godot/imported/combe_4.png-acf57faacc00feb67daff1317a330cd1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Runtime/Resource/Sprite/S2-1_UI_icon/electrocardiogram_3.png"
-dest_files=["res://.godot/imported/electrocardiogram_3.png-549cd922b6cefe0406c8cd284ebfae4c.ctex"]
+source_file="res://Runtime/Resource/Sprite/S2-1_UI_icon/combe_4.png"
+dest_files=["res://.godot/imported/combe_4.png-acf57faacc00feb67daff1317a330cd1.ctex"]
 
 [params]
 
