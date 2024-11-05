@@ -89,7 +89,7 @@ texture = ExtResource("8_d76dc")
 
 [node name="notes" type="Node2D" parent="."]
 
-[node name="note" parent="notes" instance=ExtResource("1_ckp7n")]
+[node name="note1" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(361, 719)
 
