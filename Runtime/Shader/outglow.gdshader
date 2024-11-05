@@ -3,7 +3,7 @@ shader_type canvas_item;
 uniform bool b_outglow_on = false;
 uniform float outline_width = 0.06;
 uniform float outline_min_alpha = 0.1;
-uniform float outline_max_alpha = 0.3;
+uniform float outline_max_alpha = 1.0;
 uniform vec4 modulate_color:source_color = vec4(1.0); // 默认白色
 uniform vec4 outline_color:source_color = vec4(1.0); // 默认白色
 
@@ -25,7 +25,7 @@ void fragment() {
 			 }
 		}
 
-		Alpha /= 100.0; // 平均, 300 这个值可以试几次手动调节一下
+		Alpha /= 50.0; // 平均, 300 这个值可以试几次手动调节一下
 
 		if(Alpha < outline_min_alpha) {
 			discard;
