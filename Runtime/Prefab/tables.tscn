@@ -27,7 +27,9 @@ offset_bottom = 1196.0
 scale = Vector2(0.446749, 0.742071)
 texture = ExtResource("2_ykw15")
 
-[node name="electrocardiogram1" type="TextureRect" parent="."]
+[node name="electrocardiogram" type="Node2D" parent="."]
+
+[node name="electrocardiogram1" type="TextureRect" parent="electrocardiogram"]
 offset_left = -2877.0
 offset_top = 604.0
 offset_right = 58998.0
@@ -35,7 +37,7 @@ offset_bottom = 1233.0
 scale = Vector2(0.046529, 0.616358)
 texture = ExtResource("3_hw4am")
 
-[node name="electrocardiogram2" type="TextureRect" parent="."]
+[node name="electrocardiogram2" type="TextureRect" parent="electrocardiogram"]
 offset_left = -2.0
 offset_top = 602.0
 offset_right = 19023.0
@@ -43,7 +45,7 @@ offset_bottom = 1000.0
 scale = Vector2(0.602911, 0.983778)
 texture = ExtResource("4_5hg4s")
 
-[node name="electrocardiogram3" type="TextureRect" parent="."]
+[node name="electrocardiogram3" type="TextureRect" parent="electrocardiogram"]
 offset_left = 11465.0
 offset_top = 600.0
 offset_right = 30492.0
@@ -51,7 +53,7 @@ offset_bottom = 998.0
 scale = Vector2(0.150678, 0.992033)
 texture = ExtResource("5_ypdsc")
 
-[node name="electrocardiogram4" type="TextureRect" parent="."]
+[node name="electrocardiogram4" type="TextureRect" parent="electrocardiogram"]
 offset_left = 14329.0
 offset_top = 598.0
 offset_right = 19085.0
@@ -59,7 +61,7 @@ offset_bottom = 996.0
 scale = Vector2(0.585857, 0.992144)
 texture = ExtResource("6_i5xs4")
 
-[node name="electrocardiogram5" type="TextureRect" parent="."]
+[node name="electrocardiogram5" type="TextureRect" parent="electrocardiogram"]
 offset_left = 17091.0
 offset_top = 597.0
 offset_right = 26789.0
@@ -67,7 +69,7 @@ offset_bottom = 995.0
 scale = Vector2(0.603955, 1.00712)
 texture = ExtResource("7_vopsx")
 
-[node name="electrocardiogram6" type="TextureRect" parent="."]
+[node name="electrocardiogram6" type="TextureRect" parent="electrocardiogram"]
 offset_left = 22919.0
 offset_top = 600.0
 offset_right = 41957.0
