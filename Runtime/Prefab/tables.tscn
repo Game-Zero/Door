@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dh8frt03hpxs0"]
+[gd_scene load_steps=12 format=3 uid="uid://dh8frt03hpxs0"]
 
 [ext_resource type="PackedScene" uid="uid://vguvqexn7pw4" path="res://Runtime/Prefab/note.tscn" id="1_ckp7n"]
 [ext_resource type="Texture2D" uid="uid://cmbbs1ma7qrb0" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/gray_base_map.png" id="2_cr8ci"]
@@ -9,6 +9,16 @@
 [ext_resource type="Texture2D" uid="uid://57xqao41j3ul" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/electrocardiogram_4.png" id="6_i5xs4"]
 [ext_resource type="Texture2D" uid="uid://cwnuqgdv3gw4d" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/electrocardiogram_5.png" id="7_vopsx"]
 [ext_resource type="Texture2D" uid="uid://bcinwt2ow08yf" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/electrocardiogram_6.png" id="8_d76dc"]
+[ext_resource type="Shader" path="res://Runtime/Shader/outglow.gdshader" id="10_0inuw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7lxqp"]
+shader = ExtResource("10_0inuw")
+shader_parameter/b_outglow_on = false
+shader_parameter/outline_width = 0.06
+shader_parameter/outline_min_alpha = 0.1
+shader_parameter/outline_max_alpha = 0.3
+shader_parameter/modulate_color = Color(1, 0.807843, 0.396078, 1)
+shader_parameter/outline_color = Color(1, 1, 1, 1)
 
 [node name="tables" type="Node2D"]
 
@@ -80,411 +90,520 @@ texture = ExtResource("8_d76dc")
 [node name="notes" type="Node2D" parent="."]
 
 [node name="note" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(361, 719)
 
 [node name="note2" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(838, 833)
 value = 1
 
 [node name="note3" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(1316, 676)
 value = 2
 
 [node name="note4" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(1787, 796)
 value = 3
 
 [node name="note5" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(2268, 850)
 value = 3
 
 [node name="note6" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(2745, 731)
 value = 2
 
 [node name="note7" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(3228, 816)
 value = 1
 
 [node name="note8" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(3705, 741)
 
 [node name="note9" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(3934, 871)
 value = 3
 
 [node name="note10" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(4419, 792)
 
 [node name="note11" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(4893, 834)
 value = 1
 
 [node name="note12" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(5370, 887)
 value = 2
 
 [node name="note13" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(5610, 715)
 
 [node name="note14" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(5851, 676)
 value = 3
 
 [node name="note15" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(6332, 793)
 value = 2
 
 [node name="note16" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(6572, 870)
 value = 1
 
 [node name="note17" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(6812, 801)
 
 [node name="note18" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(7760, 755)
 value = 2
 
 [node name="note19" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(7998, 801)
 value = 3
 
 [node name="note20" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(8238, 715)
 
 [node name="note21" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(8418, 907)
 value = 1
 
 [node name="note22" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(8539, 832)
 value = 1
 
 [node name="note23" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(8954, 778)
 
 [node name="note24" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(9205, 893)
 value = 3
 
 [node name="note25" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(9445, 678)
 value = 3
 
 [node name="note26" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(9686, 826)
 value = 2
 
 [node name="note27" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(9921, 756)
 value = 1
 
 [node name="note28" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(10157, 893)
 value = 2
 
 [node name="note29" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(10333, 835)
 value = 3
 
 [node name="note30" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(10456, 773)
 
 [node name="note31" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(10871, 719)
 value = 1
 
 [node name="note32" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(11287, 756)
 
 [node name="note33" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(11411, 873)
 value = 1
 
 [node name="note34" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(11587, 758)
 value = 2
 
 [node name="note35" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(11829, 885)
 value = 3
 
 [node name="note36" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(12071, 913)
 value = 3
 
 [node name="note37" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(12245, 807)
 
 [node name="note38" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(12364, 728)
 
 [node name="note39" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(12534, 803)
 value = 1
 
 [node name="note40" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(12783, 860)
 value = 2
 
 [node name="note41" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(13020, 757)
 value = 1
 
 [node name="note42" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(13197, 813)
 
 [node name="note43" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(13317, 865)
 value = 2
 
 [node name="note44" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(13495, 806)
 value = 3
 
 [node name="note45" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(13736, 714)
 
 [node name="note46" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(13973, 757)
 value = 1
 
 [node name="note47" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(14155, 716)
 value = 2
 
 [node name="note48" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(14275, 717)
 value = 2
 
 [node name="note49" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(14454, 798)
 value = 3
 
 [node name="note50" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(14694, 801)
 
 [node name="note51" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(14935, 799)
 value = 1
 
 [node name="note52" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(15113, 812)
 value = 1
 
 [node name="note53" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(15230, 761)
 value = 2
 
 [node name="note54" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(15400, 799)
 value = 3
 
 [node name="note55" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(15648, 755)
 
 [node name="note56" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(15886, 875)
 value = 1
 
 [node name="note57" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(16060, 775)
 value = 1
 
 [node name="note58" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(16180, 706)
 value = 2
 
 [node name="note59" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(16360, 800)
 value = 2
 
 [node name="note60" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(16601, 800)
 value = 3
 
 [node name="note61" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(17321, 876)
 value = 3
 
 [node name="note62" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(17563, 720)
 value = 2
 
 [node name="note63" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(17803, 838)
 
 [node name="note64" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(17976, 762)
 value = 2
 
 [node name="note65" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(18101, 699)
 value = 2
 
 [node name="note66" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(18268, 802)
 value = 1
 
 [node name="note67" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(19228, 758)
 
 [node name="note68" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(19469, 806)
 value = 3
 
 [node name="note69" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(20193, 799)
 value = 3
 
 [node name="note70" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(20436, 854)
 value = 2
 
 [node name="note71" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(21140, 762)
 value = 1
 
 [node name="note72" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(21389, 786)
 
 [node name="note73" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(21860, 828)
 value = 3
 
 [node name="note74" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(22520, 802)
 value = 2
 
 [node name="note75" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(22639, 866)
 value = 2
 
 [node name="note76" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(23057, 765)
 value = 1
 
 [node name="note77" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(23298, 868)
 value = 3
 
 [node name="note78" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(23539, 773)
 
 [node name="note79" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(23713, 711)
 value = 2
 
 [node name="note80" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(23833, 869)
 
 [node name="note81" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(24004, 793)
 value = 1
 
 [node name="note82" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(24490, 755)
 value = 2
 
 [node name="note83" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(24724, 697)
 value = 3
 
 [node name="note84" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(24964, 869)
 value = 3
 
 [node name="note85" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(25205, 758)
 value = 2
 
 [node name="note86" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(25441, 690)
 value = 3
 
 [node name="note87" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(25623, 748)
 
 [node name="note88" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(25743, 733)
 value = 1
 
 [node name="note89" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(25922, 824)
 value = 1
 
 [node name="note90" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(26405, 712)
 
 [node name="note91" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(26640, 685)
 value = 2
 
 [node name="note92" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(26870, 875)
 value = 3
 
 [node name="note93" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(27118, 824)
 value = 1
 
 [node name="note94" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(27355, 857)
 value = 3
 
 [node name="note95" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(27532, 726)
 
 [node name="note96" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(27650, 708)
 value = 2
 
 [node name="note97" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(27828, 754)
 value = 2
 
 [node name="note98" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(28306, 733)
 
 [node name="note99" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(28544, 822)
 value = 1
 
 [node name="note100" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(28788, 728)
 value = 1
 
 [node name="note101" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(29030, 812)
 value = 2
 
 [node name="note102" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(29270, 756)
 value = 3
 
 [node name="note103" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(29445, 800)
 
 [node name="note104" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(29564, 898)
 
 [node name="note105" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(29735, 697)
 value = 1
 
 [node name="note106" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(30221, 833)
 value = 2
 
 [node name="note107" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(30455, 768)
 value = 3
 
 [node name="note108" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(30694, 815)
 value = 1
 
 [node name="note109" parent="notes" instance=ExtResource("1_ckp7n")]
+material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(31172, 734)
 value = 1
