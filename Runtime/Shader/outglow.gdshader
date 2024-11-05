@@ -25,7 +25,7 @@ void fragment() {
 			 }
 		}
 
-		Alpha /= 300.0; // 平均, 300 这个值可以试几次手动调节一下
+		Alpha /= 100.0; // 平均, 300 这个值可以试几次手动调节一下
 
 		if(Alpha < outline_min_alpha) {
 			discard;
