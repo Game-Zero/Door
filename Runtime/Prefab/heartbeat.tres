@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://c7rlyiif0b0yf"]
+
+[ext_resource type="Texture2D" uid="uid://n2h2tc821tv6" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/left_green_hert_unseen.png" id="1_335pu"]
+[ext_resource type="Texture2D" uid="uid://be8i2hvp6um27" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/left_green_hert.png" id="2_t42gl"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_335pu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_t42gl")
+}],
+"loop": true,
+"name": &"heartbeat",
+"speed": 5.0
+}]

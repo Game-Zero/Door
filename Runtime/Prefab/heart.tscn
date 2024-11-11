@@ -1,0 +1,91 @@
+[gd_scene load_steps=7 format=3 uid="uid://28vptjjrju5w"]
+
+[ext_resource type="Texture2D" uid="uid://n2h2tc821tv6" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/left_green_hert_unseen.png" id="1_0g1h2"]
+[ext_resource type="Texture2D" uid="uid://be8i2hvp6um27" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/left_green_hert.png" id="2_f1pgx"]
+
+[sub_resource type="Animation" id="Animation_28ocu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"heartbeat"]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.0005, 0, 0.0005, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_tn4qs"]
+resource_name = "heartbeat"
+length = 0.67
+loop_mode = 2
+step = 0.67
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"heartbeat"]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.67)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_signl"]
+_data = {
+"RESET": SubResource("Animation_28ocu"),
+"heartbeat": SubResource("Animation_tn4qs")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kh7ac"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0g1h2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_f1pgx")
+}],
+"loop": true,
+"name": &"heartbeat",
+"speed": 5.0
+}]
+
+[node name="heart" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_signl")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kh7ac")
+animation = &"heartbeat"
+frame = 1

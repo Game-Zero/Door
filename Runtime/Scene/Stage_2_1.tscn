@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dcj23pu0k32jg"]
+[gd_scene load_steps=17 format=3 uid="uid://dcj23pu0k32jg"]
 
 [ext_resource type="Script" path="res://Runtime/Script/Manager/Stage_2_1.gd" id="1_fy5sg"]
 [ext_resource type="Texture2D" uid="uid://8b3tljigsmuk" path="res://Runtime/Resource/Background/stage2-1.png" id="1_umuh0"]
@@ -10,6 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://dbtoksrbrxqyx" path="res://Runtime/Prefab/s2_3_cross_door.tscn" id="7_h87v7"]
 [ext_resource type="PackedScene" uid="uid://bofbb0bvx1ysw" path="res://Runtime/Prefab/hud.tscn" id="8_05owv"]
 [ext_resource type="PackedScene" uid="uid://dh8frt03hpxs0" path="res://Runtime/Prefab/tables.tscn" id="9_dlun6"]
+[ext_resource type="PackedScene" uid="uid://kxmak151p1kc" path="res://Runtime/Prefab/combo.tscn" id="11_2sla6"]
+[ext_resource type="PackedScene" uid="uid://3nraj8h7elmj" path="res://Runtime/Prefab/judgment.tscn" id="12_vdo4n"]
+[ext_resource type="Texture2D" uid="uid://c2plimbxqqrwg" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/left_green_line.png" id="13_u61u4"]
+[ext_resource type="PackedScene" uid="uid://28vptjjrju5w" path="res://Runtime/Prefab/heart.tscn" id="14_py5fr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqdc5"]
 size = Vector2(3075.7, 2964.14)
@@ -23,7 +27,7 @@ script = ExtResource("1_fy5sg")
 [node name="background" type="TextureRect" parent="."]
 offset_right = 12331.0
 offset_bottom = 4320.0
-scale = Vector2(0.25098, 0.25098)
+scale = Vector2(0.251, 0.251)
 texture = ExtResource("1_umuh0")
 
 [node name="doll_anime_complete" parent="." instance=ExtResource("3_ge5ri")]
@@ -77,6 +81,21 @@ position = Vector2(960, 540)
 [node name="tables" parent="." instance=ExtResource("9_dlun6")]
 
 [node name="HUD" parent="." instance=ExtResource("8_05owv")]
+
+[node name="combo" parent="." instance=ExtResource("11_2sla6")]
+position = Vector2(960, 140)
+
+[node name="judgment" parent="." instance=ExtResource("12_vdo4n")]
+position = Vector2(960, 340)
+
+[node name="casing_green" type="TextureRect" parent="."]
+offset_top = 949.0
+offset_right = 532.0
+offset_bottom = 1079.0
+texture = ExtResource("13_u61u4")
+
+[node name="heart" parent="." instance=ExtResource("14_py5fr")]
+position = Vector2(281, 1012)
 
 [connection signal="body_entered" from="doll_anime/Area2D" to="." method="on_doll_body_entered"]
 [connection signal="body_entered" from="Door/Area2D" to="." method="on_door_body_entered"]
