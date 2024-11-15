@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://wiron84s02qh"
+path="res://.godot/imported/miss .MP3-a8f86d2e10370d6f4f23616edf4066a0.mp3str"
+
+[deps]
+
+source_file="res://Runtime/Resource/Audio/s2/miss .MP3"
+dest_files=["res://.godot/imported/miss .MP3-a8f86d2e10370d6f4f23616edf4066a0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
