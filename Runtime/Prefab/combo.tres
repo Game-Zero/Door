@@ -1,21 +1,5 @@
 [gd_resource type="AnimationLibrary" load_steps=5 format=3 uid="uid://cxgicj57dhwjy"]
 
-[sub_resource type="Animation" id="Animation_yuraj"]
-resource_name = "digital1_appeared"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("digital1:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1, 1.06394e-05), Vector2(1, 1.00001)]
-}
-
 [sub_resource type="Animation" id="Animation_q87cq"]
 length = 0.001
 tracks/0/type = "value"
@@ -53,6 +37,22 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_yuraj"]
+resource_name = "digital1_appeared"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("digital1:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1.06394e-05), Vector2(1, 1.00001)]
 }
 
 [sub_resource type="Animation" id="Animation_4c215"]
