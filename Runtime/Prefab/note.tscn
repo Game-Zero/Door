@@ -8,9 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://b2nqsxobvtdee" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/S_button.png" id="4_htpnw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jaxau"]
-radius = 156.895
+radius = 15.8114
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_dasoq"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r56d4"]
 shader = ExtResource("1_g3eno")
 shader_parameter/b_outglow_on = false
 shader_parameter/outline_width = 0.06
@@ -19,7 +19,7 @@ shader_parameter/outline_max_alpha = 1.0
 shader_parameter/modulate_color = Color(1, 1, 1, 1)
 shader_parameter/outline_color = Color(0.396078, 0.733333, 1, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xop7i"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vf6uq"]
 shader = ExtResource("1_g3eno")
 shader_parameter/b_outglow_on = false
 shader_parameter/outline_width = 0.06
@@ -28,7 +28,7 @@ shader_parameter/outline_max_alpha = 1.0
 shader_parameter/modulate_color = Color(1, 1, 1, 1)
 shader_parameter/outline_color = Color(0.396078, 0.733333, 1, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ecbns"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mmtf6"]
 shader = ExtResource("1_g3eno")
 shader_parameter/b_outglow_on = false
 shader_parameter/outline_width = 0.06
@@ -37,7 +37,7 @@ shader_parameter/outline_max_alpha = 1.0
 shader_parameter/modulate_color = Color(1, 1, 1, 1)
 shader_parameter/outline_color = Color(0.396078, 0.733333, 1, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_l2825"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7khkv"]
 shader = ExtResource("1_g3eno")
 shader_parameter/b_outglow_on = false
 shader_parameter/outline_width = 0.06
@@ -57,7 +57,7 @@ shape = SubResource("CircleShape2D_jaxau")
 
 [node name="TextureRectD" type="TextureRect" parent="."]
 visible = false
-material = SubResource("ShaderMaterial_dasoq")
+material = SubResource("ShaderMaterial_r56d4")
 offset_left = -200.0
 offset_top = -205.0
 offset_right = 202.0
@@ -66,7 +66,7 @@ texture = ExtResource("2_o8u0o")
 
 [node name="TextureRectA" type="TextureRect" parent="."]
 visible = false
-material = SubResource("ShaderMaterial_xop7i")
+material = SubResource("ShaderMaterial_vf6uq")
 offset_left = -200.0
 offset_top = -205.0
 offset_right = 202.0
@@ -75,7 +75,7 @@ texture = ExtResource("3_o11d0")
 
 [node name="TextureRectS" type="TextureRect" parent="."]
 visible = false
-material = SubResource("ShaderMaterial_ecbns")
+material = SubResource("ShaderMaterial_mmtf6")
 offset_left = -200.0
 offset_top = -205.0
 offset_right = 202.0
@@ -84,7 +84,7 @@ texture = ExtResource("4_htpnw")
 
 [node name="TextureRectW" type="TextureRect" parent="."]
 self_modulate = Color(1, 0.807843, 0.396078, 1)
-material = SubResource("ShaderMaterial_l2825")
+material = SubResource("ShaderMaterial_7khkv")
 offset_left = -200.0
 offset_top = -205.0
 offset_right = 202.0
