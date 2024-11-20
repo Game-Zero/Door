@@ -1,6 +1,8 @@
 @tool
 extends Area2D
 
+@export var active_state = []
+
 @onready var texture_rect_w = $TextureRectW
 @onready var texture_rect_s = $TextureRectS
 @onready var texture_rect_a = $TextureRectA
@@ -16,7 +18,7 @@ enum KeyType {
 enum KeyState {
 	Standby,
 	Active,
-	Accepted,
+	Good,
 	Perfect,
 	Missed,
 }
@@ -25,7 +27,7 @@ enum KeyState {
 @export var state: KeyState = KeyState.Standby
 
 @export var standby_color: Color = Color8(255, 206,101)
-@export var accepted_color: Color = Color8(255, 240, 207)
+@export var good_color: Color = Color8(255, 240, 207)
 @export var perfect_color: Color = Color8(0, 253, 32)
 @export var missed_color: Color = Color8(255, 76, 71)
 
@@ -36,6 +38,7 @@ func _ready() -> void:
 	texture_rect_s.material = original_material.duplicate()
 	texture_rect_a.material = original_material.duplicate()
 	texture_rect_d.material = original_material.duplicate()
+	active_state = []
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -70,8 +73,8 @@ func _process(_delta: float) -> void:
 			b_outglow_on = true
 		KeyState.Perfect:
 			now_key.self_modulate = self.perfect_color
-		KeyState.Accepted:
-			now_key.self_modulate = self.accepted_color
+		KeyState.Good:
+			now_key.self_modulate = self.good_color
 		KeyState.Missed:
 			now_key.self_modulate = self.missed_color
 

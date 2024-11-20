@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dh8frt03hpxs0"]
+[gd_scene load_steps=19 format=3 uid="uid://dh8frt03hpxs0"]
 
 [ext_resource type="Script" path="res://Runtime/Script/Manager/s2_1_tables.gd" id="1_ax147"]
 [ext_resource type="PackedScene" uid="uid://vguvqexn7pw4" path="res://Runtime/Prefab/note.tscn" id="1_ckp7n"]
@@ -11,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://bcinwt2ow08yf" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/electrocardiogram_6.png" id="8_d76dc"]
 [ext_resource type="Shader" path="res://Runtime/Shader/outglow.gdshader" id="10_0inuw"]
 [ext_resource type="Texture2D" uid="uid://cot6q6uijaefu" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/vertical_line.png" id="12_7o65m"]
+[ext_resource type="Texture2D" uid="uid://c2plimbxqqrwg" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/left_green_line.png" id="12_oidw5"]
+[ext_resource type="PackedScene" uid="uid://28vptjjrju5w" path="res://Runtime/Prefab/heart.tscn" id="13_q6m5s"]
+[ext_resource type="Texture2D" uid="uid://b5xdv0bnilrk6" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/heartbeat_0.png" id="15_br4eo"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7lxqp"]
 shader = ExtResource("10_0inuw")
@@ -20,9 +23,6 @@ shader_parameter/outline_min_alpha = 0.1
 shader_parameter/outline_max_alpha = 0.3
 shader_parameter/modulate_color = Color(1, 0.807843, 0.396078, 1)
 shader_parameter/outline_color = Color(1, 1, 1, 1)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6rrv4"]
-size = Vector2(400, 398)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3nax3"]
 size = Vector2(92, 400)
@@ -105,966 +105,630 @@ position = Vector2(1746, 0)
 [node name="note1" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(361, 719)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note2" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(838, 833)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note3" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(1316, 676)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note4" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(1787, 796)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note5" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(2268, 850)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note6" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(2745, 731)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note7" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(3228, 816)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note8" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(3705, 741)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note9" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(3934, 871)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note10" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(4419, 792)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note11" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(4893, 834)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note12" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(5370, 887)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note13" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(5610, 715)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note14" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(5851, 676)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note15" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(6332, 793)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note16" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(6572, 870)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note17" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(6812, 801)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note18" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(7760, 755)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note19" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(7998, 801)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note20" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(8238, 715)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note21" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(8418, 907)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note22" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(8539, 832)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note23" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(8954, 778)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note24" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(9205, 893)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note25" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(9445, 678)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note26" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(9686, 826)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note27" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(9921, 756)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note28" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(10157, 893)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note29" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(10333, 835)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note30" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(10456, 773)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note31" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(10871, 719)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note32" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(11287, 756)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note33" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(11411, 873)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note34" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(11587, 758)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note35" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(11829, 885)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note36" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(12071, 913)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note37" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(12245, 807)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note38" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(12364, 728)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note39" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(12534, 803)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note40" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(12783, 860)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note41" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(13020, 757)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note42" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(13197, 813)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note43" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(13317, 865)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note44" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(13495, 806)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note45" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(13736, 714)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note46" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(13973, 757)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note47" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(14155, 716)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note48" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(14275, 717)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note49" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(14454, 798)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note50" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(14694, 801)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note51" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(14935, 799)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note52" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(15113, 812)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note53" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(15230, 761)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note54" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(15400, 799)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note55" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(15648, 755)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note56" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(15886, 875)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note57" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(16060, 775)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note58" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(16180, 706)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note59" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(16360, 800)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note60" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(16601, 800)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note61" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(17321, 876)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note62" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(17563, 720)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note63" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(17803, 838)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note64" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(17976, 762)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note65" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(18101, 699)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note66" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(18268, 802)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note67" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(19228, 758)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note68" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(19469, 806)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note69" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(20193, 799)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note70" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(20436, 854)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note71" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(21140, 762)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note72" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(21389, 786)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note73" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(21860, 828)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note74" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(22520, 802)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note75" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(22639, 866)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note76" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(23057, 765)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note77" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(23298, 868)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note78" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(23539, 773)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note79" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(23713, 711)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note80" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(23833, 869)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note81" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(24004, 793)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note82" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(24490, 755)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note83" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(24724, 697)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note84" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(24964, 869)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note85" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(25205, 758)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note86" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(25441, 690)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note87" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(25623, 748)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note88" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(25743, 733)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note89" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(25922, 824)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note90" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(26405, 712)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note91" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(26640, 685)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note92" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(26870, 875)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note93" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(27118, 824)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note94" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(27355, 857)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note95" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(27532, 726)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note96" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(27650, 708)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note97" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(27828, 754)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note98" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(28306, 733)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note99" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(28544, 822)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note100" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(28788, 728)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note101" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(29030, 812)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note102" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(29270, 756)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note103" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(29445, 800)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note104" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(29564, 898)
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
+active_state = []
 
 [node name="note105" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(29735, 697)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note106" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(30221, 833)
+active_state = []
 value = 2
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note107" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(30455, 768)
+active_state = []
 value = 3
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note108" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(30694, 815)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="note109" parent="notes" instance=ExtResource("1_ckp7n")]
 material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(31172, 734)
+active_state = []
 value = 1
-standby_color = Color(1, 0.737255, 0.537255, 1)
-accepted_color = Color(0, 0.733333, 0.843137, 1)
-perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
-missed_color = Color(0.407843, 0.407843, 0.407843, 1)
-
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(958, 800)
-collision_layer = 16
-collision_mask = 32
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-171, 3)
-shape = SubResource("RectangleShape2D_6rrv4")
 
 [node name="vertical_line" type="TextureRect" parent="."]
 offset_left = 663.0
@@ -1075,22 +739,57 @@ scale = Vector2(0.251, 0.251)
 texture = ExtResource("12_7o65m")
 
 [node name="Area2D3" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 32
 
 [node name="good" type="CollisionShape2D" parent="Area2D3"]
 position = Vector2(788, 800)
 shape = SubResource("RectangleShape2D_3nax3")
 
 [node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 32
 
 [node name="perfect" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(787.5, 800.25)
 shape = SubResource("RectangleShape2D_6ofyt")
 
 [node name="Area2D4" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 32
 
 [node name="music_play" type="CollisionShape2D" parent="Area2D4"]
 position = Vector2(788, 802)
 shape = SubResource("RectangleShape2D_5c63p")
 
-[connection signal="area_entered" from="Area2D" to="." method="on_area_entered"]
-[connection signal="area_exited" from="Area2D" to="." method="on_area_exited"]
+[node name="heart" type="Node2D" parent="."]
+
+[node name="casing" type="TextureRect" parent="heart"]
+offset_top = 949.0
+offset_right = 532.0
+offset_bottom = 1079.0
+texture = ExtResource("12_oidw5")
+
+[node name="heart_icon" parent="heart" instance=ExtResource("13_q6m5s")]
+position = Vector2(273, 1012)
+
+[node name="heartbeart_figures" type="Node2D" parent="heart"]
+
+[node name="first" type="TextureRect" parent="heart/heartbeart_figures"]
+offset_left = 140.0
+offset_top = 971.0
+offset_right = 231.0
+offset_bottom = 1071.0
+texture = ExtResource("15_br4eo")
+
+[node name="second" type="TextureRect" parent="heart/heartbeart_figures"]
+offset_left = 212.0
+offset_top = 970.0
+offset_right = 303.0
+offset_bottom = 1070.0
+texture = ExtResource("15_br4eo")
+
+[connection signal="area_entered" from="Area2D3" to="." method="on_note_entered_good"]
+[connection signal="area_exited" from="Area2D3" to="." method="on_note_exited_good"]
+[connection signal="area_entered" from="Area2D2" to="." method="on_note_entered_perfect"]
+[connection signal="area_exited" from="Area2D2" to="." method="on_note_exited_perfect"]
