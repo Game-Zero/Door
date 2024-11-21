@@ -1,10 +1,15 @@
 @tool
 extends Node2D
 
+@export var full_heart_num: int = 90
+@export var lose_heart_num: int = 45
+
+@export var heart_line_color: Color = Color8(116, 221,163)
+
 @export var b_game_started: bool = false
 @export var speed: int = 300
-@export var heart_num: int = 0
-@export var last_combo_num: int = 999
+@export var heart_num: int = 90
+@export var last_combo_num: int = full_heart_num
 @export var combo_num: int = 0:
 	get = get_combo_num,
 	set = set_combo_num
@@ -12,6 +17,7 @@ extends Node2D
 
 @onready var electrocardiogram = $electrocardiogram
 @onready var notes = $notes
+@onready var heart = $heart
 @onready var casing = $heart/casing
 @onready var heartbeart_figures_list: Array[Variant] = [$heart/heartbeart_figures/second, $heart/heartbeart_figures/first]
 @onready var heartbeat_texture_list: Array[CompressedTexture2D ] = [
@@ -44,6 +50,12 @@ extends Node2D
 @onready var que: Array
 @onready var audio_player = $AudioStreamPlayer2D
 @onready var judgment_anim_player = $judgment/AnimationPlayer
+@onready var timer = $Timer
+
+@onready var note_cnt = $notes.get_child_count()
+@onready var note_score = 1.0 * full_heart_num / note_cnt
+
+@onready var vertical_line = $vertical_line
 
 var dialog
 
@@ -88,6 +100,7 @@ func _ready() -> void:
 	last_combo_num = 999
 	b_comboing = false
 	judgment_anim_player.play("RESET")
+	print("[_ready] note_cnt: ", note_cnt, ", note_score: ", note_score)
 	if Engine.is_editor_hint():
 		return
 
@@ -117,6 +130,15 @@ func _process(delta: float) -> void:
 			combo_animation_player_list[i].play(anim_name)
 
 	last_combo_num = combo_num
+
+	heart.modulate = heart_line_color
+	electrocardiogram.modulate = heart_line_color
+
+	# todo:zero 确定竖线颜色逻辑
+	vertical_line.self_modulate = heart_line_color
+	vertical_line.material.set_shader_parameter("modulate_color", vertical_line.self_modulate)
+	vertical_line.material.set_shader_parameter("outline_color", vertical_line.self_modulate)
+	vertical_line.material.set_shader_parameter("b_outglow_on", true)
 
 	if Engine.is_editor_hint():
 		return
@@ -201,4 +223,11 @@ func on_note_exited_perfect(note) -> void:
 
 func on_music_play_start(node) -> void:
 	print("[on_music_play_start] ", node.name)
+	timer.start()
 	audio_player.play()
+
+
+func on_timer_trigger() -> void:
+	print("[on_timer_trigger] ", Time.get_time_string_from_system())
+	# todo:zero 分数计算逻辑
+	pass

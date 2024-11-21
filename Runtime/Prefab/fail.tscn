@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bty8imgplid4h"]
+[gd_scene load_steps=8 format=3 uid="uid://ba5b7vuikrqoj"]
 
 [ext_resource type="Texture2D" uid="uid://xhc6xd8jy3c1" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/fail_sample.png" id="1_fmeao"]
 [ext_resource type="Texture2D" uid="uid://d315yrbrgcgmn" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/fail_background.png" id="2_xhldr"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c6i5m60gs3y0p" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/fail.png" id="4_xsu0r"]
 [ext_resource type="Texture2D" uid="uid://cnnmyvqc4l16t" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/exit.png" id="5_e6dtg"]
 [ext_resource type="Texture2D" uid="uid://8gybsm3jcv3f" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/again.png" id="6_nf1k0"]
-[ext_resource type="AnimationLibrary" uid="uid://cihuli7ytkujj" path="res://Runtime/Prefab/fail_anime.tres" id="7_5cndh"]
+[ext_resource type="AnimationLibrary" uid="uid://cgnrrjjna85oq" path="res://Runtime/Prefab/fail_anime.tres" id="7_5cndh"]
 
 [node name="fail" type="Node2D"]
 

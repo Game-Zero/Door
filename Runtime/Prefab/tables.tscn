@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dh8frt03hpxs0"]
+[gd_scene load_steps=25 format=3 uid="uid://dh8frt03hpxs0"]
 
 [ext_resource type="Script" path="res://Runtime/Script/Manager/s2_1_tables.gd" id="1_ax147"]
 [ext_resource type="PackedScene" uid="uid://vguvqexn7pw4" path="res://Runtime/Prefab/note.tscn" id="1_ckp7n"]
@@ -10,9 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://cwnuqgdv3gw4d" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/electrocardiogram_5.png" id="7_vopsx"]
 [ext_resource type="Texture2D" uid="uid://bcinwt2ow08yf" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/electrocardiogram_6.png" id="8_d76dc"]
 [ext_resource type="Shader" path="res://Runtime/Shader/outglow.gdshader" id="10_0inuw"]
+[ext_resource type="Material" uid="uid://dl2yxos0bpive" path="res://Runtime/Shader/vertical_line.material" id="11_1ojn4"]
 [ext_resource type="Texture2D" uid="uid://cot6q6uijaefu" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/vertical_line.png" id="12_7o65m"]
 [ext_resource type="Texture2D" uid="uid://c2plimbxqqrwg" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/left_green_line.png" id="12_oidw5"]
 [ext_resource type="PackedScene" uid="uid://28vptjjrju5w" path="res://Runtime/Prefab/heart.tscn" id="13_q6m5s"]
+[ext_resource type="Texture2D" uid="uid://2tq83j4f0feh" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/heartbeat_9.png" id="14_0eu30"]
 [ext_resource type="Texture2D" uid="uid://b5xdv0bnilrk6" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/heartbeat_0.png" id="15_br4eo"]
 [ext_resource type="AudioStream" uid="uid://c5f5g1bwe7mo8" path="res://Runtime/Resource/Audio/s2/music_game.MP3" id="15_ratjp"]
 [ext_resource type="PackedScene" uid="uid://kxmak151p1kc" path="res://Runtime/Prefab/combo.tscn" id="16_kx5lx"]
@@ -59,6 +61,7 @@ scale = Vector2(0.446749, 0.742071)
 texture = ExtResource("2_ykw15")
 
 [node name="electrocardiogram" type="Node2D" parent="."]
+modulate = Color(0.454902, 0.866667, 0.639216, 1)
 position = Vector2(1746, 0)
 
 [node name="electrocardiogram1" type="TextureRect" parent="electrocardiogram"]
@@ -638,6 +641,8 @@ position = Vector2(31172, 734)
 value = 1
 
 [node name="vertical_line" type="TextureRect" parent="."]
+self_modulate = Color(0.454902, 0.866667, 0.639216, 1)
+material = ExtResource("11_1ojn4")
 offset_left = 663.0
 offset_top = 542.0
 offset_right = 1653.0
@@ -646,6 +651,7 @@ scale = Vector2(0.251, 0.251)
 texture = ExtResource("12_7o65m")
 
 [node name="Area2D3" type="Area2D" parent="."]
+visible = false
 collision_layer = 16
 collision_mask = 32
 
@@ -654,6 +660,7 @@ position = Vector2(788, 800)
 shape = SubResource("RectangleShape2D_3nax3")
 
 [node name="Area2D2" type="Area2D" parent="."]
+visible = false
 collision_layer = 16
 collision_mask = 32
 
@@ -662,6 +669,7 @@ position = Vector2(787.5, 800.25)
 shape = SubResource("RectangleShape2D_6ofyt")
 
 [node name="Area2D4" type="Area2D" parent="."]
+visible = false
 collision_layer = 16
 collision_mask = 64
 
@@ -670,6 +678,7 @@ position = Vector2(788, 802)
 shape = SubResource("RectangleShape2D_5c63p")
 
 [node name="heart" type="Node2D" parent="."]
+modulate = Color(0.454902, 0.866667, 0.639216, 1)
 
 [node name="casing" type="TextureRect" parent="heart"]
 offset_top = 949.0
@@ -687,7 +696,7 @@ offset_left = 140.0
 offset_top = 971.0
 offset_right = 231.0
 offset_bottom = 1071.0
-texture = ExtResource("15_br4eo")
+texture = ExtResource("14_0eu30")
 
 [node name="second" type="TextureRect" parent="heart/heartbeart_figures"]
 offset_left = 212.0
@@ -705,8 +714,12 @@ position = Vector2(960, 140)
 [node name="judgment" parent="." instance=ExtResource("17_o7bef")]
 position = Vector2(960, 340)
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+
 [connection signal="area_entered" from="Area2D3" to="." method="on_note_entered_good"]
 [connection signal="area_exited" from="Area2D3" to="." method="on_note_exited_good"]
 [connection signal="area_entered" from="Area2D2" to="." method="on_note_entered_perfect"]
 [connection signal="area_exited" from="Area2D2" to="." method="on_note_exited_perfect"]
 [connection signal="area_entered" from="Area2D4" to="." method="on_music_play_start"]
+[connection signal="timeout" from="Timer" to="." method="on_timer_trigger"]
