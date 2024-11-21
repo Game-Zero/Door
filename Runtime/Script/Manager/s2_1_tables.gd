@@ -23,6 +23,7 @@ extends Node2D
 ]
 
 @onready var que: Array
+@onready var audio_player = $AudioStreamPlayer2D
 
 var dialog
 
@@ -139,3 +140,8 @@ func on_note_exited_perfect(note) -> void:
 	note.active_state.pop_back()
 
 	pass
+
+
+func on_music_play_start(node) -> void:
+	print("[on_music_play_start] ", node.name)
+	audio_player.play()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dh8frt03hpxs0"]
+[gd_scene load_steps=21 format=3 uid="uid://dh8frt03hpxs0"]
 
 [ext_resource type="Script" path="res://Runtime/Script/Manager/s2_1_tables.gd" id="1_ax147"]
 [ext_resource type="PackedScene" uid="uid://vguvqexn7pw4" path="res://Runtime/Prefab/note.tscn" id="1_ckp7n"]
@@ -14,6 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://c2plimbxqqrwg" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/left_green_line.png" id="12_oidw5"]
 [ext_resource type="PackedScene" uid="uid://28vptjjrju5w" path="res://Runtime/Prefab/heart.tscn" id="13_q6m5s"]
 [ext_resource type="Texture2D" uid="uid://b5xdv0bnilrk6" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/heartbeat_0.png" id="15_br4eo"]
+[ext_resource type="AudioStream" uid="uid://c5f5g1bwe7mo8" path="res://Runtime/Resource/Audio/s2/music_game.MP3" id="15_ratjp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f7xp0"]
+size = Vector2(20, 14)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7lxqp"]
 shader = ExtResource("10_0inuw")
@@ -62,6 +66,15 @@ offset_bottom = 1000.0
 scale = Vector2(0.602911, 0.983778)
 texture = ExtResource("4_5hg4s")
 metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="electrocardiogram/electrocardiogram1"]
+position = Vector2(16.5861, 199.232)
+scale = Vector2(1.65862, 1.01649)
+collision_layer = 64
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="electrocardiogram/electrocardiogram1/Area2D"]
+shape = SubResource("RectangleShape2D_f7xp0")
 
 [node name="electrocardiogram2" type="TextureRect" parent="electrocardiogram"]
 offset_left = 11465.0
@@ -756,7 +769,7 @@ shape = SubResource("RectangleShape2D_6ofyt")
 
 [node name="Area2D4" type="Area2D" parent="."]
 collision_layer = 16
-collision_mask = 32
+collision_mask = 64
 
 [node name="music_play" type="CollisionShape2D" parent="Area2D4"]
 position = Vector2(788, 802)
@@ -789,7 +802,11 @@ offset_right = 303.0
 offset_bottom = 1070.0
 texture = ExtResource("15_br4eo")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_ratjp")
+
 [connection signal="area_entered" from="Area2D3" to="." method="on_note_entered_good"]
 [connection signal="area_exited" from="Area2D3" to="." method="on_note_exited_good"]
 [connection signal="area_entered" from="Area2D2" to="." method="on_note_entered_perfect"]
 [connection signal="area_exited" from="Area2D2" to="." method="on_note_exited_perfect"]
+[connection signal="area_entered" from="Area2D4" to="." method="on_music_play_start"]
