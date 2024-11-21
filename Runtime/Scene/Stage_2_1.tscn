@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dcj23pu0k32jg"]
+[gd_scene load_steps=14 format=3 uid="uid://dcj23pu0k32jg"]
 
 [ext_resource type="Script" path="res://Runtime/Script/Manager/Stage_2_1.gd" id="1_fy5sg"]
 [ext_resource type="Texture2D" uid="uid://8b3tljigsmuk" path="res://Runtime/Resource/Background/stage2-1.png" id="1_umuh0"]
@@ -11,8 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://bofbb0bvx1ysw" path="res://Runtime/Prefab/hud.tscn" id="8_05owv"]
 [ext_resource type="PackedScene" uid="uid://dh8frt03hpxs0" path="res://Runtime/Prefab/tables.tscn" id="9_dlun6"]
 [ext_resource type="PackedScene" path="res://Runtime/Prefab/fail.tscn" id="9_ik0ue"]
-[ext_resource type="PackedScene" uid="uid://kxmak151p1kc" path="res://Runtime/Prefab/combo.tscn" id="11_2sla6"]
-[ext_resource type="PackedScene" uid="uid://3nraj8h7elmj" path="res://Runtime/Prefab/judgment.tscn" id="12_vdo4n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqdc5"]
 size = Vector2(3075.7, 2964.14)
@@ -84,12 +82,6 @@ visible = false
 heart_num = 98
 
 [node name="HUD" parent="." instance=ExtResource("8_05owv")]
-
-[node name="combo" parent="." instance=ExtResource("11_2sla6")]
-position = Vector2(960, 140)
-
-[node name="judgment" parent="." instance=ExtResource("12_vdo4n")]
-position = Vector2(960, 340)
 
 [connection signal="body_entered" from="doll_anime/Area2D" to="." method="on_doll_body_entered"]
 [connection signal="body_entered" from="Door/Area2D" to="." method="on_door_body_entered"]

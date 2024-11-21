@@ -1,15 +1,20 @@
 @tool
 extends Node2D
 
-@export var b_game_started = false
-@export var speed = 300
-@export var heart_num = 0
+@export var b_game_started: bool = false
+@export var speed: int = 300
+@export var heart_num: int = 0
+@export var last_combo_num: int = 999
+@export var combo_num: int = 0:
+	get = get_combo_num,
+	set = set_combo_num
+
 
 @onready var electrocardiogram = $electrocardiogram
 @onready var notes = $notes
 @onready var casing = $heart/casing
-@onready var heartbeart_figures_list = [$heart/heartbeart_figures/second, $heart/heartbeart_figures/first]
-@onready var texture_list = [
+@onready var heartbeart_figures_list: Array[Variant] = [$heart/heartbeart_figures/second, $heart/heartbeart_figures/first]
+@onready var heartbeat_texture_list: Array[CompressedTexture2D ] = [
 	load("res://Runtime/Resource/Sprite/S2-1_UI_icon/heartbeat_0.png"),	# 0
 	load("res://Runtime/Resource/Sprite/S2-1_UI_icon/heartbeat_1.png"),	# 1
 	load("res://Runtime/Resource/Sprite/S2-1_UI_icon/heartbeat_2.png"),	# 2
@@ -21,9 +26,24 @@ extends Node2D
 	load("res://Runtime/Resource/Sprite/S2-1_UI_icon/heartbeat_8.png"),	# 8
 	load("res://Runtime/Resource/Sprite/S2-1_UI_icon/heartbeat_9.png"),	# 9
 ]
-
+@onready var combo_digital_list: Array[Variant] = [$combo/digital3, $combo/digital2, $combo/digital1]
+@onready var combo_digital_texture_list: Array[CompressedTexture2D ] = [
+	load("res://Runtime/Resource/Sprite/S2-1_UI_icon/combe_0.png"),	# 0
+	load("res://Runtime/Resource/Sprite/S2-1_UI_icon/combe_1.png"),	# 1
+	load("res://Runtime/Resource/Sprite/S2-1_UI_icon/combe_2.png"),	# 2
+	load("res://Runtime/Resource/Sprite/S2-1_UI_icon/combe_3.png"),	# 3
+	load("res://Runtime/Resource/Sprite/S2-1_UI_icon/combe_4.png"),	# 4
+	load("res://Runtime/Resource/Sprite/S2-1_UI_icon/combe_5.png"),	# 5
+	load("res://Runtime/Resource/Sprite/S2-1_UI_icon/combe_6.png"),	# 6
+	load("res://Runtime/Resource/Sprite/S2-1_UI_icon/combe_7.png"),	# 7
+	load("res://Runtime/Resource/Sprite/S2-1_UI_icon/combe_8.png"),	# 8
+	load("res://Runtime/Resource/Sprite/S2-1_UI_icon/combe_9.png"),	# 9
+]
+@onready var combo_animation_player_list: Array[Variant] = [$combo/digital3/AnimationPlayer, $combo/digital2/AnimationPlayer, $combo/digital1/AnimationPlayer]
+@onready var b_comboing: bool = false
 @onready var que: Array
 @onready var audio_player = $AudioStreamPlayer2D
+@onready var judgment_anim_player = $judgment/AnimationPlayer
 
 var dialog
 
@@ -53,8 +73,21 @@ enum KeyType {
 }
 
 
+func get_combo_num() -> int:
+	return combo_num
+
+
+func set_combo_num(value):
+	print("[set_combo_num] value: ", value)
+	combo_num = value
+	
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	last_combo_num = 999
+	b_comboing = false
+	judgment_anim_player.play("RESET")
 	if Engine.is_editor_hint():
 		return
 
@@ -70,8 +103,20 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	heartbeart_figures_list[0].texture = texture_list[heart_num % 10]
-	heartbeart_figures_list[1].texture = texture_list[(heart_num / 10) % 10]
+	heartbeart_figures_list[0].texture = heartbeat_texture_list[heart_num % 10]
+	heartbeart_figures_list[1].texture = heartbeat_texture_list[(heart_num / 10) % 10]
+
+	var last_combo_num_bits: Array[int] = [last_combo_num % 10, last_combo_num / 10 % 10, last_combo_num / 100 % 10]
+	var combo_num_bits: Array[int]      = [combo_num % 10, combo_num / 10 % 10, combo_num / 100 % 10]
+
+	for i in range(0, 3):
+		if (last_combo_num_bits[i] != combo_num_bits[i]):
+			combo_digital_list[i].texture = combo_digital_texture_list[combo_num_bits[i]]
+			var anim_name: String = "digital" + str(3 - i) + "_appeared"
+			print("combo_animation_player[", i, "].play: ", anim_name)
+			combo_animation_player_list[i].play(anim_name)
+
+	last_combo_num = combo_num
 
 	if Engine.is_editor_hint():
 		return
@@ -97,8 +142,18 @@ func _process(delta: float) -> void:
 		if (note.state == note.KeyState.Active):
 			if (note.value == key_type):
 				note.state = note.active_state.back()
+				if (note.state == note.KeyState.Perfect):
+					judgment_anim_player.play("perfect_appeared")
+					set_combo_num(get_combo_num() + 1)
+				elif (note.state == note.KeyState.Good):
+					judgment_anim_player.play("good_appeared")
+					set_combo_num(0)
+				else:
+					assert(false, "Unkown note state: " + str(note.state))
 			else:
 				note.state = note.KeyState.Missed
+				judgment_anim_player.play("miss_appeared")
+				set_combo_num(0)
 
 
 func start_game() -> void:
@@ -118,6 +173,8 @@ func on_note_exited_good(note) -> void:
 	print("[on_note_exited_good] ", note.name)
 	if (note.state == note.KeyState.Active):
 		note.state = note.KeyState.Missed
+		judgment_anim_player.play("miss_appeared")
+		set_combo_num(0)
 		que_pop()
 
 	if (note == notes.get_child(-1)):
