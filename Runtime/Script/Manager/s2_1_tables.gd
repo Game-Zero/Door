@@ -2,18 +2,33 @@
 extends Node2D
 
 @export var full_heart_num: int = 90
+@export var health_heart_num: int = 75
+@export var danger_heart_num: int = 55
 @export var lose_heart_num: int = 45
 
-@export var heart_line_color: Color = Color8(116, 221,163)
+@export var add_heart_num_combo_cnt: int = 10
+@export var add_heart_num_cnt: int = 2
+
+@export var miss_note_beta: float = 0
+@export var good_note_beta: float = 0.6
+@export var perfect_note_beta: float = 1
+
+@export var default_heart_line_color: Color = Color8(116, 221,163)
+@export var health_heart_line_color: Color = Color8(116, 221, 163)
+@export var danger_heart_line_color: Color = Color8(230, 175, 106)
+@export var lose_heart_line_color: Color = Color8(203, 63, 44)
+
+@export var default_line_color: Color = Color8(225, 188, 137)
 
 @export var b_game_started: bool = false
 @export var speed: int = 300
-@export var heart_num: int = 90
-@export var last_combo_num: int = full_heart_num
+@export var heart_num: float = full_heart_num # sum(n)
+@export var last_combo_num: int = 999
 @export var combo_num: int = 0:
 	get = get_combo_num,
 	set = set_combo_num
 
+@export var cur_note_cnt: int = 0
 
 @onready var electrocardiogram = $electrocardiogram
 @onready var notes = $notes
@@ -53,9 +68,10 @@ extends Node2D
 @onready var timer = $Timer
 
 @onready var note_cnt = $notes.get_child_count()
-@onready var note_score = 1.0 * full_heart_num / note_cnt
 
 @onready var vertical_line = $vertical_line
+@onready var heart_line_color = default_line_color
+
 
 var dialog
 
@@ -100,7 +116,18 @@ func _ready() -> void:
 	last_combo_num = 999
 	b_comboing = false
 	judgment_anim_player.play("RESET")
-	print("[_ready] note_cnt: ", note_cnt, ", note_score: ", note_score)
+	change_line_color(default_line_color)
+	change_heart_line_color(default_heart_line_color)
+	var vertical_line_center_position = vertical_line.position + (vertical_line.size * vertical_line.scale / 2)
+	var viewport_size = get_viewport().size
+	var mask_screen_position_x = vertical_line_center_position.x / viewport_size.x
+	var original_material = load("res://Runtime/Shader/electrocardiogram_mask.material")
+	for child in electrocardiogram.get_children():
+		child.material = original_material.duplicate()
+		child.material.set_shader_parameter("modulate_color", heart_line_color)
+		child.material.set_shader_parameter("mask_screen_position_x", mask_screen_position_x)
+
+	print("[_ready] note_cnt: ", note_cnt, ", viewport_size: ", viewport_size, ", vertical_line_center_position: ", vertical_line_center_position, ", mask_screen_position_x: ", mask_screen_position_x)
 	if Engine.is_editor_hint():
 		return
 
@@ -116,8 +143,51 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	heartbeart_figures_list[0].texture = heartbeat_texture_list[heart_num % 10]
-	heartbeart_figures_list[1].texture = heartbeat_texture_list[(heart_num / 10) % 10]
+	if (not b_game_started):
+		return
+
+	if not Engine.is_editor_hint():
+		electrocardiogram.translate(Vector2(-speed*delta, 0))
+		notes.translate(Vector2(-speed*delta, 0))
+	
+		var key_type = null
+		if (Input.is_action_just_pressed("player_up")):
+			key_type = KeyType.W
+		if (Input.is_action_just_pressed("player_down")):
+			key_type = KeyType.S
+		if (Input.is_action_just_pressed("player_left")):
+			key_type = KeyType.A
+		if (Input.is_action_just_pressed("player_right")):
+			key_type = KeyType.D
+	
+		if (key_type != null and not que_empty()):
+			var note = que_pop()
+			if (note.state == note.KeyState.Active):
+				if (note.value == key_type):
+					note.state = note.active_state.back()
+					if (note.state == note.KeyState.Perfect):
+						change_line_color(note.perfect_color)
+						add_note(perfect_note_beta)
+						judgment_anim_player.play("perfect_appeared")
+						set_combo_num(get_combo_num() + 1)
+						check_combo()
+					elif (note.state == note.KeyState.Good):
+						change_line_color(note.good_color)
+						add_note(good_note_beta)
+						judgment_anim_player.play("good_appeared")
+						set_combo_num(get_combo_num() + 1)
+						check_combo()
+					else:
+						assert(false, "Unkown note state: " + str(note.state))
+				else:
+					note.state = note.KeyState.Missed
+					add_note(miss_note_beta)
+					judgment_anim_player.play("miss_appeared")
+					set_combo_num(0)
+
+	var heart_num_int: int = roundi(heart_num)
+	heartbeart_figures_list[0].texture = heartbeat_texture_list[heart_num_int % 10]
+	heartbeart_figures_list[1].texture = heartbeat_texture_list[(heart_num_int / 10) % 10]
 
 	var last_combo_num_bits: Array[int] = [last_combo_num % 10, last_combo_num / 10 % 10, last_combo_num / 100 % 10]
 	var combo_num_bits: Array[int]      = [combo_num % 10, combo_num / 10 % 10, combo_num / 100 % 10]
@@ -132,94 +202,69 @@ func _process(delta: float) -> void:
 	last_combo_num = combo_num
 
 	heart.modulate = heart_line_color
-	electrocardiogram.modulate = heart_line_color
+	for child in electrocardiogram.get_children():
+		child.material.set_shader_parameter("modulate_color", heart_line_color)
 
-	# todo:zero 确定竖线颜色逻辑
-	vertical_line.self_modulate = heart_line_color
+func start_game() -> void:
+	b_game_started = true
+
+
+func add_note(beta: float):
+	cur_note_cnt = cur_note_cnt + 1
+	heart_num = (heart_num * (cur_note_cnt - 1) + beta * full_heart_num) / cur_note_cnt
+	if (heart_num >= health_heart_num):
+		change_heart_line_color(health_heart_line_color)
+	elif (heart_num >= danger_heart_num):
+		change_heart_line_color(danger_heart_line_color)
+	else:
+		change_heart_line_color(lose_heart_line_color)
+
+
+func check_combo():
+	if (get_combo_num() != 0 and (get_combo_num() % add_heart_num_combo_cnt == 0)):
+		heart_num = heart_num + add_heart_num_cnt
+		heart_num = min(heart_num, full_heart_num)
+
+	
+func change_line_color(color: Color):
+	vertical_line.self_modulate = color
 	vertical_line.material.set_shader_parameter("modulate_color", vertical_line.self_modulate)
 	vertical_line.material.set_shader_parameter("outline_color", vertical_line.self_modulate)
 	vertical_line.material.set_shader_parameter("b_outglow_on", true)
 
-	if Engine.is_editor_hint():
-		return
-
-	if (not b_game_started):
-		return
-
-	electrocardiogram.translate(Vector2(-speed*delta, 0))
-	notes.translate(Vector2(-speed*delta, 0))
-
-	var key_type = null
-	if (Input.is_action_just_pressed("player_up")):
-		key_type = KeyType.W
-	if (Input.is_action_just_pressed("player_down")):
-		key_type = KeyType.S
-	if (Input.is_action_just_pressed("player_left")):
-		key_type = KeyType.A
-	if (Input.is_action_just_pressed("player_right")):
-		key_type = KeyType.D
-
-	if (key_type != null and not que_empty()):
-		var note = que_pop()
-		if (note.state == note.KeyState.Active):
-			if (note.value == key_type):
-				note.state = note.active_state.back()
-				if (note.state == note.KeyState.Perfect):
-					judgment_anim_player.play("perfect_appeared")
-					set_combo_num(get_combo_num() + 1)
-				elif (note.state == note.KeyState.Good):
-					judgment_anim_player.play("good_appeared")
-					set_combo_num(0)
-				else:
-					assert(false, "Unkown note state: " + str(note.state))
-			else:
-				note.state = note.KeyState.Missed
-				judgment_anim_player.play("miss_appeared")
-				set_combo_num(0)
-
-
-func start_game() -> void:
-	b_game_started = true
+	
+func change_heart_line_color(color: Color):
+	heart_line_color = color
 	pass
-
 
 func on_note_entered_good(note) -> void:
 	print("[on_note_entered_good] ", note.name)
 	que_push(note)
 	note.state = note.KeyState.Active
 	note.active_state.push_back(note.KeyState.Good)
-	pass
 
 
 func on_note_exited_good(note) -> void:
 	print("[on_note_exited_good] ", note.name)
 	if (note.state == note.KeyState.Active):
 		note.state = note.KeyState.Missed
+		add_note(miss_note_beta)
 		judgment_anim_player.play("miss_appeared")
 		set_combo_num(0)
 		que_pop()
 
-	if (note == notes.get_child(-1)):
-		b_game_started = false
-		dialog.popup_centered()
-
 	note.active_state.pop_back()
-	pass
 
 
 func on_note_entered_perfect(note) -> void:
 	print("[on_note_entered_perfect] ", note.name)
 	note.active_state.push_back(note.KeyState.Perfect)
 
-	pass
-
 
 func on_note_exited_perfect(note) -> void:
 	print("[on_note_exited_perfect] ", note.name)
 	note.active_state.pop_back()
-
-	pass
-
+	change_line_color(default_line_color)
 
 func on_music_play_start(node) -> void:
 	print("[on_music_play_start] ", node.name)
@@ -227,7 +272,15 @@ func on_music_play_start(node) -> void:
 	audio_player.play()
 
 
+func on_music_play_end(node) -> void:
+	on_timer_trigger()
+	# todo:zero 实现过关逻辑
+	print("[on_music_play_end] 过关.")
+
+
 func on_timer_trigger() -> void:
 	print("[on_timer_trigger] ", Time.get_time_string_from_system())
-	# todo:zero 分数计算逻辑
+	if (heart_num < lose_heart_num):
+		b_game_started = false
+		dialog.popup_centered()
 	pass

@@ -79,7 +79,6 @@ position = Vector2(960, 540)
 visible = false
 
 [node name="tables" parent="." instance=ExtResource("9_dlun6")]
-heart_line_color = Color(0.454902, 0.866667, 0.639216, 1)
 
 [node name="HUD" parent="." instance=ExtResource("8_05owv")]
 

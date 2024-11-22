@@ -10,7 +10,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_jaxau"]
 radius = 15.8114
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4ec4u"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q1auf"]
 shader = ExtResource("1_g3eno")
 shader_parameter/b_outglow_on = false
 shader_parameter/outline_width = 0.06
@@ -19,7 +19,7 @@ shader_parameter/outline_max_alpha = 1.0
 shader_parameter/modulate_color = Color(1, 1, 1, 1)
 shader_parameter/outline_color = Color(0.396078, 0.733333, 1, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_y7288"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3oob6"]
 shader = ExtResource("1_g3eno")
 shader_parameter/b_outglow_on = false
 shader_parameter/outline_width = 0.06
@@ -28,7 +28,7 @@ shader_parameter/outline_max_alpha = 1.0
 shader_parameter/modulate_color = Color(1, 1, 1, 1)
 shader_parameter/outline_color = Color(0.396078, 0.733333, 1, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_6qt1g"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nr5cr"]
 shader = ExtResource("1_g3eno")
 shader_parameter/b_outglow_on = false
 shader_parameter/outline_width = 0.06
@@ -37,13 +37,13 @@ shader_parameter/outline_max_alpha = 1.0
 shader_parameter/modulate_color = Color(1, 1, 1, 1)
 shader_parameter/outline_color = Color(0.396078, 0.733333, 1, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_fne3b"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1uwjp"]
 shader = ExtResource("1_g3eno")
 shader_parameter/b_outglow_on = false
 shader_parameter/outline_width = 0.06
 shader_parameter/outline_min_alpha = 0.1
 shader_parameter/outline_max_alpha = 1.0
-shader_parameter/modulate_color = Color(1, 1, 1, 1)
+shader_parameter/modulate_color = Color(1, 0.737255, 0.537255, 1)
 shader_parameter/outline_color = Color(0.396078, 0.733333, 1, 1)
 
 [node name="note" type="Area2D"]
@@ -52,6 +52,7 @@ collision_layer = 32
 collision_mask = 16
 script = ExtResource("1_48s0n")
 standby_color = Color(1, 0.737255, 0.537255, 1)
+good_color = Color(0, 0.733333, 0.843137, 1)
 perfect_color = Color(0.705882, 0.0784314, 0.654902, 1)
 missed_color = Color(0.407843, 0.407843, 0.407843, 1)
 
@@ -61,7 +62,7 @@ shape = SubResource("CircleShape2D_jaxau")
 [node name="TextureRectD" type="TextureRect" parent="."]
 visible = false
 self_modulate = Color(1, 0.737255, 0.537255, 1)
-material = SubResource("ShaderMaterial_4ec4u")
+material = SubResource("ShaderMaterial_q1auf")
 offset_left = -200.0
 offset_top = -205.0
 offset_right = 202.0
@@ -71,7 +72,7 @@ texture = ExtResource("2_o8u0o")
 [node name="TextureRectA" type="TextureRect" parent="."]
 visible = false
 self_modulate = Color(1, 0.737255, 0.537255, 1)
-material = SubResource("ShaderMaterial_y7288")
+material = SubResource("ShaderMaterial_3oob6")
 offset_left = -200.0
 offset_top = -205.0
 offset_right = 202.0
@@ -81,7 +82,7 @@ texture = ExtResource("3_o11d0")
 [node name="TextureRectS" type="TextureRect" parent="."]
 visible = false
 self_modulate = Color(1, 0.737255, 0.537255, 1)
-material = SubResource("ShaderMaterial_6qt1g")
+material = SubResource("ShaderMaterial_nr5cr")
 offset_left = -200.0
 offset_top = -205.0
 offset_right = 202.0
@@ -90,7 +91,7 @@ texture = ExtResource("4_htpnw")
 
 [node name="TextureRectW" type="TextureRect" parent="."]
 self_modulate = Color(1, 0.737255, 0.537255, 1)
-material = SubResource("ShaderMaterial_fne3b")
+material = SubResource("ShaderMaterial_1uwjp")
 offset_left = -200.0
 offset_top = -205.0
 offset_right = 202.0

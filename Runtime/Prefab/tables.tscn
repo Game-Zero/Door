@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dh8frt03hpxs0"]
+[gd_scene load_steps=30 format=3 uid="uid://dh8frt03hpxs0"]
 
 [ext_resource type="Script" path="res://Runtime/Script/Manager/s2_1_tables.gd" id="1_ax147"]
 [ext_resource type="PackedScene" uid="uid://vguvqexn7pw4" path="res://Runtime/Prefab/note.tscn" id="1_ckp7n"]
@@ -20,8 +20,18 @@
 [ext_resource type="PackedScene" uid="uid://kxmak151p1kc" path="res://Runtime/Prefab/combo.tscn" id="16_kx5lx"]
 [ext_resource type="PackedScene" uid="uid://3nraj8h7elmj" path="res://Runtime/Prefab/judgment.tscn" id="17_o7bef"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_163qw"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f7xp0"]
 size = Vector2(20, 14)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dnfq5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_876kw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a76wu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2py4h"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7lxqp"]
 shader = ExtResource("10_0inuw")
@@ -33,17 +43,18 @@ shader_parameter/modulate_color = Color(1, 0.807843, 0.396078, 1)
 shader_parameter/outline_color = Color(1, 1, 1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3nax3"]
-size = Vector2(92, 400)
+size = Vector2(376, 400)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ofyt"]
-size = Vector2(45, 395.5)
+size = Vector2(111, 395.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5c63p"]
 size = Vector2(4.5, 394)
 
 [node name="tables" type="Node2D"]
 script = ExtResource("1_ax147")
-last_combo_num = 0
+heart_num = 90.0
+last_combo_num = 999
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 7680.0
@@ -65,6 +76,7 @@ modulate = Color(0.454902, 0.866667, 0.639216, 1)
 position = Vector2(1746, 0)
 
 [node name="electrocardiogram1" type="TextureRect" parent="electrocardiogram"]
+material = SubResource("ShaderMaterial_163qw")
 offset_left = -2.0
 offset_top = 602.0
 offset_right = 19023.0
@@ -73,16 +85,17 @@ scale = Vector2(0.602911, 0.983778)
 texture = ExtResource("4_5hg4s")
 metadata/_edit_use_anchors_ = true
 
-[node name="Area2D" type="Area2D" parent="electrocardiogram/electrocardiogram1"]
+[node name="MusicBegin" type="Area2D" parent="electrocardiogram/electrocardiogram1"]
 position = Vector2(16.5861, 199.232)
 scale = Vector2(1.65862, 1.01649)
 collision_layer = 64
 collision_mask = 16
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="electrocardiogram/electrocardiogram1/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="electrocardiogram/electrocardiogram1/MusicBegin"]
 shape = SubResource("RectangleShape2D_f7xp0")
 
 [node name="electrocardiogram2" type="TextureRect" parent="electrocardiogram"]
+material = SubResource("ShaderMaterial_dnfq5")
 offset_left = 11465.0
 offset_top = 600.0
 offset_right = 30492.0
@@ -92,6 +105,7 @@ texture = ExtResource("5_ypdsc")
 metadata/_edit_use_anchors_ = true
 
 [node name="electrocardiogram3" type="TextureRect" parent="electrocardiogram"]
+material = SubResource("ShaderMaterial_876kw")
 offset_left = 14329.0
 offset_top = 598.0
 offset_right = 19085.0
@@ -101,6 +115,7 @@ texture = ExtResource("6_i5xs4")
 metadata/_edit_use_anchors_ = true
 
 [node name="electrocardiogram4" type="TextureRect" parent="electrocardiogram"]
+material = SubResource("ShaderMaterial_a76wu")
 offset_left = 17091.0
 offset_top = 597.0
 offset_right = 26789.0
@@ -110,6 +125,7 @@ texture = ExtResource("7_vopsx")
 metadata/_edit_use_anchors_ = true
 
 [node name="electrocardiogram5" type="TextureRect" parent="electrocardiogram"]
+material = SubResource("ShaderMaterial_2py4h")
 offset_left = 22919.0
 offset_top = 600.0
 offset_right = 41957.0
@@ -117,6 +133,15 @@ offset_bottom = 998.0
 scale = Vector2(0.603245, 0.994488)
 texture = ExtResource("8_d76dc")
 metadata/_edit_use_anchors_ = true
+
+[node name="MusicEnd" type="Area2D" parent="electrocardiogram/electrocardiogram5"]
+position = Vector2(19043.7, 199.097)
+scale = Vector2(1.65862, 1.01649)
+collision_layer = 64
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="electrocardiogram/electrocardiogram5/MusicEnd"]
+shape = SubResource("RectangleShape2D_f7xp0")
 
 [node name="notes" type="Node2D" parent="."]
 position = Vector2(1746, 0)
@@ -641,14 +666,15 @@ position = Vector2(31172, 734)
 value = 1
 
 [node name="vertical_line" type="TextureRect" parent="."]
-self_modulate = Color(0.454902, 0.866667, 0.639216, 1)
+self_modulate = Color(0.882353, 0.737255, 0.537255, 1)
 material = ExtResource("11_1ojn4")
-offset_left = 663.0
-offset_top = 542.0
-offset_right = 1653.0
-offset_bottom = 2589.0
+offset_left = 665.0
+offset_top = 540.0
+offset_right = 1655.0
+offset_bottom = 2588.0
 scale = Vector2(0.251, 0.251)
 texture = ExtResource("12_7o65m")
+metadata/_edit_use_anchors_ = true
 
 [node name="Area2D3" type="Area2D" parent="."]
 collision_layer = 16
@@ -714,6 +740,7 @@ position = Vector2(960, 340)
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0
 
+[connection signal="area_entered" from="electrocardiogram/electrocardiogram5/MusicEnd" to="." method="on_music_play_end"]
 [connection signal="area_entered" from="Area2D3" to="." method="on_note_entered_good"]
 [connection signal="area_exited" from="Area2D3" to="." method="on_note_exited_good"]
 [connection signal="area_entered" from="Area2D2" to="." method="on_note_entered_perfect"]
