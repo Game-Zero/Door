@@ -138,7 +138,7 @@ func _ready() -> void:
 	dialog.title = "提示"
 	dialog.get_ok_button().pressed.connect(func():get_tree().reload_current_scene())
 
-	self.start_game()
+#	self.start_game()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

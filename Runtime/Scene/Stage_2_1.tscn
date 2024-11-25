@@ -28,11 +28,11 @@ scale = Vector2(0.251, 0.251)
 texture = ExtResource("1_umuh0")
 
 [node name="doll_anime_complete" parent="." instance=ExtResource("3_ge5ri")]
+visible = false
 position = Vector2(1297, 406)
 scale = Vector2(0.251, 0.251)
 
 [node name="doll_anime" parent="." instance=ExtResource("4_cx74w")]
-visible = false
 position = Vector2(1293, 406)
 scale = Vector2(0.251, 0.251)
 
@@ -79,8 +79,10 @@ position = Vector2(960, 540)
 visible = false
 
 [node name="tables" parent="." instance=ExtResource("9_dlun6")]
+visible = false
 
 [node name="HUD" parent="." instance=ExtResource("8_05owv")]
 
 [connection signal="body_entered" from="doll_anime/Area2D" to="." method="on_doll_body_entered"]
+[connection signal="body_exited" from="doll_anime/Area2D" to="." method="on_doll_body_exit"]
 [connection signal="body_entered" from="Door/Area2D" to="." method="on_door_body_entered"]
