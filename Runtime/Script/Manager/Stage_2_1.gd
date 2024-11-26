@@ -1,5 +1,6 @@
 extends Node2D
 var bHasSurgeryDone: bool = false
+var bHasCrossDoor: bool = false
 var bCanStartGame: bool = false
 var body = null
 
@@ -7,22 +8,26 @@ var body = null
 @onready var tables = $tables
 @onready var doll_anime_complete = $doll_anime_complete
 @onready var doll_anime = $doll_anime
+@onready var doll_anime_arm = $doll_anime/arm
 @onready var doll_anime_complete_anim_player = $doll_anime_complete/AnimationPlayer
 @onready var doll_anime_player = $doll_anime/AnimationPlayer
 @onready var b_doll_arm_open_belly_finished: bool = false
 @onready var b_protagonist_medium_lie_open_belly_finished: bool = false
 @onready var b_doll_arm_suegery_end_finished: bool = false
 @onready var b_protagonist_medium_lie_suegery_end_finished: bool = false
-
+@onready var bInDoor: bool = false
+@onready var cross_door = $s2_3_cross_door
+@onready var cross_door_anim_player = $s2_3_cross_door/AnimationPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	cross_door.visible = false
 	doll_anime.visible = false
 	doll_anime_complete.visible = true
+	cross_door_anim_player.animation_finished.connect(self.goto_next_stage)
 	doll_anime_complete_anim_player.animation_finished.connect(self.on_animation_finished)
 	doll_anime_player.animation_finished.connect(self.on_animation_finished)
 	doll_anime_complete_anim_player.play("doll_initial_state_complete")
-	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -31,6 +36,15 @@ func _process(delta: float) -> void:
 		self.bHasSurgeryDone = true
 		start_game()
 
+	if (self.bInDoor and Input.is_action_just_pressed("player_fire") and not self.bHasCrossDoor and body != null and body.person_state == body.PersonState.Thin):
+		self.bHasCrossDoor = true
+		body.set_can_move(false)
+		body.person_animation_state = body.PersonAnimationState.Standing
+		tables.global_position.x = camera.global_position.x - 960
+		cross_door.global_position = camera.global_position
+		cross_door.visible = true
+		cross_door_anim_player.play("s2_3_cross_door")
+
 
 func start_game() -> void:
 	body.set_can_move(false)
@@ -38,6 +52,7 @@ func start_game() -> void:
 	body.person_animation_state = body.PersonAnimationState.Lie
 	body.set_global_position(Vector2(1280, 570))
 	body.set_animation_finish_callback(self.on_animation_finished)
+	camera.global_position.x = body.global_position.x
 	tables.global_position.x = camera.global_position.x - 960
 	tables.visible = true
 	doll_anime_complete_anim_player.play("doll_surgery_ready_complete")
@@ -47,6 +62,7 @@ func on_animation_finished(anim_name):
 	match (anim_name):
 		"doll_surgery_ready_complete":
 			doll_anime_complete.visible = false
+			doll_anime_arm.z_index = body.z_index + 1
 			doll_anime.visible = true
 			doll_anime_player.play("doll_arm_open_belly")
 			body.person_animation_state = body.PersonAnimationState.LieOpenBelly
@@ -77,6 +93,10 @@ func check_next_game():
 		body.person_state = body.PersonState.Thin
 		body.set_can_move(true)
 
+func goto_next_stage(anim_name):
+	print("[Stage_2_1][goto_next_stage]")
+	get_tree().reload_current_scene() # todo:zero 切换到下一关
+	pass
 
 func on_game_finish(b_success):
 	print("[on_game_finish] b_success: ", b_success)
@@ -103,3 +123,7 @@ func on_doll_body_exit(body: Node2D) -> void:
 func on_door_body_entered(body: Node2D) -> void:
 	print("[Stage_2_1][on_door_body_entered] body.name: ", body.name)
 	self.body = body
+	self.bInDoor = true
+
+func on_door_body_exit(body: Node2D) -> void:
+	self.bInDoor = false

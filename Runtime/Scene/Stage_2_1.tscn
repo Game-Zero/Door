@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dcj23pu0k32jg"]
+[gd_scene load_steps=15 format=3 uid="uid://dcj23pu0k32jg"]
 
 [ext_resource type="Script" path="res://Runtime/Script/Manager/Stage_2_1.gd" id="1_fy5sg"]
 [ext_resource type="Texture2D" uid="uid://8b3tljigsmuk" path="res://Runtime/Resource/Background/stage2-1.png" id="1_umuh0"]
@@ -14,11 +14,11 @@
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y43vn"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqdc5"]
-size = Vector2(3075.7, 2964.14)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q01xe"]
 size = Vector2(126, 582)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqdc5"]
+size = Vector2(3075.7, 2964.14)
 
 [node name="Root" type="Node2D"]
 script = ExtResource("1_fy5sg")
@@ -40,6 +40,18 @@ position = Vector2(12330.7, 2.01053e-08)
 rotation = -1.5708
 shape = SubResource("WorldBoundaryShape2D_y43vn")
 
+[node name="camera" type="Camera2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(0.999999, 0.999999)
+
+[node name="Door" type="Node2D" parent="."]
+position = Vector2(2787, 486)
+
+[node name="Area2D" type="Area2D" parent="Door"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/Area2D"]
+shape = SubResource("RectangleShape2D_q01xe")
+
 [node name="doll_anime_complete" parent="." instance=ExtResource("3_ge5ri")]
 position = Vector2(1297, 406)
 scale = Vector2(0.251, 0.251)
@@ -53,18 +65,6 @@ scale = Vector2(0.251, 0.251)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="doll_anime/Area2D"]
 shape = SubResource("RectangleShape2D_hqdc5")
-
-[node name="camera" type="Camera2D" parent="."]
-position = Vector2(960, 540)
-scale = Vector2(0.999999, 0.999999)
-
-[node name="Door" type="Node2D" parent="."]
-position = Vector2(2787, 486)
-
-[node name="Area2D" type="Area2D" parent="Door"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/Area2D"]
-shape = SubResource("RectangleShape2D_q01xe")
 
 [node name="bed" type="TextureRect" parent="."]
 offset_right = 12331.0
@@ -84,18 +84,18 @@ offset_bottom = 40.0
 scale = Vector2(0.251, 0.251)
 texture = ExtResource("6_ekbdv")
 
-[node name="s2_3_cross_door" parent="." instance=ExtResource("7_h87v7")]
-visible = false
-position = Vector2(960, 540)
-
 [node name="fail" parent="." instance=ExtResource("9_ik0ue")]
 visible = false
 
 [node name="tables" parent="." instance=ExtResource("9_dlun6")]
 visible = false
 
+[node name="s2_3_cross_door" parent="." instance=ExtResource("7_h87v7")]
+visible = false
+position = Vector2(960, 540)
+
 [node name="HUD" parent="." instance=ExtResource("8_05owv")]
 
+[connection signal="body_entered" from="Door/Area2D" to="." method="on_door_body_entered"]
 [connection signal="body_entered" from="doll_anime/Area2D" to="." method="on_doll_body_entered"]
 [connection signal="body_exited" from="doll_anime/Area2D" to="." method="on_doll_body_exit"]
-[connection signal="body_entered" from="Door/Area2D" to="." method="on_door_body_entered"]
