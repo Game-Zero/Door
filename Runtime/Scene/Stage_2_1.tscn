@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://dh8frt03hpxs0" path="res://Runtime/Prefab/tables.tscn" id="9_dlun6"]
 [ext_resource type="PackedScene" uid="uid://ba5b7vuikrqoj" path="res://Runtime/Prefab/fail.tscn" id="9_ik0ue"]
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y43vn"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqdc5"]
 size = Vector2(3075.7, 2964.14)
 
@@ -26,6 +28,17 @@ offset_right = 12331.0
 offset_bottom = 4320.0
 scale = Vector2(0.251, 0.251)
 texture = ExtResource("1_umuh0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="background"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="background/StaticBody2D"]
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_y43vn")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="background/StaticBody2D"]
+position = Vector2(12330.7, 2.01053e-08)
+rotation = -1.5708
+shape = SubResource("WorldBoundaryShape2D_y43vn")
 
 [node name="doll_anime_complete" parent="." instance=ExtResource("3_ge5ri")]
 position = Vector2(1297, 406)

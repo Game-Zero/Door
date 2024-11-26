@@ -116,6 +116,9 @@ func set_combo_num(value):
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	for note in notes.get_children():
+		if not (note.visible):
+			note.free()
 	last_combo_num = 999
 	b_comboing = false
 	b_game_over = false
