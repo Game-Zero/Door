@@ -69,6 +69,10 @@ size = Vector2(4.5, 394)
 
 [node name="tables" type="Node2D"]
 script = ExtResource("1_ax147")
+good_note_beta = 0.8
+perfect_note_beta = 1.2
+danger_heart_line_color = Color(0.901961, 0.6, 0.243137, 1)
+speed = 470
 heart_num = 90.0
 
 [node name="TextureRect" type="TextureRect" parent="."]
