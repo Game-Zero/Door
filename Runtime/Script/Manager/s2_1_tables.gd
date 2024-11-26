@@ -72,7 +72,10 @@ extends Node2D
 @onready var vertical_line = $vertical_line
 @onready var heart_line_color = default_line_color
 
+@onready var combo = $combo
 
+var game_finish_callback = null
+var b_game_over = false
 var dialog
 
 # 末尾压入值
@@ -115,6 +118,7 @@ func set_combo_num(value):
 func _ready() -> void:
 	last_combo_num = 999
 	b_comboing = false
+	b_game_over = false
 	judgment_anim_player.play("RESET")
 	change_line_color(default_line_color)
 	change_heart_line_color(default_heart_line_color)
@@ -205,19 +209,23 @@ func _process(delta: float) -> void:
 	for child in electrocardiogram.get_children():
 		child.material.set_shader_parameter("modulate_color", heart_line_color)
 
-func start_game() -> void:
+func start_game(game_finish_callback) -> void:
 	b_game_started = true
+	self.combo.visible = true
+	self.game_finish_callback = game_finish_callback
 
 
 func add_note(beta: float):
 	cur_note_cnt = cur_note_cnt + 1
 	heart_num = (heart_num * (cur_note_cnt - 1) + beta * full_heart_num) / cur_note_cnt
+	heart_num = min(heart_num, full_heart_num)
 	if (heart_num >= health_heart_num):
 		change_heart_line_color(health_heart_line_color)
 	elif (heart_num >= danger_heart_num):
 		change_heart_line_color(danger_heart_line_color)
 	else:
 		change_heart_line_color(lose_heart_line_color)
+
 
 
 func check_combo():
@@ -237,15 +245,37 @@ func change_heart_line_color(color: Color):
 	heart_line_color = color
 	pass
 
+	
+func game_over():
+	self.b_game_started = false
+	audio_player.stop()
+	timer.stop()
+
+	self.b_game_over = true
+
+	dialog.popup_centered()
+	if (game_finish_callback):
+		game_finish_callback.call(false)
+#	var children = self.get_children()
+#	for child in children:
+#		if (child.name != "Timer"):
+#			child.visible = false
+#		pass
+#	pass
+
 func on_note_entered_good(note) -> void:
-	print("[on_note_entered_good] ", note.name)
+	print("[tables][on_note_entered_good] ", note.name)
+	if not (b_game_started):
+		return
 	que_push(note)
 	note.state = note.KeyState.Active
 	note.active_state.push_back(note.KeyState.Good)
 
 
 func on_note_exited_good(note) -> void:
-	print("[on_note_exited_good] ", note.name)
+	print("[tables][on_note_exited_good] ", note.name)
+	if not (b_game_started):
+		return
 	if (note.state == note.KeyState.Active):
 		note.state = note.KeyState.Missed
 		add_note(miss_note_beta)
@@ -257,30 +287,40 @@ func on_note_exited_good(note) -> void:
 
 
 func on_note_entered_perfect(note) -> void:
-	print("[on_note_entered_perfect] ", note.name)
+	print("[tables][on_note_entered_perfect] ", note.name)
+	if not (b_game_started):
+		return
 	note.active_state.push_back(note.KeyState.Perfect)
 
 
 func on_note_exited_perfect(note) -> void:
-	print("[on_note_exited_perfect] ", note.name)
+	print("[tables][on_note_exited_perfect] ", note.name)
+	if not (b_game_started):
+		return
 	note.active_state.pop_back()
 	change_line_color(default_line_color)
 
+
 func on_music_play_start(node) -> void:
-	print("[on_music_play_start] ", node.name)
+	print("[tables][on_music_play_start] ", node.name)
 	timer.start()
 	audio_player.play()
 
 
 func on_music_play_end(node) -> void:
 	on_timer_trigger()
+	self.b_game_started = false
+	audio_player.stop()
+	timer.stop()
 	# todo:zero 实现过关逻辑
-	print("[on_music_play_end] 过关.")
+	if (not self.b_game_over):
+		print("[tables][on_music_play_end] 过关.")
+		if(game_finish_callback):
+			game_finish_callback.call(true)
 
 
 func on_timer_trigger() -> void:
-	print("[on_timer_trigger] ", Time.get_time_string_from_system())
-	if (heart_num < lose_heart_num):
-		b_game_started = false
-		dialog.popup_centered()
+	print("[tables][on_timer_trigger] ", Time.get_time_string_from_system())
+	if (heart_num < lose_heart_num and self.b_game_started):
+		self.game_over()
 	pass

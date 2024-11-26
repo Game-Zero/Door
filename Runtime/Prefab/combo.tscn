@@ -1,8 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://kxmak151p1kc"]
+[gd_scene load_steps=3 format=3 uid="uid://kxmak151p1kc"]
 
 [ext_resource type="Texture2D" uid="uid://ctvyuqh61nq02" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/combe_0.png" id="1_ko7w1"]
-[ext_resource type="Texture2D" uid="uid://6ujgmd15nlgk" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/combe_5.png" id="2_7xj2r"]
-[ext_resource type="Texture2D" uid="uid://ct4lxn2kngtde" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/combe_9.png" id="3_cucfr"]
 [ext_resource type="AnimationLibrary" uid="uid://cxgicj57dhwjy" path="res://Runtime/Prefab/combo.tres" id="4_82dyj"]
 
 [node name="combo" type="Node2D"]
@@ -25,7 +23,7 @@ offset_left = -54.0
 offset_top = -70.0
 offset_right = 54.0
 offset_bottom = 69.0
-texture = ExtResource("2_7xj2r")
+texture = ExtResource("1_ko7w1")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="digital2"]
 root_node = NodePath("../..")
@@ -38,7 +36,7 @@ offset_left = 62.0
 offset_top = -70.0
 offset_right = 170.0
 offset_bottom = 69.0
-texture = ExtResource("3_cucfr")
+texture = ExtResource("1_ko7w1")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="digital3"]
 root_node = NodePath("../..")

@@ -28,11 +28,11 @@ scale = Vector2(0.251, 0.251)
 texture = ExtResource("1_umuh0")
 
 [node name="doll_anime_complete" parent="." instance=ExtResource("3_ge5ri")]
-visible = false
 position = Vector2(1297, 406)
 scale = Vector2(0.251, 0.251)
 
 [node name="doll_anime" parent="." instance=ExtResource("4_cx74w")]
+visible = false
 position = Vector2(1293, 406)
 scale = Vector2(0.251, 0.251)
 

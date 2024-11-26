@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dh8frt03hpxs0"]
+[gd_scene load_steps=33 format=3 uid="uid://dh8frt03hpxs0"]
 
 [ext_resource type="Script" path="res://Runtime/Script/Manager/s2_1_tables.gd" id="1_ax147"]
 [ext_resource type="PackedScene" uid="uid://vguvqexn7pw4" path="res://Runtime/Prefab/note.tscn" id="1_ckp7n"]
@@ -20,34 +20,35 @@
 [ext_resource type="AudioStream" uid="uid://c5f5g1bwe7mo8" path="res://Runtime/Resource/Audio/s2/music_game.MP3" id="15_ratjp"]
 [ext_resource type="PackedScene" uid="uid://kxmak151p1kc" path="res://Runtime/Prefab/combo.tscn" id="16_kx5lx"]
 [ext_resource type="PackedScene" uid="uid://3nraj8h7elmj" path="res://Runtime/Prefab/judgment.tscn" id="17_o7bef"]
+[ext_resource type="PackedScene" uid="uid://dtta75oplr5x3" path="res://Runtime/Prefab/doll_anime.tscn" id="21_dgxpj"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ag7nq"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ui0d4"]
 shader = ExtResource("4_yqiq5")
 shader_parameter/modulate_color = Color(0.454902, 0.866667, 0.639216, 1)
-shader_parameter/mask_screen_position_x = 394.622
+shader_parameter/mask_screen_position_x = 0.737612
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f7xp0"]
 size = Vector2(20, 14)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_3lm76"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sbyng"]
 shader = ExtResource("4_yqiq5")
 shader_parameter/modulate_color = Color(0.454902, 0.866667, 0.639216, 1)
-shader_parameter/mask_screen_position_x = 394.622
+shader_parameter/mask_screen_position_x = 0.737612
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_b6moa"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m5fdh"]
 shader = ExtResource("4_yqiq5")
 shader_parameter/modulate_color = Color(0.454902, 0.866667, 0.639216, 1)
-shader_parameter/mask_screen_position_x = 394.622
+shader_parameter/mask_screen_position_x = 0.737612
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_88bdm"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cf0ur"]
 shader = ExtResource("4_yqiq5")
 shader_parameter/modulate_color = Color(0.454902, 0.866667, 0.639216, 1)
-shader_parameter/mask_screen_position_x = 394.622
+shader_parameter/mask_screen_position_x = 0.737612
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_vq41i"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mynqf"]
 shader = ExtResource("4_yqiq5")
 shader_parameter/modulate_color = Color(0.454902, 0.866667, 0.639216, 1)
-shader_parameter/mask_screen_position_x = 394.622
+shader_parameter/mask_screen_position_x = 0.737612
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7lxqp"]
 shader = ExtResource("10_0inuw")
@@ -66,6 +67,9 @@ size = Vector2(111, 395.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5c63p"]
 size = Vector2(4.5, 394)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0pew0"]
+size = Vector2(3075.7, 2964.14)
 
 [node name="tables" type="Node2D"]
 script = ExtResource("1_ax147")
@@ -95,7 +99,7 @@ modulate = Color(0.454902, 0.866667, 0.639216, 1)
 position = Vector2(1746, 0)
 
 [node name="electrocardiogram1" type="TextureRect" parent="electrocardiogram"]
-material = SubResource("ShaderMaterial_ag7nq")
+material = SubResource("ShaderMaterial_ui0d4")
 offset_left = -2.0
 offset_top = 602.0
 offset_right = 19023.0
@@ -114,7 +118,7 @@ collision_mask = 16
 shape = SubResource("RectangleShape2D_f7xp0")
 
 [node name="electrocardiogram2" type="TextureRect" parent="electrocardiogram"]
-material = SubResource("ShaderMaterial_3lm76")
+material = SubResource("ShaderMaterial_sbyng")
 offset_left = 11465.0
 offset_top = 600.0
 offset_right = 30492.0
@@ -124,7 +128,7 @@ texture = ExtResource("5_ypdsc")
 metadata/_edit_use_anchors_ = true
 
 [node name="electrocardiogram3" type="TextureRect" parent="electrocardiogram"]
-material = SubResource("ShaderMaterial_b6moa")
+material = SubResource("ShaderMaterial_m5fdh")
 offset_left = 14329.0
 offset_top = 598.0
 offset_right = 19085.0
@@ -134,7 +138,7 @@ texture = ExtResource("6_i5xs4")
 metadata/_edit_use_anchors_ = true
 
 [node name="electrocardiogram4" type="TextureRect" parent="electrocardiogram"]
-material = SubResource("ShaderMaterial_88bdm")
+material = SubResource("ShaderMaterial_cf0ur")
 offset_left = 17091.0
 offset_top = 597.0
 offset_right = 26789.0
@@ -144,7 +148,7 @@ texture = ExtResource("7_vopsx")
 metadata/_edit_use_anchors_ = true
 
 [node name="electrocardiogram5" type="TextureRect" parent="electrocardiogram"]
-material = SubResource("ShaderMaterial_vq41i")
+material = SubResource("ShaderMaterial_mynqf")
 offset_left = 22919.0
 offset_top = 600.0
 offset_right = 41957.0
@@ -751,6 +755,7 @@ texture = ExtResource("15_br4eo")
 stream = ExtResource("15_ratjp")
 
 [node name="combo" parent="." instance=ExtResource("16_kx5lx")]
+visible = false
 position = Vector2(960, 140)
 
 [node name="judgment" parent="." instance=ExtResource("17_o7bef")]
@@ -758,6 +763,16 @@ position = Vector2(960, 340)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0
+
+[node name="doll_anime" parent="." instance=ExtResource("21_dgxpj")]
+visible = false
+position = Vector2(1293, 406)
+scale = Vector2(0.251, 0.251)
+
+[node name="Area2D" type="Area2D" parent="doll_anime"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doll_anime/Area2D"]
+shape = SubResource("RectangleShape2D_0pew0")
 
 [connection signal="area_entered" from="electrocardiogram/electrocardiogram5/MusicEnd" to="." method="on_music_play_end"]
 [connection signal="area_entered" from="Area2D3" to="." method="on_note_entered_good"]

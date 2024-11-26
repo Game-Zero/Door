@@ -23,9 +23,13 @@ enum PersonState {
 @export var camera: Camera2D
 @export var b_can_move: bool = true
 
+@onready var animation_finish_callback = null
+@onready var last_animation_name: String = ""
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	b_can_move = true
+	animation_player.animation_finished.connect(on_animation_finish)
 	pass
 	
 func set_can_move(can_move: bool) -> bool:
@@ -91,3 +95,13 @@ func _process(_delta) -> void:
 		#tween.set_trans(Tween.TRANS_QUAD) # warning-ignore:return_value_discarded
 		#tween.tween_property(camera, "global_position:x", x, 0.1)
 		camera.global_position.x = x
+
+func set_animation_finish_callback(animation_finish_callback):
+	self.animation_finish_callback = animation_finish_callback
+
+
+func on_animation_finish(anim_name):
+	print("[on_animation_finish] anim_name: ", anim_name)
+	if (self.animation_finish_callback != null):
+		animation_finish_callback.call(anim_name)
+	pass
