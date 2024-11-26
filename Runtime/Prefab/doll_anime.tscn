@@ -204,6 +204,8 @@ _data = {
 texture = ExtResource("1_lrax0")
 
 [node name="arm" type="AnimatedSprite2D" parent="."]
+z_index = 1024
+z_as_relative = false
 sprite_frames = ExtResource("2_7akfb")
 animation = &"doll_arm_open_belly"
 
