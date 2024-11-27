@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dh8frt03hpxs0"]
+[gd_scene load_steps=33 format=3 uid="uid://dh8frt03hpxs0"]
 
 [ext_resource type="Script" path="res://Runtime/Script/Manager/s2_1_tables.gd" id="1_ax147"]
 [ext_resource type="PackedScene" uid="uid://vguvqexn7pw4" path="res://Runtime/Prefab/note.tscn" id="1_ckp7n"]
@@ -23,28 +23,33 @@
 [ext_resource type="PackedScene" uid="uid://3nraj8h7elmj" path="res://Runtime/Prefab/judgment.tscn" id="17_o7bef"]
 [ext_resource type="PackedScene" uid="uid://ba5b7vuikrqoj" path="res://Runtime/Prefab/fail.tscn" id="22_y4o50"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2b5uy"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hekb6"]
 shader = ExtResource("4_yqiq5")
 shader_parameter/modulate_color = Color(0.454902, 0.866667, 0.639216, 1)
-shader_parameter/mask_screen_position_x = 394.622
+shader_parameter/mask_screen_position_x = 0.607579
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f7xp0"]
 size = Vector2(20, 14)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ks5nw"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_137rd"]
 shader = ExtResource("4_yqiq5")
 shader_parameter/modulate_color = Color(0.454902, 0.866667, 0.639216, 1)
-shader_parameter/mask_screen_position_x = 394.622
+shader_parameter/mask_screen_position_x = 0.607579
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ua1j6"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qgay0"]
 shader = ExtResource("4_yqiq5")
 shader_parameter/modulate_color = Color(0.454902, 0.866667, 0.639216, 1)
-shader_parameter/mask_screen_position_x = 394.622
+shader_parameter/mask_screen_position_x = 0.607579
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_joi7v"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cke4u"]
 shader = ExtResource("4_yqiq5")
 shader_parameter/modulate_color = Color(0.454902, 0.866667, 0.639216, 1)
-shader_parameter/mask_screen_position_x = 394.622
+shader_parameter/mask_screen_position_x = 0.607579
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vpmg8"]
+shader = ExtResource("4_yqiq5")
+shader_parameter/modulate_color = Color(0.454902, 0.866667, 0.639216, 1)
+shader_parameter/mask_screen_position_x = 0.607579
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7lxqp"]
 shader = ExtResource("10_0inuw")
@@ -93,7 +98,7 @@ modulate = Color(0.454902, 0.866667, 0.639216, 1)
 position = Vector2(1746, 0)
 
 [node name="electrocardiogram1" type="TextureRect" parent="electrocardiogram"]
-material = SubResource("ShaderMaterial_2b5uy")
+material = SubResource("ShaderMaterial_hekb6")
 offset_left = -2.0
 offset_top = 602.0
 offset_right = 19023.0
@@ -112,7 +117,7 @@ collision_mask = 16
 shape = SubResource("RectangleShape2D_f7xp0")
 
 [node name="electrocardiogram2" type="TextureRect" parent="electrocardiogram"]
-material = SubResource("ShaderMaterial_ks5nw")
+material = SubResource("ShaderMaterial_137rd")
 offset_left = 11465.0
 offset_top = 600.0
 offset_right = 30492.0
@@ -122,7 +127,7 @@ texture = ExtResource("5_ypdsc")
 metadata/_edit_use_anchors_ = true
 
 [node name="electrocardiogram3" type="TextureRect" parent="electrocardiogram"]
-material = SubResource("ShaderMaterial_ua1j6")
+material = SubResource("ShaderMaterial_qgay0")
 offset_left = 14329.0
 offset_top = 598.0
 offset_right = 19085.0
@@ -132,7 +137,7 @@ texture = ExtResource("6_i5xs4")
 metadata/_edit_use_anchors_ = true
 
 [node name="electrocardiogram4" type="TextureRect" parent="electrocardiogram"]
-material = SubResource("ShaderMaterial_joi7v")
+material = SubResource("ShaderMaterial_cke4u")
 offset_left = 17091.0
 offset_top = 597.0
 offset_right = 26789.0
@@ -142,6 +147,7 @@ texture = ExtResource("7_vopsx")
 metadata/_edit_use_anchors_ = true
 
 [node name="electrocardiogram5" type="TextureRect" parent="electrocardiogram"]
+material = SubResource("ShaderMaterial_vpmg8")
 offset_left = 22919.0
 offset_top = 599.0
 offset_right = 39139.0
@@ -765,6 +771,7 @@ position = Vector2(960, 340)
 wait_time = 10.0
 
 [node name="fail" parent="." instance=ExtResource("22_y4o50")]
+visible = false
 
 [connection signal="area_entered" from="electrocardiogram/electrocardiogram5/MusicEnd" to="." method="on_music_play_end"]
 [connection signal="area_entered" from="Area2D3" to="." method="on_note_entered_good"]
