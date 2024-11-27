@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://ijakyfwhisgi"]
+[gd_scene load_steps=4 format=3 uid="uid://ijakyfwhisgi"]
 
 [ext_resource type="SpriteFrames" uid="uid://bp05yrtbv55bw" path="res://Runtime/Prefab/s0_0_person_anime.tres" id="1_dxiv8"]
 
@@ -31,35 +31,8 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1, 1.125, 1.25, 1.375, 1.5, 1.625, 1.75, 1.875, 2, 2.125, 2.25, 2.375, 2.5, 2.625, 2.75, 2.875)
 }
 
-[sub_resource type="Animation" id="Animation_1dncd"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"hula_hoop"]
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_monn4"]
 _data = {
-"RESET": SubResource("Animation_1dncd"),
 "hula_hoop": SubResource("Animation_c8hvg")
 }
 
@@ -73,3 +46,4 @@ animation = &"hula_hoop"
 libraries = {
 "": SubResource("AnimationLibrary_monn4")
 }
+autoplay = "hula_hoop"

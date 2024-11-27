@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b2ygbp3m4codl"]
+[gd_scene load_steps=16 format=3 uid="uid://b2ygbp3m4codl"]
 
 [ext_resource type="Texture2D" uid="uid://dx8l6rrukkw7x" path="res://Runtime/Resource/Background/s0_0.png" id="1_21h58"]
 [ext_resource type="Texture2D" uid="uid://hgis7ue078ut" path="res://Runtime/Resource/Background/s0_0_name.png" id="2_iagdu"]
@@ -8,9 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://cdeglmuhlefcw" path="res://Runtime/Resource/Sprite/S0_0_UI/setting.png" id="6_3axm8"]
 [ext_resource type="Texture2D" uid="uid://lt2375gv502j" path="res://Runtime/Resource/Sprite/S0_0_UI/start_hover.png" id="6_x86xo"]
 [ext_resource type="BitMap" uid="uid://ba3jxfra5m58v" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/click.bmp" id="7_td5st"]
+[ext_resource type="Script" path="res://Runtime/Script/Manager/ButtonAudioManager.gd" id="8_0kr71"]
 [ext_resource type="Texture2D" uid="uid://qsgr82tnaxyy" path="res://Runtime/Resource/Sprite/S0_0_UI/s0_exit.png" id="8_p8vak"]
 [ext_resource type="Texture2D" uid="uid://boxh03s5sapcw" path="res://Runtime/Resource/Sprite/S0_0_UI/setting_hover.png" id="9_0kml1"]
+[ext_resource type="AudioStream" uid="uid://bd4s8ksjjc0ei" path="res://Runtime/Resource/Audio/s0_0/click.MP3" id="9_0wm8h"]
+[ext_resource type="AudioStream" uid="uid://bwj6wvg8c6py4" path="res://Runtime/Resource/Audio/s0_0/hover.mp3" id="10_k86lg"]
 [ext_resource type="Texture2D" uid="uid://dret3mhhd3dr7" path="res://Runtime/Resource/Sprite/S0_0_UI/s0_exit_hover.png" id="11_u436w"]
+[ext_resource type="AudioStream" uid="uid://bn8fq63ouos0l" path="res://Runtime/Resource/Audio/s0_0/s0_0_background_music.mp3" id="12_j1a5p"]
 
 [node name="Root" type="Node2D"]
 
@@ -47,6 +51,9 @@ offset_bottom = 615.0
 texture_normal = ExtResource("5_rkh3y")
 texture_hover = ExtResource("6_x86xo")
 texture_click_mask = ExtResource("7_td5st")
+script = ExtResource("8_0kr71")
+on_button_down_audio = ExtResource("9_0wm8h")
+on_button_hover_audio = ExtResource("10_k86lg")
 
 [node name="setting" type="TextureButton" parent="press"]
 offset_left = 781.0
@@ -56,6 +63,9 @@ offset_bottom = 695.0
 texture_normal = ExtResource("6_3axm8")
 texture_hover = ExtResource("9_0kml1")
 texture_click_mask = ExtResource("7_td5st")
+script = ExtResource("8_0kr71")
+on_button_down_audio = ExtResource("9_0wm8h")
+on_button_hover_audio = ExtResource("10_k86lg")
 
 [node name="exit" type="TextureButton" parent="press"]
 offset_left = 781.0
@@ -65,3 +75,11 @@ offset_bottom = 774.0
 texture_normal = ExtResource("8_p8vak")
 texture_hover = ExtResource("11_u436w")
 texture_click_mask = ExtResource("7_td5st")
+script = ExtResource("8_0kr71")
+on_button_down_audio = ExtResource("9_0wm8h")
+on_button_hover_audio = ExtResource("10_k86lg")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_j1a5p")
+autoplay = true
+parameters/looping = true
