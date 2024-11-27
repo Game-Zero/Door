@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=3 uid="uid://dqf7dekvholxn"]
+[gd_scene load_steps=102 format=3 uid="uid://dqf7dekvholxn"]
 
 [ext_resource type="PackedScene" uid="uid://brg0ell7yg5nl" path="res://Runtime/Prefab/hole.tscn" id="2_53d5x"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/PlayerManager_3_2.gd" id="2_vn8ns"]
@@ -93,6 +93,7 @@
 [ext_resource type="Texture2D" uid="uid://8fw4h2sj8uhq" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_55.png" id="71_pinlh"]
 [ext_resource type="PackedScene" uid="uid://de8so0lu14br5" path="res://Runtime/Prefab/big_fat.tscn" id="76_qivtl"]
 [ext_resource type="PackedScene" uid="uid://bofbb0bvx1ysw" path="res://Runtime/Prefab/hud.tscn" id="95_14h4s"]
+[ext_resource type="AudioStream" uid="uid://dmuy741n3amd3" path="res://Runtime/Resource/Audio/s3/s3_2/s3_2_background.wav" id="95_uripk"]
 [ext_resource type="PackedScene" uid="uid://omevqqnc5ybq" path="res://Runtime/Prefab/fat.tscn" id="174_eeac7"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/ScreenCameraManger.gd" id="184_d74i6"]
 
@@ -588,6 +589,10 @@ collision_mask = 2
 
 [node name="destination" type="CollisionShape2D" parent="destination/destination"]
 shape = SubResource("RectangleShape2D_o0f2e")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("95_uripk")
+autoplay = true
 
 [node name="HUD" parent="." instance=ExtResource("95_14h4s")]
 
