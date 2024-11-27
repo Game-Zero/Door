@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx5jxtm8jukf6"]
+
+[ext_resource type="Texture2D" uid="uid://bv1ikpdvrj1h4" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/be_thinner.png" id="1_g4aaj"]
+[ext_resource type="AnimationLibrary" uid="uid://de1exyqp5amtr" path="res://Runtime/Prefab/be_thinner_anime.tres" id="2_3xfee"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_g4aaj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": ExtResource("2_3xfee")
+}
