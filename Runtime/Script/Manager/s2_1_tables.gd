@@ -1,4 +1,4 @@
-@tool
+#@tool
 extends Node2D
 
 @export var full_heart_num: int = 90

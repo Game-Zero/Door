@@ -22,33 +22,33 @@
 [ext_resource type="PackedScene" uid="uid://3nraj8h7elmj" path="res://Runtime/Prefab/judgment.tscn" id="17_o7bef"]
 [ext_resource type="PackedScene" uid="uid://ba5b7vuikrqoj" path="res://Runtime/Prefab/fail.tscn" id="22_y4o50"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_nwdfv"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3l4ps"]
 shader = ExtResource("4_yqiq5")
 shader_parameter/modulate_color = Color(0.454902, 0.866667, 0.639216, 1)
-shader_parameter/mask_screen_position_x = 0.737612
+shader_parameter/mask_screen_position_x = 0.653349
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f7xp0"]
 size = Vector2(20, 14)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4y7xu"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kg06k"]
 shader = ExtResource("4_yqiq5")
 shader_parameter/modulate_color = Color(0.454902, 0.866667, 0.639216, 1)
-shader_parameter/mask_screen_position_x = 0.737612
+shader_parameter/mask_screen_position_x = 0.653349
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_8k3pu"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wg84t"]
 shader = ExtResource("4_yqiq5")
 shader_parameter/modulate_color = Color(0.454902, 0.866667, 0.639216, 1)
-shader_parameter/mask_screen_position_x = 0.737612
+shader_parameter/mask_screen_position_x = 0.653349
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_q1rlc"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x3vxk"]
 shader = ExtResource("4_yqiq5")
 shader_parameter/modulate_color = Color(0.454902, 0.866667, 0.639216, 1)
-shader_parameter/mask_screen_position_x = 0.737612
+shader_parameter/mask_screen_position_x = 0.653349
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ia3cp"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_awcvb"]
 shader = ExtResource("4_yqiq5")
 shader_parameter/modulate_color = Color(0.454902, 0.866667, 0.639216, 1)
-shader_parameter/mask_screen_position_x = 0.737612
+shader_parameter/mask_screen_position_x = 0.653349
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7lxqp"]
 shader = ExtResource("10_0inuw")
@@ -97,7 +97,7 @@ modulate = Color(0.454902, 0.866667, 0.639216, 1)
 position = Vector2(1746, 0)
 
 [node name="electrocardiogram1" type="TextureRect" parent="electrocardiogram"]
-material = SubResource("ShaderMaterial_nwdfv")
+material = SubResource("ShaderMaterial_3l4ps")
 offset_left = -2.0
 offset_top = 602.0
 offset_right = 19023.0
@@ -116,7 +116,7 @@ collision_mask = 16
 shape = SubResource("RectangleShape2D_f7xp0")
 
 [node name="electrocardiogram2" type="TextureRect" parent="electrocardiogram"]
-material = SubResource("ShaderMaterial_4y7xu")
+material = SubResource("ShaderMaterial_kg06k")
 offset_left = 11465.0
 offset_top = 600.0
 offset_right = 30492.0
@@ -126,7 +126,7 @@ texture = ExtResource("5_ypdsc")
 metadata/_edit_use_anchors_ = true
 
 [node name="electrocardiogram3" type="TextureRect" parent="electrocardiogram"]
-material = SubResource("ShaderMaterial_8k3pu")
+material = SubResource("ShaderMaterial_wg84t")
 offset_left = 14329.0
 offset_top = 598.0
 offset_right = 19085.0
@@ -136,7 +136,7 @@ texture = ExtResource("6_i5xs4")
 metadata/_edit_use_anchors_ = true
 
 [node name="electrocardiogram4" type="TextureRect" parent="electrocardiogram"]
-material = SubResource("ShaderMaterial_q1rlc")
+material = SubResource("ShaderMaterial_x3vxk")
 offset_left = 17091.0
 offset_top = 597.0
 offset_right = 26789.0
@@ -146,7 +146,7 @@ texture = ExtResource("7_vopsx")
 metadata/_edit_use_anchors_ = true
 
 [node name="electrocardiogram5" type="TextureRect" parent="electrocardiogram"]
-material = SubResource("ShaderMaterial_ia3cp")
+material = SubResource("ShaderMaterial_awcvb")
 offset_left = 22919.0
 offset_top = 599.0
 offset_right = 39139.0
