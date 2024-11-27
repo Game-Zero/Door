@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://247thrl7sreg"]
 
 [ext_resource type="SpriteFrames" uid="uid://c6w4we1exvsgx" path="res://Runtime/Prefab/s2_person_anime.tres" id="1_8uy5x"]
-[ext_resource type="Script" path="res://Runtime/Script/Manager/PlayerManager_4_1.gd" id="1_n6avp"]
+[ext_resource type="Script" path="res://Runtime/Script/Manager/PlayerManager_2_1.gd" id="1_xqwfq"]
 [ext_resource type="AudioStream" uid="uid://b2l5ij7tjrs04" path="res://Runtime/Resource/Audio/s1/walking.MP3" id="2_5bbq4"]
 
 [sub_resource type="Animation" id="Animation_wqruc"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b4yhlgy47d7k2"]
+[gd_scene load_steps=12 format=3 uid="uid://b4yhlgy47d7k2"]
 
 [ext_resource type="Texture2D" uid="uid://cyqsb3o5h1x08" path="res://Runtime/Resource/Background/stage4.png" id="1_2jawe"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/Stage_4_1.gd" id="1_xw5fa"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://2lt8ey4aknoy" path="res://Runtime/Prefab/end.tscn" id="2_ubst6"]
 [ext_resource type="PackedScene" uid="uid://ctrl7btmmpqnl" path="res://Runtime/Prefab/s4_person.tscn" id="3_ywbdv"]
 [ext_resource type="PackedScene" uid="uid://bofbb0bvx1ysw" path="res://Runtime/Prefab/hud.tscn" id="5_8eu86"]
+[ext_resource type="AudioStream" uid="uid://bby3ycpgh82u1" path="res://Runtime/Resource/Audio/s4/end_music.mp3" id="6_3yfnq"]
+[ext_resource type="AudioStream" uid="uid://bkskrhplbtqb" path="res://Runtime/Resource/Audio/s4/end_hurrah.MP3" id="7_empl8"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vw622"]
 normal = Vector2(1, 0)
@@ -72,6 +74,16 @@ visible = false
 
 [node name="end_part_2" parent="Camera2D" instance=ExtResource("2_2qc13")]
 visible = false
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_3yfnq")
+autoplay = true
+parameters/looping = true
+
+[node name="hurrah_player" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_empl8")
+autoplay = true
+parameters/looping = true
 
 [node name="HUD" parent="." instance=ExtResource("5_8eu86")]
 
