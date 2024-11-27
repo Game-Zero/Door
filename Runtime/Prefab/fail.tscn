@@ -1,12 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://ba5b7vuikrqoj"]
+[gd_scene load_steps=11 format=3 uid="uid://ba5b7vuikrqoj"]
 
 [ext_resource type="Texture2D" uid="uid://xhc6xd8jy3c1" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/fail_sample.png" id="1_fmeao"]
 [ext_resource type="Texture2D" uid="uid://d315yrbrgcgmn" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/fail_background.png" id="2_xhldr"]
 [ext_resource type="Texture2D" uid="uid://dxf0ej0sbakog" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/death_line.png" id="3_o271x"]
 [ext_resource type="Texture2D" uid="uid://c6i5m60gs3y0p" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/fail.png" id="4_xsu0r"]
-[ext_resource type="Texture2D" uid="uid://cnnmyvqc4l16t" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/exit.png" id="5_e6dtg"]
+[ext_resource type="Texture2D" uid="uid://bh6ahi81sclxr" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/hover_white.png" id="5_2jb7l"]
+[ext_resource type="BitMap" uid="uid://ba3jxfra5m58v" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/click.bmp" id="6_esrf1"]
 [ext_resource type="Texture2D" uid="uid://8gybsm3jcv3f" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/again.png" id="6_nf1k0"]
+[ext_resource type="Texture2D" uid="uid://bvv75ht2u6ma" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/s2_exit.png" id="6_s0ugr"]
 [ext_resource type="AnimationLibrary" uid="uid://cgnrrjjna85oq" path="res://Runtime/Prefab/fail_anime.tres" id="7_5cndh"]
+[ext_resource type="Texture2D" uid="uid://cmbbs1ma7qrb0" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/gray_base_map.png" id="7_o7ven"]
 
 [node name="fail" type="Node2D"]
 
@@ -17,18 +20,10 @@ offset_bottom = 1080.0
 texture = ExtResource("1_fmeao")
 
 [node name="fail_background" type="TextureRect" parent="."]
-offset_top = -1080.0
 offset_right = 1920.0
+offset_bottom = 1080.0
 pivot_offset = Vector2(927, 1)
 texture = ExtResource("2_xhldr")
-
-[node name="death_line" type="TextureRect" parent="."]
-offset_top = 774.0
-offset_right = 1920.0
-offset_bottom = 816.0
-scale = Vector2(1e-05, 1)
-pivot_offset = Vector2(1921, 22)
-texture = ExtResource("3_o271x")
 
 [node name="fail_icon" type="TextureRect" parent="."]
 offset_left = 614.0
@@ -39,22 +34,42 @@ texture = ExtResource("4_xsu0r")
 
 [node name="again" type="TextureButton" parent="."]
 offset_left = 784.0
-offset_top = 836.0
+offset_top = 860.0
 offset_right = 1142.0
-offset_bottom = 978.0
-pivot_offset = Vector2(166, 143)
+offset_bottom = 946.0
+pivot_offset = Vector2(165, 86)
 texture_normal = ExtResource("6_nf1k0")
+texture_hover = ExtResource("5_2jb7l")
+texture_click_mask = ExtResource("6_esrf1")
 
 [node name="exit" type="TextureButton" parent="."]
 offset_left = 784.0
-offset_top = 922.0
+offset_top = 956.0
 offset_right = 1142.0
-offset_bottom = 1064.0
-scale = Vector2(1, 1e-05)
-pivot_offset = Vector2(170, 144)
-texture_normal = ExtResource("5_e6dtg")
+offset_bottom = 1042.0
+pivot_offset = Vector2(178, 88)
+texture_normal = ExtResource("6_s0ugr")
+texture_hover = ExtResource("5_2jb7l")
+texture_click_mask = ExtResource("6_esrf1")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": ExtResource("7_5cndh")
 }
+
+[node name="base" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("7_o7ven")
+
+[node name="death_line" type="TextureRect" parent="."]
+offset_top = 774.0
+offset_right = 1920.0
+offset_bottom = 816.0
+scale = Vector2(1e-05, 1)
+pivot_offset = Vector2(1921, 22)
+texture = ExtResource("3_o271x")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

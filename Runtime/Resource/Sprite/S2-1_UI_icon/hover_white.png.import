@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8gybsm3jcv3f"
-path="res://.godot/imported/again.png-f1a9ff6e11a161893de15ea8e1cc0f7a.ctex"
+uid="uid://bh6ahi81sclxr"
+path="res://.godot/imported/hover_white.png-7c4315497262d6bc0f995c15a6835bd9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Runtime/Resource/Sprite/S2-1_UI_icon/again.png"
-dest_files=["res://.godot/imported/again.png-f1a9ff6e11a161893de15ea8e1cc0f7a.ctex"]
+source_file="res://Runtime/Resource/Sprite/S2-1_UI_icon/hover_white.png"
+dest_files=["res://.godot/imported/hover_white.png-7c4315497262d6bc0f995c15a6835bd9.ctex"]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

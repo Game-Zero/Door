@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://ba3jxfra5m58v"
+path="res://.godot/imported/click.bmp-20f29b99d63c6aa1e79e8e6711f57e24.res"
+
+[deps]
+
+source_file="res://Runtime/Resource/Sprite/S2-1_UI_icon/click.bmp"
+dest_files=["res://.godot/imported/click.bmp-20f29b99d63c6aa1e79e8e6711f57e24.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

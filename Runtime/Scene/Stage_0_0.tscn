@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b2ygbp3m4codl"]
+[gd_scene load_steps=10 format=3 uid="uid://b2ygbp3m4codl"]
 
 [ext_resource type="Texture2D" uid="uid://dx8l6rrukkw7x" path="res://Runtime/Resource/Background/s0_0.png" id="1_21h58"]
 [ext_resource type="Texture2D" uid="uid://hgis7ue078ut" path="res://Runtime/Resource/Background/s0_0_name.png" id="2_iagdu"]
@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://ijakyfwhisgi" path="res://Runtime/Prefab/s0_0_person.tscn" id="4_cav2p"]
 [ext_resource type="Texture2D" uid="uid://bmt7t8tj2lwq3" path="res://Runtime/Resource/Sprite/S0_0_UI/start.png" id="5_rkh3y"]
 [ext_resource type="Texture2D" uid="uid://cdeglmuhlefcw" path="res://Runtime/Resource/Sprite/S0_0_UI/setting.png" id="6_3axm8"]
-[ext_resource type="Texture2D" uid="uid://bylpt6eflj2sh" path="res://Runtime/Resource/Sprite/S0_0_UI/exit.png" id="7_nmsci"]
+[ext_resource type="Texture2D" uid="uid://bh6ahi81sclxr" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/hover_white.png" id="6_ya6cf"]
+[ext_resource type="BitMap" uid="uid://ba3jxfra5m58v" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/click.bmp" id="7_td5st"]
+[ext_resource type="Texture2D" uid="uid://qsgr82tnaxyy" path="res://Runtime/Resource/Sprite/S0_0_UI/s0_exit.png" id="8_p8vak"]
 
 [node name="Root" type="Node2D"]
 
@@ -35,23 +37,29 @@ scale = Vector2(0.25, 0.25)
 
 [node name="press" type="Node" parent="."]
 
-[node name="start" type="TextureRect" parent="press"]
+[node name="start" type="TextureButton" parent="press"]
 offset_left = 781.0
-offset_top = 500.0
+offset_top = 529.0
 offset_right = 1139.0
-offset_bottom = 642.0
-texture = ExtResource("5_rkh3y")
+offset_bottom = 615.0
+texture_normal = ExtResource("5_rkh3y")
+texture_hover = ExtResource("6_ya6cf")
+texture_click_mask = ExtResource("7_td5st")
 
-[node name="setting" type="TextureRect" parent="press"]
+[node name="setting" type="TextureButton" parent="press"]
 offset_left = 781.0
-offset_top = 580.0
+offset_top = 609.0
 offset_right = 1139.0
-offset_bottom = 722.0
-texture = ExtResource("6_3axm8")
+offset_bottom = 695.0
+texture_normal = ExtResource("6_3axm8")
+texture_hover = ExtResource("6_ya6cf")
+texture_click_mask = ExtResource("7_td5st")
 
-[node name="exit" type="TextureRect" parent="press"]
+[node name="exit" type="TextureButton" parent="press"]
 offset_left = 781.0
-offset_top = 659.0
+offset_top = 688.0
 offset_right = 1139.0
-offset_bottom = 801.0
-texture = ExtResource("7_nmsci")
+offset_bottom = 774.0
+texture_normal = ExtResource("8_p8vak")
+texture_hover = ExtResource("6_ya6cf")
+texture_click_mask = ExtResource("7_td5st")

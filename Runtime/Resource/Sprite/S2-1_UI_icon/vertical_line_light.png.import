@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8gybsm3jcv3f"
-path="res://.godot/imported/again.png-f1a9ff6e11a161893de15ea8e1cc0f7a.ctex"
+uid="uid://cyntpceibwoei"
+path="res://.godot/imported/vertical_line_light.png-ea166ca5bf912e6d33c073b920237bbb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Runtime/Resource/Sprite/S2-1_UI_icon/again.png"
-dest_files=["res://.godot/imported/again.png-f1a9ff6e11a161893de15ea8e1cc0f7a.ctex"]
+source_file="res://Runtime/Resource/Sprite/S2-1_UI_icon/vertical_line_light.png"
+dest_files=["res://.godot/imported/vertical_line_light.png-ea166ca5bf912e6d33c073b920237bbb.ctex"]
 
 [params]
 
