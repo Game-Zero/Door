@@ -20,16 +20,15 @@ offset_bottom = 1080.0
 texture = ExtResource("1_fmeao")
 
 [node name="fail_background" type="TextureRect" parent="."]
+offset_top = -1080.0
 offset_right = 1920.0
-offset_bottom = 1080.0
 pivot_offset = Vector2(927, 1)
 texture = ExtResource("2_xhldr")
 
 [node name="fail_icon" type="TextureRect" parent="."]
 offset_left = 614.0
-offset_top = 318.0
+offset_top = -189.0
 offset_right = 1268.0
-offset_bottom = 507.0
 texture = ExtResource("4_xsu0r")
 
 [node name="again" type="TextureButton" parent="."]
@@ -37,6 +36,7 @@ offset_left = 784.0
 offset_top = 860.0
 offset_right = 1142.0
 offset_bottom = 946.0
+scale = Vector2(1, 1e-05)
 pivot_offset = Vector2(165, 86)
 texture_normal = ExtResource("6_nf1k0")
 texture_hover = ExtResource("5_2jb7l")
@@ -47,6 +47,7 @@ offset_left = 784.0
 offset_top = 956.0
 offset_right = 1142.0
 offset_bottom = 1042.0
+scale = Vector2(1, 1e-05)
 pivot_offset = Vector2(178, 88)
 texture_normal = ExtResource("6_s0ugr")
 texture_hover = ExtResource("5_2jb7l")
@@ -58,7 +59,6 @@ libraries = {
 }
 
 [node name="base" type="TextureRect" parent="."]
-modulate = Color(1, 1, 1, 0)
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.25, 0.25)
