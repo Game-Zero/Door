@@ -70,13 +70,17 @@ extends Node2D
 @onready var note_cnt = $notes.get_child_count()
 
 @onready var vertical_line = $vertical_line
-@onready var heart_line_color = default_line_color
+@onready var heart_line_color: Color = default_line_color
 
 @onready var combo = $combo
+@onready var fail = $fail
+@onready var fail_anim_player = $fail/AnimationPlayer
+@onready var fail_again_button = $fail/again
+@onready var fail_exit_button = $fail/exit
 
-var game_finish_callback = null
-var b_game_over = false
-var dialog
+var game_finish_callback   = null
+var reload_tables_callback = null
+var b_game_over: bool      = false
 
 # 末尾压入值
 func que_push(value):
@@ -122,6 +126,7 @@ func _ready() -> void:
 	last_combo_num = 999
 	b_comboing = false
 	b_game_over = false
+	fail.visible = false
 	judgment_anim_player.play("RESET")
 	change_line_color(default_line_color)
 	change_heart_line_color(default_heart_line_color)
@@ -134,16 +139,12 @@ func _ready() -> void:
 		child.material.set_shader_parameter("modulate_color", heart_line_color)
 		child.material.set_shader_parameter("mask_screen_position_x", mask_screen_position_x)
 
+	fail_again_button.pressed.connect(self.on_fail_again_button_press)
+	fail_exit_button.pressed.connect(self.on_fail_exit_button_press)
+
 	print("[_ready] note_cnt: ", note_cnt, ", viewport_size: ", viewport_size, ", vertical_line_center_position: ", vertical_line_center_position, ", mask_screen_position_x: ", mask_screen_position_x)
 	if Engine.is_editor_hint():
 		return
-
-	dialog = AcceptDialog.new()
-	add_child(dialog)
-	dialog.size.x = 300
-	dialog.dialog_text = "GameOver."
-	dialog.title = "提示"
-	dialog.get_ok_button().pressed.connect(func():get_tree().reload_current_scene())
 
 #	self.start_game()
 
@@ -157,6 +158,9 @@ func _process(delta: float) -> void:
 		electrocardiogram.translate(Vector2(-speed*delta, 0))
 		notes.translate(Vector2(-speed*delta, 0))
 	
+		if (self.b_game_started and Input.is_action_just_pressed("gm_skip")):
+			self.on_music_play_end(null)
+
 		var key_type = null
 		if (Input.is_action_just_pressed("player_up")):
 			key_type = KeyType.W
@@ -212,10 +216,11 @@ func _process(delta: float) -> void:
 	for child in electrocardiogram.get_children():
 		child.material.set_shader_parameter("modulate_color", heart_line_color)
 
-func start_game(game_finish_callback) -> void:
+func start_game(game_finish_callback, reload_tables_callback) -> void:
 	b_game_started = true
 	self.combo.visible = true
 	self.game_finish_callback = game_finish_callback
+	self.reload_tables_callback = reload_tables_callback
 
 
 func add_note(beta: float):
@@ -238,11 +243,7 @@ func check_combo():
 
 	
 func change_line_color(color: Color):
-	vertical_line.self_modulate = color
-	vertical_line.material.set_shader_parameter("modulate_color", vertical_line.self_modulate)
-	vertical_line.material.set_shader_parameter("outline_color", vertical_line.self_modulate)
-	vertical_line.material.set_shader_parameter("b_outglow_on", true)
-
+	vertical_line.modulate = color
 	
 func change_heart_line_color(color: Color):
 	heart_line_color = color
@@ -256,15 +257,17 @@ func game_over():
 
 	self.b_game_over = true
 
-	dialog.popup_centered()
+
+	var children = self.get_children()
+	for child in children:
+		if (child.name != "Timer"):
+			child.visible = false
+
+	fail.visible = true
+	fail_anim_player.play("fail")
 	if (game_finish_callback):
 		game_finish_callback.call(false)
-#	var children = self.get_children()
-#	for child in children:
-#		if (child.name != "Timer"):
-#			child.visible = false
-#		pass
-#	pass
+
 
 func on_note_entered_good(note) -> void:
 	print("[tables][on_note_entered_good] ", note.name)
@@ -311,11 +314,11 @@ func on_music_play_start(node) -> void:
 
 
 func on_music_play_end(node) -> void:
-	on_timer_trigger()
+	if (node != null):
+		on_timer_trigger()
 	self.b_game_started = false
 	audio_player.stop()
 	timer.stop()
-	# todo:zero 实现过关逻辑
 	if (not self.b_game_over):
 		print("[tables][on_music_play_end] 过关.")
 		if(game_finish_callback):
@@ -326,4 +329,17 @@ func on_timer_trigger() -> void:
 	print("[tables][on_timer_trigger] ", Time.get_time_string_from_system())
 	if (heart_num < lose_heart_num and self.b_game_started):
 		self.game_over()
+	pass
+
+
+func on_fail_again_button_press() -> void:
+	print("[tables][on_fail_again_button_press]")
+	if (self.reload_tables_callback):
+		self.reload_tables_callback.call()
+	pass
+
+
+func on_fail_exit_button_press() -> void:
+	print("[tables][on_fail_exit_button_press]")
+	get_tree().reload_current_scene()
 	pass

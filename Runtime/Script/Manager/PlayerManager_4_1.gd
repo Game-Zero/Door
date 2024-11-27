@@ -18,6 +18,7 @@ enum PersonState {
 }
 
 @onready var animation_player = $AnimationPlayer
+@onready var gradually_player = $gradually
 @export var person_animation_state: PersonAnimationState = PersonAnimationState.Standing
 @export var person_state: PersonState = PersonState.Medium
 @export var camera: Camera2D
@@ -25,19 +26,40 @@ enum PersonState {
 
 @onready var animation_finish_callback = null
 @onready var last_animation_name: String = ""
+@onready var auto_play: bool = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	b_can_move = true
 	animation_player.animation_finished.connect(on_animation_finish)
+	gradually_player.animation_finished.connect(on_animation_finish)
 	pass
 	
 func set_can_move(can_move: bool) -> bool:
 	self.b_can_move = can_move
+	if (not can_move and transform.x.x < 0):
+		transform.x.x *= -1
 	return self.b_can_move
 
 func get_can_move() -> bool:
 	return self.b_can_move
+
+
+func play_gradually_in():
+	self.gradually_player.play("gradually_enter")
+
+
+func play_gradually_out():
+	self.gradually_player.play("gradully_out")
+
+
+func turn_off_auto_play():
+	auto_play = false
+
+
+func turn_on_auto_play():
+	auto_play = true
+
 
 func play_animation():
 	var animation_name: String = "protagonist_"
@@ -66,7 +88,8 @@ func play_animation():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta) -> void:
-	play_animation()
+	if (self.auto_play):
+		play_animation()
 	if Engine.is_editor_hint() or !get_parent().visible:
 		return
 
@@ -101,7 +124,7 @@ func set_animation_finish_callback(animation_finish_callback):
 
 
 func on_animation_finish(anim_name):
-	print("[on_animation_finish] anim_name: ", anim_name)
+	print("[PlayerManager_4_1][on_animation_finish] anim_name: ", anim_name)
 	if (self.animation_finish_callback != null):
 		animation_finish_callback.call(anim_name)
 	pass

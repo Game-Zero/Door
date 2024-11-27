@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://247thrl7sreg"]
+[gd_scene load_steps=19 format=3 uid="uid://247thrl7sreg"]
 
 [ext_resource type="SpriteFrames" uid="uid://c6w4we1exvsgx" path="res://Runtime/Prefab/s2_person_anime.tres" id="1_8uy5x"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/PlayerManager_4_1.gd" id="1_n6avp"]
@@ -110,34 +110,6 @@ tracks/1/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0, 3, -0.25, 0, 0.25, 0, 4, -0.25, 0, 0.25, 0, 5, -0.25, 0, 0.25, 0, 6, -0.25, 0, 0.25, 0, 7, -0.25, 0, 0.25, 0, 8, -0.25, 0, 0.25, 0, 9, -0.25, 0, 0.25, 0, 10, -0.25, 0, 0.25, 0, 11, -0.25, 0, 0.25, 0, 12, -0.25, 0, 0.25, 0, 13, -0.25, 0, 0.25, 0, 14, -0.25, 0, 0.25, 0, 15, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1, 1.125, 1.25, 1.375, 1.5, 1.625, 1.75, 1.875)
-}
-
-[sub_resource type="Animation" id="Animation_youq6"]
-resource_name = "protagonist_medium_lie_suegery_end"
-length = 1.375
-step = 0.125
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"protagonist_medium_lie_suegery_end"]
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0, 3, -0.25, 0, 0.25, 0, 4, -0.25, 0, 0.25, 0, 5, -0.25, 0, 0.25, 0, 6, -0.25, 0, 0.25, 0, 7, -0.25, 0, 0.25, 0, 8, -0.25, 0, 0.25, 0, 9, -0.25, 0, 0.25, 0, 10, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1, 1.125, 1.25)
 }
 
 [sub_resource type="Animation" id="Animation_gm4h6"]
@@ -282,21 +254,103 @@ tracks/2/keys = {
 }
 tracks/2/use_blend = true
 
+[sub_resource type="Animation" id="Animation_youq6"]
+resource_name = "protagonist_thin_lie_suegery_end"
+length = 1.375
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"protagonist_medium_lie_suegery_end"]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0, 3, -0.25, 0, 0.25, 0, 4, -0.25, 0, 0.25, 0, 5, -0.25, 0, 0.25, 0, 6, -0.25, 0, 0.25, 0, 7, -0.25, 0, 0.25, 0, 8, -0.25, 0, 0.25, 0, 9, -0.25, 0, 0.25, 0, 10, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1, 1.125, 1.25)
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7ceew"]
 _data = {
 "RESET": SubResource("Animation_wqruc"),
 "protagonist_medium_lie": SubResource("Animation_p31q0"),
 "protagonist_medium_lie_cycle": SubResource("Animation_oj4gw"),
 "protagonist_medium_lie_open_belly": SubResource("Animation_8v1xa"),
-"protagonist_medium_lie_suegery_end": SubResource("Animation_youq6"),
 "protagonist_medium_standing": SubResource("Animation_gm4h6"),
 "protagonist_medium_walking": SubResource("Animation_lw4il"),
+"protagonist_thin_lie_suegery_end": SubResource("Animation_youq6"),
 "protagonist_thin_standing": SubResource("Animation_rllla"),
 "protagonist_thin_walking": SubResource("Animation_ugf1c")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lmnuy"]
 size = Vector2(600, 1800)
+
+[sub_resource type="Animation" id="Animation_yavlr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_l85rq"]
+resource_name = "gradually_enter"
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_x0df4"]
+resource_name = "gradully_out"
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7qcdd"]
+_data = {
+"RESET": SubResource("Animation_yavlr"),
+"gradually_enter": SubResource("Animation_l85rq"),
+"gradully_out": SubResource("Animation_x0df4")
+}
 
 [node name="s2_person" type="CharacterBody2D"]
 script = ExtResource("1_n6avp")
@@ -315,3 +369,8 @@ volume_db = 10.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_lmnuy")
+
+[node name="gradually" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7qcdd")
+}

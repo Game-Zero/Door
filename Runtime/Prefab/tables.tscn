@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://dh8frt03hpxs0"]
+[gd_scene load_steps=32 format=3 uid="uid://dh8frt03hpxs0"]
 
 [ext_resource type="Script" path="res://Runtime/Script/Manager/s2_1_tables.gd" id="1_ax147"]
 [ext_resource type="PackedScene" uid="uid://vguvqexn7pw4" path="res://Runtime/Prefab/note.tscn" id="1_ckp7n"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://cwnuqgdv3gw4d" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/electrocardiogram_5.png" id="7_vopsx"]
 [ext_resource type="Texture2D" uid="uid://cs5nfqwoxkwyt" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/electrocardiogram_7.png" id="9_6b7p1"]
 [ext_resource type="Shader" path="res://Runtime/Shader/outglow.gdshader" id="10_0inuw"]
-[ext_resource type="Material" uid="uid://dl2yxos0bpive" path="res://Runtime/Shader/vertical_line.material" id="11_1ojn4"]
 [ext_resource type="Texture2D" uid="uid://cot6q6uijaefu" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/vertical_line.png" id="12_7o65m"]
 [ext_resource type="Texture2D" uid="uid://cyntpceibwoei" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/vertical_line_light.png" id="12_221mc"]
 [ext_resource type="Texture2D" uid="uid://c2plimbxqqrwg" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/left_green_line.png" id="12_oidw5"]
@@ -23,33 +22,33 @@
 [ext_resource type="PackedScene" uid="uid://3nraj8h7elmj" path="res://Runtime/Prefab/judgment.tscn" id="17_o7bef"]
 [ext_resource type="PackedScene" uid="uid://ba5b7vuikrqoj" path="res://Runtime/Prefab/fail.tscn" id="22_y4o50"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_mo8wh"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nwdfv"]
 shader = ExtResource("4_yqiq5")
 shader_parameter/modulate_color = Color(0.454902, 0.866667, 0.639216, 1)
-shader_parameter/mask_screen_position_x = 0.607579
+shader_parameter/mask_screen_position_x = 0.737612
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f7xp0"]
 size = Vector2(20, 14)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ef0p3"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4y7xu"]
 shader = ExtResource("4_yqiq5")
 shader_parameter/modulate_color = Color(0.454902, 0.866667, 0.639216, 1)
-shader_parameter/mask_screen_position_x = 0.607579
+shader_parameter/mask_screen_position_x = 0.737612
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_sjsj8"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8k3pu"]
 shader = ExtResource("4_yqiq5")
 shader_parameter/modulate_color = Color(0.454902, 0.866667, 0.639216, 1)
-shader_parameter/mask_screen_position_x = 0.607579
+shader_parameter/mask_screen_position_x = 0.737612
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ql38c"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q1rlc"]
 shader = ExtResource("4_yqiq5")
 shader_parameter/modulate_color = Color(0.454902, 0.866667, 0.639216, 1)
-shader_parameter/mask_screen_position_x = 0.607579
+shader_parameter/mask_screen_position_x = 0.737612
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_0fjy2"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ia3cp"]
 shader = ExtResource("4_yqiq5")
 shader_parameter/modulate_color = Color(0.454902, 0.866667, 0.639216, 1)
-shader_parameter/mask_screen_position_x = 0.607579
+shader_parameter/mask_screen_position_x = 0.737612
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7lxqp"]
 shader = ExtResource("10_0inuw")
@@ -98,7 +97,7 @@ modulate = Color(0.454902, 0.866667, 0.639216, 1)
 position = Vector2(1746, 0)
 
 [node name="electrocardiogram1" type="TextureRect" parent="electrocardiogram"]
-material = SubResource("ShaderMaterial_mo8wh")
+material = SubResource("ShaderMaterial_nwdfv")
 offset_left = -2.0
 offset_top = 602.0
 offset_right = 19023.0
@@ -117,7 +116,7 @@ collision_mask = 16
 shape = SubResource("RectangleShape2D_f7xp0")
 
 [node name="electrocardiogram2" type="TextureRect" parent="electrocardiogram"]
-material = SubResource("ShaderMaterial_ef0p3")
+material = SubResource("ShaderMaterial_4y7xu")
 offset_left = 11465.0
 offset_top = 600.0
 offset_right = 30492.0
@@ -127,7 +126,7 @@ texture = ExtResource("5_ypdsc")
 metadata/_edit_use_anchors_ = true
 
 [node name="electrocardiogram3" type="TextureRect" parent="electrocardiogram"]
-material = SubResource("ShaderMaterial_sjsj8")
+material = SubResource("ShaderMaterial_8k3pu")
 offset_left = 14329.0
 offset_top = 598.0
 offset_right = 19085.0
@@ -137,7 +136,7 @@ texture = ExtResource("6_i5xs4")
 metadata/_edit_use_anchors_ = true
 
 [node name="electrocardiogram4" type="TextureRect" parent="electrocardiogram"]
-material = SubResource("ShaderMaterial_ql38c")
+material = SubResource("ShaderMaterial_q1rlc")
 offset_left = 17091.0
 offset_top = 597.0
 offset_right = 26789.0
@@ -147,7 +146,7 @@ texture = ExtResource("7_vopsx")
 metadata/_edit_use_anchors_ = true
 
 [node name="electrocardiogram5" type="TextureRect" parent="electrocardiogram"]
-material = SubResource("ShaderMaterial_0fjy2")
+material = SubResource("ShaderMaterial_ia3cp")
 offset_left = 22919.0
 offset_top = 599.0
 offset_right = 39139.0
@@ -686,17 +685,9 @@ material = SubResource("ShaderMaterial_7lxqp")
 position = Vector2(31172, 734)
 value = 1
 
-[node name="vertical_line_light" type="TextureRect" parent="."]
-offset_left = 666.0
-offset_top = 542.0
-offset_right = 1656.0
-offset_bottom = 2589.0
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("12_221mc")
-
 [node name="vertical_line" type="TextureRect" parent="."]
+modulate = Color(0.882353, 0.737255, 0.537255, 1)
 self_modulate = Color(0.882353, 0.737255, 0.537255, 1)
-material = ExtResource("11_1ojn4")
 offset_left = 665.0
 offset_top = 543.0
 offset_right = 1655.0
@@ -704,6 +695,14 @@ offset_bottom = 2591.0
 scale = Vector2(0.251, 0.251)
 texture = ExtResource("12_7o65m")
 metadata/_edit_use_anchors_ = true
+
+[node name="vertical_line_light" type="TextureRect" parent="vertical_line"]
+layout_mode = 0
+offset_left = 3.98389
+offset_top = -3.98413
+offset_right = 993.984
+offset_bottom = 2043.02
+texture = ExtResource("12_221mc")
 
 [node name="Area2D3" type="Area2D" parent="."]
 collision_layer = 16

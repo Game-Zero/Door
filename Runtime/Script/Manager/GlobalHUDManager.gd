@@ -10,4 +10,6 @@ func _ready():
 func _process(_delta):
 	if Input.is_action_pressed("ui_cancel"):
 		get_tree().quit()
+	if Input.is_action_pressed("gm_reload_current_scene"):
+		get_tree().reload_current_scene()
 	pass
