@@ -153,7 +153,6 @@ offset_right = 41957.0
 offset_bottom = 998.0
 scale = Vector2(0.603245, 0.994488)
 texture = ExtResource("8_d76dc")
-metadata/_edit_use_anchors_ = true
 
 [node name="MusicEnd" type="Area2D" parent="electrocardiogram/electrocardiogram5"]
 position = Vector2(19043.7, 199.097)
