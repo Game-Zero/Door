@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dh8frt03hpxs0"]
+[gd_scene load_steps=32 format=3 uid="uid://dh8frt03hpxs0"]
 
 [ext_resource type="Script" path="res://Runtime/Script/Manager/s2_1_tables.gd" id="1_ax147"]
 [ext_resource type="PackedScene" uid="uid://vguvqexn7pw4" path="res://Runtime/Prefab/note.tscn" id="1_ckp7n"]
@@ -21,6 +21,7 @@
 [ext_resource type="AudioStream" uid="uid://c5f5g1bwe7mo8" path="res://Runtime/Resource/Audio/s2/music_game.MP3" id="15_ratjp"]
 [ext_resource type="PackedScene" uid="uid://kxmak151p1kc" path="res://Runtime/Prefab/combo.tscn" id="16_kx5lx"]
 [ext_resource type="PackedScene" uid="uid://3nraj8h7elmj" path="res://Runtime/Prefab/judgment.tscn" id="17_o7bef"]
+[ext_resource type="PackedScene" uid="uid://ba5b7vuikrqoj" path="res://Runtime/Prefab/fail.tscn" id="22_y4o50"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2b5uy"]
 shader = ExtResource("4_yqiq5")
@@ -762,6 +763,8 @@ position = Vector2(960, 340)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0
+
+[node name="fail" parent="." instance=ExtResource("22_y4o50")]
 
 [connection signal="area_entered" from="electrocardiogram/electrocardiogram5/MusicEnd" to="." method="on_music_play_end"]
 [connection signal="area_entered" from="Area2D3" to="." method="on_note_entered_good"]
