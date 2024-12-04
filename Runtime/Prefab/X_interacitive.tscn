@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=3 uid="uid://ddtyr0aq6cixr"]
+
+[ext_resource type="Texture2D" uid="uid://de4um0a7gy488" path="res://Runtime/Resource/Sprite/S0-1_UI/x_normal.png" id="1_j44uo"]
+[ext_resource type="Texture2D" uid="uid://dh7npyt7dk7w5" path="res://Runtime/Resource/Sprite/S0-1_UI/x_press.png" id="2_th7fr"]
+[ext_resource type="BitMap" uid="uid://dr4ldju8jjhpj" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/x_click.bmp" id="3_kwx72"]
+
+[sub_resource type="Animation" id="Animation_vi6oa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("X_button:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ype8s"]
+resource_name = "button_x_appear"
+length = 0.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("X_button:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_s0muq"]
+resource_name = "button_x_disappear"
+length = 0.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("X_button:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gpj5e"]
+_data = {
+"RESET": SubResource("Animation_vi6oa"),
+"button_x_appear": SubResource("Animation_ype8s"),
+"button_x_disappear": SubResource("Animation_s0muq")
+}
+
+[node name="x" type="Node2D"]
+
+[node name="X_button" type="TextureButton" parent="."]
+offset_left = -47.0
+offset_top = -45.0
+offset_right = 46.0
+offset_bottom = 47.0
+pivot_offset = Vector2(46, 46)
+texture_normal = ExtResource("1_j44uo")
+texture_pressed = ExtResource("2_th7fr")
+texture_click_mask = ExtResource("3_kwx72")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_gpj5e")
+}
