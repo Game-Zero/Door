@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://c353rtq7kkrvj"]
+[gd_scene load_steps=10 format=3 uid="uid://c353rtq7kkrvj"]
 
 [ext_resource type="Script" path="res://Runtime/Script/Manager/s3_button.gd" id="1_r8lm6"]
 [ext_resource type="SpriteFrames" uid="uid://dpfkuldxj3pc0" path="res://Runtime/Prefab/s3_button_anime.tres" id="1_ty8am"]
 [ext_resource type="AudioStream" uid="uid://dcc2smwisntji" path="res://Runtime/Resource/Audio/s3/button_pusseed.MP3" id="3_lqjwy"]
+[ext_resource type="PackedScene" uid="uid://ddtyr0aq6cixr" path="res://Runtime/Prefab/X_interacitive.tscn" id="4_hv8px"]
 
 [sub_resource type="Animation" id="Animation_6vdaa"]
 length = 0.001
@@ -104,6 +105,10 @@ libraries = {
 shape = SubResource("RectangleShape2D_rt3s3")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="x" parent="." instance=ExtResource("4_hv8px")]
+position = Vector2(-1, 1005)
+scale = Vector2(4, 4)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

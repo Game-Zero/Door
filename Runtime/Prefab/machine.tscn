@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://k7cs5dfyvr8"]
+[gd_scene load_steps=13 format=3 uid="uid://k7cs5dfyvr8"]
 
 [ext_resource type="Script" path="res://Runtime/Script/Manager/machine.gd" id="1_oylm8"]
 [ext_resource type="SpriteFrames" uid="uid://bffx87q6w2o0j" path="res://Runtime/Prefab/machine_anime.tres" id="1_yk5er"]
 [ext_resource type="AudioStream" uid="uid://co6p51xsbsfrd" path="res://Runtime/Resource/Audio/s3/machine_made_medicine.MP3" id="3_p1hj5"]
 [ext_resource type="AudioStream" uid="uid://dancqfdsa3loa" path="res://Runtime/Resource/Audio/s3/medicine_taken.MP3" id="4_b6gxl"]
+[ext_resource type="PackedScene" uid="uid://ddtyr0aq6cixr" path="res://Runtime/Prefab/X_interacitive.tscn" id="5_s43cs"]
 
 [sub_resource type="Animation" id="Animation_s8gkn"]
 length = 0.001
@@ -189,6 +190,10 @@ position = Vector2(495, 496)
 shape = SubResource("RectangleShape2D_1r5n0")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="x" parent="." instance=ExtResource("5_s43cs")]
+position = Vector2(504, 2128)
+scale = Vector2(4, 4)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

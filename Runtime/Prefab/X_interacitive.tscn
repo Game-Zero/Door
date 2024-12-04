@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://de4um0a7gy488" path="res://Runtime/Resource/Sprite/S0-1_UI/x_normal.png" id="1_j44uo"]
 [ext_resource type="Texture2D" uid="uid://dh7npyt7dk7w5" path="res://Runtime/Resource/Sprite/S0-1_UI/x_press.png" id="2_th7fr"]
-[ext_resource type="BitMap" uid="uid://dr4ldju8jjhpj" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/x_click.bmp" id="3_kwx72"]
+[ext_resource type="BitMap" uid="uid://ddcmjs68or4n6" path="res://Runtime/Resource/Sprite/S0-1_UI/x_click.bmp" id="3_yl0bo"]
 
 [sub_resource type="Animation" id="Animation_vi6oa"]
 length = 0.001
@@ -70,7 +70,7 @@ offset_bottom = 47.0
 pivot_offset = Vector2(46, 46)
 texture_normal = ExtResource("1_j44uo")
 texture_pressed = ExtResource("2_th7fr")
-texture_click_mask = ExtResource("3_kwx72")
+texture_click_mask = ExtResource("3_yl0bo")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
