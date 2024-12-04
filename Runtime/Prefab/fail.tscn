@@ -54,7 +54,7 @@ scale = Vector2(1e-05, 1)
 pivot_offset = Vector2(1921, 22)
 texture = ExtResource("3_o271x")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
 
 [node name="again" type="TextureButton" parent="."]
 offset_left = 784.0

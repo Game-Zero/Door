@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dh8frt03hpxs0" path="res://Runtime/Prefab/tables.tscn" id="9_dlun6"]
 [ext_resource type="PackedScene" uid="uid://dx5jxtm8jukf6" path="res://Runtime/Prefab/be_thinner.tscn" id="11_2hdhw"]
 [ext_resource type="Texture2D" uid="uid://b86pyehyyv64s" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/x_normal.png" id="12_bv6de"]
-[ext_resource type="Texture2D" uid="uid://danrtf0kype2q" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/x_hover.png" id="13_4b6jx"]
+[ext_resource type="Texture2D" uid="uid://yufac7wtle4h" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/x_press.png" id="13_s568d"]
 [ext_resource type="BitMap" uid="uid://dr4ldju8jjhpj" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/x_click.bmp" id="14_aqwrh"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y43vn"]
@@ -224,7 +224,7 @@ offset_top = 885.0
 offset_right = 1358.0
 offset_bottom = 977.0
 texture_normal = ExtResource("12_bv6de")
-texture_pressed = ExtResource("13_4b6jx")
+texture_pressed = ExtResource("13_s568d")
 texture_click_mask = ExtResource("14_aqwrh")
 
 [node name="x2" type="TextureButton" parent="s2_1_interacitive"]
@@ -233,7 +233,7 @@ offset_top = 887.0
 offset_right = 2835.0
 offset_bottom = 979.0
 texture_normal = ExtResource("12_bv6de")
-texture_pressed = ExtResource("13_4b6jx")
+texture_pressed = ExtResource("13_s568d")
 texture_click_mask = ExtResource("14_aqwrh")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="s2_1_interacitive"]

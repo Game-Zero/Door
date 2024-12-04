@@ -295,5 +295,5 @@ libraries = {
 "": SubResource("AnimationLibrary_5y6da")
 }
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
 volume_db = -5.0

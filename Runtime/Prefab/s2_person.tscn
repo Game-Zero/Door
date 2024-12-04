@@ -364,7 +364,7 @@ libraries = {
 "": SubResource("AnimationLibrary_7ceew")
 }
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
 volume_db = 10.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -756,7 +756,7 @@ offset_right = 303.0
 offset_bottom = 1070.0
 texture = ExtResource("15_br4eo")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_ratjp")
 
 [node name="combo" parent="." instance=ExtResource("16_kx5lx")]
