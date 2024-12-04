@@ -20,8 +20,9 @@ func _process(delta: float) -> void:
 func level_success():
 	var share_instance = get_node("/root/SharedInstance")
 	var data_map = share_instance.shared_data_map["s3_1"]
-	data_map["player_can_move"] = true
 	data_map["person_state"] = 1
+	data_map["b_has_pressed_button"] = true
+	data_map["b_has_eaten_medication"] = true
 	get_tree().change_scene_to_file("res://Runtime/Scene/Stage_3_1.tscn")
 
 func body_entered(body):

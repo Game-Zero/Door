@@ -23,6 +23,7 @@ func on_again_pressed():
 func on_exit_pressed():
 	var share_instance = get_node("/root/SharedInstance")
 	var data_map = share_instance.shared_data_map["s3_1"]
-	data_map["player_can_move"] = true
 	data_map["person_state"] = 0
+	data_map["b_has_pressed_button"] = true
+	data_map["b_has_eaten_medication"] = false
 	get_tree().change_scene_to_file("res://Runtime/Scene/Stage_3_1.tscn")

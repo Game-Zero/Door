@@ -45,9 +45,10 @@ position = Vector2(834, 680)
 scale = Vector2(0.25, 0.25)
 machine = NodePath("../machine")
 
-[node name="person" parent="." instance=ExtResource("3_06vkj")]
+[node name="person" parent="." node_paths=PackedStringArray("machine") instance=ExtResource("3_06vkj")]
 position = Vector2(109, 570)
 scale = Vector2(0.25, 0.25)
+machine = NodePath("../machine")
 
 [node name="camera" type="Camera2D" parent="."]
 position = Vector2(960, 540)
@@ -62,9 +63,9 @@ position = Vector2(2622, 497)
 position = Vector2(1, -10)
 shape = SubResource("RectangleShape2D_mmr05")
 
-[node name="HUD" parent="." instance=ExtResource("7_lidkm")]
-
 [node name="s3_1_be_thinner" parent="." instance=ExtResource("10_72ci6")]
 position = Vector2(2454, 119)
+
+[node name="HUD" parent="." instance=ExtResource("7_lidkm")]
 
 [connection signal="body_entered" from="destination" to="person" method="_on_destination_body_entered"]

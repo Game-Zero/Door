@@ -4,7 +4,7 @@
 [ext_resource type="SpriteFrames" uid="uid://bffx87q6w2o0j" path="res://Runtime/Prefab/machine_anime.tres" id="1_yk5er"]
 [ext_resource type="AudioStream" uid="uid://co6p51xsbsfrd" path="res://Runtime/Resource/Audio/s3/machine_made_medicine.MP3" id="3_p1hj5"]
 [ext_resource type="AudioStream" uid="uid://dancqfdsa3loa" path="res://Runtime/Resource/Audio/s3/medicine_taken.MP3" id="4_b6gxl"]
-[ext_resource type="PackedScene" uid="uid://ddtyr0aq6cixr" path="res://Runtime/Prefab/X_interacitive.tscn" id="5_s43cs"]
+[ext_resource type="PackedScene" path="res://Runtime/Prefab/X_interacitive.tscn" id="5_s43cs"]
 
 [sub_resource type="Animation" id="Animation_s8gkn"]
 length = 0.001

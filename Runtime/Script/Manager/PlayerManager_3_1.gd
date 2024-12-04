@@ -24,6 +24,8 @@ enum PersonAnimationState {
 @export var person_state: PersonState
 @export var b_has_pressed_button = false
 @export var b_has_eaten_medication = false
+@export var machine: Node2D
+
 
 var b_force_move = false
 var force_move_to_x = 0
@@ -176,7 +178,12 @@ func load_state():
 		b_has_pressed_button = data_map["b_has_pressed_button"]
 		b_has_eaten_medication = data_map["b_has_eaten_medication"]
 		global_position = data_map["player_global_position"]
-		
+		if not (b_has_eaten_medication) and machine:
+			self.do_change_move_state(false)
+			var make_medicine_finish = func():
+				self.do_change_move_state(true)
+			machine.do_make_medicine(make_medicine_finish)
+
 func do_change_move_state(b_can_move):
 	if not b_can_move and person_animation_state == PersonAnimationState.Walking:
 		person_animation_state = PersonAnimationState.Standing
@@ -202,4 +209,8 @@ func _on_animation_player_animation_finished(anim_name):
 
 
 func _on_destination_body_entered(body):
-	get_tree().change_scene_to_file("res://Runtime/Scene/Stage_4_1.tscn")
+	if (self.person_state == PersonState.VeryThin):
+		get_tree().change_scene_to_file("res://Runtime/Scene/Stage_4_1.tscn")
+	else:
+		print("请变瘦!!!!")
+		# todo:zero 提示玩家拿起药丸
