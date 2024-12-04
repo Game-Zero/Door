@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bfu8jl255k6mq" path="res://Runtime/Prefab/s0_1_cross_door.tscn" id="3_oas88"]
 [ext_resource type="PackedScene" uid="uid://cs31mftu1xuen" path="res://Runtime/Prefab/s0_1_cross_door_part2.tscn" id="4_e1giy"]
 [ext_resource type="Texture2D" uid="uid://de4um0a7gy488" path="res://Runtime/Resource/Sprite/S0-1_UI/x_normal.png" id="5_013ke"]
-[ext_resource type="Texture2D" uid="uid://danrtf0kype2q" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/x_hover.png" id="7_53hr6"]
+[ext_resource type="Texture2D" uid="uid://dh7npyt7dk7w5" path="res://Runtime/Resource/Sprite/S0-1_UI/x_press.png" id="7_qmkdr"]
 [ext_resource type="BitMap" uid="uid://dr4ldju8jjhpj" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/x_click.bmp" id="8_jx5ab"]
 
 [sub_resource type="Animation" id="Animation_vi6oa"]
@@ -102,7 +102,7 @@ offset_top = 884.0
 offset_right = 2204.0
 offset_bottom = 976.0
 texture_normal = ExtResource("5_013ke")
-texture_pressed = ExtResource("7_53hr6")
+texture_pressed = ExtResource("7_qmkdr")
 texture_click_mask = ExtResource("8_jx5ab")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="s0_1_interacitive"]
