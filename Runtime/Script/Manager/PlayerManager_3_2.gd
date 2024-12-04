@@ -4,6 +4,9 @@ extends CharacterBody2D
 const SPEED = 200.0
 const JUMP_VELOCITY = -400.0
 
+@export var failed_node: Node2D = null
+@export var bgm_player: AudioStreamPlayer = null
+
 @onready var player = $"."
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var collision_shape = $CollisionShape2D
@@ -32,6 +35,9 @@ func _ready():
 	dialog.get_ok_button().pressed.connect(func():get_tree().reload_current_scene())
 
 func _physics_process(delta):
+	if (Input.is_action_just_pressed("gm_fail")):
+		self.dead(null)
+
 	if !bCanControl:
 		return
 	
@@ -85,17 +91,25 @@ func _physics_process(delta):
 			var callback = func():
 				bFatEatenAnimPlayFinished = true
 				try_resume_contrl()
-			body.start_being_eaten(direction, callback)	
+			body.start_being_eaten(direction, callback)
 			animated_sprite_2d.play("swarm_eating" if body.name.begins_with("fat") else "swarm_eating_big")
 		elif body.name.begins_with("robot"):
-			dead(body)
+			body.fade_to_player()
+			body.discovered()
+			self.dead(body)
+
 
 func dead(robot):
 	bCanControl = false
+	bgm_player.stop()
 	if robot:
 		robot.set_physics_process(false)
 		robot.anim.play("robot_standing")
-	dialog.popup_centered()
+	if (failed_node):
+		failed_node.show_fail()
+	else:
+		dialog.popup_centered()
+
 
 func try_resume_contrl():
 	if bFatEatenAnimPlayFinished and bPlayerEatPlayFinished:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://d17xo1l43snf7"]
+[gd_scene load_steps=6 format=3 uid="uid://p3hu2j5qfh7g"]
 
 [ext_resource type="Texture2D" uid="uid://bp1b48338ita3" path="res://Runtime/Resource/Sprite/s3_UI/s3_2_UI/be_discovered.png" id="1_asaq1"]
 [ext_resource type="AudioStream" uid="uid://cdfptndsmgtb2" path="res://Runtime/Resource/Audio/s3/s3_2/discovered.mp3" id="2_5gjqx"]
@@ -58,11 +58,22 @@ _data = {
 
 [node name="discovered" type="Node2D"]
 
+[node name="TextureRectDemo" type="TextureRect" parent="."]
+visible = false
+offset_left = -220.0
+offset_top = -240.0
+offset_right = 210.0
+offset_bottom = 263.0
+pivot_offset = Vector2(222, 243)
+texture = ExtResource("1_asaq1")
+
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 429.0
-offset_bottom = 503.0
+offset_left = -220.0
+offset_top = -240.0
+offset_right = 210.0
+offset_bottom = 263.0
 scale = Vector2(1, 1e-05)
-pivot_offset = Vector2(204, 503)
+pivot_offset = Vector2(222, 243)
 texture = ExtResource("1_asaq1")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

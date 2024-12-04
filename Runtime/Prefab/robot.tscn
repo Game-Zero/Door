@@ -1,4 +1,4 @@
-[gd_scene load_steps=166 format=3 uid="uid://ugbp7lw4pwpc"]
+[gd_scene load_steps=168 format=3 uid="uid://ugbp7lw4pwpc"]
 
 [ext_resource type="Texture2D" uid="uid://0yrpisinw2s1" path="res://Runtime/Resource/FrameAnimation/robot_standing/robot_standing_00.png" id="1_sq55p"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/robot_3_2.gd" id="1_xidbv"]
@@ -163,6 +163,8 @@
 [ext_resource type="Texture2D" uid="uid://dbf2r6p78e5bl" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_098.png" id="160_yf5ca"]
 [ext_resource type="Texture2D" uid="uid://itb2rj7hyxku" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_099.png" id="161_nc1vk"]
 [ext_resource type="Texture2D" uid="uid://bwy6a1vupyhex" path="res://Runtime/Resource/FrameAnimation/robot_walking/robot_walking_100.png" id="162_7byta"]
+[ext_resource type="PackedScene" uid="uid://p3hu2j5qfh7g" path="res://Runtime/Prefab/discovered.tscn" id="164_x5rjd"]
+[ext_resource type="AudioStream" uid="uid://blgevjhf5bluk" path="res://Runtime/Resource/Audio/s3/s3_2/robot_walking.MP3" id="165_koo3t"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8v8w1"]
 animations = [{
@@ -737,4 +739,9 @@ rotation = 1.5708
 target_position = Vector2(0, 20000)
 collision_mask = 3
 
+[node name="discovered" parent="." instance=ExtResource("164_x5rjd")]
+position = Vector2(-32, -50)
+scale = Vector2(0.1, 0.1)
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("165_koo3t")

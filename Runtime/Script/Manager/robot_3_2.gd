@@ -51,6 +51,7 @@ func _process(delta):
 		ray_not_to_wall.target_position.y = GROUND_DISTANCE
 		ray_not_to_wall.position.x = 42 * GROUND_POSITION
 
+
 func _check_eyes_see_player():
 	for ray_eye in ray_eyes:
 		if ray_eye.is_colliding():
@@ -58,6 +59,17 @@ func _check_eyes_see_player():
 			if collider.collision_layer & (1 << 1):
 				return collider
 	return null
+
+
+func discovered():
+	$discovered/AnimationPlayer.play("discovered")
+
+
+func fade_to_player():
+	if not (_check_eyes_see_player()):
+		scale.x = scale.x * -1
+		direction *= -1
+
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -75,15 +87,13 @@ func _physics_process(delta):
 		# 设置音量
 		audio_player.volume_db = -60.0 / 1000 * distance # 根据距离设置音量
 
-		
-			
-
 
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
 	var collider_player = _check_eyes_see_player()
 	if collider_player != null:
+		self.discovered()
 		collider_player.dead(self)
 		return
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=105 format=3 uid="uid://dqf7dekvholxn"]
+[gd_scene load_steps=104 format=3 uid="uid://dqf7dekvholxn"]
 
 [ext_resource type="PackedScene" uid="uid://brg0ell7yg5nl" path="res://Runtime/Prefab/hole.tscn" id="2_53d5x"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/PlayerManager_3_2.gd" id="2_vn8ns"]
@@ -94,9 +94,8 @@
 [ext_resource type="PackedScene" uid="uid://de8so0lu14br5" path="res://Runtime/Prefab/big_fat.tscn" id="76_qivtl"]
 [ext_resource type="PackedScene" uid="uid://bofbb0bvx1ysw" path="res://Runtime/Prefab/hud.tscn" id="95_14h4s"]
 [ext_resource type="AudioStream" uid="uid://dmuy741n3amd3" path="res://Runtime/Resource/Audio/s3/s3_2/s3_2_background.wav" id="95_uripk"]
-[ext_resource type="PackedScene" uid="uid://d17xo1l43snf7" path="res://Runtime/Prefab/discovered.tscn" id="97_a4wuy"]
-[ext_resource type="PackedScene" uid="uid://cf6i0boe6q4c6" path="res://Runtime/Prefab/s3_2_fail.tscn" id="98_4v2hu"]
-[ext_resource type="PackedScene" uid="uid://b6bwm3g0w4b4p" path="res://Runtime/Prefab/s3_2_interacitive.tscn" id="99_0gbw0"]
+[ext_resource type="PackedScene" uid="uid://duohsmfk2d131" path="res://Runtime/Prefab/s3_2_fail.tscn" id="98_4v2hu"]
+[ext_resource type="PackedScene" path="res://Runtime/Prefab/s3_2_interacitive.tscn" id="99_0gbw0"]
 [ext_resource type="PackedScene" uid="uid://omevqqnc5ybq" path="res://Runtime/Prefab/fat.tscn" id="174_eeac7"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/ScreenCameraManger.gd" id="184_d74i6"]
 
@@ -406,11 +405,13 @@ position = Vector2(-3, 1)
 build_mode = 1
 polygon = PackedVector2Array(1187, 0, 1188, 163, 1184, 175, 1168, 188, 1157, 191, 579, 191, 567, 197, 556, 207, 552, 215, 552, 624, 555, 634, 562, 644, 571, 651, 1433, 652, 1443, 656, 1450, 661, 1455, 669, 1458, 679, 1458, 742, 1455, 750, 1449, 758, 1439, 765, 873, 765, 854, 769, 842, 781, 840, 792, 840, 1128, 844, 1137, 851, 1145, 860, 1150, 1092, 1150, 1102, 1156, 1106, 1161, 1109, 1168, 1110, 1173, 1110, 1321, 1112, 1329, 1120, 1336, 1129, 1341, 1436, 1341, 1448, 1338, 1455, 1328, 1455, 1169, 1460, 1158, 1471, 1150, 1713, 1150, 1721, 1154, 1726, 1160, 1728, 1166, 1728, 1397, 1724, 1406, 1715, 1414, 1706, 1418, 1556, 1418, 1550, 1419, 1537, 1434, 1537, 1861, 1531, 1872, 1517, 1879, 1503, 1872, 1496, 1858, 1496, 1555, 1492, 1544, 1486, 1537, 1476, 1533, 781, 1533, 773, 1538, 766, 1546, 764, 1553, 764, 1865, 759, 1873, 752, 1877, 747, 1879, 547, 1880, 537, 1873, 531, 1863, 530, 1852, 531, 1474, 534, 1465, 542, 1459, 550, 1456, 663, 1456, 672, 1454, 681, 1445, 684, 1434, 684, 872, 680, 858, 670, 847, 659, 844, 511, 844, 499, 837, 491, 823, 492, 446, 484, 432, 470, 423, 173, 423, 156, 429, 147, 440, 145, 453, 145, 1863, 141, 1872, 130, 1879, 122, 1880, 41, 1880, 34, 1886, 29, 1892, 29, 2015, 31, 2022, 38, 2030, 49, 2033, 280, 2033, 289, 2029, 297, 2020, 298, 2011, 298, 596, 303, 587, 314, 579, 323, 580, 334, 590, 337, 600, 337, 974, 339, 984, 345, 991, 353, 995, 509, 995, 519, 1000, 525, 1007, 530, 1019, 530, 1290, 525, 1298, 519, 1303, 508, 1307, 394, 1307, 387, 1311, 380, 1318, 377, 1328, 376, 2015, 383, 2026, 393, 2032, 898, 2032, 909, 2028, 915, 2016, 916, 2005, 916, 1705, 921, 1696, 932, 1687, 1322, 1687, 1328, 1688, 1337, 1696, 1341, 1710, 1341, 2017, 1348, 2030, 1356, 2035, 1669, 2035, 1679, 2031, 1688, 2019, 1688, 1589, 1690, 1581, 1701, 1571, 1709, 1569, 1860, 1569, 1867, 1567, 1874, 1563, 1879, 1555, 1881, 1547, 1880, 1023, 1876, 1008, 1869, 1000, 1856, 997, 1331, 997, 1319, 1001, 1311, 1006, 1304, 1017, 1304, 1165, 1301, 1178, 1294, 1186, 1284, 1188, 1271, 1184, 1263, 1171, 1263, 1024, 1256, 1004, 1241, 996, 1009, 996, 1001, 989, 994, 977, 994, 937, 1001, 926, 1016, 917, 1592, 917, 1604, 912, 1611, 902, 1612, 893, 1612, 535, 1608, 520, 1599, 507, 1585, 499, 729, 499, 714, 491, 706, 477, 704, 455, 704, 373, 712, 359, 727, 348, 740, 343, 1307, 344, 1321, 342, 1332, 332, 1339, 319, 1340, 0)
 
-[node name="player" type="CharacterBody2D" parent="."]
+[node name="player" type="CharacterBody2D" parent="." node_paths=PackedStringArray("failed_node", "bgm_player")]
 position = Vector2(1261, 294)
 collision_layer = 2
 collision_mask = 7
 script = ExtResource("2_vn8ns")
+failed_node = NodePath("../fail")
+bgm_player = NodePath("../AudioStreamPlayer")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player"]
 scale = Vector2(0.15, 0.15)
@@ -599,14 +600,10 @@ autoplay = true
 
 [node name="HUD" parent="." instance=ExtResource("95_14h4s")]
 
-[node name="discovered" parent="." instance=ExtResource("97_a4wuy")]
-position = Vector2(1066, 192)
-scale = Vector2(0.1, 0.1)
+[node name="s3_2_interacitive" parent="." instance=ExtResource("99_0gbw0")]
 
 [node name="fail" parent="." instance=ExtResource("98_4v2hu")]
 visible = false
-
-[node name="s3_2_interacitive" parent="." instance=ExtResource("99_0gbw0")]
 
 [connection signal="animation_finished" from="player/AnimatedSprite2D" to="player" method="animation_finished"]
 [connection signal="body_entered" from="destination/destination" to="destination" method="body_entered"]

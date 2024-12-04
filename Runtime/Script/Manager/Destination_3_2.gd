@@ -10,11 +10,24 @@ func _ready():
 	dialog.dialog_text = "恭喜过关!"
 	dialog.title = "提示"
 	dialog.get_ok_button().pressed.connect(self._button_pressed)
+	
+	
+func _process(delta: float) -> void:
+	if (Input.is_action_just_pressed("gm_skip")):
+		self.level_success()
+
+
+func level_success():
+	var share_instance = get_node("/root/SharedInstance")
+	var data_map = share_instance.shared_data_map["s3_1"]
+	data_map["player_can_move"] = true
+	data_map["person_state"] = 1
+	get_tree().change_scene_to_file("res://Runtime/Scene/Stage_3_1.tscn")
 
 func body_entered(body):
 	body.bCanControl = false
 	body.animated_sprite_2d.stop()
-	get_tree().change_scene_to_file("res://Runtime/Scene/Stage_3_1.tscn")
+	self.level_success()
 	#dialog.popup_centered()
 	#get_tree().reload_current_scene()
 
