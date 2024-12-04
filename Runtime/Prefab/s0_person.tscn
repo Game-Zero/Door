@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://bx7do7py8jbba"]
+[gd_scene load_steps=9 format=3 uid="uid://bx7do7py8jbba"]
 
+[ext_resource type="Script" path="res://Runtime/Script/Manager/PlayerManager_0_1.gd" id="1_5wk24"]
 [ext_resource type="SpriteFrames" uid="uid://brueluouavdil" path="res://Runtime/Prefab/s0_person_anime.tres" id="1_bxoxx"]
 [ext_resource type="AudioStream" uid="uid://b2l5ij7tjrs04" path="res://Runtime/Resource/Audio/s1/walking.MP3" id="2_x5olr"]
 
@@ -107,7 +108,11 @@ _data = {
 "protagonist_fat_walking": SubResource("Animation_t1mnk")
 }
 
-[node name="person" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_08vm7"]
+size = Vector2(628, 1836)
+
+[node name="person" type="CharacterBody2D"]
+script = ExtResource("1_5wk24")
 
 [node name="state" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_bxoxx")
@@ -120,3 +125,6 @@ libraries = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 volume_db = 10.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_08vm7")
