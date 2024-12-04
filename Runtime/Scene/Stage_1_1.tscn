@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b0fmpdl8gr1da"]
+[gd_scene load_steps=27 format=3 uid="uid://b0fmpdl8gr1da"]
 
 [ext_resource type="Texture2D" uid="uid://ca7mpah0s762r" path="res://Runtime/Resource/Background/stage1-1.png" id="1_x035b"]
 [ext_resource type="Texture2D" uid="uid://bfpeddby78ypy" path="res://Runtime/Resource/Background/person_stand_sample_with_line.png" id="2_42k81"]
@@ -14,6 +14,9 @@
 [ext_resource type="Script" path="res://Runtime/Script/Manager/LightManager.gd" id="12_ejfi4"]
 [ext_resource type="PackedScene" uid="uid://tc4t3r0kxkk3" path="res://Runtime/Prefab/s1_1_light.tscn" id="13_r5j2e"]
 [ext_resource type="PackedScene" uid="uid://dvqavnf8m6dgn" path="res://Runtime/Prefab/s1_2_cross_door.tscn" id="14_wnwul"]
+[ext_resource type="Texture2D" uid="uid://b86pyehyyv64s" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/x_normal.png" id="15_l50ww"]
+[ext_resource type="Texture2D" uid="uid://yufac7wtle4h" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/x_press.png" id="16_h4bcl"]
+[ext_resource type="BitMap" uid="uid://dr4ldju8jjhpj" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/x_click.bmp" id="17_185wi"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0pj63"]
 shader = ExtResource("2_ics1n")
@@ -22,6 +25,100 @@ shader_parameter/texture_mask = ExtResource("3_lkgex")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u6q8p"]
 size = Vector2(144, 576)
+
+[sub_resource type="Animation" id="Animation_coe6v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_7c2qc"]
+resource_name = "s1_1_game_over"
+length = 2.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.5, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bw461"]
+_data = {
+"RESET": SubResource("Animation_coe6v"),
+"s1_1_game_over": SubResource("Animation_7c2qc")
+}
+
+[sub_resource type="Animation" id="Animation_ieoja"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("x:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_mvnjk"]
+resource_name = "button_x_appear"
+length = 0.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("x:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jgghu"]
+resource_name = "button_x_disappear"
+length = 0.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("x:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p4i2h"]
+_data = {
+"RESET": SubResource("Animation_ieoja"),
+"button_x_appear": SubResource("Animation_mvnjk"),
+"button_x_disappear": SubResource("Animation_jgghu")
+}
 
 [node name="Root" type="Node2D"]
 position = Vector2(1, 0)
@@ -194,5 +291,27 @@ position = Vector2(5133.48, 277.964)
 z_index = 100
 z_as_relative = false
 position = Vector2(9659.37, 281.948)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bw461")
+}
+
+[node name="s1_1_interacitive" type="Node2D" parent="."]
+
+[node name="x" type="TextureButton" parent="s1_1_interacitive"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 3840.0
+offset_top = 886.0
+offset_right = 3933.0
+offset_bottom = 978.0
+texture_normal = ExtResource("15_l50ww")
+texture_pressed = ExtResource("16_h4bcl")
+texture_click_mask = ExtResource("17_185wi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="s1_1_interacitive"]
+libraries = {
+"": SubResource("AnimationLibrary_p4i2h")
+}
 
 [connection signal="body_entered" from="Destination" to="Destination" method="body_entered"]

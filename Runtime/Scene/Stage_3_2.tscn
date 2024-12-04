@@ -1,4 +1,4 @@
-[gd_scene load_steps=102 format=3 uid="uid://dqf7dekvholxn"]
+[gd_scene load_steps=105 format=3 uid="uid://dqf7dekvholxn"]
 
 [ext_resource type="PackedScene" uid="uid://brg0ell7yg5nl" path="res://Runtime/Prefab/hole.tscn" id="2_53d5x"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/PlayerManager_3_2.gd" id="2_vn8ns"]
@@ -94,6 +94,9 @@
 [ext_resource type="PackedScene" uid="uid://de8so0lu14br5" path="res://Runtime/Prefab/big_fat.tscn" id="76_qivtl"]
 [ext_resource type="PackedScene" uid="uid://bofbb0bvx1ysw" path="res://Runtime/Prefab/hud.tscn" id="95_14h4s"]
 [ext_resource type="AudioStream" uid="uid://dmuy741n3amd3" path="res://Runtime/Resource/Audio/s3/s3_2/s3_2_background.wav" id="95_uripk"]
+[ext_resource type="PackedScene" uid="uid://d17xo1l43snf7" path="res://Runtime/Prefab/discovered.tscn" id="97_a4wuy"]
+[ext_resource type="PackedScene" uid="uid://cf6i0boe6q4c6" path="res://Runtime/Prefab/s3_2_fail.tscn" id="98_4v2hu"]
+[ext_resource type="PackedScene" uid="uid://b6bwm3g0w4b4p" path="res://Runtime/Prefab/s3_2_interacitive.tscn" id="99_0gbw0"]
 [ext_resource type="PackedScene" uid="uid://omevqqnc5ybq" path="res://Runtime/Prefab/fat.tscn" id="174_eeac7"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/ScreenCameraManger.gd" id="184_d74i6"]
 
@@ -595,6 +598,15 @@ stream = ExtResource("95_uripk")
 autoplay = true
 
 [node name="HUD" parent="." instance=ExtResource("95_14h4s")]
+
+[node name="discovered" parent="." instance=ExtResource("97_a4wuy")]
+position = Vector2(1066, 192)
+scale = Vector2(0.1, 0.1)
+
+[node name="fail" parent="." instance=ExtResource("98_4v2hu")]
+visible = false
+
+[node name="s3_2_interacitive" parent="." instance=ExtResource("99_0gbw0")]
 
 [connection signal="animation_finished" from="player/AnimatedSprite2D" to="player" method="animation_finished"]
 [connection signal="body_entered" from="destination/destination" to="destination" method="body_entered"]
