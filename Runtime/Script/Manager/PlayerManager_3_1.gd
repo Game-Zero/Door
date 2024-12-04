@@ -25,6 +25,7 @@ enum PersonAnimationState {
 @export var b_has_pressed_button = false
 @export var b_has_eaten_medication = false
 @export var machine: Node2D
+@export var be_thinner: Node2D
 
 
 var b_force_move = false
@@ -32,7 +33,7 @@ var force_move_to_x = 0
 var force_move_finish_callback
 var press_button_finish_callabck
 var get_medicine_finish_callback
-
+var b_on_destination = false
 var last_played_animation = ""
 var dialog
 
@@ -117,7 +118,12 @@ func _physics_process(_delta):
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			if person_animation_state == PersonAnimationState.Walking:
 				person_animation_state = PersonAnimationState.Standing
-
+		
+		if (Input.is_action_just_pressed("player_fire") and self.b_on_destination):
+			if (self.person_state == PersonState.VeryThin):
+				get_tree().change_scene_to_file("res://Runtime/Scene/Stage_4_1.tscn")
+			else:
+				be_thinner.get_node("AnimationPlayer").play("be_thinner")
 	move_and_slide()
 
 	var x = global_position.x
@@ -209,8 +215,8 @@ func _on_animation_player_animation_finished(anim_name):
 
 
 func _on_destination_body_entered(body):
-	if (self.person_state == PersonState.VeryThin):
-		get_tree().change_scene_to_file("res://Runtime/Scene/Stage_4_1.tscn")
-	else:
-		print("请变瘦!!!!")
-		# todo:zero 提示玩家拿起药丸
+	self.b_on_destination = true
+
+
+func _on_destination_body_exited(body):
+	self.b_on_destination = false

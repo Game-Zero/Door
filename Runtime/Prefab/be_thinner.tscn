@@ -3,7 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://bv1ikpdvrj1h4" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/be_thinner.png" id="1_g4aaj"]
 [ext_resource type="AnimationLibrary" uid="uid://2mcpiyl8ws5e" path="res://Runtime/Prefab/be_thinner_anime.tres" id="2_3xfee"]
 
-[node name="Node2D" type="Node2D"]
+[node name="be_thinner" type="Node2D"]
+visible = false
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -152.0
