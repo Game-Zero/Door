@@ -107,7 +107,7 @@ shape = SubResource("RectangleShape2D_rt3s3")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
 [node name="x" parent="." instance=ExtResource("4_hv8px")]
-position = Vector2(-1, 1005)
+position = Vector2(-1, -69)
 scale = Vector2(4, 4)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -206,7 +206,7 @@ script = ExtResource("7_5sfds")
 shape = SubResource("RectangleShape2D_u6q8p")
 
 [node name="x" parent="Destination" instance=ExtResource("11_4apwg")]
-position = Vector2(0, 438)
+position = Vector2(0, 117)
 
 [node name="s1_2_cross_door" parent="." instance=ExtResource("14_wnwul")]
 visible = false
