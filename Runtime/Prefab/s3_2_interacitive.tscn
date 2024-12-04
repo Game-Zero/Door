@@ -34,3 +34,4 @@ texture = ExtResource("2_0q0m2")
 libraries = {
 "": ExtResource("4_8rtn1")
 }
+autoplay = "s3_2_interacitive"
