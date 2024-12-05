@@ -598,12 +598,12 @@ shape = SubResource("RectangleShape2D_o0f2e")
 stream = ExtResource("95_uripk")
 autoplay = true
 
-[node name="HUD" parent="." instance=ExtResource("95_14h4s")]
-
 [node name="s3_2_interacitive" parent="." instance=ExtResource("99_0gbw0")]
 
 [node name="fail" parent="." instance=ExtResource("98_4v2hu")]
 visible = false
+
+[node name="HUD" parent="." instance=ExtResource("95_14h4s")]
 
 [connection signal="animation_finished" from="player/AnimatedSprite2D" to="player" method="animation_finished"]
 [connection signal="body_entered" from="destination/destination" to="destination" method="body_entered"]

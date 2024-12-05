@@ -79,10 +79,10 @@ shape = SubResource("RectangleShape2D_mmr05")
 position = Vector2(0, 91)
 b_can_multi_time_use = true
 
-[node name="HUD" parent="." instance=ExtResource("7_lidkm")]
-
 [node name="be_thinner" parent="." instance=ExtResource("9_pb8r6")]
 position = Vector2(2617, 173)
+
+[node name="HUD" parent="." instance=ExtResource("7_lidkm")]
 
 [connection signal="body_entered" from="destination" to="person" method="_on_destination_body_entered"]
 [connection signal="body_exited" from="destination" to="person" method="_on_destination_body_exited"]

@@ -92,8 +92,6 @@ texture = ExtResource("2_42k81")
 position = Vector2(3004, 536)
 scale = Vector2(0.251, 0.251)
 
-[node name="HUD" parent="." instance=ExtResource("2_vcqr2")]
-
 [node name="nurses" parent="." instance=ExtResource("4_vsn48")]
 position = Vector2(678, 516)
 scale = Vector2(0.251, 0.251)
@@ -241,3 +239,5 @@ position = Vector2(9659.37, 281.948)
 libraries = {
 "": SubResource("AnimationLibrary_bw461")
 }
+
+[node name="HUD" parent="." instance=ExtResource("2_vcqr2")]

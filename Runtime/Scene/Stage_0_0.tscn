@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b2ygbp3m4codl"]
+[gd_scene load_steps=17 format=3 uid="uid://b2ygbp3m4codl"]
 
 [ext_resource type="Texture2D" uid="uid://dx8l6rrukkw7x" path="res://Runtime/Resource/Background/s0_0.png" id="1_21h58"]
 [ext_resource type="Texture2D" uid="uid://hgis7ue078ut" path="res://Runtime/Resource/Background/s0_0_name.png" id="2_iagdu"]
@@ -15,6 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://bwj6wvg8c6py4" path="res://Runtime/Resource/Audio/s0_0/hover.mp3" id="10_k86lg"]
 [ext_resource type="Texture2D" uid="uid://dret3mhhd3dr7" path="res://Runtime/Resource/Sprite/S0_0_UI/s0_exit_hover.png" id="11_u436w"]
 [ext_resource type="AudioStream" uid="uid://bn8fq63ouos0l" path="res://Runtime/Resource/Audio/s0_0/s0_0_background_music.mp3" id="12_j1a5p"]
+[ext_resource type="PackedScene" uid="uid://bofbb0bvx1ysw" path="res://Runtime/Prefab/hud.tscn" id="16_6202y"]
 
 [node name="Root" type="Node2D"]
 
@@ -83,3 +84,5 @@ on_button_hover_audio = ExtResource("10_k86lg")
 stream = ExtResource("12_j1a5p")
 autoplay = true
 parameters/looping = true
+
+[node name="HUD" parent="." instance=ExtResource("16_6202y")]

@@ -155,8 +155,6 @@ visible = false
 visible = false
 position = Vector2(960, 540)
 
-[node name="HUD" parent="." instance=ExtResource("8_05owv")]
-
 [node name="gradually" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_7qcdd")
@@ -164,6 +162,8 @@ libraries = {
 
 [node name="be_thinner" parent="." instance=ExtResource("11_2hdhw")]
 position = Vector2(2786, 170)
+
+[node name="HUD" parent="." instance=ExtResource("8_05owv")]
 
 [connection signal="body_entered" from="Door/Area2D" to="." method="on_door_body_entered"]
 [connection signal="body_entered" from="bed/Area2D" to="." method="on_doll_body_entered"]
