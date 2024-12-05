@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://ddtyr0aq6cixr"]
+[gd_scene load_steps=9 format=3 uid="uid://cfhx1r2bcs6ct"]
 
 [ext_resource type="Texture2D" uid="uid://de4um0a7gy488" path="res://Runtime/Resource/Sprite/S0-1_UI/x_normal.png" id="1_j44uo"]
+[ext_resource type="Script" path="res://Runtime/Script/Manager/x_interacitive.gd" id="1_l08wp"]
 [ext_resource type="Texture2D" uid="uid://dh7npyt7dk7w5" path="res://Runtime/Resource/Sprite/S0-1_UI/x_press.png" id="2_th7fr"]
 [ext_resource type="BitMap" uid="uid://ddcmjs68or4n6" path="res://Runtime/Resource/Sprite/S0-1_UI/x_click.bmp" id="3_yl0bo"]
 
@@ -61,6 +62,7 @@ _data = {
 }
 
 [node name="x" type="Node2D"]
+script = ExtResource("1_l08wp")
 
 [node name="X_button" type="TextureButton" parent="."]
 offset_left = -47.0
