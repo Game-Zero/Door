@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://8b3tljigsmuk" path="res://Runtime/Resource/Background/stage2-1.png" id="1_umuh0"]
 [ext_resource type="PackedScene" uid="uid://247thrl7sreg" path="res://Runtime/Prefab/s2_person.tscn" id="2_blu0p"]
 [ext_resource type="PackedScene" uid="uid://dg3my4p57h5kh" path="res://Runtime/Prefab/doll_anime_complete.tscn" id="3_ge5ri"]
-[ext_resource type="PackedScene" uid="uid://ddtyr0aq6cixr" path="res://Runtime/Prefab/X_interacitive.tscn" id="3_mmjby"]
+[ext_resource type="PackedScene" uid="uid://cfhx1r2bcs6ct" path="res://Runtime/Prefab/X_interacitive.tscn" id="3_mmjby"]
 [ext_resource type="PackedScene" uid="uid://dtta75oplr5x3" path="res://Runtime/Prefab/doll_anime.tscn" id="4_cx74w"]
 [ext_resource type="Texture2D" uid="uid://dv2x103qv0iis" path="res://Runtime/Resource/Background/stage2_bed.png" id="5_ph1ej"]
 [ext_resource type="Texture2D" uid="uid://qjepgekb1ew3" path="res://Runtime/Resource/Background/stage2_person_sample.png" id="6_ekbdv"]
@@ -109,6 +109,7 @@ shape = SubResource("RectangleShape2D_q01xe")
 
 [node name="x" parent="Door/Area2D" instance=ExtResource("3_mmjby")]
 position = Vector2(3, 100)
+b_can_multi_time_use = true
 
 [node name="doll_anime_complete" parent="." instance=ExtResource("3_ge5ri")]
 position = Vector2(1297, 406)
@@ -119,19 +120,21 @@ visible = false
 position = Vector2(1293, 406)
 scale = Vector2(0.251, 0.251)
 
-[node name="Area2D" type="Area2D" parent="doll_anime"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="doll_anime/Area2D"]
-shape = SubResource("RectangleShape2D_hqdc5")
-
 [node name="bed" type="TextureRect" parent="."]
 offset_right = 12331.0
 offset_bottom = 4320.0
 scale = Vector2(0.251, 0.251)
 texture = ExtResource("5_ph1ej")
 
-[node name="x" parent="." instance=ExtResource("3_mmjby")]
-position = Vector2(1308, 571)
+[node name="Area2D" type="Area2D" parent="bed"]
+position = Vector2(5151.39, 1617.53)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bed/Area2D"]
+shape = SubResource("RectangleShape2D_hqdc5")
+
+[node name="x" parent="bed/Area2D" instance=ExtResource("3_mmjby")]
+position = Vector2(63.7451, 657.371)
+scale = Vector2(3.98406, 3.98406)
 
 [node name="s2_person" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("2_blu0p")]
 position = Vector2(149, 567)
@@ -163,5 +166,5 @@ libraries = {
 position = Vector2(2786, 170)
 
 [connection signal="body_entered" from="Door/Area2D" to="." method="on_door_body_entered"]
-[connection signal="body_entered" from="doll_anime/Area2D" to="." method="on_doll_body_entered"]
-[connection signal="body_exited" from="doll_anime/Area2D" to="." method="on_doll_body_exit"]
+[connection signal="body_entered" from="bed/Area2D" to="." method="on_doll_body_entered"]
+[connection signal="body_exited" from="bed/Area2D" to="." method="on_doll_body_exit"]

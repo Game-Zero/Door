@@ -19,11 +19,12 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if (Input.is_action_just_pressed("player_fire") and player and player.is_can_move()):
-		player.set_can_move(false)
-		cross_door_part1.global_position = camera.global_position
-		cross_door_part2.global_position = camera.global_position
-		cross_door_part1.visible = true
-		cross_door_part1_anim_player.play("part1")
+#		player.set_can_move(false)
+#		cross_door_part1.global_position = camera.global_position
+#		cross_door_part2.global_position = camera.global_position
+#		cross_door_part1.visible = true
+#		cross_door_part1_anim_player.play("part1")
+		pass
 
 
 func on_animation_finish(anim_name: String):

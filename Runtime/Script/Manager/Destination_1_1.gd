@@ -1,9 +1,10 @@
-extends Node2D
+extends Area2D
 
 var dialog
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	self.body_entered.connect(self.on_body_entered)
 	dialog = AcceptDialog.new()
 	add_child(dialog)
 	dialog.size.x = 300
@@ -12,7 +13,7 @@ func _ready():
 	dialog.get_ok_button().pressed.connect(self._button_pressed)
 
 var cached_body
-func body_entered(_body):
+func on_body_entered(_body):
 	cached_body = _body
 	if _body.person_type == _body.PersonType.Player:
 		_body.do_change_move_state(false)

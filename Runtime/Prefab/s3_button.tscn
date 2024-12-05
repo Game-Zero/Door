@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Runtime/Script/Manager/s3_button.gd" id="1_r8lm6"]
 [ext_resource type="SpriteFrames" uid="uid://dpfkuldxj3pc0" path="res://Runtime/Prefab/s3_button_anime.tres" id="1_ty8am"]
 [ext_resource type="AudioStream" uid="uid://dcc2smwisntji" path="res://Runtime/Resource/Audio/s3/button_pusseed.MP3" id="3_lqjwy"]
-[ext_resource type="PackedScene" path="res://Runtime/Prefab/X_interacitive.tscn" id="4_hv8px"]
+[ext_resource type="PackedScene" uid="uid://cfhx1r2bcs6ct" path="res://Runtime/Prefab/X_interacitive.tscn" id="4_hv8px"]
 
 [sub_resource type="Animation" id="Animation_6vdaa"]
 length = 0.001

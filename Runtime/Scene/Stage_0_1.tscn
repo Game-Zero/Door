@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bx7do7py8jbba" path="res://Runtime/Prefab/s0_person.tscn" id="2_lc70h"]
 [ext_resource type="PackedScene" uid="uid://bfu8jl255k6mq" path="res://Runtime/Prefab/s0_1_cross_door.tscn" id="3_oas88"]
 [ext_resource type="PackedScene" uid="uid://cs31mftu1xuen" path="res://Runtime/Prefab/s0_1_cross_door_part2.tscn" id="4_e1giy"]
-[ext_resource type="PackedScene" path="res://Runtime/Prefab/X_interacitive.tscn" id="6_npw3d"]
+[ext_resource type="PackedScene" uid="uid://cfhx1r2bcs6ct" path="res://Runtime/Prefab/X_interacitive.tscn" id="6_npw3d"]
 [ext_resource type="PackedScene" uid="uid://bofbb0bvx1ysw" path="res://Runtime/Prefab/hud.tscn" id="10_rpb32"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gipgw"]
