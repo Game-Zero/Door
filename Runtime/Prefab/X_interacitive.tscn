@@ -70,6 +70,7 @@ offset_bottom = 47.0
 pivot_offset = Vector2(46, 46)
 texture_normal = ExtResource("1_j44uo")
 texture_pressed = ExtResource("2_th7fr")
+texture_hover = ExtResource("2_th7fr")
 texture_click_mask = ExtResource("3_yl0bo")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
