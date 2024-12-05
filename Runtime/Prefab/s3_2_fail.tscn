@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://8gybsm3jcv3f" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/again.png" id="4_70rjn"]
 [ext_resource type="Texture2D" uid="uid://bf1eio68xxsgw" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/again_hover.png" id="5_a0gng"]
 [ext_resource type="BitMap" uid="uid://ba3jxfra5m58v" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/click.bmp" id="6_51ehj"]
-[ext_resource type="Texture2D" uid="uid://bvv75ht2u6ma" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/s2_exit.png" id="7_rbeid"]
-[ext_resource type="Texture2D" uid="uid://dm6cfdesa0bcv" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/s2_exit_hover.png" id="8_silvj"]
+[ext_resource type="Texture2D" uid="uid://1ejrxver8uv1" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/back.png" id="8_tp2s1"]
+[ext_resource type="Texture2D" uid="uid://cxy4nxkup25l6" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/back_hover.png" id="9_47yrh"]
 [ext_resource type="AudioStream" uid="uid://b4ejosrpxyhny" path="res://Runtime/Resource/Audio/s3/s3_2/fail.MP3" id="9_kfoa2"]
 
 [sub_resource type="Animation" id="Animation_yunlo"]
@@ -175,8 +175,8 @@ offset_top = 951.0
 offset_right = 1142.0
 offset_bottom = 1037.0
 pivot_offset = Vector2(-1, 40)
-texture_normal = ExtResource("7_rbeid")
-texture_hover = ExtResource("8_silvj")
+texture_normal = ExtResource("8_tp2s1")
+texture_hover = ExtResource("9_47yrh")
 texture_click_mask = ExtResource("6_51ehj")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
