@@ -156,7 +156,7 @@ func do_press_button(callback = null):
 	press_button_finish_callabck = callback
 	self.do_change_move_state(false)
 	self.person_animation_state = PersonAnimationState.ButtonPressing
-	
+
 func do_get_medicine(callback = null):
 	get_medicine_finish_callback = callback
 	self.do_change_move_state(false)

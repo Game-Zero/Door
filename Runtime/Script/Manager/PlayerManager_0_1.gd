@@ -11,6 +11,8 @@ enum PersonAnimationState {
 @export var person_animation_state: PersonAnimationState
 @export var camera: Camera2D
 
+var b_can_move: bool = true
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -30,6 +32,10 @@ func play_animation():
 func _process(delta):
 	play_animation()
 	if Engine.is_editor_hint() or !get_parent().visible:
+		return
+
+	if not (self.b_can_move):
+		person_animation_state = PersonAnimationState.Standing
 		return
 
 	var direction: float = Input.get_axis("player_left", "player_right")
@@ -54,3 +60,11 @@ func _process(delta):
 		#tween.set_trans(Tween.TRANS_QUAD) # warning-ignore:return_value_discarded
 		#tween.tween_property(camera, "global_position:x", x, 0.1)
 		camera.global_position.x = x
+
+
+func set_can_move(b_can_move: bool):
+	self.b_can_move = b_can_move
+
+
+func is_can_move() -> bool:
+	return self.b_can_move
