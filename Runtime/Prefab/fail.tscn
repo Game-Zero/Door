@@ -7,13 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://bf1eio68xxsgw" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/again_hover.png" id="5_7ifbt"]
 [ext_resource type="BitMap" uid="uid://ba3jxfra5m58v" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/click.bmp" id="6_esrf1"]
 [ext_resource type="Texture2D" uid="uid://8gybsm3jcv3f" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/again.png" id="6_nf1k0"]
-[ext_resource type="Texture2D" uid="uid://bvv75ht2u6ma" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/s2_exit.png" id="6_s0ugr"]
 [ext_resource type="AnimationLibrary" uid="uid://cgnrrjjna85oq" path="res://Runtime/Prefab/fail_anime.tres" id="7_5cndh"]
 [ext_resource type="Texture2D" uid="uid://cmbbs1ma7qrb0" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/gray_base_map.png" id="7_o7ven"]
-[ext_resource type="Texture2D" uid="uid://dm6cfdesa0bcv" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/s2_exit_hover.png" id="8_a7ryc"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/ButtonAudioManager.gd" id="10_q5ivh"]
 [ext_resource type="AudioStream" uid="uid://bd4s8ksjjc0ei" path="res://Runtime/Resource/Audio/s0_0/click.MP3" id="11_phjxu"]
 [ext_resource type="AudioStream" uid="uid://bwj6wvg8c6py4" path="res://Runtime/Resource/Audio/s0_0/hover.mp3" id="12_lxdba"]
+[ext_resource type="Texture2D" uid="uid://1ejrxver8uv1" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/back.png" id="13_gerbu"]
+[ext_resource type="Texture2D" uid="uid://cxy4nxkup25l6" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/back_hover.png" id="14_nxifh"]
 
 [node name="fail" type="Node2D"]
 
@@ -77,8 +77,8 @@ offset_right = 1142.0
 offset_bottom = 1042.0
 scale = Vector2(1, 1e-05)
 pivot_offset = Vector2(178, 88)
-texture_normal = ExtResource("6_s0ugr")
-texture_hover = ExtResource("8_a7ryc")
+texture_normal = ExtResource("13_gerbu")
+texture_hover = ExtResource("14_nxifh")
 texture_click_mask = ExtResource("6_esrf1")
 script = ExtResource("10_q5ivh")
 on_button_down_audio = ExtResource("11_phjxu")
