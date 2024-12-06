@@ -1,9 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://cfhx1r2bcs6ct"]
+[gd_scene load_steps=12 format=3 uid="uid://cfhx1r2bcs6ct"]
 
 [ext_resource type="Texture2D" uid="uid://de4um0a7gy488" path="res://Runtime/Resource/Sprite/S0-1_UI/x_normal.png" id="1_j44uo"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/x_interacitive.gd" id="1_l08wp"]
 [ext_resource type="Texture2D" uid="uid://dh7npyt7dk7w5" path="res://Runtime/Resource/Sprite/S0-1_UI/x_press.png" id="2_th7fr"]
 [ext_resource type="BitMap" uid="uid://ddcmjs68or4n6" path="res://Runtime/Resource/Sprite/S0-1_UI/x_click.bmp" id="3_yl0bo"]
+[ext_resource type="Script" path="res://Runtime/Script/Manager/ButtonAudioManager.gd" id="5_5ycrs"]
+[ext_resource type="AudioStream" uid="uid://bd4s8ksjjc0ei" path="res://Runtime/Resource/Audio/s0_0/click.MP3" id="6_p6cie"]
+[ext_resource type="AudioStream" uid="uid://bwj6wvg8c6py4" path="res://Runtime/Resource/Audio/s0_0/hover.mp3" id="7_lw72b"]
 
 [sub_resource type="Animation" id="Animation_vi6oa"]
 length = 0.001
@@ -74,6 +77,9 @@ texture_normal = ExtResource("1_j44uo")
 texture_pressed = ExtResource("2_th7fr")
 texture_hover = ExtResource("2_th7fr")
 texture_click_mask = ExtResource("3_yl0bo")
+script = ExtResource("5_5ycrs")
+on_button_down_audio = ExtResource("6_p6cie")
+on_button_hover_audio = ExtResource("7_lw72b")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
