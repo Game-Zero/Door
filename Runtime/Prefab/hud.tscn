@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Runtime/Script/Manager/GlobalHUDManager.gd" id="1_q83tm"]
 [ext_resource type="Script" path="res://Runtime/Script/UI/Label_FPS.gd" id="2_o6mpc"]
-[ext_resource type="PackedScene" uid="uid://nbvwuh4ys41s" path="res://Runtime/Prefab/esc.tscn" id="3_pkm2s"]
-[ext_resource type="PackedScene" uid="uid://20vtnk6uygvc" path="res://Runtime/Prefab/options.tscn" id="4_ntgbp"]
+[ext_resource type="PackedScene" path="res://Runtime/Prefab/esc.tscn" id="3_pkm2s"]
+[ext_resource type="PackedScene" uid="uid://bnswhyto2a80i" path="res://Runtime/Prefab/options.tscn" id="4_ntgbp"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_q83tm")

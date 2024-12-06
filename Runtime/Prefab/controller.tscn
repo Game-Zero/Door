@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dmkm1q1w3ba0y"]
+[gd_scene load_steps=17 format=3 uid="uid://cug7huv2x8ivx"]
 
 [ext_resource type="Texture2D" uid="uid://107k4yocdokc" path="res://Runtime/Resource/Sprite/S0-1_UI/controls_icon/controller_sample.PNG" id="1_b5shl"]
 [ext_resource type="Texture2D" uid="uid://44ynoysfww0y" path="res://Runtime/Resource/Sprite/S0-1_UI/controls_icon/controller_45.png" id="1_l2v0q"]
@@ -326,16 +326,20 @@ _data = {
 "controller_back_to_mouse": SubResource("Animation_ufgff")
 }
 
-[node name="controller" type="Node"]
+[node name="controller" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="controller_sample" type="TextureRect" parent="."]
 visible = false
+layout_mode = 2
 offset_right = 7680.0
 offset_bottom = 4320.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_b5shl")
 
 [node name="base" type="TextureRect" parent="."]
+layout_mode = 2
 offset_left = 535.0
 offset_top = -1530.0
 offset_right = 3925.0
@@ -345,6 +349,7 @@ pivot_offset = Vector2(6, 2040)
 texture = ExtResource("2_v6di4")
 
 [node name="conterols_word" type="TextureRect" parent="."]
+layout_mode = 2
 offset_left = 758.0
 offset_top = 65.0
 offset_right = 2383.0
@@ -354,6 +359,7 @@ pivot_offset = Vector2(-1, 109)
 texture = ExtResource("3_pr0l2")
 
 [node name="cancel" type="TextureButton" parent="."]
+layout_mode = 2
 offset_left = 406.0
 offset_top = 114.0
 offset_right = 499.0
@@ -365,6 +371,7 @@ texture_hover = ExtResource("5_3f146")
 texture_click_mask = ExtResource("6_h6tvc")
 
 [node name="controller_word" type="TextureRect" parent="."]
+layout_mode = 2
 offset_left = 788.0
 offset_top = 344.0
 offset_right = 1146.0
@@ -374,6 +381,7 @@ pivot_offset = Vector2(0, 45)
 texture = ExtResource("1_l2v0q")
 
 [node name="previous_page" type="TextureButton" parent="."]
+layout_mode = 2
 offset_left = 720.0
 offset_top = 252.0
 offset_right = 1011.0
@@ -386,6 +394,7 @@ texture_hover = ExtResource("9_8u4vr")
 texture_click_mask = ExtResource("10_k5qe3")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
 offset_left = 641.0
 offset_top = 3.0
 offset_right = 3459.0

@@ -75,7 +75,6 @@ position = Vector2(960, 540)
 position = Vector2(960, 540)
 
 [node name="HUD" parent="." instance=ExtResource("10_rpb32")]
-visible = false
 
 [connection signal="body_entered" from="DoorArea2D" to="." method="on_body_entered"]
 [connection signal="body_exited" from="DoorArea2D" to="." method="on_body_exited"]

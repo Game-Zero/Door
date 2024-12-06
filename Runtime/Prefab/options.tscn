@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://20vtnk6uygvc"]
+[gd_scene load_steps=23 format=3 uid="uid://bnswhyto2a80i"]
 
 [ext_resource type="Texture2D" uid="uid://d3m8smrwilfff" path="res://Runtime/Resource/Sprite/S0-1_UI/options_icon/options_sample.PNG" id="1_qf537"]
 [ext_resource type="Texture2D" uid="uid://u8p4wnk8gm5k" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/esc_background.png" id="2_ajr2e"]
@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://ca6s4k3p5borm" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/cancel.png" id="12_hxol7"]
 [ext_resource type="Texture2D" uid="uid://lm38novdblk6" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/cancel_hover.png" id="13_uou1l"]
 [ext_resource type="BitMap" uid="uid://dnr66fq6eppxw" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/cancel_click.bmp" id="14_ctdgs"]
-[ext_resource type="PackedScene" uid="uid://3e2lkqtbhpwi" path="res://Runtime/Prefab/controls.tscn" id="15_6hrc3"]
+[ext_resource type="PackedScene" uid="uid://bn6yqk82t6tgt" path="res://Runtime/Prefab/controls.tscn" id="15_6hrc3"]
 
 [sub_resource type="Animation" id="Animation_ur4fp"]
 length = 0.001
@@ -558,16 +558,20 @@ _data = {
 "options_to_controls": SubResource("Animation_me4wn")
 }
 
-[node name="options" type="Node"]
+[node name="options" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="sample" type="TextureRect" parent="."]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_qf537")
 
 [node name="base" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 535.0
 offset_top = -1530.0
 offset_right = 3925.0
@@ -577,6 +581,7 @@ pivot_offset = Vector2(6, 2040)
 texture = ExtResource("2_ajr2e")
 
 [node name="options_word" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 795.0
 offset_top = 69.0
 offset_right = 2116.0
@@ -586,6 +591,7 @@ pivot_offset = Vector2(0, 104)
 texture = ExtResource("3_6cm3l")
 
 [node name="audio" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 780.0
 offset_top = 346.0
 offset_right = 1138.0
@@ -594,6 +600,7 @@ pivot_offset = Vector2(0, 42)
 texture = ExtResource("4_buv2l")
 
 [node name="volume_bar" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 750.0
 offset_top = 415.0
 offset_right = 2431.0
@@ -603,6 +610,7 @@ pivot_offset = Vector2(0, 60)
 texture = ExtResource("5_sk1d2")
 
 [node name="volume_button" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 1131.0
 offset_top = 387.0
 offset_right = 1300.0
@@ -615,6 +623,7 @@ texture_hover = ExtResource("7_w8p7t")
 texture_click_mask = ExtResource("8_xjpg2")
 
 [node name="controls_button" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 781.0
 offset_top = 517.0
 offset_right = 1139.0
@@ -626,6 +635,7 @@ texture_hover = ExtResource("10_otpg0")
 texture_click_mask = ExtResource("11_nu24s")
 
 [node name="cancel" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 406.0
 offset_top = 114.0
 offset_right = 499.0
@@ -642,3 +652,4 @@ libraries = {
 }
 
 [node name="controls" parent="." instance=ExtResource("15_6hrc3")]
+visible = false

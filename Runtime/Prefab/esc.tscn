@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://nbvwuh4ys41s"]
+[gd_scene load_steps=14 format=3 uid="uid://cbn4m8o68g7h1"]
 
 [ext_resource type="Texture2D" uid="uid://bsrrm1xvtik5t" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/pause_sample.PNG" id="1_0v6d7"]
 [ext_resource type="Texture2D" uid="uid://u8p4wnk8gm5k" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/esc_background.png" id="2_grvm2"]
@@ -12,9 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://b74er08jb66wb" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/exit_45.png" id="10_klt6n"]
 [ext_resource type="Texture2D" uid="uid://b7vk2kme6pae7" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/exit_45_hover.png" id="11_31pvl"]
 [ext_resource type="Texture2D" uid="uid://dlkewbdj6k256" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/all_black.png" id="12_luvtt"]
-[ext_resource type="AnimationLibrary" uid="uid://bkpqgnw1m2g7l" path="res://Runtime/Prefab/esc.tres" id="13_5l0vn"]
+[ext_resource type="AnimationLibrary" uid="uid://ddnmd4whet2pg" path="res://Runtime/Prefab/esc.tres" id="13_5l0vn"]
 
-[node name="esc" type="Node"]
+[node name="esc" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visible = false

@@ -11,9 +11,8 @@ config_version=5
 [application]
 
 config/name="Door"
-run/main_scene="res://Runtime/Scene/Stage_1_1.tscn"
+run/main_scene="res://Runtime/Scene/Stage_0_0.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
 config/icon="res://icon.svg"
 
 [autoload]
