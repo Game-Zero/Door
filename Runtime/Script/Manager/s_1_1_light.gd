@@ -1,7 +1,8 @@
+@tool
 extends Sprite2D
 
 
-@onready var light = $Polygon2D
+@onready var light = $light_image
 @export var NormalLightColor: Color = Color(0, 1, 0, 0.3)
 @export var FailedLightColor: Color = Color(1, 0, 0, 0.3)
 
@@ -17,9 +18,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if (player && player.b_is_game_over):
-		self.light.color = FailedLightColor
+		self.light.modulate = FailedLightColor
 	else:
-		self.light.color = NormalLightColor
+		self.light.modulate = NormalLightColor
 	pass
 
 
