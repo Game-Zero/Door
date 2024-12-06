@@ -55,6 +55,17 @@ position = Vector2(834, 680)
 scale = Vector2(0.25, 0.25)
 machine = NodePath("../machine")
 
+[node name="destination" type="Area2D" parent="."]
+position = Vector2(2622, 497)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="destination"]
+position = Vector2(1, -10)
+shape = SubResource("RectangleShape2D_mmr05")
+
+[node name="x" parent="destination" instance=ExtResource("7_1wmaq")]
+position = Vector2(0, 91)
+b_can_multi_time_use = true
+
 [node name="person" parent="." node_paths=PackedStringArray("machine", "button", "be_thinner") instance=ExtResource("3_06vkj")]
 position = Vector2(109, 570)
 scale = Vector2(0.25, 0.25)
@@ -67,17 +78,6 @@ position = Vector2(960, 540)
 
 [node name="s3_1-2_bridge anime" parent="camera" instance=ExtResource("6_15bsl")]
 visible = false
-
-[node name="destination" type="Area2D" parent="."]
-position = Vector2(2622, 497)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="destination"]
-position = Vector2(1, -10)
-shape = SubResource("RectangleShape2D_mmr05")
-
-[node name="x" parent="destination" instance=ExtResource("7_1wmaq")]
-position = Vector2(0, 91)
-b_can_multi_time_use = true
 
 [node name="be_thinner" parent="." instance=ExtResource("9_pb8r6")]
 position = Vector2(2617, 173)

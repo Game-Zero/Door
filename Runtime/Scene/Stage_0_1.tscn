@@ -9,14 +9,14 @@
 [ext_resource type="PackedScene" uid="uid://cfhx1r2bcs6ct" path="res://Runtime/Prefab/X_interacitive.tscn" id="6_npw3d"]
 [ext_resource type="PackedScene" uid="uid://bofbb0bvx1ysw" path="res://Runtime/Prefab/hud.tscn" id="10_rpb32"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gipgw"]
-size = Vector2(672, 2316)
-
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_imu5k"]
 normal = Vector2(1, 0)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iewam"]
 normal = Vector2(-1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gipgw"]
+size = Vector2(672, 2316)
 
 [node name="Root" type="Node2D" node_paths=PackedStringArray("camera")]
 script = ExtResource("1_6yfbi")
@@ -27,16 +27,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_tbd8e")
-
-[node name="DoorArea2D" type="Area2D" parent="background"]
-position = Vector2(8624, 1936)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="background/DoorArea2D"]
-shape = SubResource("RectangleShape2D_gipgw")
-
-[node name="x" parent="background/DoorArea2D" instance=ExtResource("6_npw3d")]
-position = Vector2(12, 416)
-scale = Vector2(4, 4)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="background"]
 
@@ -57,6 +47,17 @@ offset_bottom = 3081.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_3es4c")
 
+[node name="DoorArea2D" type="Area2D" parent="."]
+position = Vector2(2156, 484)
+scale = Vector2(0.25, 0.25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorArea2D"]
+shape = SubResource("RectangleShape2D_gipgw")
+
+[node name="x" parent="DoorArea2D" instance=ExtResource("6_npw3d")]
+position = Vector2(12, 416)
+scale = Vector2(4, 4)
+
 [node name="person" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("2_lc70h")]
 position = Vector2(237, 551)
 scale = Vector2(0.25, 0.25)
@@ -75,5 +76,5 @@ position = Vector2(960, 540)
 
 [node name="HUD" parent="." instance=ExtResource("10_rpb32")]
 
-[connection signal="body_entered" from="background/DoorArea2D" to="." method="on_body_entered"]
-[connection signal="body_exited" from="background/DoorArea2D" to="." method="on_body_exited"]
+[connection signal="body_entered" from="DoorArea2D" to="." method="on_body_entered"]
+[connection signal="body_exited" from="DoorArea2D" to="." method="on_body_exited"]

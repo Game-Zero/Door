@@ -4,6 +4,7 @@ extends Node2D
 @onready var cross_door_part1_anim_player = $s0_1_cross_door/AnimationPlayer
 @onready var cross_door_part2 = $s0_1_cross_door_part2
 @onready var cross_door_part2_anim_player = $s0_1_cross_door_part2/AnimationPlayer
+@onready var door_light = $door_light
 
 @export var camera: Camera2D = null
 
@@ -42,11 +43,13 @@ func on_animation_finish(anim_name: String):
 
 func on_body_entered(body):
 	self.player = body
+	self.door_light.visible = true
 	print("[Stage_0_1][on_body_entered] body.name: ", body.name)
 	pass
 
 
 func on_body_exited(body):
 	self.player = null
+	self.door_light.visible = false
 	print("[Stage_0_1][on_body_exited] body.name: ", body.name)
 	pass

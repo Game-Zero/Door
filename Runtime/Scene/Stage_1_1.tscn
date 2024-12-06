@@ -105,6 +105,16 @@ nurse_type = 2
 position = Vector2(960, 540.131)
 scale = Vector2(0.999999, 0.999999)
 
+[node name="Destination" type="Area2D" parent="."]
+position = Vector2(3887, 488)
+script = ExtResource("7_5sfds")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Destination"]
+shape = SubResource("RectangleShape2D_u6q8p")
+
+[node name="x" parent="Destination" instance=ExtResource("11_4apwg")]
+position = Vector2(0, 117)
+
 [node name="player" parent="." instance=ExtResource("5_gak2m")]
 position = Vector2(164, 570)
 scale = Vector2(0.251, 0.251)
@@ -195,16 +205,6 @@ person_type = 3
 person_state = 1
 b_has_mark = true
 b_has_diagnosed = true
-
-[node name="Destination" type="Area2D" parent="."]
-position = Vector2(3887, 488)
-script = ExtResource("7_5sfds")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Destination"]
-shape = SubResource("RectangleShape2D_u6q8p")
-
-[node name="x" parent="Destination" instance=ExtResource("11_4apwg")]
-position = Vector2(0, 117)
 
 [node name="s1_2_cross_door" parent="." instance=ExtResource("14_wnwul")]
 visible = false
