@@ -370,3 +370,4 @@ libraries = {
 }
 
 [node name="controller" parent="." instance=ExtResource("12_kpkrf")]
+visible = false
