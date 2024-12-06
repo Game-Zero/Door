@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://btcm0hktt4r82"
+path="res://.godot/imported/volume_button_click.bmp-dc269d2219b11f9ab3c7bd37d33a652f.res"
+
+[deps]
+
+source_file="res://Runtime/Resource/Sprite/S0-1_UI/options_icon/volume_button_click.bmp"
+dest_files=["res://.godot/imported/volume_button_click.bmp-dc269d2219b11f9ab3c7bd37d33a652f.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

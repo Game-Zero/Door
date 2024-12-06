@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b2ygbp3m4codl"]
+[gd_scene load_steps=18 format=3 uid="uid://b2ygbp3m4codl"]
 
 [ext_resource type="Texture2D" uid="uid://dx8l6rrukkw7x" path="res://Runtime/Resource/Background/s0_0.png" id="1_21h58"]
 [ext_resource type="Texture2D" uid="uid://hgis7ue078ut" path="res://Runtime/Resource/Background/s0_0_name.png" id="2_iagdu"]
@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://bn8fq63ouos0l" path="res://Runtime/Resource/Audio/s0_0/s0_0_background_music.mp3" id="12_j1a5p"]
 [ext_resource type="Texture2D" uid="uid://cbwox87ogsa8x" path="res://Runtime/Resource/Sprite/S0_0_UI/options_40_hover.png" id="12_jv4j8"]
 [ext_resource type="PackedScene" uid="uid://bofbb0bvx1ysw" path="res://Runtime/Prefab/hud.tscn" id="16_6202y"]
+[ext_resource type="PackedScene" uid="uid://20vtnk6uygvc" path="res://Runtime/Prefab/options.tscn" id="17_8cooc"]
 
 [node name="Root" type="Node2D"]
 
@@ -87,3 +88,6 @@ autoplay = true
 parameters/looping = true
 
 [node name="HUD" parent="." instance=ExtResource("16_6202y")]
+
+[node name="options" parent="." instance=ExtResource("17_8cooc")]
+visible = false

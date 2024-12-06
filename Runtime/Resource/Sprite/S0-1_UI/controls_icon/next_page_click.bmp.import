@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cpwlgu22nudib"
+path="res://.godot/imported/next_page_click.bmp-969014f3277aa96ce77a20ce6fff951d.res"
+
+[deps]
+
+source_file="res://Runtime/Resource/Sprite/S0-1_UI/controls_icon/next_page_click.bmp"
+dest_files=["res://.godot/imported/next_page_click.bmp-969014f3277aa96ce77a20ce6fff951d.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

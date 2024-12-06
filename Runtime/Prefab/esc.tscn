@@ -1,0 +1,91 @@
+[gd_scene load_steps=15 format=3 uid="uid://nbvwuh4ys41s"]
+
+[ext_resource type="Texture2D" uid="uid://bsrrm1xvtik5t" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/pause_sample.PNG" id="1_0v6d7"]
+[ext_resource type="Texture2D" uid="uid://u8p4wnk8gm5k" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/esc_background.png" id="2_grvm2"]
+[ext_resource type="Texture2D" uid="uid://icurc2i5k1vh" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/pause_70.png" id="3_f0h1i"]
+[ext_resource type="Texture2D" uid="uid://dn2r0likccpt0" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/options_45.png" id="4_yhidf"]
+[ext_resource type="Texture2D" uid="uid://cjtdmflimjr62" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/options_45_hover.png" id="5_5t64f"]
+[ext_resource type="Texture2D" uid="uid://ca6s4k3p5borm" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/cancel.png" id="6_eyhk5"]
+[ext_resource type="Texture2D" uid="uid://lm38novdblk6" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/cancel_hover.png" id="7_qks6c"]
+[ext_resource type="BitMap" uid="uid://dnr66fq6eppxw" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/cancel_click.bmp" id="8_fthbi"]
+[ext_resource type="BitMap" uid="uid://ba3jxfra5m58v" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/click.bmp" id="9_6ifcc"]
+[ext_resource type="Texture2D" uid="uid://b74er08jb66wb" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/exit_45.png" id="10_klt6n"]
+[ext_resource type="Texture2D" uid="uid://b7vk2kme6pae7" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/exit_45_hover.png" id="11_31pvl"]
+[ext_resource type="Texture2D" uid="uid://dlkewbdj6k256" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/all_black.png" id="12_luvtt"]
+[ext_resource type="AnimationLibrary" uid="uid://bkpqgnw1m2g7l" path="res://Runtime/Prefab/esc.tres" id="13_5l0vn"]
+[ext_resource type="PackedScene" uid="uid://20vtnk6uygvc" path="res://Runtime/Prefab/options.tscn" id="14_c33ep"]
+
+[node name="esc" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_0v6d7")
+
+[node name="base" type="TextureRect" parent="."]
+offset_left = 535.0
+offset_top = -1530.0
+offset_right = 3925.0
+offset_bottom = 2790.0
+scale = Vector2(0.25, 0.25)
+pivot_offset = Vector2(6, 2040)
+texture = ExtResource("2_grvm2")
+
+[node name="pause_word" type="TextureRect" parent="."]
+offset_left = 843.0
+offset_top = 70.0
+offset_right = 1788.0
+offset_bottom = 287.0
+scale = Vector2(0.25, 0.25)
+pivot_offset = Vector2(0, 102)
+texture = ExtResource("3_f0h1i")
+
+[node name="cancel" type="TextureButton" parent="."]
+offset_left = 406.0
+offset_top = 114.0
+offset_right = 499.0
+offset_bottom = 206.0
+pivot_offset = Vector2(92, 46)
+texture_normal = ExtResource("6_eyhk5")
+texture_pressed = ExtResource("7_qks6c")
+texture_hover = ExtResource("7_qks6c")
+texture_click_mask = ExtResource("8_fthbi")
+
+[node name="option_Button" type="TextureButton" parent="."]
+offset_left = 782.0
+offset_top = 346.0
+offset_right = 1140.0
+offset_bottom = 432.0
+pivot_offset = Vector2(0, 43)
+texture_normal = ExtResource("4_yhidf")
+texture_pressed = ExtResource("5_5t64f")
+texture_hover = ExtResource("5_5t64f")
+texture_click_mask = ExtResource("9_6ifcc")
+
+[node name="exit_Button" type="TextureButton" parent="."]
+offset_left = 781.0
+offset_top = 444.0
+offset_right = 1139.0
+offset_bottom = 530.0
+pivot_offset = Vector2(2, 44)
+texture_normal = ExtResource("10_klt6n")
+texture_pressed = ExtResource("11_31pvl")
+texture_hover = ExtResource("11_31pvl")
+texture_click_mask = ExtResource("9_6ifcc")
+
+[node name="all_black" type="TextureRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.00392157)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("12_luvtt")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": ExtResource("13_5l0vn")
+}
+
+[node name="options" parent="." instance=ExtResource("14_c33ep")]
+visible = false
