@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b0fmpdl8gr1da"]
+[gd_scene load_steps=22 format=3 uid="uid://b0fmpdl8gr1da"]
 
 [ext_resource type="Texture2D" uid="uid://ca7mpah0s762r" path="res://Runtime/Resource/Background/stage1-1.png" id="1_x035b"]
 [ext_resource type="Texture2D" uid="uid://bfpeddby78ypy" path="res://Runtime/Resource/Background/person_stand_sample_with_line.png" id="2_42k81"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://i3hvoqto4ryi" path="res://Runtime/Prefab/nurses.tscn" id="4_vsn48"]
 [ext_resource type="PackedScene" uid="uid://cjircuvt6il8c" path="res://Runtime/Prefab/person.tscn" id="5_gak2m"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/Destination_1_1.gd" id="7_5sfds"]
+[ext_resource type="Script" path="res://Runtime/Script/Manager/x_interacitive_1_1.gd" id="10_bbdx7"]
 [ext_resource type="PackedScene" uid="uid://cfhx1r2bcs6ct" path="res://Runtime/Prefab/X_interacitive.tscn" id="11_4apwg"]
 [ext_resource type="Texture2D" uid="uid://44hs1ycbx5gl" path="res://Runtime/Resource/Sprite/light_base.png" id="11_jqium"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/LightManager.gd" id="12_ejfi4"]
@@ -114,6 +115,7 @@ shape = SubResource("RectangleShape2D_u6q8p")
 
 [node name="x" parent="Destination" instance=ExtResource("11_4apwg")]
 position = Vector2(0, 117)
+script = ExtResource("10_bbdx7")
 
 [node name="player" parent="." instance=ExtResource("5_gak2m")]
 position = Vector2(164, 570)
