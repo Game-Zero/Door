@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b4yhlgy47d7k2"]
+[gd_scene load_steps=15 format=3 uid="uid://b4yhlgy47d7k2"]
 
 [ext_resource type="Texture2D" uid="uid://cyqsb3o5h1x08" path="res://Runtime/Resource/Background/stage4.png" id="1_2jawe"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/Stage_4_1.gd" id="1_xw5fa"]
@@ -17,6 +17,44 @@ normal = Vector2(-1, 0)
 
 [sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_62lid"]
 length = 225.0
+
+[sub_resource type="Animation" id="Animation_f8nfm"]
+resource_name = "end_appear"
+length = 0.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1lpwu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_124wq"]
+_data = {
+"RESET": SubResource("Animation_1lpwu"),
+"end_appear": SubResource("Animation_f8nfm")
+}
 
 [node name="Root" type="Node2D" node_paths=PackedStringArray("end_1", "end_2", "end_3", "end_4")]
 script = ExtResource("1_xw5fa")
@@ -86,5 +124,11 @@ autoplay = true
 parameters/looping = true
 
 [node name="HUD" parent="." instance=ExtResource("5_8eu86")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_124wq")
+}
+autoplay = "end_appear"
 
 [connection signal="body_entered" from="end2/TextureRect/StaticBody2D/R/Area2D" to="." method="_on_area_2d_body_entered"]
