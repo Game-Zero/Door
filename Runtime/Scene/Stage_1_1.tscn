@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b0fmpdl8gr1da"]
+[gd_scene load_steps=23 format=3 uid="uid://b0fmpdl8gr1da"]
 
 [ext_resource type="Texture2D" uid="uid://ca7mpah0s762r" path="res://Runtime/Resource/Background/stage1-1.png" id="1_x035b"]
 [ext_resource type="Texture2D" uid="uid://bfpeddby78ypy" path="res://Runtime/Resource/Background/person_stand_sample_with_line.png" id="2_42k81"]
@@ -16,6 +16,7 @@
 [ext_resource type="Script" path="res://Runtime/Script/Manager/LightManager.gd" id="12_ejfi4"]
 [ext_resource type="PackedScene" uid="uid://tc4t3r0kxkk3" path="res://Runtime/Prefab/s1_1_light.tscn" id="13_r5j2e"]
 [ext_resource type="PackedScene" uid="uid://dvqavnf8m6dgn" path="res://Runtime/Prefab/s1_2_cross_door.tscn" id="14_wnwul"]
+[ext_resource type="AudioStream" uid="uid://dyrl6f88j086a" path="res://Runtime/Resource/Audio/s1/game_over.mp3" id="16_12tpt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0pj63"]
 shader = ExtResource("2_ics1n")
@@ -63,13 +64,28 @@ tracks/1/path = NodePath("HUD")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(2),
+"times": PackedFloat32Array(2.5),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
 "method": &"reload_current_scene"
 }]
 }
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_12tpt")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/2/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bw461"]
 _data = {
@@ -259,3 +275,5 @@ libraries = {
 }
 
 [node name="HUD" parent="." instance=ExtResource("2_vcqr2")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
