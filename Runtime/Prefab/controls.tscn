@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bn6yqk82t6tgt"]
+[gd_scene load_steps=22 format=3 uid="uid://bn6yqk82t6tgt"]
 
 [ext_resource type="Texture2D" uid="uid://c52ekaiffef1u" path="res://Runtime/Resource/Sprite/S0-1_UI/controls_icon/mouse_sample.PNG" id="2_tkvxr"]
 [ext_resource type="Texture2D" uid="uid://u8p4wnk8gm5k" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/esc_background.png" id="3_nvf3w"]
@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://c35254bqvrd74" path="res://Runtime/Resource/Sprite/S0-1_UI/controls_icon/next_page_hover.png" id="10_b84fl"]
 [ext_resource type="BitMap" uid="uid://cpwlgu22nudib" path="res://Runtime/Resource/Sprite/S0-1_UI/controls_icon/next_page_click.bmp" id="11_i816t"]
 [ext_resource type="Texture2D" uid="uid://i25ck357ss3x" path="res://Runtime/Resource/Sprite/S0-1_UI/controls_icon/mouse_instructions.png" id="12_e4wt4"]
-[ext_resource type="PackedScene" uid="uid://cug7huv2x8ivx" path="res://Runtime/Prefab/controller.tscn" id="12_kpkrf"]
 
 [sub_resource type="Animation" id="Animation_3tg7w"]
 length = 0.001
@@ -378,6 +377,3 @@ texture = ExtResource("12_e4wt4")
 libraries = {
 "": SubResource("AnimationLibrary_7t2w8")
 }
-
-[node name="controller" parent="." instance=ExtResource("12_kpkrf")]
-visible = false

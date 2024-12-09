@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bnswhyto2a80i"]
+[gd_scene load_steps=25 format=3 uid="uid://bnswhyto2a80i"]
 
 [ext_resource type="Texture2D" uid="uid://d3m8smrwilfff" path="res://Runtime/Resource/Sprite/S0-1_UI/options_icon/options_sample.PNG" id="1_qf537"]
 [ext_resource type="Texture2D" uid="uid://u8p4wnk8gm5k" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/esc_background.png" id="2_ajr2e"]
@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://ca6s4k3p5borm" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/cancel.png" id="12_hxol7"]
 [ext_resource type="Texture2D" uid="uid://lm38novdblk6" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/cancel_hover.png" id="13_uou1l"]
 [ext_resource type="BitMap" uid="uid://dnr66fq6eppxw" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/cancel_click.bmp" id="14_ctdgs"]
-[ext_resource type="PackedScene" uid="uid://bn6yqk82t6tgt" path="res://Runtime/Prefab/controls.tscn" id="15_6hrc3"]
 [ext_resource type="AudioStream" uid="uid://dbky513i38skh" path="res://Runtime/Resource/Audio/s0_0/close.mp3" id="18_dwu64"]
 
 [sub_resource type="Animation" id="Animation_ur4fp"]
@@ -573,6 +572,3 @@ on_button_hover_audio = ExtResource("11_huvfh")
 libraries = {
 "": SubResource("AnimationLibrary_0i16m")
 }
-
-[node name="controls" parent="." instance=ExtResource("15_6hrc3")]
-visible = false

@@ -107,5 +107,3 @@ texture = ExtResource("16_u3rwi")
 libraries = {
 "": ExtResource("13_5l0vn")
 }
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
