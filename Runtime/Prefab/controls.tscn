@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bn6yqk82t6tgt"]
+[gd_scene load_steps=23 format=3 uid="uid://bn6yqk82t6tgt"]
 
 [ext_resource type="Texture2D" uid="uid://c52ekaiffef1u" path="res://Runtime/Resource/Sprite/S0-1_UI/controls_icon/mouse_sample.PNG" id="2_tkvxr"]
 [ext_resource type="Texture2D" uid="uid://u8p4wnk8gm5k" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/esc_background.png" id="3_nvf3w"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://Runtime/Script/Manager/ButtonAudioManager.gd" id="7_3nu1f"]
 [ext_resource type="BitMap" uid="uid://dnr66fq6eppxw" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/cancel_click.bmp" id="7_np8b7"]
 [ext_resource type="AudioStream" uid="uid://bd4s8ksjjc0ei" path="res://Runtime/Resource/Audio/s0_0/click.MP3" id="8_bqsue"]
+[ext_resource type="AudioStream" uid="uid://dbky513i38skh" path="res://Runtime/Resource/Audio/s0_0/close.mp3" id="8_trtjg"]
 [ext_resource type="Texture2D" uid="uid://b2wme62d7q352" path="res://Runtime/Resource/Sprite/S0-1_UI/controls_icon/next_page.png" id="9_12b08"]
 [ext_resource type="AudioStream" uid="uid://bwj6wvg8c6py4" path="res://Runtime/Resource/Audio/s0_0/hover.mp3" id="9_pnqln"]
 [ext_resource type="Texture2D" uid="uid://c35254bqvrd74" path="res://Runtime/Resource/Sprite/S0-1_UI/controls_icon/next_page_hover.png" id="10_b84fl"]
@@ -332,7 +333,7 @@ texture_pressed = ExtResource("6_q50i1")
 texture_hover = ExtResource("6_q50i1")
 texture_click_mask = ExtResource("7_np8b7")
 script = ExtResource("7_3nu1f")
-on_button_down_audio = ExtResource("8_bqsue")
+on_button_down_audio = ExtResource("8_trtjg")
 on_button_hover_audio = ExtResource("9_pnqln")
 
 [node name="mouse" type="Control" parent="."]
