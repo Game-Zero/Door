@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cbn4m8o68g7h1"]
+[gd_scene load_steps=18 format=3 uid="uid://cbn4m8o68g7h1"]
 
 [ext_resource type="Texture2D" uid="uid://bsrrm1xvtik5t" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/pause_sample.PNG" id="1_0v6d7"]
 [ext_resource type="Texture2D" uid="uid://u8p4wnk8gm5k" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/esc_background.png" id="2_grvm2"]
@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://bd4s8ksjjc0ei" path="res://Runtime/Resource/Audio/s0_0/click.MP3" id="11_srwl0"]
 [ext_resource type="AudioStream" uid="uid://bwj6wvg8c6py4" path="res://Runtime/Resource/Audio/s0_0/hover.mp3" id="12_rpo2n"]
 [ext_resource type="AnimationLibrary" uid="uid://ddnmd4whet2pg" path="res://Runtime/Prefab/esc.tres" id="13_5l0vn"]
+[ext_resource type="Texture2D" uid="uid://dlkewbdj6k256" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/all_black.png" id="16_u3rwi"]
 
 [node name="esc" type="Control"]
 layout_mode = 3
@@ -93,6 +94,14 @@ texture_click_mask = ExtResource("9_6ifcc")
 script = ExtResource("10_6gavb")
 on_button_down_audio = ExtResource("11_srwl0")
 on_button_hover_audio = ExtResource("12_rpo2n")
+
+[node name="all_black" type="TextureRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.00392157)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("16_u3rwi")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
