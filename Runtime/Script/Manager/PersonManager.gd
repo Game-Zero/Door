@@ -113,23 +113,22 @@ func _ready():
 		npcs.append(self)
 
 var last_scale_x = 0
-func _physics_process(_delta):
+func _process(_delta):
 	play_animation()
 	if Engine.is_editor_hint():
 		return
-	
+
 	if person_type == PersonType.Player:
 		if get_slide_collision_count() > 0:
-			if self.person_type == self.PersonType.Player:
-				for npc in npcs:
-					if npc != null:
-						npc.do_change_move_state(false)
-				player.do_change_move_state(false)
-				npcs = []
-				b_is_game_over = true
-				npc_can_move = false
-				player_can_move = false
-				failed_animation_player.play("s1_1_game_over")
+			for npc in npcs:
+				if npc != null:
+					npc.do_change_move_state(false)
+			player.do_change_move_state(false)
+			npcs = []
+			b_is_game_over = true
+			npc_can_move = false
+			player_can_move = false
+			failed_animation_player.play("s1_1_game_over")
 
 		var direction = Input.get_axis("player_left", "player_right")
 		var can_move_y = check_can_move_y()
@@ -151,8 +150,7 @@ func _physics_process(_delta):
 			velocity.y = move_toward(velocity.y, 0, SPEED)
 			if person_animation_state == PersonAnimationState.Walking:
 				person_animation_state = PersonAnimationState.Standing
-	
-	if person_type != PersonType.Player:
+	else:
 		if npc_can_move:
 			var can_move_y = check_can_move_y()
 			velocity.x = NPC_SPEED

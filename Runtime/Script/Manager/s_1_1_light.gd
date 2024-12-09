@@ -7,8 +7,8 @@ extends Sprite2D
 @export var FailedLightColor: Color = Color(1, 0, 0, 0.3)
 
 
-var b_player_colliding: bool           = false
 var player                             = null
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -29,10 +29,10 @@ func turn_off():
 
 
 func _on_body_entered(player):
-	self.b_player_colliding = true
-	self.player = player
+	if (player.person_type == player.PersonType.Player):
+		self.player = player
 
 
 func _on_body_exited(player):
-	self.b_player_colliding = false
-	self.player = null
+	if (player.person_type == player.PersonType.Player):
+		self.player = null
