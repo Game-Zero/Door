@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bofbb0bvx1ysw"]
+[gd_scene load_steps=7 format=3 uid="uid://bofbb0bvx1ysw"]
 
 [ext_resource type="Script" path="res://Runtime/Script/Manager/GlobalHUDManager.gd" id="1_q83tm"]
 [ext_resource type="Script" path="res://Runtime/Script/UI/Label_FPS.gd" id="2_o6mpc"]
 [ext_resource type="PackedScene" uid="uid://cbn4m8o68g7h1" path="res://Runtime/Prefab/esc.tscn" id="3_pkm2s"]
+[ext_resource type="PackedScene" uid="uid://cug7huv2x8ivx" path="res://Runtime/Prefab/controller.tscn" id="4_klnon"]
 [ext_resource type="PackedScene" uid="uid://bnswhyto2a80i" path="res://Runtime/Prefab/options.tscn" id="4_ntgbp"]
+[ext_resource type="PackedScene" uid="uid://bn6yqk82t6tgt" path="res://Runtime/Prefab/controls.tscn" id="5_jck54"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_q83tm")
@@ -19,6 +21,12 @@ vertical_alignment = 1
 script = ExtResource("2_o6mpc")
 
 [node name="esc" parent="." instance=ExtResource("3_pkm2s")]
+visible = false
+
+[node name="controller" parent="." instance=ExtResource("4_klnon")]
+visible = false
+
+[node name="controls" parent="." instance=ExtResource("5_jck54")]
 visible = false
 
 [node name="options" parent="." instance=ExtResource("4_ntgbp")]

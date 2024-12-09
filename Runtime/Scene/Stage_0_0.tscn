@@ -87,3 +87,6 @@ autoplay = true
 parameters/looping = true
 
 [node name="HUD" parent="." instance=ExtResource("16_6202y")]
+
+[connection signal="pressed" from="press/start" to="HUD" method="change_scene_to_file" binds= ["res://Runtime/Scene/Stage_0_1.tscn"]]
+[connection signal="pressed" from="press/exit" to="HUD" method="quit_scene"]
