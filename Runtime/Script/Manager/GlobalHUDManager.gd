@@ -1,5 +1,12 @@
 extends CanvasLayer
 
+func reload_current_scene():
+	get_tree().reload_current_scene()
+
+
+func quit_scene():
+	get_tree().quit()
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -9,7 +16,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if Input.is_action_pressed("ui_cancel"):
-		get_tree().quit()
+		self.quit_scene()
 	if Input.is_action_pressed("gm_reload_current_scene"):
-		get_tree().reload_current_scene()
-	pass
+		self.reload_current_scene()

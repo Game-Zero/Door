@@ -37,6 +37,7 @@ enum PersonAnimationState {
 @export var person_state: PersonState
 @export var b_has_mark = false
 @export var b_has_diagnosed = false
+@export var failed_animation_player: AnimationPlayer
 
 var last_played_animation = ""
 var dialog
@@ -128,7 +129,7 @@ func _physics_process(_delta):
 				b_is_game_over = true
 				npc_can_move = false
 				player_can_move = false
-				dialog.popup_centered()
+				failed_animation_player.play("s1_1_game_over")
 
 		var direction = Input.get_axis("player_left", "player_right")
 		var can_move_y = check_can_move_y()
