@@ -38,8 +38,7 @@ func _process(delta: float) -> void:
 	if (self.visible and not self.has_pressed()):
 		if (Input.is_action_just_pressed("player_fire")):
 			x_button.texture_normal = x_button.texture_pressed
-			x_button.audio_stream_player.stream = x_button.audio_stream_player.on_button_down_audio
-			x_button.audio_stream_player.play()
+			x_button.play_button_down_audio()
 		elif (Input.is_action_just_released("player_fire")):
 			self.set_pressed()
 

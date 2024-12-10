@@ -13,10 +13,14 @@ func _ready() -> void:
 	self.mouse_entered.connect(self.on_mouse_entered)
 
 
-func on_button_down() -> void:
-	print("[ButtonAudioManager][on_button_down]")
+func play_button_down_audio():
 	audio_stream_player.stream = on_button_down_audio
 	audio_stream_player.play()
+
+
+func on_button_down() -> void:
+	print("[ButtonAudioManager][on_button_down]")
+	self.play_button_down_audio()
 
 
 func on_mouse_entered() -> void:
