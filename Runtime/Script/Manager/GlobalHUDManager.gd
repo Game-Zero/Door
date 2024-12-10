@@ -28,7 +28,6 @@ func _process(_delta):
 
 	if Input.is_action_pressed("ui_cancel"):
 		get_node("esc").get_node("AnimationPlayer").play("pause_appear")
-		get_node("esc").visible = true
 
 	if Input.is_action_pressed("gm_reload_current_scene"):
 		self.reload_current_scene()
