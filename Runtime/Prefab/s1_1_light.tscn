@@ -18,6 +18,7 @@ NormalLightColor = Color(0.996078, 0.921569, 0.662745, 0.984314)
 FailedLightColor = Color(1, 0.607843, 0.45098, 1)
 
 [node name="light_image" type="TextureRect" parent="."]
+visible = false
 modulate = Color(0.996078, 0.921569, 0.662745, 0.984314)
 material = SubResource("ShaderMaterial_jjhva")
 offset_left = -1012.99
@@ -33,6 +34,12 @@ position = Vector2(1012.99, -216.353)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="light_image/Area2D"]
 visible = false
 polygon = PackedVector2Array(-283.994, 312.353, -2305.99, 11305.4, 2793.01, 11297.4, 327.006, 313.353)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(97.0064, 2140.35)
+color = Color(0.996078, 0.921569, 0.662745, 0.984314)
+energy = 0.23
+texture = ExtResource("3_g7sjf")
 
 [connection signal="body_entered" from="light_image/Area2D" to="." method="_on_body_entered"]
 [connection signal="body_exited" from="light_image/Area2D" to="." method="_on_body_exited"]
