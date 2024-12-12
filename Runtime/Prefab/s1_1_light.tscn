@@ -15,7 +15,7 @@ texture = ExtResource("1_e2hxx")
 offset = Vector2(22.1362, 171.381)
 script = ExtResource("2_xxpii")
 NormalLightColor = Color(0.996078, 0.921569, 0.662745, 0.984314)
-FailedLightColor = Color(1, 0.607843, 0.45098, 1)
+FailedLightColor = Color(0.996078, 0.607843, 0.45098, 1)
 
 [node name="light_image" type="TextureRect" parent="."]
 visible = false
