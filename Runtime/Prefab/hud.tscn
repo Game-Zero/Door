@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://bofbb0bvx1ysw"]
+[gd_scene load_steps=63 format=3 uid="uid://bofbb0bvx1ysw"]
 
 [ext_resource type="Script" path="res://Runtime/Script/Manager/GlobalHUDManager.gd" id="1_q83tm"]
 [ext_resource type="Script" path="res://Runtime/Script/UI/Label_FPS.gd" id="2_o6mpc"]
@@ -40,6 +40,7 @@
 [ext_resource type="Texture2D" uid="uid://bns3imyf36t80" path="res://Runtime/Resource/Sprite/S0-1_UI/controls_icon/previous_page.png" id="38_gai6l"]
 [ext_resource type="Texture2D" uid="uid://bqjvlsalvfcxr" path="res://Runtime/Resource/Sprite/S0-1_UI/controls_icon/previous_page_hover.png" id="39_20q5h"]
 [ext_resource type="Texture2D" uid="uid://dlrxptn02vjed" path="res://Runtime/Resource/Sprite/S0-1_UI/controls_icon/controller_instructions.png" id="40_wyma6"]
+[ext_resource type="Texture2D" uid="uid://b0rjqtufwwlr0" path="res://Runtime/Resource/Sprite/S0-1_UI/select.PNG" id="41_32fim"]
 
 [sub_resource type="Animation" id="Animation_ur4fp"]
 length = 0.001
@@ -1505,6 +1506,56 @@ _data = {
 "controller_back_to_mouse": SubResource("Animation_ufgff")
 }
 
+[sub_resource type="Animation" id="Animation_tlfoc"]
+resource_name = "select_appear"
+length = 0.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("select:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_7505x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("select:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6ktqh"]
+_data = {
+"RESET": SubResource("Animation_7505x"),
+"select_appear": SubResource("Animation_tlfoc")
+}
+
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_q83tm")
 
@@ -1848,10 +1899,10 @@ on_button_down_audio = ExtResource("15_gncbs")
 on_button_hover_audio = ExtResource("11_uv5lf")
 
 [node name="TextureRect" type="TextureRect" parent="options/controls/controller"]
-offset_left = 641.0
+offset_left = 585.0
 offset_top = 3.0
-offset_right = 3459.0
-offset_bottom = 1378.0
+offset_right = 3622.0
+offset_bottom = 1427.0
 scale = Vector2(0.25, 0.25)
 pivot_offset = Vector2(-2, 660)
 texture = ExtResource("40_wyma6")
@@ -1859,6 +1910,23 @@ texture = ExtResource("40_wyma6")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="options/controls/controller"]
 libraries = {
 "": SubResource("AnimationLibrary_1mpd8")
+}
+
+[node name="select_controller" type="Node2D" parent="."]
+visible = false
+
+[node name="select" type="TextureRect" parent="select_controller"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1183.0
+offset_top = 992.0
+offset_right = 1879.0
+offset_bottom = 1223.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("41_32fim")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="select_controller"]
+libraries = {
+"": SubResource("AnimationLibrary_6ktqh")
 }
 
 [connection signal="pressed" from="esc/cancel" to="esc/AnimationPlayer" method="play" binds= ["pause_back"]]
