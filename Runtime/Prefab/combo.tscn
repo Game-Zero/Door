@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://kxmak151p1kc"]
+[gd_scene load_steps=4 format=3 uid="uid://kxmak151p1kc"]
 
 [ext_resource type="Texture2D" uid="uid://ctvyuqh61nq02" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/combe_0.png" id="1_ko7w1"]
+[ext_resource type="Texture2D" uid="uid://djncwea4rck35" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/combe_word.PNG" id="3_6lxey"]
 [ext_resource type="AnimationLibrary" uid="uid://cxgicj57dhwjy" path="res://Runtime/Prefab/combo.tres" id="4_82dyj"]
 
 [node name="combo" type="Node2D"]
@@ -43,3 +44,10 @@ root_node = NodePath("../..")
 libraries = {
 "": ExtResource("4_82dyj")
 }
+
+[node name="combe_word" type="TextureRect" parent="."]
+offset_left = -103.0
+offset_top = 74.0
+offset_right = 98.0
+offset_bottom = 114.0
+texture = ExtResource("3_6lxey")
