@@ -29,6 +29,7 @@ func _process(delta: float) -> void:
 
 func turn_off():
 	self.light.visible = false
+	self.point_light.visible = false
 
 
 func _on_body_entered(player):
