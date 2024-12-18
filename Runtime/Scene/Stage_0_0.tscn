@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b2ygbp3m4codl"]
+[gd_scene load_steps=19 format=3 uid="uid://b2ygbp3m4codl"]
 
 [ext_resource type="Texture2D" uid="uid://dx8l6rrukkw7x" path="res://Runtime/Resource/Background/s0_0.png" id="1_21h58"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/Stage_0_0.gd" id="1_m1lnm"]
@@ -17,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://bn8fq63ouos0l" path="res://Runtime/Resource/Audio/s0_0/s0_0_background_music.mp3" id="12_j1a5p"]
 [ext_resource type="Texture2D" uid="uid://cbwox87ogsa8x" path="res://Runtime/Resource/Sprite/S0_0_UI/options_40_hover.png" id="12_jv4j8"]
 [ext_resource type="PackedScene" uid="uid://bofbb0bvx1ysw" path="res://Runtime/Prefab/hud.tscn" id="16_6202y"]
+[ext_resource type="PackedScene" uid="uid://b357c1umlxu2r" path="res://Runtime/Prefab/loading.tscn" id="18_wsj5v"]
 
 [node name="Root" type="Node2D"]
 script = ExtResource("1_m1lnm")
@@ -89,6 +90,8 @@ autoplay = true
 parameters/looping = true
 
 [node name="HUD" parent="." instance=ExtResource("16_6202y")]
+
+[node name="loading" parent="." instance=ExtResource("18_wsj5v")]
 
 [connection signal="pressed" from="press/start" to="HUD" method="change_scene_to_file" binds= ["res://Runtime/Scene/Stage_0_1.tscn"]]
 [connection signal="pressed" from="press/setting" to="." method="open_operation"]
