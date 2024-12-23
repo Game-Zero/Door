@@ -1228,6 +1228,7 @@ _data = {
 size = Vector2(600, 1800)
 
 [node name="person" type="CharacterBody2D"]
+collision_mask = 3
 script = ExtResource("1_ty8q4")
 
 [node name="state" type="AnimatedSprite2D" parent="."]

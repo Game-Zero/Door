@@ -94,9 +94,9 @@
 [ext_resource type="PackedScene" uid="uid://de8so0lu14br5" path="res://Runtime/Prefab/big_fat.tscn" id="76_qivtl"]
 [ext_resource type="PackedScene" uid="uid://bofbb0bvx1ysw" path="res://Runtime/Prefab/hud.tscn" id="95_14h4s"]
 [ext_resource type="AudioStream" uid="uid://dmuy741n3amd3" path="res://Runtime/Resource/Audio/s3/s3_2/s3_2_background.wav" id="95_uripk"]
-[ext_resource type="PackedScene" uid="uid://bf8yhigx4g1ht" path="res://Runtime/Prefab/s_3_2_interacitive_controller.tscn" id="97_0gxxn"]
+[ext_resource type="PackedScene" path="res://Runtime/Prefab/s_3_2_interacitive_controller.tscn" id="97_0gxxn"]
 [ext_resource type="PackedScene" uid="uid://duohsmfk2d131" path="res://Runtime/Prefab/s3_2_fail.tscn" id="98_4v2hu"]
-[ext_resource type="PackedScene" uid="uid://b6bwm3g0w4b4p" path="res://Runtime/Prefab/s3_2_interacitive.tscn" id="99_0gbw0"]
+[ext_resource type="PackedScene" path="res://Runtime/Prefab/s3_2_interacitive.tscn" id="99_0gbw0"]
 [ext_resource type="PackedScene" uid="uid://omevqqnc5ybq" path="res://Runtime/Prefab/fat.tscn" id="174_eeac7"]
 [ext_resource type="Script" path="res://Runtime/Script/Manager/ScreenCameraManger.gd" id="184_d74i6"]
 

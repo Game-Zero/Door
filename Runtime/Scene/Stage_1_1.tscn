@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://b0fmpdl8gr1da"]
+[gd_scene load_steps=26 format=3 uid="uid://b0fmpdl8gr1da"]
 
 [ext_resource type="Texture2D" uid="uid://ca7mpah0s762r" path="res://Runtime/Resource/Background/stage1-1.png" id="1_x035b"]
 [ext_resource type="Texture2D" uid="uid://bfpeddby78ypy" path="res://Runtime/Resource/Background/person_stand_sample_with_line.png" id="2_42k81"]
@@ -23,6 +23,12 @@
 shader = ExtResource("2_ics1n")
 shader_parameter/speed = 0.2
 shader_parameter/texture_mask = ExtResource("3_lkgex")
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5xh1s"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sohbq"]
+normal = Vector2(-1, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u6q8p"]
 size = Vector2(144, 576)
@@ -150,6 +156,17 @@ offset_right = 10546.4
 offset_bottom = 1582.37
 texture = ExtResource("3_hpy4d")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="background"]
+collision_layer = 2
+
+[node name="L" type="CollisionShape2D" parent="background/StaticBody2D"]
+position = Vector2(23.9336, 0)
+shape = SubResource("WorldBoundaryShape2D_5xh1s")
+
+[node name="R" type="CollisionShape2D" parent="background/StaticBody2D"]
+position = Vector2(16801.4, 0)
+shape = SubResource("WorldBoundaryShape2D_sohbq")
+
 [node name="person_stand_sample" type="TextureRect" parent="."]
 visible = false
 offset_right = 16835.0
@@ -174,9 +191,11 @@ nurse_type = 2
 position = Vector2(960, 540.131)
 scale = Vector2(0.999999, 0.999999)
 
-[node name="Destination" type="Area2D" parent="."]
+[node name="Destination" type="Area2D" parent="." node_paths=PackedStringArray("cross_door")]
 position = Vector2(3887, 488)
+collision_layer = 2
 script = ExtResource("7_5sfds")
+cross_door = NodePath("../s1_2_cross_door")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Destination"]
 shape = SubResource("RectangleShape2D_u6q8p")
@@ -196,46 +215,54 @@ failed_texture = NodePath("../TextureRect")
 [node name="person13" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(-556, 570)
 scale = Vector2(0.251, 0.251)
+collision_mask = 1
 person_type = 3
 b_has_diagnosed = true
 
 [node name="person" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(-210, 570)
 scale = Vector2(0.251, 0.251)
+collision_mask = 1
 person_type = 1
 
 [node name="person1" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(510, 570)
 scale = Vector2(0.251, 0.251)
+collision_mask = 1
 person_type = 2
 
 [node name="person3" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(912, 570)
 scale = Vector2(0.251, 0.251)
+collision_mask = 1
 person_type = 3
 b_has_diagnosed = true
 
 [node name="person4" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(1137, 690)
 scale = Vector2(0.251, 0.251)
+collision_mask = 1
 person_type = 1
 b_has_diagnosed = true
 
 [node name="person5" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(1502, 690)
 scale = Vector2(0.251, 0.251)
+collision_mask = 1
 person_type = 2
 b_has_diagnosed = true
 
 [node name="person6" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(1727, 810)
 scale = Vector2(0.251, 0.251)
+collision_mask = 1
 person_type = 3
 b_has_diagnosed = true
 
 [node name="person7" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(2101, 810)
 scale = Vector2(0.251, 0.251)
+collision_mask = 1
 person_type = 1
 b_has_mark = true
 b_has_diagnosed = true
@@ -243,6 +270,7 @@ b_has_diagnosed = true
 [node name="person8" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(2475, 810)
 scale = Vector2(0.251, 0.251)
+collision_mask = 1
 person_type = 2
 b_has_mark = true
 b_has_diagnosed = true
@@ -250,6 +278,7 @@ b_has_diagnosed = true
 [node name="person9" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(2700, 690)
 scale = Vector2(0.251, 0.251)
+collision_mask = 1
 person_type = 3
 b_has_mark = true
 b_has_diagnosed = true
@@ -257,6 +286,7 @@ b_has_diagnosed = true
 [node name="person10" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(3074, 690)
 scale = Vector2(0.251, 0.251)
+collision_mask = 1
 person_type = 1
 person_state = 1
 b_has_mark = true
@@ -265,6 +295,7 @@ b_has_diagnosed = true
 [node name="person11" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(3448, 690)
 scale = Vector2(0.251, 0.251)
+collision_mask = 1
 person_type = 2
 person_state = 1
 b_has_mark = true
@@ -273,14 +304,11 @@ b_has_diagnosed = true
 [node name="person12" parent="PersonNPCS" instance=ExtResource("5_gak2m")]
 position = Vector2(3673, 570)
 scale = Vector2(0.251, 0.251)
+collision_mask = 1
 person_type = 3
 person_state = 1
 b_has_mark = true
 b_has_diagnosed = true
-
-[node name="s1_2_cross_door" parent="." instance=ExtResource("14_wnwul")]
-visible = false
-position = Vector2(961, 543)
 
 [node name="light_base" type="TextureRect" parent="." node_paths=PackedStringArray("player")]
 z_index = 200
@@ -327,6 +355,11 @@ texture = ExtResource("16_5nm2x")
 libraries = {
 "": SubResource("AnimationLibrary_bw461")
 }
+
+[node name="s1_2_cross_door" parent="." instance=ExtResource("14_wnwul")]
+visible = false
+z_index = 4095
+position = Vector2(961, 543)
 
 [node name="HUD" parent="." instance=ExtResource("2_vcqr2")]
 

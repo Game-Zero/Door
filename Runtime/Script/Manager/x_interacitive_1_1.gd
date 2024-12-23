@@ -13,6 +13,6 @@ func on_body_entered(body: Node2D):
 
 
 func on_body_exited(body: Node2D):
-	print("[x_interactive_1_1][on_body_entered] body.name: ", body)
+	print("[x_interactive_1_1][on_body_exited] body.name: ", body)
 	if (body.name == "player"):
-		super.on_body_entered(body)
+		super.on_body_exited(body)
