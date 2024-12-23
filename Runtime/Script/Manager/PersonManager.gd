@@ -38,6 +38,7 @@ enum PersonAnimationState {
 @export var b_has_mark = false
 @export var b_has_diagnosed = false
 @export var failed_animation_player: AnimationPlayer
+@export var failed_texture: TextureRect
 
 var last_played_animation = ""
 var dialog
@@ -128,6 +129,7 @@ func _process(_delta):
 			b_is_game_over = true
 			npc_can_move = false
 			player_can_move = false
+			failed_texture.global_position.x = camera.global_position.x - 1920 / 2.0
 			failed_animation_player.play("s1_1_game_over")
 
 		var direction = Input.get_axis("player_left", "player_right")
