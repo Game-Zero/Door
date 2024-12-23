@@ -6,6 +6,7 @@ const JUMP_VELOCITY = -400.0
 
 @export var failed_node: Node2D = null
 @export var bgm_player: AudioStreamPlayer = null
+@export var camera: Camera2D = null
 
 @onready var player = $"."
 @onready var animated_sprite_2d = $AnimatedSprite2D
@@ -25,6 +26,7 @@ var gravity_direct = 1
 var direction = -1
 var dialog
 
+
 func _ready():
 	audio_player.stream = load("res://Runtime/Resource/Audio/s3/s3_2/worm_flip_and_hide.MP3")
 	dialog = AcceptDialog.new()
@@ -33,6 +35,7 @@ func _ready():
 	dialog.dialog_text = "GameOver."
 	dialog.title = "提示"
 	dialog.get_ok_button().pressed.connect(func():get_tree().reload_current_scene())
+
 
 func _physics_process(delta):
 	if (Input.is_action_just_pressed("gm_fail")):
@@ -88,15 +91,17 @@ func _physics_process(delta):
 				if gravity_direct < 0:
 					delta_y = 20
 				tween.tween_property(body, "global_position:y", global_position.y - delta_y, 1)
-			var callback = func():
-				bFatEatenAnimPlayFinished = true
-				try_resume_contrl()
-			body.start_being_eaten(direction, callback)
+			body.start_being_eaten(direction, self.being_eaten)
 			animated_sprite_2d.play("swarm_eating" if body.name.begins_with("fat") else "swarm_eating_big")
 		elif body.name.begins_with("robot"):
 			body.fade_to_player()
 			body.discovered()
 			self.dead(body)
+
+
+func being_eaten():
+	bFatEatenAnimPlayFinished = true
+	try_resume_contrl()
 
 
 func dead(robot):
@@ -106,6 +111,7 @@ func dead(robot):
 		robot.set_physics_process(false)
 		robot.anim.play("robot_standing")
 	if (failed_node):
+		failed_node.global_position.y = camera.global_position.y - 540
 		failed_node.show_fail()
 	else:
 		dialog.popup_centered()
@@ -117,11 +123,13 @@ func try_resume_contrl():
 		bFatEatenAnimPlayFinished = false
 		bPlayerEatPlayFinished = false
 
+
 func animation_finished():
 	if animated_sprite_2d.animation == "swarm_eating" || animated_sprite_2d.animation == "swarm_eating_big":
 		bPlayerEatPlayFinished = true
 		animated_sprite_2d.animation = "swarm_walking"
 		try_resume_contrl()
+
 
 func get_ray_clliding_robot():
 	for ray in rays:

@@ -133,7 +133,7 @@ func check_next_game():
 
 func goto_next_stage(anim_name):
 	print("[Stage_2_1][goto_next_stage]")
-	get_tree().reload_current_scene() # todo:zero 切换到下一关
+	get_tree().change_scene_to_file("res://Runtime/Scene/Stage_3_1.tscn")
 	pass
 
 
