@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://4xdahtgflcos" path="res://Runtime/Resource/Sprite/s3_UI/s3_2_UI/action.png" id="1_2g5i3"]
 [ext_resource type="Texture2D" uid="uid://0u3nl552otyx" path="res://Runtime/Resource/Background/s3-2_sample.png" id="1_l8x2d"]
 [ext_resource type="Texture2D" uid="uid://c0y340n7doo8i" path="res://Runtime/Resource/Sprite/s3_UI/s3_2_UI/hide.png" id="2_0q0m2"]
-[ext_resource type="AnimationLibrary" uid="uid://ct7tghpndujfm" path="res://Runtime/Prefab/s3_2_interacitive_anime.tres" id="4_8rtn1"]
+[ext_resource type="AnimationLibrary" uid="uid://boctegf72k0kv" path="res://Runtime/Prefab/s3_2_interacitive_anime.tres" id="4_8rtn1"]
 
 [node name="s3_2_interacitive" type="Node2D"]
 modulate = Color(1, 1, 1, 0)

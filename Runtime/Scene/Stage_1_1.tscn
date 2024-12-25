@@ -359,7 +359,7 @@ libraries = {
 [node name="s1_2_cross_door" parent="." instance=ExtResource("14_wnwul")]
 visible = false
 z_index = 4095
-position = Vector2(961, 543)
+position = Vector2(960, 540)
 
 [node name="HUD" parent="." instance=ExtResource("2_vcqr2")]
 
