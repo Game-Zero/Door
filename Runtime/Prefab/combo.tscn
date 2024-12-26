@@ -47,7 +47,7 @@ libraries = {
 
 [node name="combe_word" type="TextureRect" parent="."]
 offset_left = -103.0
-offset_top = 74.0
-offset_right = 98.0
+offset_top = 80.0
+offset_right = 110.0
 offset_bottom = 114.0
 texture = ExtResource("3_6lxey")
