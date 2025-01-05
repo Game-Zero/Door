@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://bofbb0bvx1ysw"]
+[gd_scene load_steps=68 format=3 uid="uid://bofbb0bvx1ysw"]
 
 [ext_resource type="Script" path="res://Runtime/Script/Manager/GlobalHUDManager.gd" id="1_q83tm"]
 [ext_resource type="Script" path="res://Runtime/Script/UI/Label_FPS.gd" id="2_o6mpc"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://d3m8smrwilfff" path="res://Runtime/Resource/Sprite/S0-1_UI/options_icon/options_sample.PNG" id="20_450fk"]
 [ext_resource type="Texture2D" uid="uid://cvojf7tjq8qul" path="res://Runtime/Resource/Sprite/S0-1_UI/options_icon/options_70.png" id="21_04pif"]
 [ext_resource type="Texture2D" uid="uid://dinjfanixpqxg" path="res://Runtime/Resource/Sprite/S0-1_UI/options_icon/audio_45.png" id="22_e2n1f"]
+[ext_resource type="Script" path="res://Runtime/Script/Manager/hud_volume_slider.gd" id="24_ybejo"]
 [ext_resource type="Texture2D" uid="uid://dufh2yp1t8e7j" path="res://Runtime/Resource/Sprite/S0-1_UI/options_icon/controls_45.png" id="27_2kx8o"]
 [ext_resource type="Texture2D" uid="uid://cc37hfnociji1" path="res://Runtime/Resource/Sprite/S0-1_UI/options_icon/controls_45_hover.png" id="28_rq62x"]
 [ext_resource type="Texture2D" uid="uid://c52ekaiffef1u" path="res://Runtime/Resource/Sprite/S0-1_UI/controls_icon/mouse_sample.PNG" id="29_kt3qe"]
@@ -1665,8 +1666,9 @@ offset_right = 1170.0
 offset_bottom = 490.0
 theme = SubResource("Theme_6d41w")
 max_value = 1.0
-step = 0.1
+step = 0.01
 value = 1.0
+script = ExtResource("24_ybejo")
 
 [node name="controls_button" type="TextureButton" parent="options"]
 offset_left = 781.0
