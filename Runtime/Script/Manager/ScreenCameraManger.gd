@@ -18,7 +18,7 @@ func _physics_process(_delta: float) -> void:
 	
 	var half_screen_height = screen_size.y / 2
 
-	if half_screen_height <= Target.global_position.y and Target.global_position.y <= half_screen_height * 3:
+	if half_screen_height <= Target.global_position.y and Target.global_position.y <= 1530:
 		var tween: Tween = get_tree().create_tween()
 		tween.set_trans(Tween.TRANS_QUAD) # warning-ignore:return_value_discarded
 		tween.tween_property(self, "global_position:y", Target.global_position.y, 0.1)
