@@ -5,6 +5,7 @@ extends Node2D
 @onready var cross_door_part2 = $s0_1_cross_door_part2
 @onready var cross_door_part2_anim_player = $s0_1_cross_door_part2/AnimationPlayer
 @onready var door_light = $door_light
+@export var hud: CanvasLayer
 
 @export var camera: Camera2D = null
 
@@ -37,7 +38,7 @@ func on_animation_finish(anim_name: String):
 			cross_door_part2.visible = true
 			cross_door_part2_anim_player.play("part2")
 		"part2":
-			get_tree().change_scene_to_file("res://Runtime/Scene/Stage_1_1.tscn")
+			hud.change_scene_to_file("res://Runtime/Scene/Stage_1_1.tscn")
 			pass
 
 

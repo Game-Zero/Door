@@ -3,6 +3,7 @@ extends Node2D
 @onready var again_button = $again
 @onready var exit_button = $exit
 @onready var animation_player = $AnimationPlayer
+@export var hud: CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,4 +27,4 @@ func on_exit_pressed():
 	data_map["person_state"] = 0
 	data_map["b_has_pressed_button"] = true
 	data_map["b_has_eaten_medication"] = false
-	get_tree().change_scene_to_file("res://Runtime/Scene/Stage_3_1.tscn")
+	hud.change_scene_to_file("res://Runtime/Scene/Stage_3_1.tscn")

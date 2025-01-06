@@ -1,6 +1,7 @@
 extends Node2D
 
 var dialog
+@export var hud: CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -37,4 +38,4 @@ func body_entered(body):
 	#get_tree().reload_current_scene()
 
 func _button_pressed():
-	get_tree().reload_current_scene()
+	hud.reload_current_scene()

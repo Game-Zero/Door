@@ -45,9 +45,12 @@ texture = ExtResource("3_p8jx6")
 position = Vector2(959, 837)
 scale = Vector2(0.25, 0.25)
 
-[node name="press" type="Node" parent="."]
+[node name="press" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="start" type="TextureButton" parent="press"]
+layout_mode = 0
 offset_left = 781.0
 offset_top = 529.0
 offset_right = 1139.0
@@ -60,6 +63,7 @@ on_button_down_audio = ExtResource("9_0wm8h")
 on_button_hover_audio = ExtResource("10_k86lg")
 
 [node name="setting" type="TextureButton" parent="press"]
+layout_mode = 0
 offset_left = 781.0
 offset_top = 609.0
 offset_right = 1139.0
@@ -73,6 +77,7 @@ on_button_down_audio = ExtResource("9_0wm8h")
 on_button_hover_audio = ExtResource("10_k86lg")
 
 [node name="exit" type="TextureButton" parent="press"]
+layout_mode = 0
 offset_left = 781.0
 offset_top = 688.0
 offset_right = 1139.0
@@ -92,7 +97,8 @@ parameters/looping = true
 [node name="HUD" parent="." instance=ExtResource("16_6202y")]
 
 [node name="loading" parent="." instance=ExtResource("18_wsj5v")]
+visible = false
 
-[connection signal="pressed" from="press/start" to="HUD" method="change_scene_to_file" binds= ["res://Runtime/Scene/Stage_0_1.tscn"]]
+[connection signal="pressed" from="press/start" to="." method="load_all_scene"]
 [connection signal="pressed" from="press/setting" to="." method="open_operation"]
 [connection signal="pressed" from="press/exit" to="HUD" method="quit_scene"]

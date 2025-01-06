@@ -3,6 +3,7 @@ extends Area2D
 var dialog
 
 @export var cross_door: Node2D
+@export var hud: CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -40,4 +41,4 @@ func _process(delta: float) -> void:
 
 
 func animation_finished(anim_name: String):
-	get_tree().change_scene_to_file("res://Runtime/Scene/Stage_2_1.tscn")
+	hud.change_scene_to_file("res://Runtime/Scene/Stage_2_1.tscn")

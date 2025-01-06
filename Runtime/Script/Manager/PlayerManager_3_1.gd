@@ -28,6 +28,7 @@ enum PersonAnimationState {
 @export var machine: Node2D
 @export var button: Node2D
 @export var be_thinner: Node2D
+@export var hud: CanvasLayer
 
 
 var machine_x_button: Node2D
@@ -129,7 +130,7 @@ func _physics_process(_delta) -> void:
 		
 		if (Input.is_action_just_pressed("player_fire") and self.b_on_destination):
 			if (self.person_state == PersonState.VeryThin):
-				get_tree().change_scene_to_file("res://Runtime/Scene/Stage_4_1.tscn")
+				hud.change_scene_to_file("res://Runtime/Scene/Stage_4_1.tscn")
 			else:
 				be_thinner.get_node("AnimationPlayer").play("be_thinner")
 	move_and_slide()

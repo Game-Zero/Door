@@ -191,11 +191,12 @@ nurse_type = 2
 position = Vector2(960, 540.131)
 scale = Vector2(0.999999, 0.999999)
 
-[node name="Destination" type="Area2D" parent="." node_paths=PackedStringArray("cross_door")]
+[node name="Destination" type="Area2D" parent="." node_paths=PackedStringArray("cross_door", "hud")]
 position = Vector2(3887, 488)
 collision_layer = 2
 script = ExtResource("7_5sfds")
 cross_door = NodePath("../s1_2_cross_door")
+hud = NodePath("../HUD")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Destination"]
 shape = SubResource("RectangleShape2D_u6q8p")

@@ -75,8 +75,9 @@ _data = {
 "gradully_out": SubResource("Animation_x0df4")
 }
 
-[node name="Root" type="Node2D"]
+[node name="Root" type="Node2D" node_paths=PackedStringArray("hud")]
 script = ExtResource("1_fy5sg")
+hud = NodePath("HUD")
 
 [node name="background" type="TextureRect" parent="."]
 offset_right = 12331.0

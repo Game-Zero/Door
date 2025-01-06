@@ -22,6 +22,7 @@ var delay_call_queue: Array = []
 @onready var cross_door_anim_player = $s2_3_cross_door/AnimationPlayer
 @onready var be_thinner = $be_thinner
 @onready var be_thinner_anim_player = $be_thinner/AnimationPlayer
+@export var hud: CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -133,7 +134,7 @@ func check_next_game():
 
 func goto_next_stage(anim_name):
 	print("[Stage_2_1][goto_next_stage]")
-	get_tree().change_scene_to_file("res://Runtime/Scene/Stage_3_1.tscn")
+	hud.change_scene_to_file("res://Runtime/Scene/Stage_3_1.tscn")
 	pass
 
 
