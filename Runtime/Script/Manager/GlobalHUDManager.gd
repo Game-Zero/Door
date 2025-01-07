@@ -11,6 +11,8 @@ signal on_pause(b_is_pause: bool)
 
 
 func change_scene_to_file(scene_resource_path: String):
+	get_tree().change_scene_to_file(scene_resource_path)
+	return # todo:zero 改成异步加载
 	var share_instance: Node = get_node("/root/SharedInstance")
 	if not (share_instance.shared_data_map.has("maps") and share_instance.shared_data_map.has("maps_size")):
 		return
@@ -46,7 +48,8 @@ func _ready():
 
 func _on_pause(b_is_pause: bool) -> void:
 	print("[hud][_on_pause] b_is_pause: ", b_is_pause)
-	get_tree().paused = b_is_pause
+	if (get_tree() != null):
+		get_tree().paused = b_is_pause
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -9,6 +9,8 @@ var loading_id: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	get_tree().paused = false
+	return # todo:zero 改成异步加载资源
 	loading_id = 0
 	var share_instance: Node = get_node("/root/SharedInstance")
 	if (share_instance.shared_data_map.has("maps_size") and share_instance.shared_data_map["maps_size"] == arr.size()):
@@ -36,6 +38,7 @@ func start_game():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	return # todo:zero 改成异步加载资源
 	if (b_loaded.size() == arr.size()):
 		get_node("loading").visible = false
 		get_node("person").visible = true

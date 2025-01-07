@@ -25,7 +25,7 @@ func level_success():
 		data_map["person_state"] = 1
 		data_map["b_has_pressed_button"] = true
 		data_map["b_has_eaten_medication"] = true
-		get_tree().change_scene_to_file("res://Runtime/Scene/Stage_3_1.tscn")
+		hud.change_scene_to_file("res://Runtime/Scene/Stage_3_1.tscn")
 	else:
 		get_tree().reload_current_scene()
 
@@ -36,6 +36,7 @@ func body_entered(body):
 	self.level_success()
 	#dialog.popup_centered()
 	#get_tree().reload_current_scene()
+
 
 func _button_pressed():
 	hud.reload_current_scene()
