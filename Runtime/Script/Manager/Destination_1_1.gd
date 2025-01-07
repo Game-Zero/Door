@@ -7,6 +7,7 @@ var dialog
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	hud.b_can_pause = true
 	self.body_entered.connect(self.on_body_entered)
 	self.body_exited.connect(self.on_body_exited)
 
@@ -29,6 +30,7 @@ var b_locked: bool = false
 func _process(delta: float) -> void:
 	if (cached_player != null and cached_player.player_can_move and Input.is_action_just_pressed("player_fire")):
 		b_locked = true
+		hud.b_can_pause = false
 		cached_player.do_change_move_state(false)
 		cross_door.global_position.x = cached_player.camera.global_position.x
 		var cross_door_anim_player: AnimationPlayer = cross_door.get_node("AnimationPlayer")

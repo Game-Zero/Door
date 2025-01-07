@@ -13,6 +13,7 @@ var player = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	hud.b_can_pause = true
 	cross_door_part1_anim_player.animation_finished.connect(self.on_animation_finish)
 	cross_door_part2_anim_player.animation_finished.connect(self.on_animation_finish)
 	pass # Replace with function body.
@@ -25,6 +26,7 @@ func _process(delta: float) -> void:
 		cross_door_part1.global_position = camera.global_position
 		cross_door_part2.global_position = camera.global_position
 		cross_door_part1.visible = true
+		hud.b_can_pause = false
 		cross_door_part1_anim_player.play("part1")
 		pass
 

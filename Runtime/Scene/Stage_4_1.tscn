@@ -114,11 +114,13 @@ visible = false
 visible = false
 
 [node name="music" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = ExtResource("6_3yfnq")
 autoplay = true
 parameters/looping = true
 
 [node name="hurrah_player" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = ExtResource("7_empl8")
 autoplay = true
 parameters/looping = true

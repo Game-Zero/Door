@@ -26,6 +26,7 @@ var delay_call_queue: Array = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	hud.b_can_pause = true
 	cross_door.visible = false
 	doll_anime.visible = false
 	doll_anime_complete.visible = true
@@ -54,6 +55,7 @@ func _process(delta: float) -> void:
 		if (body.person_state == body.PersonState.Thin):
 			self.bHasCrossDoor = true
 			body.set_can_move(false)
+			hud.b_can_pause = false
 			body.person_animation_state = body.PersonAnimationState.Standing
 			tables.global_position.x = camera.global_position.x - 960
 			cross_door.global_position = camera.global_position

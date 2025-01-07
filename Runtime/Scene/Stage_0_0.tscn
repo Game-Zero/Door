@@ -19,8 +19,9 @@
 [ext_resource type="PackedScene" uid="uid://bofbb0bvx1ysw" path="res://Runtime/Prefab/hud.tscn" id="16_6202y"]
 [ext_resource type="PackedScene" uid="uid://b357c1umlxu2r" path="res://Runtime/Prefab/loading.tscn" id="18_wsj5v"]
 
-[node name="Root" type="Node2D"]
+[node name="Root" type="Node2D" node_paths=PackedStringArray("hud")]
 script = ExtResource("1_m1lnm")
+hud = NodePath("HUD")
 
 [node name="background" type="TextureRect" parent="."]
 offset_right = 40.0
@@ -98,8 +99,11 @@ parameters/looping = true
 
 [node name="loading" parent="." instance=ExtResource("18_wsj5v")]
 visible = false
-position = Vector2(-2, -2)
+offset_left = -2.0
+offset_top = -2.0
+offset_right = -2.0
+offset_bottom = -2.0
 
-[connection signal="pressed" from="press/start" to="." method="load_all_scene"]
+[connection signal="pressed" from="press/start" to="." method="start_game"]
 [connection signal="pressed" from="press/setting" to="." method="open_operation"]
 [connection signal="pressed" from="press/exit" to="HUD" method="quit_scene"]

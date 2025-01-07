@@ -1526,6 +1526,7 @@ _data = {
 }
 
 [node name="HUD" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_q83tm")
 
 [node name="Label_FPS" type="Label" parent="."]

@@ -39,7 +39,9 @@ _data = {
 "loading": SubResource("Animation_eevxr")
 }
 
-[node name="loading" type="Node2D"]
+[node name="loading" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(962, 542)
