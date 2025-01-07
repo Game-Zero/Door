@@ -98,6 +98,7 @@ parameters/looping = true
 
 [node name="loading" parent="." instance=ExtResource("18_wsj5v")]
 visible = false
+position = Vector2(-2, -2)
 
 [connection signal="pressed" from="press/start" to="." method="load_all_scene"]
 [connection signal="pressed" from="press/setting" to="." method="open_operation"]
