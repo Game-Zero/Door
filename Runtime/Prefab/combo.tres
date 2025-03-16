@@ -89,8 +89,8 @@ tracks/0/keys = {
 
 [resource]
 _data = {
-"RESET": SubResource("Animation_q87cq"),
-"digital1_appeared": SubResource("Animation_yuraj"),
-"digital2_appeared": SubResource("Animation_4c215"),
-"digital3_appeared": SubResource("Animation_h7ild")
+&"RESET": SubResource("Animation_q87cq"),
+&"digital1_appeared": SubResource("Animation_yuraj"),
+&"digital2_appeared": SubResource("Animation_4c215"),
+&"digital3_appeared": SubResource("Animation_h7ild")
 }

@@ -58,6 +58,6 @@ tracks/1/keys = {
 
 [resource]
 _data = {
-"RESET": SubResource("Animation_6yfhc"),
-"be_thinner": SubResource("Animation_pa3de")
+&"RESET": SubResource("Animation_6yfhc"),
+&"be_thinner": SubResource("Animation_pa3de")
 }

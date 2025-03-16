@@ -158,7 +158,7 @@ position = Vector2(960, 540)
 
 [node name="gradually" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_7qcdd")
+&"": SubResource("AnimationLibrary_7qcdd")
 }
 
 [node name="be_thinner" parent="." instance=ExtResource("11_2hdhw")]

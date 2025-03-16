@@ -35,6 +35,6 @@ tracks/0/keys = {
 
 [resource]
 _data = {
-"RESET": SubResource("Animation_vs3cl"),
-"walk_prompt": SubResource("Animation_4eug4")
+&"RESET": SubResource("Animation_vs3cl"),
+&"walk_prompt": SubResource("Animation_4eug4")
 }

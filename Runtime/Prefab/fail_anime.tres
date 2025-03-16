@@ -195,6 +195,6 @@ tracks/7/use_blend = true
 
 [resource]
 _data = {
-"RESET": SubResource("Animation_pyqxq"),
-"fail": SubResource("Animation_x6br7")
+&"RESET": SubResource("Animation_pyqxq"),
+&"fail": SubResource("Animation_x6br7")
 }

@@ -129,7 +129,7 @@ parameters/looping = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_124wq")
+&"": SubResource("AnimationLibrary_124wq")
 }
 autoplay = "end_appear"
 

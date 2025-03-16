@@ -492,10 +492,10 @@ tracks/6/keys = {
 
 [resource]
 _data = {
-"RESET": SubResource("Animation_kvsdb"),
-"pause_appear": SubResource("Animation_mc3w2"),
-"pause_back": SubResource("Animation_jvqfm"),
-"pause_back_from_options": SubResource("Animation_k6cqq"),
-"pause_exit_to_s0_0": SubResource("Animation_trk24"),
-"pause_to_options": SubResource("Animation_tx8ud")
+&"RESET": SubResource("Animation_kvsdb"),
+&"pause_appear": SubResource("Animation_mc3w2"),
+&"pause_back": SubResource("Animation_jvqfm"),
+&"pause_back_from_options": SubResource("Animation_k6cqq"),
+&"pause_exit_to_s0_0": SubResource("Animation_trk24"),
+&"pause_to_options": SubResource("Animation_tx8ud")
 }
