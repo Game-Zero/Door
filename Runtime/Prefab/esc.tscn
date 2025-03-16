@@ -105,5 +105,5 @@ texture = ExtResource("16_u3rwi")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": ExtResource("13_5l0vn")
+&"": ExtResource("13_5l0vn")
 }

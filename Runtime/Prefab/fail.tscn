@@ -37,7 +37,7 @@ texture = ExtResource("4_xsu0r")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": ExtResource("7_5cndh")
+&"": ExtResource("7_5cndh")
 }
 
 [node name="base" type="TextureRect" parent="."]

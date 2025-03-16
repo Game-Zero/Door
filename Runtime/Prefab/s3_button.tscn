@@ -98,7 +98,7 @@ frame = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_533th")
+&"": SubResource("AnimationLibrary_533th")
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

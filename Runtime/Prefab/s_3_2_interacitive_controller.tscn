@@ -70,5 +70,5 @@ texture = ExtResource("3_muml4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_4um8w")
+&"": SubResource("AnimationLibrary_4um8w")
 }

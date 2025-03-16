@@ -87,7 +87,7 @@ speed_scale = 0.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_ljmut")
+&"": SubResource("AnimationLibrary_ljmut")
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

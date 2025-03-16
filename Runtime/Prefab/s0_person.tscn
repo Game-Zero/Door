@@ -120,7 +120,7 @@ animation = &"protagonist_fat_walking"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_ykq4e")
+&"": SubResource("AnimationLibrary_ykq4e")
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

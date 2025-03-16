@@ -82,7 +82,7 @@ animations = [{
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_signl")
+&"": SubResource("AnimationLibrary_signl")
 }
 autoplay = "heartbeat"
 

@@ -39,22 +39,6 @@ tracks/2/keys = {
 "values": [Vector2(1e-05, 1e-05)]
 }
 
-[sub_resource type="Animation" id="Animation_yluxb"]
-resource_name = "perfect_appeared"
-length = 0.25
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("perfect:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.133333, 0.233333),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1e-05, 1e-05), Vector2(1.25, 1.25), Vector2(1, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_85ump"]
 resource_name = "good_appeared"
 length = 0.25
@@ -87,10 +71,26 @@ tracks/0/keys = {
 "values": [Vector2(1e-05, 1e-05), Vector2(1.25, 1.25), Vector2(1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_yluxb"]
+resource_name = "perfect_appeared"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("perfect:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.233333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1.25, 1.25), Vector2(1, 1)]
+}
+
 [resource]
 _data = {
-"RESET": SubResource("Animation_37u5a"),
-"good_appeared": SubResource("Animation_85ump"),
-"miss_appeared": SubResource("Animation_jid10"),
-"perfect_appeared": SubResource("Animation_yluxb")
+&"RESET": SubResource("Animation_37u5a"),
+&"good_appeared": SubResource("Animation_85ump"),
+&"miss_appeared": SubResource("Animation_jid10"),
+&"perfect_appeared": SubResource("Animation_yluxb")
 }

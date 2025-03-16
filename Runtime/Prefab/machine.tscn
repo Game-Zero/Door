@@ -182,7 +182,7 @@ animation = &"machine_noun_still"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_13ey8")
+&"": SubResource("AnimationLibrary_13ey8")
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

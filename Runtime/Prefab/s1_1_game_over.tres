@@ -48,6 +48,6 @@ tracks/1/keys = {
 
 [resource]
 _data = {
-"RESET": SubResource("Animation_coe6v"),
-"s1_1_game_over": SubResource("Animation_7c2qc")
+&"RESET": SubResource("Animation_coe6v"),
+&"s1_1_game_over": SubResource("Animation_7c2qc")
 }

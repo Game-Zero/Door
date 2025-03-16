@@ -50,6 +50,6 @@ animation = &"loading"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_ru0th")
+&"": SubResource("AnimationLibrary_ru0th")
 }
 autoplay = "loading"

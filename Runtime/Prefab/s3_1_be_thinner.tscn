@@ -50,5 +50,5 @@ texture = ExtResource("1_7pvmr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_j4lha")
+&"": SubResource("AnimationLibrary_j4lha")
 }

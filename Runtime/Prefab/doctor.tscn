@@ -129,7 +129,7 @@ animation = &"doctor_arm_moving"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_u64ve")
+&"": SubResource("AnimationLibrary_u64ve")
 }
 
 [node name="liquid" type="Sprite2D" parent="."]

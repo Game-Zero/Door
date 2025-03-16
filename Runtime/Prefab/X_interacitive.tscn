@@ -83,5 +83,5 @@ on_button_hover_audio = ExtResource("7_lw72b")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_gpj5e")
+&"": SubResource("AnimationLibrary_gpj5e")
 }

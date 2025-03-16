@@ -44,6 +44,6 @@ animation = &"hula_hoop"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_monn4")
+&"": SubResource("AnimationLibrary_monn4")
 }
 autoplay = "hula_hoop"
