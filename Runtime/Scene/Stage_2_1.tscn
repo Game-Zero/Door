@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://dcj23pu0k32jg"]
 
-[ext_resource type="Script" path="res://Runtime/Script/Manager/Stage_2_1.gd" id="1_fy5sg"]
+[ext_resource type="Script" uid="uid://dhrjlvudauf4u" path="res://Runtime/Script/Manager/Stage_2_1.gd" id="1_fy5sg"]
 [ext_resource type="Texture2D" uid="uid://8b3tljigsmuk" path="res://Runtime/Resource/Background/stage2-1.png" id="1_umuh0"]
 [ext_resource type="PackedScene" uid="uid://247thrl7sreg" path="res://Runtime/Prefab/s2_person.tscn" id="2_blu0p"]
 [ext_resource type="PackedScene" uid="uid://dg3my4p57h5kh" path="res://Runtime/Prefab/doll_anime_complete.tscn" id="3_ge5ri"]
@@ -70,9 +70,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7qcdd"]
 _data = {
-"RESET": SubResource("Animation_yavlr"),
-"gradually_enter": SubResource("Animation_l85rq"),
-"gradully_out": SubResource("Animation_x0df4")
+&"RESET": SubResource("Animation_yavlr"),
+&"gradually_enter": SubResource("Animation_l85rq"),
+&"gradully_out": SubResource("Animation_x0df4")
 }
 
 [node name="Root" type="Node2D" node_paths=PackedStringArray("hud")]

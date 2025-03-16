@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://8gybsm3jcv3f" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/again.png" id="6_nf1k0"]
 [ext_resource type="AnimationLibrary" uid="uid://cgnrrjjna85oq" path="res://Runtime/Prefab/fail_anime.tres" id="7_5cndh"]
 [ext_resource type="Texture2D" uid="uid://cmbbs1ma7qrb0" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/gray_base_map.png" id="7_o7ven"]
-[ext_resource type="Script" path="res://Runtime/Script/Manager/ButtonAudioManager.gd" id="10_q5ivh"]
+[ext_resource type="Script" uid="uid://d2ps5ijm8n1tt" path="res://Runtime/Script/Manager/ButtonAudioManager.gd" id="10_q5ivh"]
 [ext_resource type="AudioStream" uid="uid://bd4s8ksjjc0ei" path="res://Runtime/Resource/Audio/s0_0/click.MP3" id="11_phjxu"]
 [ext_resource type="AudioStream" uid="uid://bwj6wvg8c6py4" path="res://Runtime/Resource/Audio/s0_0/hover.mp3" id="12_lxdba"]
 [ext_resource type="Texture2D" uid="uid://1ejrxver8uv1" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/back.png" id="13_gerbu"]

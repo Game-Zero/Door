@@ -74,8 +74,8 @@ tracks/2/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ljmut"]
 _data = {
-"RESET": SubResource("Animation_cigox"),
-"s1_2_cross_door": SubResource("Animation_gtqdl")
+&"RESET": SubResource("Animation_cigox"),
+&"s1_2_cross_door": SubResource("Animation_gtqdl")
 }
 
 [node name="s1_2_cross_door" type="Node2D"]

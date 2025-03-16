@@ -2,18 +2,18 @@
 
 [ext_resource type="Texture2D" uid="uid://ca7mpah0s762r" path="res://Runtime/Resource/Background/stage1-1.png" id="1_x035b"]
 [ext_resource type="Texture2D" uid="uid://bfpeddby78ypy" path="res://Runtime/Resource/Background/person_stand_sample_with_line.png" id="2_42k81"]
-[ext_resource type="Shader" path="res://Runtime/Shader/electrocardiogram.gdshader" id="2_ics1n"]
+[ext_resource type="Shader" uid="uid://dr62wwdt4vsmf" path="res://Runtime/Shader/electrocardiogram.gdshader" id="2_ics1n"]
 [ext_resource type="PackedScene" uid="uid://vn4a1rgtwlwx" path="res://Runtime/Prefab/doctor.tscn" id="2_l10wh"]
 [ext_resource type="PackedScene" uid="uid://bofbb0bvx1ysw" path="res://Runtime/Prefab/hud.tscn" id="2_vcqr2"]
 [ext_resource type="Texture2D" uid="uid://bme2g6tns1qh7" path="res://Runtime/Resource/Sprite/wave.png" id="3_hpy4d"]
 [ext_resource type="Texture2D" uid="uid://bdsbcq14u4841" path="res://Runtime/Resource/Sprite/wave_mask.png" id="3_lkgex"]
 [ext_resource type="PackedScene" uid="uid://i3hvoqto4ryi" path="res://Runtime/Prefab/nurses.tscn" id="4_vsn48"]
 [ext_resource type="PackedScene" uid="uid://cjircuvt6il8c" path="res://Runtime/Prefab/person.tscn" id="5_gak2m"]
-[ext_resource type="Script" path="res://Runtime/Script/Manager/Destination_1_1.gd" id="7_5sfds"]
-[ext_resource type="Script" path="res://Runtime/Script/Manager/x_interacitive_1_1.gd" id="10_bbdx7"]
+[ext_resource type="Script" uid="uid://d165br4xifm8t" path="res://Runtime/Script/Manager/Destination_1_1.gd" id="7_5sfds"]
+[ext_resource type="Script" uid="uid://ro3020v8crtq" path="res://Runtime/Script/Manager/x_interacitive_1_1.gd" id="10_bbdx7"]
 [ext_resource type="PackedScene" uid="uid://cfhx1r2bcs6ct" path="res://Runtime/Prefab/X_interacitive.tscn" id="11_4apwg"]
 [ext_resource type="Texture2D" uid="uid://44hs1ycbx5gl" path="res://Runtime/Resource/Sprite/light_base.png" id="11_jqium"]
-[ext_resource type="Script" path="res://Runtime/Script/Manager/LightManager.gd" id="12_ejfi4"]
+[ext_resource type="Script" uid="uid://c4gcouybnk050" path="res://Runtime/Script/Manager/LightManager.gd" id="12_ejfi4"]
 [ext_resource type="PackedScene" uid="uid://tc4t3r0kxkk3" path="res://Runtime/Prefab/s1_1_light.tscn" id="13_r5j2e"]
 [ext_resource type="PackedScene" uid="uid://dvqavnf8m6dgn" path="res://Runtime/Prefab/s1_2_cross_door.tscn" id="14_wnwul"]
 [ext_resource type="Texture2D" uid="uid://y7dv5lbbq0eu" path="res://Runtime/Resource/Sprite/S1_character_standing/s1_fail.JPG" id="16_5nm2x"]
@@ -21,8 +21,8 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0pj63"]
 shader = ExtResource("2_ics1n")
-shader_parameter/speed = 0.2
 shader_parameter/texture_mask = ExtResource("3_lkgex")
+shader_parameter/speed = 0.2
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5xh1s"]
 normal = Vector2(1, 0)
@@ -132,8 +132,8 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bw461"]
 _data = {
-"RESET": SubResource("Animation_coe6v"),
-"s1_1_game_over": SubResource("Animation_7c2qc")
+&"RESET": SubResource("Animation_coe6v"),
+&"s1_1_game_over": SubResource("Animation_7c2qc")
 }
 
 [node name="Root" type="Node2D"]

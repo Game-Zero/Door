@@ -4,6 +4,21 @@
 [ext_resource type="Texture2D" uid="uid://br5e60xdbcmyv" path="res://Runtime/Resource/Sprite/s3_UI/s3_2_UI/hide_controller.png" id="2_hyigy"]
 [ext_resource type="Texture2D" uid="uid://dpk7txwwata6d" path="res://Runtime/Resource/Sprite/s3_UI/s3_2_UI/action_controller.png" id="3_muml4"]
 
+[sub_resource type="Animation" id="Animation_5ba5p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_5w4n7"]
 resource_name = "s3_2_interacitive_controller"
 length = 3.0
@@ -22,25 +37,10 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_5ba5p"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4um8w"]
 _data = {
-"RESET": SubResource("Animation_5ba5p"),
-"s3_2_interacitive_controller": SubResource("Animation_5w4n7")
+&"RESET": SubResource("Animation_5ba5p"),
+&"s3_2_interacitive_controller": SubResource("Animation_5w4n7")
 }
 
 [node name="s3_2_interacitive_controller" type="Node2D"]

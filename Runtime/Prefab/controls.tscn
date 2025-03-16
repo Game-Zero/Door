@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cbd2rl2e4h102" path="res://Runtime/Resource/Sprite/S0-1_UI/controls_icon/mouse_45.png" id="5_bdiig"]
 [ext_resource type="Texture2D" uid="uid://ca6s4k3p5borm" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/cancel.png" id="5_odeip"]
 [ext_resource type="Texture2D" uid="uid://lm38novdblk6" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/cancel_hover.png" id="6_q50i1"]
-[ext_resource type="Script" path="res://Runtime/Script/Manager/ButtonAudioManager.gd" id="7_3nu1f"]
+[ext_resource type="Script" uid="uid://d2ps5ijm8n1tt" path="res://Runtime/Script/Manager/ButtonAudioManager.gd" id="7_3nu1f"]
 [ext_resource type="BitMap" uid="uid://dnr66fq6eppxw" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/cancel_click.bmp" id="7_np8b7"]
 [ext_resource type="AudioStream" uid="uid://bd4s8ksjjc0ei" path="res://Runtime/Resource/Audio/s0_0/click.MP3" id="8_bqsue"]
 [ext_resource type="AudioStream" uid="uid://dbky513i38skh" path="res://Runtime/Resource/Audio/s0_0/close.mp3" id="8_trtjg"]
@@ -281,11 +281,11 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7t2w8"]
 _data = {
-"RESET": SubResource("Animation_3tg7w"),
-"controls_appear": SubResource("Animation_r1i8l"),
-"controls_back": SubResource("Animation_iumty"),
-"mouse_back_from_controller": SubResource("Animation_xpho3"),
-"mouse_to_controller": SubResource("Animation_73ncg")
+&"RESET": SubResource("Animation_3tg7w"),
+&"controls_appear": SubResource("Animation_r1i8l"),
+&"controls_back": SubResource("Animation_iumty"),
+&"mouse_back_from_controller": SubResource("Animation_xpho3"),
+&"mouse_to_controller": SubResource("Animation_73ncg")
 }
 
 [node name="controls" type="Control"]

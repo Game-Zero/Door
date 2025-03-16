@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bx7do7py8jbba"]
 
-[ext_resource type="Script" path="res://Runtime/Script/Manager/PlayerManager_0_1.gd" id="1_5wk24"]
+[ext_resource type="Script" uid="uid://b1vhflepnyfcm" path="res://Runtime/Script/Manager/PlayerManager_0_1.gd" id="1_5wk24"]
 [ext_resource type="SpriteFrames" uid="uid://brueluouavdil" path="res://Runtime/Prefab/s0_person_anime.tres" id="1_bxoxx"]
 [ext_resource type="AudioStream" uid="uid://b2l5ij7tjrs04" path="res://Runtime/Resource/Audio/s1/walking.MP3" id="2_x5olr"]
 
@@ -103,9 +103,9 @@ tracks/2/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ykq4e"]
 _data = {
-"RESET": SubResource("Animation_72v3t"),
-"protagonist_fat_standing": SubResource("Animation_gqo8d"),
-"protagonist_fat_walking": SubResource("Animation_t1mnk")
+&"RESET": SubResource("Animation_72v3t"),
+&"protagonist_fat_standing": SubResource("Animation_gqo8d"),
+&"protagonist_fat_walking": SubResource("Animation_t1mnk")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08vm7"]

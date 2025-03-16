@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://ctrl7btmmpqnl"]
 
-[ext_resource type="Script" path="res://Runtime/Script/Manager/PlayerManager_4_1.gd" id="1_aatmq"]
+[ext_resource type="Script" uid="uid://3bm1ddhrb80w" path="res://Runtime/Script/Manager/PlayerManager_4_1.gd" id="1_aatmq"]
 [ext_resource type="SpriteFrames" uid="uid://bltiiaorvel8t" path="res://Runtime/Prefab/s4_person_anime.tres" id="1_qrbkp"]
 [ext_resource type="AudioStream" uid="uid://b2l5ij7tjrs04" path="res://Runtime/Resource/Audio/s1/walking.MP3" id="2_vgjxv"]
 
@@ -103,9 +103,9 @@ tracks/2/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vsrin"]
 _data = {
-"RESET": SubResource("Animation_uw04c"),
-"protagonist_thinner_standing": SubResource("Animation_4spla"),
-"protagonist_thinner_walking": SubResource("Animation_et5xd")
+&"RESET": SubResource("Animation_uw04c"),
+&"protagonist_thinner_standing": SubResource("Animation_4spla"),
+&"protagonist_thinner_walking": SubResource("Animation_et5xd")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_42hyw"]

@@ -253,10 +253,10 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5y6da"]
 _data = {
-"RESET": SubResource("Animation_37u5a"),
-"good_appeared": SubResource("Animation_85ump"),
-"miss_appeared": SubResource("Animation_jid10"),
-"perfect_appeared": SubResource("Animation_yluxb")
+&"RESET": SubResource("Animation_37u5a"),
+&"good_appeared": SubResource("Animation_85ump"),
+&"miss_appeared": SubResource("Animation_jid10"),
+&"perfect_appeared": SubResource("Animation_yluxb")
 }
 
 [node name="judgment" type="Node2D"]

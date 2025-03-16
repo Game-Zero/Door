@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://vn4a1rgtwlwx"]
 
 [ext_resource type="SpriteFrames" uid="uid://dbhhh44ctampb" path="res://Runtime/Prefab/doctor_anims.tres" id="1_aa3qt"]
-[ext_resource type="Script" path="res://Runtime/Script/Manager/DoctorManager.gd" id="1_gaxn1"]
+[ext_resource type="Script" uid="uid://bvqipvrlo7ky2" path="res://Runtime/Script/Manager/DoctorManager.gd" id="1_gaxn1"]
 [ext_resource type="Texture2D" uid="uid://dpewlkcxjpwq0" path="res://Runtime/Resource/Sprite/fat_liquid.png" id="2_uyk88"]
 [ext_resource type="AudioStream" uid="uid://bjx4reets3pq0" path="res://Runtime/Resource/Audio/s1/become_thin.MP3" id="3_84qh5"]
 [ext_resource type="Texture2D" uid="uid://0dltxdm8mm6r" path="res://Runtime/Resource/Sprite/bottle.png" id="3_g7o4l"]
@@ -109,8 +109,8 @@ tracks/4/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u64ve"]
 _data = {
-"RESET": SubResource("Animation_vhhbk"),
-"doctor_lipo": SubResource("Animation_emkr3")
+&"RESET": SubResource("Animation_vhhbk"),
+&"doctor_lipo": SubResource("Animation_emkr3")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p2wl0"]

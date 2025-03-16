@@ -33,7 +33,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_monn4"]
 _data = {
-"hula_hoop": SubResource("Animation_c8hvg")
+&"hula_hoop": SubResource("Animation_c8hvg")
 }
 
 [node name="person" type="Node2D"]

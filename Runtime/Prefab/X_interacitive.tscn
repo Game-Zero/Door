@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=3 uid="uid://cfhx1r2bcs6ct"]
 
 [ext_resource type="Texture2D" uid="uid://de4um0a7gy488" path="res://Runtime/Resource/Sprite/S0-1_UI/x_normal.png" id="1_j44uo"]
-[ext_resource type="Script" path="res://Runtime/Script/Manager/x_interacitive.gd" id="1_l08wp"]
+[ext_resource type="Script" uid="uid://dau1w0l0eciqy" path="res://Runtime/Script/Manager/x_interacitive.gd" id="1_l08wp"]
 [ext_resource type="Texture2D" uid="uid://dh7npyt7dk7w5" path="res://Runtime/Resource/Sprite/S0-1_UI/x_press.png" id="2_th7fr"]
 [ext_resource type="BitMap" uid="uid://ddcmjs68or4n6" path="res://Runtime/Resource/Sprite/S0-1_UI/x_click.bmp" id="3_yl0bo"]
-[ext_resource type="Script" path="res://Runtime/Script/Manager/ButtonAudioManager.gd" id="5_5ycrs"]
+[ext_resource type="Script" uid="uid://d2ps5ijm8n1tt" path="res://Runtime/Script/Manager/ButtonAudioManager.gd" id="5_5ycrs"]
 [ext_resource type="AudioStream" uid="uid://bd4s8ksjjc0ei" path="res://Runtime/Resource/Audio/s0_0/click.MP3" id="6_p6cie"]
 [ext_resource type="AudioStream" uid="uid://bwj6wvg8c6py4" path="res://Runtime/Resource/Audio/s0_0/hover.mp3" id="7_lw72b"]
 
@@ -59,9 +59,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gpj5e"]
 _data = {
-"RESET": SubResource("Animation_vi6oa"),
-"button_x_appear": SubResource("Animation_ype8s"),
-"button_x_disappear": SubResource("Animation_s0muq")
+&"RESET": SubResource("Animation_vi6oa"),
+&"button_x_appear": SubResource("Animation_ype8s"),
+&"button_x_disappear": SubResource("Animation_s0muq")
 }
 
 [node name="x" type="Node2D"]

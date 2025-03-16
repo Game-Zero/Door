@@ -2,6 +2,21 @@
 
 [ext_resource type="Texture2D" uid="uid://bv1ikpdvrj1h4" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/be_thinner.png" id="1_7pvmr"]
 
+[sub_resource type="Animation" id="Animation_snvt3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_bveo7"]
 resource_name = "s3_1_be_thinner"
 length = 2.5
@@ -19,25 +34,10 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_snvt3"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("TextureRect:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j4lha"]
 _data = {
-"RESET": SubResource("Animation_snvt3"),
-"s3_1_be_thinner": SubResource("Animation_bveo7")
+&"RESET": SubResource("Animation_snvt3"),
+&"s3_1_be_thinner": SubResource("Animation_bveo7")
 }
 
 [node name="s3_1_be_thinner" type="Node2D"]

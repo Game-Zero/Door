@@ -1,7 +1,7 @@
 [gd_scene load_steps=105 format=3 uid="uid://dqf7dekvholxn"]
 
 [ext_resource type="PackedScene" uid="uid://brg0ell7yg5nl" path="res://Runtime/Prefab/hole.tscn" id="2_53d5x"]
-[ext_resource type="Script" path="res://Runtime/Script/Manager/PlayerManager_3_2.gd" id="2_vn8ns"]
+[ext_resource type="Script" uid="uid://hqt7t6y5jly6" path="res://Runtime/Script/Manager/PlayerManager_3_2.gd" id="2_vn8ns"]
 [ext_resource type="Texture2D" uid="uid://bjpptjyll5rtq" path="res://Runtime/Resource/FrameAnimation/swarm_eating/1.png" id="3_tofwr"]
 [ext_resource type="Texture2D" uid="uid://cobwx1iv46f5g" path="res://Runtime/Resource/FrameAnimation/swarm_eating/2.png" id="4_dfw1q"]
 [ext_resource type="Texture2D" uid="uid://gddqlnepd36j" path="res://Runtime/Resource/FrameAnimation/swarm_eating/3.png" id="5_g4l3c"]
@@ -44,7 +44,7 @@
 [ext_resource type="Texture2D" uid="uid://ccmm6r1caxwob" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_12.png" id="28_rn14c"]
 [ext_resource type="Texture2D" uid="uid://d2228fumadyjs" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_13.png" id="29_j0biu"]
 [ext_resource type="Texture2D" uid="uid://gukfftatqth5" path="res://Runtime/Resource/FrameAnimation/swarm_eating_big_fat/14.png" id="29_ublux"]
-[ext_resource type="Script" path="res://Runtime/Script/Manager/Destination_3_2.gd" id="30_4lk77"]
+[ext_resource type="Script" uid="uid://b6ljfjpdskjld" path="res://Runtime/Script/Manager/Destination_3_2.gd" id="30_4lk77"]
 [ext_resource type="Texture2D" uid="uid://v3cdbitsiceg" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_14.png" id="30_jrsjm"]
 [ext_resource type="Texture2D" uid="uid://dfkl0ul53tjuw" path="res://Runtime/Resource/FrameAnimation/swarm_eating_big_fat/15.png" id="30_vpnj4"]
 [ext_resource type="Texture2D" uid="uid://c0jr78g7ou0ph" path="res://Runtime/Resource/FrameAnimation/swarm_walking/swarm_walking_15.png" id="31_7v6ed"]
@@ -94,11 +94,11 @@
 [ext_resource type="PackedScene" uid="uid://de8so0lu14br5" path="res://Runtime/Prefab/big_fat.tscn" id="76_qivtl"]
 [ext_resource type="PackedScene" uid="uid://bofbb0bvx1ysw" path="res://Runtime/Prefab/hud.tscn" id="95_14h4s"]
 [ext_resource type="AudioStream" uid="uid://dmuy741n3amd3" path="res://Runtime/Resource/Audio/s3/s3_2/s3_2_background.wav" id="95_uripk"]
-[ext_resource type="PackedScene" path="res://Runtime/Prefab/s_3_2_interacitive_controller.tscn" id="97_0gxxn"]
+[ext_resource type="PackedScene" uid="uid://bf8yhigx4g1ht" path="res://Runtime/Prefab/s_3_2_interacitive_controller.tscn" id="97_0gxxn"]
 [ext_resource type="PackedScene" uid="uid://duohsmfk2d131" path="res://Runtime/Prefab/s3_2_fail.tscn" id="98_4v2hu"]
 [ext_resource type="PackedScene" uid="uid://b6bwm3g0w4b4p" path="res://Runtime/Prefab/s3_2_interacitive.tscn" id="99_0gbw0"]
 [ext_resource type="PackedScene" uid="uid://omevqqnc5ybq" path="res://Runtime/Prefab/fat.tscn" id="174_eeac7"]
-[ext_resource type="Script" path="res://Runtime/Script/Manager/ScreenCameraManger.gd" id="184_d74i6"]
+[ext_resource type="Script" uid="uid://dyemhvufk5t2t" path="res://Runtime/Script/Manager/ScreenCameraManger.gd" id="184_d74i6"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3i4il"]
 normal = Vector2(0, 1)

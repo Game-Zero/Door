@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://de8so0lu14br5"]
 
-[ext_resource type="Script" path="res://Runtime/Script/Manager/BigFatManager.gd" id="1_r02fy"]
+[ext_resource type="Script" uid="uid://63nuakwqex65" path="res://Runtime/Script/Manager/BigFatManager.gd" id="1_r02fy"]
 [ext_resource type="Texture2D" uid="uid://dkugg060vg0hv" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/1.png" id="2_pv4pv"]
 [ext_resource type="Texture2D" uid="uid://bdg56i77wrdkq" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/2.png" id="3_412gx"]
 [ext_resource type="Texture2D" uid="uid://dji85q3ndydk5" path="res://Runtime/Resource/FrameAnimation/big_fat_being_eaten/3.png" id="4_8ste8"]

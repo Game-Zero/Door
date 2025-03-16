@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://tc4t3r0kxkk3"]
 
 [ext_resource type="Texture2D" uid="uid://bjb3st1dksev2" path="res://Runtime/Resource/Sprite/light.png" id="1_e2hxx"]
-[ext_resource type="Script" path="res://Runtime/Script/Manager/s_1_1_light.gd" id="2_xxpii"]
+[ext_resource type="Script" uid="uid://4ragsfkmp3f5" path="res://Runtime/Script/Manager/s_1_1_light.gd" id="2_xxpii"]
 [ext_resource type="Texture2D" uid="uid://c3qppbs48ptmf" path="res://Runtime/Resource/Sprite/S1_character_standing/lighting_white.png" id="3_g7sjf"]
-[ext_resource type="Shader" path="res://Runtime/Shader/light.gdshader" id="3_uev6q"]
+[ext_resource type="Shader" uid="uid://dgfnr33u5jtbm" path="res://Runtime/Shader/light.gdshader" id="3_uev6q"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jjhva"]
 resource_local_to_scene = true

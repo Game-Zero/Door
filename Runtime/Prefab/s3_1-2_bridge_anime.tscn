@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://qb4305drrrbj"]
 
-[ext_resource type="Script" path="res://Runtime/Script/Manager/s3_1-2_bridge_anime.gd" id="1_e703t"]
+[ext_resource type="Script" uid="uid://dj5t867chnvbp" path="res://Runtime/Script/Manager/s3_1-2_bridge_anime.gd" id="1_e703t"]
 [ext_resource type="SpriteFrames" uid="uid://bc3s266icoytc" path="res://Runtime/Prefab/s3_1-2_bridge anime.tres" id="1_r7ef5"]
 [ext_resource type="AudioStream" uid="uid://cntl4abtgals4" path="res://Runtime/Resource/Audio/s3/3_1_2_bridge.MP3" id="3_wnkvu"]
 
@@ -75,8 +75,8 @@ tracks/2/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hty1j"]
 _data = {
-"RESET": SubResource("Animation_cyjix"),
-"s3_1-2_bridge anime": SubResource("Animation_ctn3y")
+&"RESET": SubResource("Animation_cyjix"),
+&"s3_1-2_bridge anime": SubResource("Animation_ctn3y")
 }
 
 [node name="s3_1-2_bridge anime" type="Node2D"]

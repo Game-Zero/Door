@@ -101,9 +101,9 @@ tracks/2/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_47sys"]
 _data = {
-"RESET": SubResource("Animation_r74wk"),
-"doll_initial_state_complete": SubResource("Animation_v4e3a"),
-"doll_surgery_ready_complete": SubResource("Animation_2y07g")
+&"RESET": SubResource("Animation_r74wk"),
+&"doll_initial_state_complete": SubResource("Animation_v4e3a"),
+&"doll_surgery_ready_complete": SubResource("Animation_2y07g")
 }
 
 [node name="doll_anime_complete" type="Node2D"]

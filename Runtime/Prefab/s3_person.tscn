@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://bsjgl82qq7apy"]
 
 [ext_resource type="SpriteFrames" uid="uid://b3bdxw7ekix2l" path="res://Runtime/Prefab/s3_person_anime.tres" id="1_8pbws"]
-[ext_resource type="Script" path="res://Runtime/Script/Manager/PlayerManager_3_1.gd" id="1_dl0of"]
+[ext_resource type="Script" uid="uid://b738xujopjinh" path="res://Runtime/Script/Manager/PlayerManager_3_1.gd" id="1_dl0of"]
 [ext_resource type="AudioStream" uid="uid://b2l5ij7tjrs04" path="res://Runtime/Resource/Audio/s1/walking.MP3" id="3_l014w"]
 
 [sub_resource type="Animation" id="Animation_3lioo"]
@@ -207,13 +207,13 @@ tracks/2/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0f0p5"]
 _data = {
-"RESET": SubResource("Animation_3lioo"),
-"protagonist_thin_button_to press": SubResource("Animation_i3x15"),
-"protagonist_thin_medicine_to get": SubResource("Animation_72whn"),
-"protagonist_thin_standing": SubResource("Animation_o1b48"),
-"protagonist_thin_walking": SubResource("Animation_nf0rb"),
-"protagonist_thinner_standing": SubResource("Animation_m3utd"),
-"protagonist_thinner_walking": SubResource("Animation_2anyy")
+&"RESET": SubResource("Animation_3lioo"),
+&"protagonist_thin_button_to press": SubResource("Animation_i3x15"),
+&"protagonist_thin_medicine_to get": SubResource("Animation_72whn"),
+&"protagonist_thin_standing": SubResource("Animation_o1b48"),
+&"protagonist_thin_walking": SubResource("Animation_nf0rb"),
+&"protagonist_thinner_standing": SubResource("Animation_m3utd"),
+&"protagonist_thinner_walking": SubResource("Animation_2anyy")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kfyl6"]

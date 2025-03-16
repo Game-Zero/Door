@@ -1,7 +1,7 @@
 [gd_scene load_steps=41 format=3 uid="uid://cjircuvt6il8c"]
 
 [ext_resource type="SpriteFrames" uid="uid://shtrwigvxjkw" path="res://Runtime/Prefab/person_fat_anime.tres" id="1_sdtbp"]
-[ext_resource type="Script" path="res://Runtime/Script/Manager/PersonManager.gd" id="1_ty8q4"]
+[ext_resource type="Script" uid="uid://4n8sirp7xqye" path="res://Runtime/Script/Manager/PersonManager.gd" id="1_ty8q4"]
 [ext_resource type="AudioStream" uid="uid://c35j4dk0vnr8p" path="res://Runtime/Resource/Audio/s1/cloth.MP3" id="4_2g67b"]
 [ext_resource type="AudioStream" uid="uid://drbeeb0r2tfs0" path="res://Runtime/Resource/Audio/s1/mark.MP3" id="5_irs2f"]
 [ext_resource type="AudioStream" uid="uid://b2l5ij7tjrs04" path="res://Runtime/Resource/Audio/s1/walking.MP3" id="5_rqf7l"]
@@ -1189,39 +1189,39 @@ tracks/2/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_slju2"]
 _data = {
-"RESET": SubResource("Animation_s5hbl"),
-"npc1_fat_becom_thin": SubResource("Animation_db7l8"),
-"npc1_fat_cloth": SubResource("Animation_4lafl"),
-"npc1_fat_mark_standing": SubResource("Animation_kv42l"),
-"npc1_fat_mark_walking": SubResource("Animation_gtg0j"),
-"npc1_fat_standing": SubResource("Animation_4ev77"),
-"npc1_fat_walking": SubResource("Animation_v7tjn"),
-"npc1_medium_standing": SubResource("Animation_n8mit"),
-"npc1_medium_walking": SubResource("Animation_oumww"),
-"npc2_fat_becom_thin": SubResource("Animation_icysg"),
-"npc2_fat_cloth": SubResource("Animation_h8mob"),
-"npc2_fat_mark_standing": SubResource("Animation_y05d4"),
-"npc2_fat_mark_walking": SubResource("Animation_yb2gf"),
-"npc2_fat_standing": SubResource("Animation_lt685"),
-"npc2_fat_walking": SubResource("Animation_lyebt"),
-"npc2_medium_standing": SubResource("Animation_n4w4i"),
-"npc2_medium_walking": SubResource("Animation_l2mqd"),
-"npc3_fat_becom_thin": SubResource("Animation_wbg1s"),
-"npc3_fat_cloth": SubResource("Animation_rske2"),
-"npc3_fat_mark_standing": SubResource("Animation_k1wns"),
-"npc3_fat_mark_walking": SubResource("Animation_yeem0"),
-"npc3_fat_standing": SubResource("Animation_2r0f0"),
-"npc3_fat_walking": SubResource("Animation_jqm7g"),
-"npc3_medium_standing": SubResource("Animation_adta1"),
-"npc3_medium_walking": SubResource("Animation_04ycs"),
-"protagonist_fat_becom_thin": SubResource("Animation_uy62o"),
-"protagonist_fat_cloth": SubResource("Animation_icpf4"),
-"protagonist_fat_mark_standing": SubResource("Animation_padeu"),
-"protagonist_fat_mark_walking": SubResource("Animation_mxyth"),
-"protagonist_fat_standing": SubResource("Animation_ho7uj"),
-"protagonist_fat_walking": SubResource("Animation_a1wp2"),
-"protagonist_medium_standing": SubResource("Animation_d7ikt"),
-"protagonist_medium_walking": SubResource("Animation_3to17")
+&"RESET": SubResource("Animation_s5hbl"),
+&"npc1_fat_becom_thin": SubResource("Animation_db7l8"),
+&"npc1_fat_cloth": SubResource("Animation_4lafl"),
+&"npc1_fat_mark_standing": SubResource("Animation_kv42l"),
+&"npc1_fat_mark_walking": SubResource("Animation_gtg0j"),
+&"npc1_fat_standing": SubResource("Animation_4ev77"),
+&"npc1_fat_walking": SubResource("Animation_v7tjn"),
+&"npc1_medium_standing": SubResource("Animation_n8mit"),
+&"npc1_medium_walking": SubResource("Animation_oumww"),
+&"npc2_fat_becom_thin": SubResource("Animation_icysg"),
+&"npc2_fat_cloth": SubResource("Animation_h8mob"),
+&"npc2_fat_mark_standing": SubResource("Animation_y05d4"),
+&"npc2_fat_mark_walking": SubResource("Animation_yb2gf"),
+&"npc2_fat_standing": SubResource("Animation_lt685"),
+&"npc2_fat_walking": SubResource("Animation_lyebt"),
+&"npc2_medium_standing": SubResource("Animation_n4w4i"),
+&"npc2_medium_walking": SubResource("Animation_l2mqd"),
+&"npc3_fat_becom_thin": SubResource("Animation_wbg1s"),
+&"npc3_fat_cloth": SubResource("Animation_rske2"),
+&"npc3_fat_mark_standing": SubResource("Animation_k1wns"),
+&"npc3_fat_mark_walking": SubResource("Animation_yeem0"),
+&"npc3_fat_standing": SubResource("Animation_2r0f0"),
+&"npc3_fat_walking": SubResource("Animation_jqm7g"),
+&"npc3_medium_standing": SubResource("Animation_adta1"),
+&"npc3_medium_walking": SubResource("Animation_04ycs"),
+&"protagonist_fat_becom_thin": SubResource("Animation_uy62o"),
+&"protagonist_fat_cloth": SubResource("Animation_icpf4"),
+&"protagonist_fat_mark_standing": SubResource("Animation_padeu"),
+&"protagonist_fat_mark_walking": SubResource("Animation_mxyth"),
+&"protagonist_fat_standing": SubResource("Animation_ho7uj"),
+&"protagonist_fat_walking": SubResource("Animation_a1wp2"),
+&"protagonist_medium_standing": SubResource("Animation_d7ikt"),
+&"protagonist_medium_walking": SubResource("Animation_3to17")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3qvl"]

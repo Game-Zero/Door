@@ -10,7 +10,7 @@
 [ext_resource type="BitMap" uid="uid://dnr66fq6eppxw" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/cancel_click.bmp" id="8_fthbi"]
 [ext_resource type="AudioStream" uid="uid://dbky513i38skh" path="res://Runtime/Resource/Audio/s0_0/close.mp3" id="8_qub41"]
 [ext_resource type="BitMap" uid="uid://ba3jxfra5m58v" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/click.bmp" id="9_6ifcc"]
-[ext_resource type="Script" path="res://Runtime/Script/Manager/ButtonAudioManager.gd" id="10_6gavb"]
+[ext_resource type="Script" uid="uid://d2ps5ijm8n1tt" path="res://Runtime/Script/Manager/ButtonAudioManager.gd" id="10_6gavb"]
 [ext_resource type="Texture2D" uid="uid://b74er08jb66wb" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/exit_45.png" id="10_klt6n"]
 [ext_resource type="Texture2D" uid="uid://b7vk2kme6pae7" path="res://Runtime/Resource/Sprite/S0-1_UI/esc_icon/exit_45_hover.png" id="11_31pvl"]
 [ext_resource type="AudioStream" uid="uid://bd4s8ksjjc0ei" path="res://Runtime/Resource/Audio/s0_0/click.MP3" id="11_srwl0"]

@@ -35,8 +35,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ru0th"]
 _data = {
-"RESET": SubResource("Animation_4h4w5"),
-"loading": SubResource("Animation_eevxr")
+&"RESET": SubResource("Animation_4h4w5"),
+&"loading": SubResource("Animation_eevxr")
 }
 
 [node name="loading" type="Control"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://i3hvoqto4ryi"]
 
-[ext_resource type="Script" path="res://Runtime/Script/Manager/NurseManager.gd" id="1_4ml8e"]
+[ext_resource type="Script" uid="uid://cq3bhwmmnalac" path="res://Runtime/Script/Manager/NurseManager.gd" id="1_4ml8e"]
 [ext_resource type="Texture2D" uid="uid://ucs66dcwe507" path="res://Runtime/Resource/Sprite/S1_character_standing/nurses_move_bottom.png" id="1_xl785"]
 [ext_resource type="SpriteFrames" uid="uid://bweo5jhy1mfth" path="res://Runtime/Prefab/nurses_anime.tres" id="2_wbasg"]
 [ext_resource type="AudioStream" uid="uid://bthota53cgmyo" path="res://Runtime/Resource/Audio/s1/heart_voice.MP3" id="4_0hjc4"]
@@ -124,9 +124,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ywtcc"]
 _data = {
-"RESET": SubResource("Animation_1scpp"),
-"nurse1_animation": SubResource("Animation_8m5sv"),
-"nurse2_arm_anime": SubResource("Animation_ns4vr")
+&"RESET": SubResource("Animation_1scpp"),
+&"nurse1_animation": SubResource("Animation_8m5sv"),
+&"nurse2_arm_anime": SubResource("Animation_ns4vr")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lihe1"]

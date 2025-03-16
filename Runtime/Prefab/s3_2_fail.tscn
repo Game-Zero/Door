@@ -1,13 +1,13 @@
 [gd_scene load_steps=17 format=3 uid="uid://duohsmfk2d131"]
 
 [ext_resource type="Texture2D" uid="uid://xhc6xd8jy3c1" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/fail_sample.png" id="1_qt8ty"]
-[ext_resource type="Script" path="res://Runtime/Script/Manager/s_3_2_fail.gd" id="1_xd6lf"]
+[ext_resource type="Script" uid="uid://cbqttmupme30d" path="res://Runtime/Script/Manager/s_3_2_fail.gd" id="1_xd6lf"]
 [ext_resource type="Texture2D" uid="uid://d315yrbrgcgmn" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/fail_background.png" id="2_kn6os"]
 [ext_resource type="Texture2D" uid="uid://c6i5m60gs3y0p" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/fail.png" id="3_l3rco"]
 [ext_resource type="Texture2D" uid="uid://8gybsm3jcv3f" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/again.png" id="4_70rjn"]
 [ext_resource type="Texture2D" uid="uid://bf1eio68xxsgw" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/again_hover.png" id="5_a0gng"]
 [ext_resource type="BitMap" uid="uid://ba3jxfra5m58v" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/click.bmp" id="6_51ehj"]
-[ext_resource type="Script" path="res://Runtime/Script/Manager/ButtonAudioManager.gd" id="8_3y0ch"]
+[ext_resource type="Script" uid="uid://d2ps5ijm8n1tt" path="res://Runtime/Script/Manager/ButtonAudioManager.gd" id="8_3y0ch"]
 [ext_resource type="Texture2D" uid="uid://1ejrxver8uv1" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/back.png" id="8_tp2s1"]
 [ext_resource type="Texture2D" uid="uid://cxy4nxkup25l6" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/back_hover.png" id="9_47yrh"]
 [ext_resource type="AudioStream" uid="uid://bd4s8ksjjc0ei" path="res://Runtime/Resource/Audio/s0_0/click.MP3" id="9_g6sf0"]
@@ -135,8 +135,8 @@ tracks/4/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_txqwt"]
 _data = {
-"RESET": SubResource("Animation_yunlo"),
-"s3_2_fail": SubResource("Animation_2yrdg")
+&"RESET": SubResource("Animation_yunlo"),
+&"s3_2_fail": SubResource("Animation_2yrdg")
 }
 
 [node name="fail" type="Node2D"]

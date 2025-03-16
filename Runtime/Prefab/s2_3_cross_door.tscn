@@ -74,8 +74,8 @@ tracks/2/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i12id"]
 _data = {
-"RESET": SubResource("Animation_nlwl5"),
-"s2_3_cross_door": SubResource("Animation_0aetc")
+&"RESET": SubResource("Animation_nlwl5"),
+&"s2_3_cross_door": SubResource("Animation_0aetc")
 }
 
 [node name="s2_3_cross_door" type="Node2D"]

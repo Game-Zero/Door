@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://2lt8ey4aknoy"]
 
-[ext_resource type="Script" path="res://Runtime/Script/Manager/EndManager.gd" id="1_jastq"]
+[ext_resource type="Script" uid="uid://bsoi5ngcwouni" path="res://Runtime/Script/Manager/EndManager.gd" id="1_jastq"]
 [ext_resource type="SpriteFrames" uid="uid://dqi4ebwehu6me" path="res://Runtime/Prefab/end_anime.tres" id="1_r6or5"]
 
 [sub_resource type="Animation" id="Animation_r1s5s"]
@@ -198,12 +198,12 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7fwn6"]
 _data = {
-"RESET": SubResource("Animation_r1s5s"),
-"end1": SubResource("Animation_omv7e"),
-"end2_base": SubResource("Animation_jxicb"),
-"end2_top": SubResource("Animation_sfj52"),
-"end3_1": SubResource("Animation_7yxcg"),
-"end3_2": SubResource("Animation_l1sv2")
+&"RESET": SubResource("Animation_r1s5s"),
+&"end1": SubResource("Animation_omv7e"),
+&"end2_base": SubResource("Animation_jxicb"),
+&"end2_top": SubResource("Animation_sfj52"),
+&"end3_1": SubResource("Animation_7yxcg"),
+&"end3_2": SubResource("Animation_l1sv2")
 }
 
 [node name="end" type="Node2D"]

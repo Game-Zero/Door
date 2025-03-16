@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://cdof8hcbk5qgg"]
 
 [ext_resource type="SpriteFrames" uid="uid://bau2p0ysdqmcg" path="res://Runtime/Prefab/end_part_2_anime.tres" id="1_5sa86"]
-[ext_resource type="Script" path="res://Runtime/Script/Manager/end_part_2.gd" id="1_tq0b2"]
+[ext_resource type="Script" uid="uid://6mhbxu5tni0l" path="res://Runtime/Script/Manager/end_part_2.gd" id="1_tq0b2"]
 [ext_resource type="AudioStream" uid="uid://cpl2rc85a7sgf" path="res://Runtime/Resource/Audio/s4/protagonist_neck_break.MP3" id="2_53r24"]
 [ext_resource type="Texture2D" uid="uid://slmvywiwwpbc" path="res://Runtime/Resource/FrameAnimation/S4_anime/end4/IMG_2183.PNG" id="4_04hpb"]
 [ext_resource type="AnimationLibrary" uid="uid://cjhe5vntqd77j" path="res://Runtime/Prefab/end_scroll_screen.tres" id="5_7h8w7"]
@@ -127,9 +127,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_juw4u"]
 _data = {
-"RESET": SubResource("Animation_twgbf"),
-"end3_3": SubResource("Animation_g7j5b"),
-"end4": SubResource("Animation_t06a3")
+&"RESET": SubResource("Animation_twgbf"),
+&"end3_3": SubResource("Animation_g7j5b"),
+&"end4": SubResource("Animation_t06a3")
 }
 
 [node name="end_part_2" type="Node2D"]

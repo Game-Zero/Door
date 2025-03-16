@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://bueufkljryjug"]
 
-[ext_resource type="Script" path="res://Runtime/Script/Manager/Stage_0_1.gd" id="1_6yfbi"]
+[ext_resource type="Script" uid="uid://c1acdmvcf5tqv" path="res://Runtime/Script/Manager/Stage_0_1.gd" id="1_6yfbi"]
 [ext_resource type="Texture2D" uid="uid://cfl5vd288pito" path="res://Runtime/Resource/Background/stage0-1.png" id="1_tbd8e"]
 [ext_resource type="Texture2D" uid="uid://dkkyy4e03c8on" path="res://Runtime/Resource/Background/s0-1_door_light.png" id="2_3es4c"]
 [ext_resource type="PackedScene" uid="uid://bx7do7py8jbba" path="res://Runtime/Prefab/s0_person.tscn" id="2_lc70h"]

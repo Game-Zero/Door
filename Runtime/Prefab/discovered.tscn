@@ -52,8 +52,8 @@ tracks/1/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qv8j5"]
 _data = {
-"RESET": SubResource("Animation_iusix"),
-"discovered": SubResource("Animation_p3kqi")
+&"RESET": SubResource("Animation_iusix"),
+&"discovered": SubResource("Animation_p3kqi")
 }
 
 [node name="discovered" type="Node2D"]

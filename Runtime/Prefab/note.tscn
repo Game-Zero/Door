@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://vguvqexn7pw4"]
 
-[ext_resource type="Script" path="res://Runtime/Script/Manager/note.gd" id="1_48s0n"]
+[ext_resource type="Script" uid="uid://bky6hyus2dk2h" path="res://Runtime/Script/Manager/note.gd" id="1_48s0n"]
 [ext_resource type="Texture2D" uid="uid://dkubgdv7bj8wo" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/W_button.png" id="1_eucpf"]
-[ext_resource type="Shader" path="res://Runtime/Shader/outglow.gdshader" id="1_g3eno"]
+[ext_resource type="Shader" uid="uid://ddmf55qgdmvo4" path="res://Runtime/Shader/outglow.gdshader" id="1_g3eno"]
 [ext_resource type="Texture2D" uid="uid://1wwctbam72m7" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/D_button.png" id="2_o8u0o"]
 [ext_resource type="Texture2D" uid="uid://bv3ff8bardroy" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/A_button.png" id="3_o11d0"]
 [ext_resource type="Texture2D" uid="uid://b2nqsxobvtdee" path="res://Runtime/Resource/Sprite/S2-1_UI_icon/S_button.png" id="4_htpnw"]

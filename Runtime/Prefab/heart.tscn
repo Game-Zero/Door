@@ -60,8 +60,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_signl"]
 _data = {
-"RESET": SubResource("Animation_28ocu"),
-"heartbeat": SubResource("Animation_tn4qs")
+&"RESET": SubResource("Animation_28ocu"),
+&"heartbeat": SubResource("Animation_tn4qs")
 }
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kh7ac"]
