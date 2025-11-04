@@ -11,6 +11,7 @@ func _ready() -> void:
 	self.add_child(self.audio_stream_player)
 	self.button_down.connect(self.on_button_down)
 	self.mouse_entered.connect(self.on_mouse_entered)
+	self.focus_entered.connect(self.on_mouse_entered)
 
 
 func play_button_down_audio():
