@@ -10,6 +10,7 @@ var loading_id: int = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	get_tree().paused = false
+	$press/start.grab_focus()
 	return # todo:zero 改成异步加载资源
 	loading_id = 0
 	var share_instance: Node = get_node("/root/SharedInstance")

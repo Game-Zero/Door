@@ -28,12 +28,14 @@ offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_21h58")
+metadata/_edit_use_anchors_ = true
 
 [node name="name" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_iagdu")
+metadata/_edit_use_anchors_ = true
 
 [node name="sample" type="TextureRect" parent="."]
 visible = false
@@ -49,46 +51,77 @@ scale = Vector2(0.25, 0.25)
 [node name="press" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
+focus_mode = 2
+metadata/_edit_use_anchors_ = true
 
-[node name="start" type="TextureButton" parent="press"]
+[node name="start" type="TextureButton" parent="press" node_paths=PackedStringArray("shortcut_context")]
 layout_mode = 0
 offset_left = 781.0
 offset_top = 529.0
 offset_right = 1139.0
 offset_bottom = 615.0
+focus_neighbor_left = NodePath("../exit")
+focus_neighbor_top = NodePath("../exit")
+focus_neighbor_right = NodePath("../setting")
+focus_neighbor_bottom = NodePath("../setting")
+focus_next = NodePath("../setting")
+focus_previous = NodePath("../exit")
+shortcut_context = NodePath("..")
 texture_normal = ExtResource("5_rkh3y")
+texture_pressed = ExtResource("6_x86xo")
 texture_hover = ExtResource("6_x86xo")
+texture_focused = ExtResource("6_x86xo")
 texture_click_mask = ExtResource("7_td5st")
 script = ExtResource("8_0kr71")
 on_button_down_audio = ExtResource("9_0wm8h")
 on_button_hover_audio = ExtResource("10_k86lg")
+metadata/_edit_use_anchors_ = true
 
-[node name="setting" type="TextureButton" parent="press"]
+[node name="setting" type="TextureButton" parent="press" node_paths=PackedStringArray("shortcut_context")]
 layout_mode = 0
 offset_left = 781.0
 offset_top = 609.0
 offset_right = 1139.0
 offset_bottom = 695.0
+focus_neighbor_left = NodePath("../start")
+focus_neighbor_top = NodePath("../start")
+focus_neighbor_right = NodePath("../exit")
+focus_neighbor_bottom = NodePath("../exit")
+focus_next = NodePath("../exit")
+focus_previous = NodePath("../start")
+shortcut_context = NodePath("..")
 texture_normal = ExtResource("11_72iy7")
 texture_pressed = ExtResource("12_jv4j8")
 texture_hover = ExtResource("12_jv4j8")
+texture_focused = ExtResource("12_jv4j8")
 texture_click_mask = ExtResource("7_td5st")
 script = ExtResource("8_0kr71")
 on_button_down_audio = ExtResource("9_0wm8h")
 on_button_hover_audio = ExtResource("10_k86lg")
+metadata/_edit_use_anchors_ = true
 
-[node name="exit" type="TextureButton" parent="press"]
+[node name="exit" type="TextureButton" parent="press" node_paths=PackedStringArray("shortcut_context")]
 layout_mode = 0
 offset_left = 781.0
 offset_top = 688.0
 offset_right = 1139.0
 offset_bottom = 774.0
+focus_neighbor_left = NodePath("../setting")
+focus_neighbor_top = NodePath("../setting")
+focus_neighbor_right = NodePath("../start")
+focus_neighbor_bottom = NodePath("../start")
+focus_next = NodePath("../start")
+focus_previous = NodePath("../setting")
+shortcut_context = NodePath("..")
 texture_normal = ExtResource("8_p8vak")
+texture_pressed = ExtResource("11_u436w")
 texture_hover = ExtResource("11_u436w")
+texture_focused = ExtResource("11_u436w")
 texture_click_mask = ExtResource("7_td5st")
 script = ExtResource("8_0kr71")
 on_button_down_audio = ExtResource("9_0wm8h")
 on_button_hover_audio = ExtResource("10_k86lg")
+metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_j1a5p")
