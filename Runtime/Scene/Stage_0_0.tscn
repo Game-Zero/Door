@@ -51,6 +51,12 @@ scale = Vector2(0.25, 0.25)
 [node name="press" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
+focus_neighbor_left = NodePath("exit")
+focus_neighbor_top = NodePath("exit")
+focus_neighbor_right = NodePath("start")
+focus_neighbor_bottom = NodePath("start")
+focus_next = NodePath("start")
+focus_previous = NodePath("exit")
 focus_mode = 2
 metadata/_edit_use_anchors_ = true
 

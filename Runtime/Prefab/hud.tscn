@@ -115,6 +115,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector2(0.25, 0.25)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("mouse:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_r1i8l"]
 resource_name = "controls_appear"
@@ -179,6 +191,20 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("mouse/next_page")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"grab_focus"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_iumty"]
@@ -267,11 +293,25 @@ tracks/6/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../game_config/controls_button")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"grab_focus"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_xpho3"]
 resource_name = "mouse_back_from_controller"
-length = 0.2
-step = 0.1
+length = 0.25
+step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -319,6 +359,20 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1e-05, 0.25), Vector2(0.25, 0.25)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("mouse/next_page")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.25),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"grab_focus"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_73ncg"]
@@ -394,6 +448,18 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("mouse:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7t2w8"]
@@ -494,8 +560,8 @@ tracks/6/keys = {
 
 [sub_resource type="Animation" id="Animation_3t5nx"]
 resource_name = "controller_appear"
-length = 0.2
-step = 0.1
+length = 0.25
+step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -555,6 +621,20 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1e-05, 0.25), Vector2(0.25, 0.25)]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("previous_page")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.25),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"grab_focus"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_ylmmq"]
@@ -768,7 +848,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("base:scale")
+tracks/0/path = NodePath("game_config/base:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -780,7 +860,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("options_word:scale")
+tracks/1/path = NodePath("game_config/options_word:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -792,7 +872,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("audio:scale")
+tracks/2/path = NodePath("game_config/audio:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -804,7 +884,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("controls_button:scale")
+tracks/3/path = NodePath("game_config/controls_button:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -816,7 +896,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("cancel:scale")
+tracks/4/path = NodePath("game_config/cancel:scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -828,7 +908,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("s0_0_options_cancel:scale")
+tracks/5/path = NodePath("game_config/s0_0_options_cancel:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -840,7 +920,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("s0_0_options_cancel:visible")
+tracks/6/path = NodePath("game_config/s0_0_options_cancel:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -852,7 +932,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("cancel:visible")
+tracks/7/path = NodePath("game_config/cancel:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -864,7 +944,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("volume:modulate")
+tracks/8/path = NodePath("game_config/volume:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -873,15 +953,27 @@ tracks/8/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0.996078)]
 }
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("game_config:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_c03sg"]
 resource_name = "options_appear"
-length = 0.4
-step = 0.1
+length = 0.45
+step = 0.01
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("base:scale")
+tracks/0/path = NodePath("game_config/base:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -893,7 +985,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("options_word:scale")
+tracks/1/path = NodePath("game_config/options_word:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -905,7 +997,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("audio:scale")
+tracks/2/path = NodePath("game_config/audio:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -917,7 +1009,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("controls_button:scale")
+tracks/3/path = NodePath("game_config/controls_button:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -929,7 +1021,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("cancel:scale")
+tracks/4/path = NodePath("game_config/cancel:scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -953,7 +1045,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("cancel:visible")
+tracks/6/path = NodePath("game_config/cancel:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -965,7 +1057,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("s0_0_options_cancel:scale")
+tracks/7/path = NodePath("game_config/s0_0_options_cancel:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -977,7 +1069,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("s0_0_options_cancel:visible")
+tracks/8/path = NodePath("game_config/s0_0_options_cancel:visible")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -989,7 +1081,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("volume:modulate")
+tracks/9/path = NodePath("game_config/volume:modulate")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -997,6 +1089,32 @@ tracks/9/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0.00392157), Color(1, 1, 1, 1)]
+}
+tracks/10/type = "method"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("game_config/controls_button")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.44),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"grab_focus"
+}]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("game_config:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_naico"]
@@ -1006,7 +1124,7 @@ step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("base:scale")
+tracks/0/path = NodePath("game_config/base:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -1018,7 +1136,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("options_word:scale")
+tracks/1/path = NodePath("game_config/options_word:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -1030,7 +1148,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("audio:scale")
+tracks/2/path = NodePath("game_config/audio:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -1042,7 +1160,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("controls_button:scale")
+tracks/3/path = NodePath("game_config/controls_button:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -1054,7 +1172,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("cancel:scale")
+tracks/4/path = NodePath("game_config/cancel:scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -1066,7 +1184,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("cancel:visible")
+tracks/5/path = NodePath("game_config/cancel:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -1078,7 +1196,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("s0_0_options_cancel:scale")
+tracks/6/path = NodePath("game_config/s0_0_options_cancel:scale")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -1090,7 +1208,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("s0_0_options_cancel:visible")
+tracks/7/path = NodePath("game_config/s0_0_options_cancel:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -1102,7 +1220,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("volume:modulate")
+tracks/8/path = NodePath("game_config/volume:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -1110,6 +1228,18 @@ tracks/8/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("game_config:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
 }
 
 [sub_resource type="Animation" id="Animation_ctdbu"]
@@ -1119,7 +1249,7 @@ step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("base:scale")
+tracks/0/path = NodePath("game_config/base:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -1131,7 +1261,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("cancel:scale")
+tracks/1/path = NodePath("game_config/cancel:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -1143,7 +1273,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("options_word:scale")
+tracks/2/path = NodePath("game_config/options_word:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -1155,7 +1285,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("audio:scale")
+tracks/3/path = NodePath("game_config/audio:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -1167,7 +1297,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("controls_button:scale")
+tracks/4/path = NodePath("game_config/controls_button:scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -1179,7 +1309,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("s0_0_options_cancel:visible")
+tracks/5/path = NodePath("game_config/s0_0_options_cancel:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -1191,7 +1321,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("cancel:visible")
+tracks/6/path = NodePath("game_config/cancel:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -1203,7 +1333,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("volume:modulate")
+tracks/7/path = NodePath("game_config/volume:modulate")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -1211,6 +1341,32 @@ tracks/7/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("game_config/controls_button")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"grab_focus"
+}]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("game_config:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_me4wn"]
@@ -1220,7 +1376,7 @@ step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("options_word:scale")
+tracks/0/path = NodePath("game_config/options_word:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -1232,7 +1388,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("audio:scale")
+tracks/1/path = NodePath("game_config/audio:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -1244,7 +1400,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("controls_button:scale")
+tracks/2/path = NodePath("game_config/controls_button:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -1256,7 +1412,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("base:scale")
+tracks/3/path = NodePath("game_config/base:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -1268,7 +1424,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("cancel:scale")
+tracks/4/path = NodePath("game_config/cancel:scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -1302,7 +1458,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("volume:modulate")
+tracks/7/path = NodePath("game_config/volume:modulate")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -1310,6 +1466,18 @@ tracks/7/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("game_config:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_c5jnl"]
@@ -1319,7 +1487,7 @@ step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("options_word:scale")
+tracks/0/path = NodePath("game_config/options_word:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -1331,7 +1499,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("audio:scale")
+tracks/1/path = NodePath("game_config/audio:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -1343,7 +1511,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("controls_button:scale")
+tracks/2/path = NodePath("game_config/controls_button:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -1355,7 +1523,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("base:scale")
+tracks/3/path = NodePath("game_config/base:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -1367,7 +1535,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("cancel:scale")
+tracks/4/path = NodePath("game_config/cancel:scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -1413,7 +1581,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("cancel:visible")
+tracks/8/path = NodePath("game_config/cancel:visible")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -1425,7 +1593,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("s0_0_options_cancel:visible")
+tracks/9/path = NodePath("game_config/s0_0_options_cancel:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -1437,7 +1605,7 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("volume:modulate")
+tracks/10/path = NodePath("game_config/volume:modulate")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -1445,6 +1613,18 @@ tracks/10/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("game_config:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0i16m"]
@@ -1534,22 +1714,26 @@ offset_right = 55.0
 offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.113725, 0.54902, 0.243137, 1)
-text = " FPS: 142.0"
+text = " FPS: 145.0"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("2_o6mpc")
 
-[node name="esc" type="Node2D" parent="."]
+[node name="esc" type="Control" parent="."]
 visible = false
+layout_mode = 3
+anchors_preset = 0
 
 [node name="TextureRect" type="TextureRect" parent="esc"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_olhm3")
 
 [node name="base" type="TextureRect" parent="esc"]
+layout_mode = 0
 offset_left = 535.0
 offset_top = -1530.0
 offset_right = 3925.0
@@ -1559,6 +1743,7 @@ pivot_offset = Vector2(6, 2040)
 texture = ExtResource("4_wvv0o")
 
 [node name="pause_word" type="TextureRect" parent="esc"]
+layout_mode = 0
 offset_left = 843.0
 offset_top = 70.0
 offset_right = 1788.0
@@ -1568,42 +1753,66 @@ pivot_offset = Vector2(0, 102)
 texture = ExtResource("5_8p5ne")
 
 [node name="cancel" type="TextureButton" parent="esc"]
+layout_mode = 0
 offset_left = 406.0
 offset_top = 114.0
 offset_right = 499.0
 offset_bottom = 206.0
 pivot_offset = Vector2(92, 46)
+focus_neighbor_left = NodePath("../option_Button")
+focus_neighbor_top = NodePath("../option_Button")
+focus_neighbor_right = NodePath("../option_Button")
+focus_neighbor_bottom = NodePath("../option_Button")
+focus_next = NodePath("../option_Button")
+focus_previous = NodePath("../option_Button")
 texture_normal = ExtResource("6_2gwfb")
 texture_pressed = ExtResource("7_uv44p")
 texture_hover = ExtResource("7_uv44p")
+texture_focused = ExtResource("7_uv44p")
 texture_click_mask = ExtResource("8_lla83")
 script = ExtResource("9_p6nvq")
 on_button_down_audio = ExtResource("10_8dfc1")
 on_button_hover_audio = ExtResource("11_uv5lf")
 
 [node name="option_Button" type="TextureButton" parent="esc"]
+layout_mode = 0
 offset_left = 782.0
 offset_top = 346.0
 offset_right = 1140.0
 offset_bottom = 432.0
 pivot_offset = Vector2(0, 43)
+focus_neighbor_left = NodePath("../cancel")
+focus_neighbor_top = NodePath("../exit_Button")
+focus_neighbor_right = NodePath("../cancel")
+focus_neighbor_bottom = NodePath("../exit_Button")
+focus_next = NodePath("../exit_Button")
+focus_previous = NodePath("../exit_Button")
 texture_normal = ExtResource("12_d54hu")
 texture_pressed = ExtResource("13_6abiu")
 texture_hover = ExtResource("13_6abiu")
+texture_focused = ExtResource("13_6abiu")
 texture_click_mask = ExtResource("14_ow7v5")
 script = ExtResource("9_p6nvq")
 on_button_down_audio = ExtResource("15_gncbs")
 on_button_hover_audio = ExtResource("11_uv5lf")
 
 [node name="exit_Button" type="TextureButton" parent="esc"]
+layout_mode = 0
 offset_left = 781.0
 offset_top = 444.0
 offset_right = 1139.0
 offset_bottom = 530.0
 pivot_offset = Vector2(2, 44)
+focus_neighbor_left = NodePath("../cancel")
+focus_neighbor_top = NodePath("../option_Button")
+focus_neighbor_right = NodePath("../cancel")
+focus_neighbor_bottom = NodePath("../option_Button")
+focus_next = NodePath("../option_Button")
+focus_previous = NodePath("../option_Button")
 texture_normal = ExtResource("16_oq82t")
 texture_pressed = ExtResource("17_d2f1t")
 texture_hover = ExtResource("17_d2f1t")
+texture_focused = ExtResource("17_d2f1t")
 texture_click_mask = ExtResource("14_ow7v5")
 script = ExtResource("9_p6nvq")
 on_button_down_audio = ExtResource("15_gncbs")
@@ -1612,6 +1821,7 @@ on_button_hover_audio = ExtResource("11_uv5lf")
 [node name="all_black" type="TextureRect" parent="esc"]
 visible = false
 modulate = Color(1, 1, 1, 0.00392157)
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("18_vf4cf")
@@ -1621,17 +1831,26 @@ libraries = {
 &"": ExtResource("19_b752j")
 }
 
-[node name="options" type="Node2D" parent="."]
+[node name="options" type="Control" parent="."]
 visible = false
+layout_mode = 3
+anchors_preset = 0
 
-[node name="sample" type="TextureRect" parent="options"]
-visible = false
+[node name="game_config" type="Control" parent="options"]
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="sample" type="TextureRect" parent="options/game_config"]
+visible = false
+layout_mode = 0
+offset_right = 7680.0
+offset_bottom = 4320.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("20_450fk")
 
-[node name="base" type="TextureRect" parent="options"]
+[node name="base" type="TextureRect" parent="options/game_config"]
+layout_mode = 0
 offset_left = 535.0
 offset_top = -1530.0
 offset_right = 3925.0
@@ -1640,7 +1859,8 @@ scale = Vector2(0.25, 0.25)
 pivot_offset = Vector2(6, 2040)
 texture = ExtResource("4_wvv0o")
 
-[node name="options_word" type="TextureRect" parent="options"]
+[node name="options_word" type="TextureRect" parent="options/game_config"]
+layout_mode = 0
 offset_left = 795.0
 offset_top = 69.0
 offset_right = 2116.0
@@ -1649,7 +1869,8 @@ scale = Vector2(0.25, 0.25)
 pivot_offset = Vector2(0, 104)
 texture = ExtResource("21_04pif")
 
-[node name="audio" type="TextureRect" parent="options"]
+[node name="audio" type="TextureRect" parent="options/game_config"]
+layout_mode = 0
 offset_left = 780.0
 offset_top = 346.0
 offset_right = 1138.0
@@ -1657,74 +1878,109 @@ offset_bottom = 432.0
 pivot_offset = Vector2(0, 42)
 texture = ExtResource("22_e2n1f")
 
-[node name="volume" type="Node2D" parent="options"]
+[node name="volume" type="Control" parent="options/game_config"]
 modulate = Color(1, 1, 1, 0.996078)
+anchors_preset = 0
 
-[node name="HSlider" type="HSlider" parent="options/volume"]
+[node name="HSlider" type="HSlider" parent="options/game_config/volume"]
+layout_mode = 0
 offset_left = 750.0
 offset_top = 461.0
 offset_right = 1170.0
 offset_bottom = 490.0
+focus_neighbor_left = NodePath("../../s0_0_options_cancel")
+focus_neighbor_top = NodePath("../../controls_button")
+focus_neighbor_right = NodePath("../../s0_0_options_cancel")
+focus_neighbor_bottom = NodePath("../../controls_button")
+focus_next = NodePath("../../controls_button")
+focus_previous = NodePath("../../controls_button")
 theme = SubResource("Theme_6d41w")
 max_value = 1.0
 step = 0.01
 value = 1.0
 script = ExtResource("24_ybejo")
 
-[node name="controls_button" type="TextureButton" parent="options"]
+[node name="controls_button" type="TextureButton" parent="options/game_config"]
+layout_mode = 0
 offset_left = 781.0
 offset_top = 517.0
 offset_right = 1139.0
 offset_bottom = 603.0
 pivot_offset = Vector2(0, 44)
+focus_neighbor_left = NodePath("../s0_0_options_cancel")
+focus_neighbor_top = NodePath("../volume/HSlider")
+focus_neighbor_right = NodePath("../s0_0_options_cancel")
+focus_neighbor_bottom = NodePath("../volume/HSlider")
+focus_next = NodePath("../volume/HSlider")
+focus_previous = NodePath("../volume/HSlider")
 texture_normal = ExtResource("27_2kx8o")
 texture_pressed = ExtResource("28_rq62x")
 texture_hover = ExtResource("28_rq62x")
+texture_focused = ExtResource("28_rq62x")
 texture_click_mask = ExtResource("14_ow7v5")
 script = ExtResource("9_p6nvq")
 on_button_down_audio = ExtResource("15_gncbs")
 on_button_hover_audio = ExtResource("11_uv5lf")
 
-[node name="cancel" type="TextureButton" parent="options"]
+[node name="cancel" type="TextureButton" parent="options/game_config"]
+layout_mode = 0
 offset_left = 406.0
 offset_top = 114.0
 offset_right = 499.0
 offset_bottom = 206.0
 pivot_offset = Vector2(92, 46)
+focus_neighbor_left = NodePath("../controls_button")
+focus_neighbor_top = NodePath("../controls_button")
+focus_neighbor_right = NodePath("../controls_button")
+focus_neighbor_bottom = NodePath("../controls_button")
+focus_next = NodePath("../controls_button")
+focus_previous = NodePath("../controls_button")
 texture_normal = ExtResource("6_2gwfb")
 texture_pressed = ExtResource("7_uv44p")
 texture_hover = ExtResource("7_uv44p")
+texture_focused = ExtResource("7_uv44p")
 texture_click_mask = ExtResource("8_lla83")
 script = ExtResource("9_p6nvq")
 on_button_down_audio = ExtResource("10_8dfc1")
 on_button_hover_audio = ExtResource("11_uv5lf")
 
-[node name="s0_0_options_cancel" type="TextureButton" parent="options"]
+[node name="s0_0_options_cancel" type="TextureButton" parent="options/game_config"]
 visible = false
+layout_mode = 0
 offset_left = 406.0
 offset_top = 114.0
 offset_right = 499.0
 offset_bottom = 206.0
 pivot_offset = Vector2(92, 46)
+focus_neighbor_left = NodePath("../controls_button")
+focus_neighbor_top = NodePath("../controls_button")
+focus_neighbor_right = NodePath("../controls_button")
+focus_neighbor_bottom = NodePath("../controls_button")
+focus_next = NodePath("../controls_button")
+focus_previous = NodePath("../controls_button")
 texture_normal = ExtResource("6_2gwfb")
 texture_pressed = ExtResource("7_uv44p")
 texture_hover = ExtResource("7_uv44p")
+texture_focused = ExtResource("7_uv44p")
 texture_click_mask = ExtResource("8_lla83")
 script = ExtResource("9_p6nvq")
 on_button_down_audio = ExtResource("10_8dfc1")
 on_button_hover_audio = ExtResource("11_uv5lf")
 
-[node name="controls" type="Node2D" parent="options"]
+[node name="controls" type="Control" parent="options"]
 visible = false
+anchors_preset = 0
 
 [node name="mouse_sample" type="TextureRect" parent="options/controls"]
 visible = false
+layout_mode = 0
 offset_right = 7680.0
 offset_bottom = 4320.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("29_kt3qe")
 
 [node name="base" type="TextureRect" parent="options/controls"]
+layout_mode = 0
 offset_left = 535.0
 offset_top = -1530.0
 offset_right = 3925.0
@@ -1734,6 +1990,7 @@ pivot_offset = Vector2(6, 2040)
 texture = ExtResource("4_wvv0o")
 
 [node name="conterols_word" type="TextureRect" parent="options/controls"]
+layout_mode = 0
 offset_left = 758.0
 offset_top = 65.0
 offset_right = 2383.0
@@ -1742,9 +1999,11 @@ scale = Vector2(9.99868e-06, 0.25)
 pivot_offset = Vector2(-1, 109)
 texture = ExtResource("30_aahnr")
 
-[node name="mouse" type="Node2D" parent="options/controls"]
+[node name="mouse" type="Control" parent="options/controls"]
+anchors_preset = 0
 
 [node name="cancel" type="TextureButton" parent="options/controls/mouse"]
+layout_mode = 0
 offset_left = 406.0
 offset_top = 114.0
 offset_right = 499.0
@@ -1753,12 +2012,14 @@ pivot_offset = Vector2(92, 46)
 texture_normal = ExtResource("6_2gwfb")
 texture_pressed = ExtResource("7_uv44p")
 texture_hover = ExtResource("7_uv44p")
+texture_focused = ExtResource("7_uv44p")
 texture_click_mask = ExtResource("8_lla83")
 script = ExtResource("9_p6nvq")
 on_button_down_audio = ExtResource("10_8dfc1")
 on_button_hover_audio = ExtResource("11_uv5lf")
 
 [node name="mouse_word" type="TextureRect" parent="options/controls/mouse"]
+layout_mode = 0
 offset_left = 781.0
 offset_top = 345.0
 offset_right = 1139.0
@@ -1767,6 +2028,7 @@ pivot_offset = Vector2(0, 41)
 texture = ExtResource("31_s411t")
 
 [node name="next_page" type="TextureButton" parent="options/controls/mouse"]
+layout_mode = 0
 offset_left = 1123.0
 offset_top = 250.0
 offset_right = 1414.0
@@ -1776,12 +2038,14 @@ pivot_offset = Vector2(1, 139)
 texture_normal = ExtResource("32_6xqw0")
 texture_pressed = ExtResource("33_2havc")
 texture_hover = ExtResource("33_2havc")
+texture_focused = ExtResource("33_2havc")
 texture_click_mask = ExtResource("34_45edp")
 script = ExtResource("9_p6nvq")
 on_button_down_audio = ExtResource("15_gncbs")
 on_button_hover_audio = ExtResource("11_uv5lf")
 
 [node name="TextureRect" type="TextureRect" parent="options/controls/mouse"]
+layout_mode = 0
 offset_left = 658.0
 offset_top = 10.0
 offset_right = 3083.0
@@ -1795,11 +2059,13 @@ libraries = {
 &"": SubResource("AnimationLibrary_7t2w8")
 }
 
-[node name="controller" type="Node2D" parent="options/controls"]
+[node name="controller" type="Control" parent="options/controls"]
 visible = false
+anchors_preset = 0
 
 [node name="controller_sample" type="TextureRect" parent="options/controls/controller"]
 visible = false
+layout_mode = 0
 offset_right = 7680.0
 offset_bottom = 4320.0
 scale = Vector2(0.25, 0.25)
@@ -1807,6 +2073,7 @@ texture = ExtResource("36_6fj7s")
 
 [node name="base" type="TextureRect" parent="options/controls/controller"]
 visible = false
+layout_mode = 0
 offset_left = 535.0
 offset_top = -1530.0
 offset_right = 3925.0
@@ -1816,6 +2083,7 @@ pivot_offset = Vector2(6, 2040)
 texture = ExtResource("4_wvv0o")
 
 [node name="cancel" type="TextureButton" parent="options/controls/controller"]
+layout_mode = 0
 offset_left = 406.0
 offset_top = 114.0
 offset_right = 499.0
@@ -1824,12 +2092,14 @@ pivot_offset = Vector2(92, 46)
 texture_normal = ExtResource("6_2gwfb")
 texture_pressed = ExtResource("7_uv44p")
 texture_hover = ExtResource("7_uv44p")
+texture_focused = ExtResource("7_uv44p")
 texture_click_mask = ExtResource("8_lla83")
 script = ExtResource("9_p6nvq")
 on_button_down_audio = ExtResource("10_8dfc1")
 on_button_hover_audio = ExtResource("11_uv5lf")
 
 [node name="controller_word" type="TextureRect" parent="options/controls/controller"]
+layout_mode = 0
 offset_left = 788.0
 offset_top = 344.0
 offset_right = 1146.0
@@ -1839,6 +2109,7 @@ pivot_offset = Vector2(0, 45)
 texture = ExtResource("37_yqdgh")
 
 [node name="previous_page" type="TextureButton" parent="options/controls/controller"]
+layout_mode = 0
 offset_left = 720.0
 offset_top = 252.0
 offset_right = 1011.0
@@ -1848,12 +2119,14 @@ pivot_offset = Vector2(1, 134)
 texture_normal = ExtResource("38_gai6l")
 texture_pressed = ExtResource("39_20q5h")
 texture_hover = ExtResource("39_20q5h")
+texture_focused = ExtResource("39_20q5h")
 texture_click_mask = ExtResource("34_45edp")
 script = ExtResource("9_p6nvq")
 on_button_down_audio = ExtResource("15_gncbs")
 on_button_hover_audio = ExtResource("11_uv5lf")
 
 [node name="TextureRect" type="TextureRect" parent="options/controls/controller"]
+layout_mode = 0
 offset_left = 585.0
 offset_top = 3.0
 offset_right = 3622.0
@@ -1872,11 +2145,14 @@ libraries = {
 &"": SubResource("AnimationLibrary_0i16m")
 }
 
-[node name="select_controller" type="Node2D" parent="."]
+[node name="select_controller" type="Control" parent="."]
 visible = false
+layout_mode = 3
+anchors_preset = 0
 
 [node name="select" type="TextureRect" parent="select_controller"]
 modulate = Color(1, 1, 1, 0)
+layout_mode = 0
 offset_left = 1183.0
 offset_top = 992.0
 offset_right = 1879.0
@@ -1892,10 +2168,13 @@ libraries = {
 [connection signal="pressed" from="esc/cancel" to="esc/AnimationPlayer" method="play" binds= ["pause_back"]]
 [connection signal="pressed" from="esc/option_Button" to="esc/AnimationPlayer" method="play" binds= ["pause_to_options"]]
 [connection signal="pressed" from="esc/exit_Button" to="esc/AnimationPlayer" method="play" binds= ["pause_exit_to_s0_0"]]
-[connection signal="pressed" from="options/controls_button" to="options/AnimationPlayer" method="play" binds= ["options_to_controls_2"]]
-[connection signal="pressed" from="options/cancel" to="options/AnimationPlayer" method="play" binds= ["options_to_controls"]]
-[connection signal="pressed" from="options/s0_0_options_cancel" to="options/AnimationPlayer" method="play" binds= ["options_back"]]
+[connection signal="draw" from="options/game_config" to="options/game_config/controls_button" method="grab_focus"]
+[connection signal="pressed" from="options/game_config/controls_button" to="options/AnimationPlayer" method="play" binds= ["options_to_controls_2"]]
+[connection signal="pressed" from="options/game_config/cancel" to="options/AnimationPlayer" method="play" binds= ["options_to_controls"]]
+[connection signal="pressed" from="options/game_config/s0_0_options_cancel" to="options/AnimationPlayer" method="play" binds= ["options_back"]]
+[connection signal="draw" from="options/controls/mouse" to="options/controls/mouse/next_page" method="grab_focus"]
 [connection signal="pressed" from="options/controls/mouse/cancel" to="options/controls/AnimationPlayer" method="play" binds= ["controls_back"]]
 [connection signal="pressed" from="options/controls/mouse/next_page" to="options/controls/AnimationPlayer" method="play" binds= ["mouse_to_controller"]]
+[connection signal="draw" from="options/controls/controller" to="options/controls/controller/previous_page" method="grab_focus"]
 [connection signal="pressed" from="options/controls/controller/cancel" to="options/controls/controller/AnimationPlayer" method="play" binds= ["controller_back"]]
 [connection signal="pressed" from="options/controls/controller/previous_page" to="options/controls/controller/AnimationPlayer" method="play" binds= ["controller_back_to_mouse"]]

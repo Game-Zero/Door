@@ -26,5 +26,6 @@ func on_button_down() -> void:
 
 func on_mouse_entered() -> void:
 	print("[ButtonAudioManager][on_button_hover]")
+	self.grab_focus()
 	audio_stream_player.stream = on_button_hover_audio
 	audio_stream_player.play()
